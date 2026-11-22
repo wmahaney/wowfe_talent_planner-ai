@@ -127,9 +127,15 @@ create pull requests under Settings -> Actions -> General.
   known (crit conversions, base mana, talent points) and takes your attributes
   as input.
 
-## Credits
+## License and credits
 
-Talent data from [Talents Forever](https://talentsforever.com/), licensed
-CC BY 4.0. Per-level stat tables from [ForeverDB](https://foreverdb.net/stats).
-Game names and tooltip text belong to Blizzard Entertainment. This project is
-not affiliated with Blizzard.
+The project's own code and text are dedicated to the public domain under
+[CC0 1.0](LICENSE). That does not extend to third-party material: talent,
+skill and icon-name data from [Talents Forever](https://talentsforever.com/)
+is used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and
+must stay credited, stat tables come from
+[ForeverDB](https://foreverdb.net/stats), and World of Warcraft names, text
+and icons belong to Blizzard Entertainment. This project is not affiliated
+with Blizzard.
+
+Full list, with what was changed from each source: [CREDITS.md](CREDITS.md).

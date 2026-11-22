@@ -1,11 +1,18 @@
 {
   "_comment": "Game rules and stat definitions. Edit here when the game changes a rule; nothing in the C engine or the UI hard-codes these.",
+  "project": {
+    "repo": "https://github.com/wmahaney/wowfe_talent_planner-ai",
+    "credits": "https://github.com/wmahaney/wowfe_talent_planner-ai/blob/main/CREDITS.md"
+  },
   "talents": {
     "first_point_level": 10,
     "max_level": 60,
     "points_per_row": 5,
     "prerequisite_needs_max_rank": true,
-    "assumed": ["points_per_row", "prerequisite_needs_max_rank"]
+    "assumed": [
+      "points_per_row",
+      "prerequisite_needs_max_rank"
+    ]
   },
   "icons": {
     "_comment": "Where icon images come from. {name} is the icon name stored in the data. Run `python3 tools/wfdata.py icons` to copy them into site/icons/ and serve them yourself.",
@@ -19,41 +26,176 @@
     "armor_per_agility": 2,
     "attack_power_per_dps": 14,
     "strength_per_block_value": 20,
-    "rating_per_percent": { "crit": 14, "hit": 10, "dodge": 12, "parry": 15, "block": 5 }
+    "rating_per_percent": {
+      "crit": 14,
+      "hit": 10,
+      "dodge": 12,
+      "parry": 15,
+      "block": 5
+    }
   },
   "classes": {
-    "warrior": { "name": "Warrior", "color": "#C69B6D", "ap_per_str": 2, "ap_per_agi": 0, "rap_per_agi": 2, "block_value": true },
-    "paladin": { "name": "Paladin", "color": "#F48CBA", "ap_per_str": 2, "ap_per_agi": 0, "rap_per_agi": 0, "block_value": true },
-    "hunter":  { "name": "Hunter",  "color": "#AAD372", "ap_per_str": 1, "ap_per_agi": 1, "rap_per_agi": 2, "block_value": false },
-    "rogue":   { "name": "Rogue",   "color": "#FFF468", "ap_per_str": 1, "ap_per_agi": 1, "rap_per_agi": 2, "block_value": false },
-    "priest":  { "name": "Priest",  "color": "#E8E8E8", "ap_per_str": 1, "ap_per_agi": 0, "rap_per_agi": 0, "block_value": false },
-    "shaman":  { "name": "Shaman",  "color": "#3D8BE8", "ap_per_str": 2, "ap_per_agi": 0, "rap_per_agi": 0, "block_value": true },
-    "mage":    { "name": "Mage",    "color": "#3FC7EB", "ap_per_str": 1, "ap_per_agi": 0, "rap_per_agi": 0, "block_value": false },
-    "warlock": { "name": "Warlock", "color": "#A99BE8", "ap_per_str": 1, "ap_per_agi": 0, "rap_per_agi": 0, "block_value": false },
-    "druid":   { "name": "Druid",   "color": "#FF7C0A", "ap_per_str": 2, "ap_per_agi": 0, "rap_per_agi": 0, "block_value": false }
+    "warrior": {
+      "name": "Warrior",
+      "color": "#C69B6D",
+      "ap_per_str": 2,
+      "ap_per_agi": 0,
+      "rap_per_agi": 2,
+      "block_value": true
+    },
+    "paladin": {
+      "name": "Paladin",
+      "color": "#F48CBA",
+      "ap_per_str": 2,
+      "ap_per_agi": 0,
+      "rap_per_agi": 0,
+      "block_value": true
+    },
+    "hunter": {
+      "name": "Hunter",
+      "color": "#AAD372",
+      "ap_per_str": 1,
+      "ap_per_agi": 1,
+      "rap_per_agi": 2,
+      "block_value": false
+    },
+    "rogue": {
+      "name": "Rogue",
+      "color": "#FFF468",
+      "ap_per_str": 1,
+      "ap_per_agi": 1,
+      "rap_per_agi": 2,
+      "block_value": false
+    },
+    "priest": {
+      "name": "Priest",
+      "color": "#E8E8E8",
+      "ap_per_str": 1,
+      "ap_per_agi": 0,
+      "rap_per_agi": 0,
+      "block_value": false
+    },
+    "shaman": {
+      "name": "Shaman",
+      "color": "#3D8BE8",
+      "ap_per_str": 2,
+      "ap_per_agi": 0,
+      "rap_per_agi": 0,
+      "block_value": true
+    },
+    "mage": {
+      "name": "Mage",
+      "color": "#3FC7EB",
+      "ap_per_str": 1,
+      "ap_per_agi": 0,
+      "rap_per_agi": 0,
+      "block_value": false
+    },
+    "warlock": {
+      "name": "Warlock",
+      "color": "#A99BE8",
+      "ap_per_str": 1,
+      "ap_per_agi": 0,
+      "rap_per_agi": 0,
+      "block_value": false
+    },
+    "druid": {
+      "name": "Druid",
+      "color": "#FF7C0A",
+      "ap_per_str": 2,
+      "ap_per_agi": 0,
+      "rap_per_agi": 0,
+      "block_value": false
+    }
   },
   "stats": {
-    "crit":       { "label": "Crit chance", "unit": "%" },
-    "spell_crit": { "label": "Spell crit chance", "unit": "%" },
-    "hit":        { "label": "Hit chance", "unit": "%" },
-    "spell_hit":  { "label": "Spell hit chance", "unit": "%" },
-    "parry":      { "label": "Parry chance", "unit": "%" },
-    "dodge":      { "label": "Dodge chance", "unit": "%" },
-    "block":      { "label": "Block chance", "unit": "%" },
-    "defense":    { "label": "Defense skill", "unit": "" },
-    "str_pct":    { "label": "Strength", "unit": "%" },
-    "agi_pct":    { "label": "Agility", "unit": "%" },
-    "sta_pct":    { "label": "Stamina", "unit": "%" },
-    "int_pct":    { "label": "Intellect", "unit": "%" },
-    "spi_pct":    { "label": "Spirit", "unit": "%" },
-    "health_pct": { "label": "Maximum health", "unit": "%" },
-    "mana_pct":   { "label": "Maximum mana", "unit": "%" },
-    "armor_pct":  { "label": "Armor", "unit": "%" },
-    "damage_pct": { "label": "Damage dealt", "unit": "%" },
-    "healing_pct": { "label": "Healing done", "unit": "%" },
-    "damage_taken_pct": { "label": "Damage taken", "unit": "%" },
-    "spell_damage_taken_pct": { "label": "Spell damage taken", "unit": "%" },
-    "energy":     { "label": "Maximum Energy", "unit": "" },
-    "resist_all": { "label": "All resistances", "unit": "" }
+    "crit": {
+      "label": "Crit chance",
+      "unit": "%"
+    },
+    "spell_crit": {
+      "label": "Spell crit chance",
+      "unit": "%"
+    },
+    "hit": {
+      "label": "Hit chance",
+      "unit": "%"
+    },
+    "spell_hit": {
+      "label": "Spell hit chance",
+      "unit": "%"
+    },
+    "parry": {
+      "label": "Parry chance",
+      "unit": "%"
+    },
+    "dodge": {
+      "label": "Dodge chance",
+      "unit": "%"
+    },
+    "block": {
+      "label": "Block chance",
+      "unit": "%"
+    },
+    "defense": {
+      "label": "Defense skill",
+      "unit": ""
+    },
+    "str_pct": {
+      "label": "Strength",
+      "unit": "%"
+    },
+    "agi_pct": {
+      "label": "Agility",
+      "unit": "%"
+    },
+    "sta_pct": {
+      "label": "Stamina",
+      "unit": "%"
+    },
+    "int_pct": {
+      "label": "Intellect",
+      "unit": "%"
+    },
+    "spi_pct": {
+      "label": "Spirit",
+      "unit": "%"
+    },
+    "health_pct": {
+      "label": "Maximum health",
+      "unit": "%"
+    },
+    "mana_pct": {
+      "label": "Maximum mana",
+      "unit": "%"
+    },
+    "armor_pct": {
+      "label": "Armor",
+      "unit": "%"
+    },
+    "damage_pct": {
+      "label": "Damage dealt",
+      "unit": "%"
+    },
+    "healing_pct": {
+      "label": "Healing done",
+      "unit": "%"
+    },
+    "damage_taken_pct": {
+      "label": "Damage taken",
+      "unit": "%"
+    },
+    "spell_damage_taken_pct": {
+      "label": "Spell damage taken",
+      "unit": "%"
+    },
+    "energy": {
+      "label": "Maximum Energy",
+      "unit": ""
+    },
+    "resist_all": {
+      "label": "All resistances",
+      "unit": ""
+    }
   }
 }
