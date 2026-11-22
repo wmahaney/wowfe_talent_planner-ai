@@ -4,6 +4,11 @@ Tool to calculate different class talent configurations in WoW Forever.
 A talent planner for World of Warcraft: Forever. Pick a class, spend points
 across its three trees, and see
 
+- **Talent tooltips**: hover a talent to see what it does at your current rank
+  and the next one, what is still needed to learn it, and the earliest level
+  it can be taken. Numbers that depend on character level ("% of your level")
+  or on an attribute ("% of Intellect") are worked out for the level on the
+  slider and the attributes in the Stats panel;
 - **Bonuses**: every talent you took at its current rank, with stat boosts
   added up across trees;
 - **Skills**: every skill the class trainer teaches and the level of each

@@ -183,14 +183,130 @@
     }
     return out;
   }
+  /** Render a string with \u0001bold\u0002 and \u0003level-scaled note\u0004 markers. */
   function marked(text) {
-    return text.split(/[\u0001\u0002]/).map((part, i) => (i % 2 ? h('b', null, part) : part));
+    const out = [];
+    let mode = null, buf = '';
+    const flush = () => {
+      if (!buf) return;
+      out.push(mode === 'b' ? h('b', null, buf) : mode === 's' ? h('span', { class: 'scaled' }, buf) : buf);
+      buf = '';
+    };
+    for (const ch of text) {
+      if (ch === '\u0001') { flush(); mode = 'b'; }
+      else if (ch === '\u0003') { flush(); mode = 's'; }
+      else if (ch === '\u0002' || ch === '\u0004') { flush(); mode = null; }
+      else buf += ch;
+    }
+    flush();
+    return out;
   }
-  /** What a talent does at a given rank (rank 0 = the general description). */
+
+  const ATTR_KEYS = { Strength: 'str', Agility: 'agi', Stamina: 'sta', Intellect: 'int', Spirit: 'spi' };
+  // One number, optionally wrapped in the bold markers, that is not part of a "1/2/3" list or a "5-25" range.
+  const ONE = String.raw`(?<![\d./+-])\u0001?(\d+(?:\.\d+)?)\u0002?(?![\d./-])`;
+  const RE_LEVEL = new RegExp(ONE + String.raw`% of (?:your )?(?:character )?level`, 'g');
+  const RE_ATTR = new RegExp(ONE + String.raw`% of (?:your )?(?:total )?(Strength|Agility|Stamina|Intellect|Spirit)`, 'g');
+  const RE_PER_LEVEL = /per level \+?\u0001?\+?(\d+(?:\.\d+)?)\u0002?(?![\d./-])/g;
+
+  /** Work out the numbers in one rank's text that depend on character level or attributes.
+   *  Lists ("1/2/3%") and ranges ("5-25%") are left alone, so only a specific rank gets a result. */
+  function scaleText(text) {
+    const L = S.level;
+    const note = (str) => ` \u0003(${str})\u0004`;
+    return text
+      .replace(RE_LEVEL, (m, v) => m + note(`${fmt(v * L / 100)} at level ${L}`))
+      .replace(RE_ATTR, (m, v, stat) => {
+        const have = Number(S.attrs[ATTR_KEYS[stat]]) || 0;
+        return m + note(`about ${fmt(v * have / 100)} with ${fmt(have)} ${stat}`);
+      })
+      .replace(RE_PER_LEVEL, (m, v) => m + note(`${fmt(v * L)} at level ${L}`));
+  }
+
+  /** What a talent does at a given rank (rank 0 = the general description, all ranks at once). */
   function talentText(t, rank) {
-    if (t.ranks) return [t.ranks[Math.max(rank, 1) - 1]];
+    if (t.ranks) return marked(scaleText(t.ranks[Math.max(rank, 1) - 1]));
     const text = t.summary || '';
-    return rank ? marked(atRank(text, rank, t.max)) : [text];
+    return rank ? marked(scaleText(atRank(text, rank, t.max))) : [text];
+  }
+
+  /** Earliest character level at which a point can go into this talent. */
+  function earliestLevel(tree, t) {
+    let before = manifest.rules.points_per_row * (t.row - 1);
+    if (t.req) {
+      const req = tree.talents.find((x) => x.name === t.req);
+      if (req && req.row >= t.row) before += req.max;
+    }
+    return manifest.rules.first_point_level + before;
+  }
+
+  // ------------------------------------------------------------ hover tooltip
+
+  let tip = null, tipFor = null;
+
+  function tipContent(ti, i) {
+    const tree = doc.trees[ti], t = tree.talents[i], rank = W.pl_rank(ti, i);
+    const kind = t.cost ? (t.cost === 'Active' ? 'Active ability' : t.cost) : null;
+    const lines = [h('div', { class: 'tip-head' }, icon(t.icon, 32),
+      h('div', null,
+        h('div', { class: 'tip-name' }, t.name),
+        h('div', { class: 'tip-rank' }, `Rank ${rank}/${t.max}`),
+        kind ? h('div', { class: 'tip-cost' }, kind) : null))];
+    const ok = W.pl_can_add(ti, i), first = earliestLevel(tree, t);
+    if (rank < t.max) {
+      if (first > S.level) lines.push(h('p', { class: 'warn' }, `Needs character level ${first} or higher.`));
+      if (ok === 4) {
+        const need = manifest.rules.points_per_row * (t.row - 1);
+        lines.push(h('p', { class: 'warn' }, `Requires ${need} points in ${tree.name} (you have ${W.pl_tree_points(ti)}).`));
+      }
+      if (t.req) {
+        const ri = tree.talents.findIndex((x) => x.name === t.req), req = tree.talents[ri], have = W.pl_rank(ti, ri);
+        lines.push(h('p', { class: have >= req.max ? 'muted' : 'warn' }, `Requires ${t.req} (${have}/${req.max}).`));
+      }
+    }
+    const label = (txt) => (t.max > 1 ? h('span', { class: 'muted' }, txt) : null);
+    if (rank === 0) {
+      lines.push(h('p', null, label('Rank 1: '), talentText(t, 1)));
+      if (t.max > 1) lines.push(h('p', { class: 'tip-next' }, label(`Rank ${t.max}: `), talentText(t, t.max)));
+    } else {
+      lines.push(h('p', null, label(`Rank ${rank}: `), talentText(t, rank)));
+      if (rank < t.max) lines.push(h('p', { class: 'tip-next' }, label('Next rank: '), talentText(t, rank + 1)));
+    }
+    let hint;
+    if (ok === 0) hint = rank > 0 ? 'Click to learn the next rank. Right-click to remove one.' : 'Click to learn.';
+    else if (rank > 0) hint = rank >= t.max ? 'Maxed. Right-click to remove a rank.' : 'Right-click to remove a rank.';
+    else hint = `Earliest at character level ${first}.`;
+    lines.push(h('p', { class: 'tip-hint' }, hint));
+    return lines;
+  }
+
+  function placeTip() {
+    if (!tipFor) return;
+    const r = nodes[tipFor.ti][tipFor.i].getBoundingClientRect();
+    const w = tip.offsetWidth, ht = tip.offsetHeight, pad = 10, edge = 8;
+    let x = r.right + pad;
+    if (x + w > innerWidth - edge) x = r.left - w - pad;           // flip to the left
+    let y = r.top;
+    if (x < edge) {                                                // no room either side: go below
+      x = Math.min(Math.max(edge, r.left + r.width / 2 - w / 2), innerWidth - w - edge);
+      y = r.bottom + pad;
+      if (y + ht > innerHeight - edge) y = r.top - ht - pad;
+    }
+    y = Math.min(Math.max(edge, y), innerHeight - ht - edge);
+    tip.style.left = `${Math.round(x)}px`;
+    tip.style.top = `${Math.round(y)}px`;
+  }
+
+  function showTip(ti, i) {
+    tipFor = { ti, i };
+    tip.replaceChildren(...tipContent(ti, i));
+    tip.hidden = false;
+    placeTip();
+  }
+
+  function hideTip() {
+    tipFor = null;
+    if (tip) tip.hidden = true;
   }
 
   // ------------------------------------------------------------ class + level
@@ -202,6 +318,7 @@
     S.selected = null;
     S.tab = 0;
     skillsKey = '';
+    hideTip();
     loadEngine();
     if (level) S.level = level;
     W.pl_set_level(S.level);
@@ -238,14 +355,18 @@
         const b = h('button', {
           type: 'button', class: 'node' + (t.cost ? ' active-ability' : ''),
           style: `grid-row:${t.row};grid-column:${t.col}`,
-          onclick: () => onNode(ti, i),
+          onclick: (e) => onNode(ti, i, e.pointerType === 'mouse'),
           oncontextmenu: (e) => { e.preventDefault(); select(ti, i); change(ti, i, -1); },
           onkeydown: (e) => {
             if (e.key === '+' || e.key === '=') { select(ti, i); change(ti, i, 1); }
             if (e.key === '-' || e.key === 'Backspace' || e.key === 'Delete') { select(ti, i); change(ti, i, -1); }
           },
         }, h('span', { class: 'name' }, t.name), h('span', { class: 'rank' }));
-        b.title = t.name;
+        // Mouse hover or keyboard focus shows the tooltip; a touch tap does not (the panel below covers phones).
+        b.addEventListener('pointerenter', (e) => { if (e.pointerType !== 'touch') showTip(ti, i); });
+        b.addEventListener('focus', () => { if (b.matches(':focus-visible')) showTip(ti, i); });
+        b.addEventListener('pointerleave', hideTip);
+        b.addEventListener('blur', hideTip);
         const img = icon(t.icon, 64, () => b.classList.add('has-icon'));
         if (img) b.prepend(img);
         nodes[ti].push(b);
@@ -258,7 +379,7 @@
           h('button', { type: 'button', onclick: () => { W.pl_clear_tree(ti); refresh(); } }, 'Clear')),
         grid));
     });
-    host.append(h('p', { class: 'hint' }, 'Select a talent to read it. Select it again, or press +, to spend a point. Right-click or press − to take one back.'));
+    host.append(h('p', { class: 'hint' }, 'Hover a talent to read it, click to learn a rank, right-click to remove one. On a touchscreen, tap to read and tap again to learn. Keyboard: + and −.'));
   }
 
   function drawArrows(ti) {
@@ -303,10 +424,12 @@
     refresh();
     if (code !== 0 && REASONS[code]) toast(REASONS[code]);
   }
-  function onNode(ti, i) {
+  /** A mouse click learns a rank straight away (the hover tooltip already explains the talent).
+   *  A tap or keyboard press selects first, so the talent can be read in the panel, and learns on the second. */
+  function onNode(ti, i, mouse) {
     const again = S.selected && S.selected.ti === ti && S.selected.i === i;
     select(ti, i);
-    if (again) change(ti, i, 1); else refresh();
+    if (mouse || again) change(ti, i, 1); else refresh();
   }
 
   function renderTrees() {
@@ -501,6 +624,7 @@
             all[S.cls] = S.attrs;
             store('wfplanner.attrs', all);
             renderDerived();
+            renderDetail();
           },
         })))),
       h('p', { class: 'note', style: 'margin-top:8px' }, saved ? 'Totals from your character sheet, gear included.'
@@ -626,6 +750,7 @@
   // ------------------------------------------------------------ refresh + start
 
   function refresh() {
+    if (tipFor) showTip(tipFor.ti, tipFor.i);
     renderPoints();
     renderTrees();
     renderDetail();
@@ -668,6 +793,9 @@
       document.querySelectorAll('#views button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
     }));
     window.addEventListener('resize', () => doc && doc.trees.forEach((_, ti) => drawArrows(ti)));
+    tip = h('div', { class: 'tooltip', role: 'tooltip', hidden: true });
+    document.body.append(tip);
+    window.addEventListener('scroll', placeTip, { passive: true });
     window.addEventListener('hashchange', () => {
       const want = parseHash();
       if (want && `#${S.cls}-${S.level}-${exportCode()}` !== location.hash) {

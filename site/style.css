@@ -184,6 +184,24 @@ img.icon { border-radius: 4px; vertical-align: middle; flex: none; background: v
 .taken img.icon { margin-right: 6px; }
 .detail-head img.icon { width: 36px; height: 36px; }
 
+/* ---------- hover tooltip ---------- */
+.tooltip {
+  position: fixed; z-index: 20; width: max-content; max-width: min(330px, calc(100vw - 16px));
+  background: #0d0f14; border: 1px solid color-mix(in srgb, var(--gold) 55%, var(--line)); border-radius: 8px;
+  padding: 10px 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55); pointer-events: none; font-size: 0.88rem;
+}
+.tooltip[hidden] { display: none; }
+.tooltip p { margin: 6px 0 0; }
+.tip-head { display: flex; gap: 10px; align-items: center; }
+.tip-head img.icon { width: 32px; height: 32px; }
+.tip-name { font-weight: 700; font-size: 0.98rem; }
+.tip-rank { color: var(--gold); font-size: 0.82rem; font-variant-numeric: tabular-nums; }
+.tip-cost { color: var(--muted); font-size: 0.8rem; }
+.tip-next { color: var(--muted); }
+.tip-next b { color: color-mix(in srgb, var(--gold) 70%, var(--muted)); }
+.tip-hint { color: var(--muted); font-size: 0.78rem; font-style: italic; }
+.scaled { color: #8fd18a; font-variant-numeric: tabular-nums; }
+
 /* ---------- skills ---------- */
 .seg { display: flex; margin-bottom: 10px; }
 .seg button { flex: 1; border-radius: 0; padding: 6px; font-weight: 600; }
