@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WoW Forever Talent Planner</title>
+<meta name="description" content="Plan talent builds for every WoW Forever class, see the bonuses they add up to, every skill and the level it is learned, and class stats at any level.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>WoW Forever Talent Planner</h1>
+    <p class="build-line" id="build-line">Loading game data</p>
+  </div>
+  <nav class="classes" id="classes" aria-label="Class"></nav>
+</header>
+
+<section class="levelbar" aria-label="Level and talent points">
+  <div class="level-control">
+    <label for="level">Level</label>
+    <input type="range" id="level" min="1" max="60" value="60" step="1">
+    <output id="level-out" for="level">60</output>
+  </div>
+  <div class="points" id="points" aria-live="polite"></div>
+  <div class="actions">
+    <button type="button" id="copy-link">Copy link</button>
+    <button type="button" id="reset-all">Reset build</button>
+  </div>
+</section>
+
+<nav class="views" id="views" aria-label="Section">
+  <button type="button" data-view="talents" aria-pressed="true">Talents</button>
+  <button type="button" data-view="bonuses" aria-pressed="false">Bonuses</button>
+  <button type="button" data-view="skills" aria-pressed="false">Skills</button>
+  <button type="button" data-view="stats" aria-pressed="false">Stats</button>
+  <button type="button" data-view="data" aria-pressed="false">Data</button>
+</nav>
+
+<main id="app" data-view="talents">
+  <section class="view view-talents" aria-label="Talent trees">
+    <nav class="tree-tabs" id="tree-tabs" aria-label="Talent tree"></nav>
+    <div class="trees" id="trees"></div>
+    <aside class="detail" id="detail" aria-live="polite"></aside>
+  </section>
+
+  <div class="panels">
+    <section class="view view-bonuses panel" aria-labelledby="h-bonuses">
+      <h2 id="h-bonuses">Bonuses from this build</h2>
+      <div id="bonuses"></div>
+    </section>
+
+    <section class="view view-skills panel" aria-labelledby="h-skills">
+      <h2 id="h-skills">Skills by level</h2>
+      <div id="skills"></div>
+    </section>
+
+    <section class="view view-stats panel" aria-labelledby="h-stats">
+      <h2 id="h-stats">Base stats</h2>
+      <div id="stats"></div>
+    </section>
+
+    <section class="view view-data panel" aria-labelledby="h-data">
+      <h2 id="h-data">Saved builds and game data</h2>
+      <div id="data"></div>
+    </section>
+  </div>
+</main>
+
+<p class="toast" id="toast" role="status" hidden></p>
+<script src="app.js"></script>
+</body>
+</html>

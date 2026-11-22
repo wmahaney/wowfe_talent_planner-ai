@@ -1,0 +1,145 @@
+T|Beast Mastery|Deadly Aspects|spell_nature_ravenform
+T|Beast Mastery|Endurance Training|spell_nature_reincarnation
+T|Beast Mastery|Focused Fire|inv_weapon_crossbow_10
+T|Beast Mastery|Improved Aspect of the Monkey|ability_hunter_aspectofthemonkey
+T|Beast Mastery|Improved Revive Pet|ability_hunter_beastsoothe
+T|Beast Mastery|Pathfinding|ability_mount_jungletiger
+T|Beast Mastery|Bestial Swiftness|ability_druid_dash
+T|Beast Mastery|Unleashed Fury|ability_bullrush
+T|Beast Mastery|Improved Mend Pet|ability_hunter_mendpet
+T|Beast Mastery|Ferocity|inv_misc_monsterclaw_04
+T|Beast Mastery|Summon Hawk|ability_hunter_animalhandler
+T|Beast Mastery|Spirit Bond|ability_druid_demoralizingroar
+T|Beast Mastery|Intimidation|ability_devour
+T|Beast Mastery|Bestial Discipline|spell_nature_abolishmagic
+T|Beast Mastery|Frenzy|inv_misc_monsterclaw_03
+T|Beast Mastery|Bestial Wrath|ability_druid_ferociousbite
+T|Marksmanship|Hawk Eye|ability_townwatch
+T|Marksmanship|Improved Concussive Shot|spell_frost_stun
+T|Marksmanship|Lethal Attacks|ability_searingarrow
+T|Marksmanship|Improved Stings|ability_hunter_quickshot
+T|Marksmanship|Efficiency|spell_frost_wizardmark
+T|Marksmanship|Careful Aim|ability_hunter_zenarchery
+T|Marksmanship|Rapid Killing|ability_hunter_rapidkilling
+T|Marksmanship|Improved Arcane Shot|ability_impalingbolt
+T|Marksmanship|Lone Wolf|ability_mount_whitedirewolf
+T|Marksmanship|Trueshot Aura|ability_trueshot
+T|Marksmanship|Mortal Shots|ability_piercedamage
+T|Marksmanship|Rapid Recuperation|ability_hunter_rapidregeneration
+T|Marksmanship|Barrage|ability_upgrademoonglaive
+T|Marksmanship|Scatter Shot|ability_golemstormbolt
+T|Marksmanship|Ranged Weapon Specialization|inv_weapon_rifle_06
+T|Marksmanship|Sniper Shot|hunter_pvp_snipershot
+T|Survival|Improved Tracking|inv_misc_head_dragon_black
+T|Survival|Deflection|ability_parry
+T|Survival|Entrapment|spell_nature_stranglevines
+T|Survival|Savage Strikes|ability_racial_bloodrage
+T|Survival|Survivalist|spell_shadow_twilight
+T|Survival|Improved Wing Clip|ability_rogue_trip
+T|Survival|Clever Traps|spell_nature_timestop
+T|Survival|Surefooted|ability_kick
+T|Survival|Deterrence|ability_whirlwind
+T|Survival|Survival Tactics|ability_ensnare
+T|Survival|Predator's Edge|ability_dualwield
+T|Survival|Counterattack|ability_warrior_challange
+T|Survival|Resourcefulness|ability_hunter_resourcefulness
+T|Survival|Expose Prey|ability_hunter_swiftstrike
+T|Survival|Survivalist's Discipline|ability_hunter_mastertactitian
+T|Survival|Strider Kick|ability_hunter_pet_tallstrider
+T|Survival|Lightning Reflexes|spell_nature_invisibilty
+T|Survival|Lacerating Strikes|ability_gouge
+S|Beast Mastery|Aspect of the Beast|30,40,50,60|ability_mount_pinktiger
+S|Beast Mastery|Aspect of the Cheetah|20|ability_mount_jungletiger
+S|Beast Mastery|Aspect of the Hawk|10,18,28,38,48,58,60|spell_nature_ravenform
+S|Beast Mastery|Aspect of the Monkey|4|ability_hunter_aspectofthemonkey
+S|Beast Mastery|Aspect of the Pack|40|ability_mount_whitetiger
+S|Beast Mastery|Aspect of the Wild|46,56|spell_nature_protectionformnature
+S|Beast Mastery|Beast Lore|24|ability_physical_taunt
+S|Beast Mastery|Bestial Wrath|40|ability_druid_ferociousbite
+S|Beast Mastery|Call Pet|10|ability_hunter_beastcall
+S|Beast Mastery|Dismiss Pet|10|spell_nature_spiritwolf
+S|Beast Mastery|Eagle Eye|14|ability_hunter_eagleeye
+S|Beast Mastery|Eyes of the Beast|14|ability_eyeoftheowl
+S|Beast Mastery|Feed Pet|10|ability_hunter_beasttraining
+S|Beast Mastery|Intimidation|30|ability_devour
+S|Beast Mastery|Mend Pet|12,20,28,36,44,52,60|ability_hunter_mendpet
+S|Beast Mastery|Revive Pet|10|ability_hunter_beastsoothe
+S|Beast Mastery|Scare Beast|14,30,46|ability_druid_cower
+S|Beast Mastery|Summon Hawk|25,36,48,60|ability_hunter_animalhandler
+S|Beast Mastery|Tame Beast|10|ability_hunter_beasttaming
+S|Beast Mastery|Tranquilizing Shot|60|spell_nature_drowsy
+S|Marksmanship|Aimed Shot|20,28,36,44,52,60|inv_spear_07
+S|Marksmanship|Arcane Shot|6,12,20,28,36,44,52,60|ability_impalingbolt
+S|Marksmanship|Auto Shot|1|ability_whirlwind
+S|Marksmanship|Concussive Shot|8|spell_frost_stun
+S|Marksmanship|Distracting Shot|12,20,30,40,50,60|spell_arcane_blink
+S|Marksmanship|Flare|32|spell_fire_flare
+S|Marksmanship|Hunter's Mark|6,22,40,58|ability_hunter_snipershot
+S|Marksmanship|Multi-Shot|18|ability_upgrademoonglaive
+S|Marksmanship|Rapid Fire|26|ability_hunter_runningshot
+S|Marksmanship|Scatter Shot|30|ability_golemstormbolt
+S|Marksmanship|Scorpid Sting|22|ability_hunter_criticalshot
+S|Marksmanship|Serpent Sting|4,10,18,26,34,42,50,58,60|ability_hunter_quickshot
+S|Marksmanship|Sniper Shot|40,48,58|hunter_pvp_snipershot
+S|Marksmanship|Trueshot Aura|25,32,40,50,60|ability_trueshot
+S|Marksmanship|Viper Sting|36,46,56|ability_hunter_aimedshot
+S|Marksmanship|Volley|40,50,58|ability_marksmanship
+S|Survival|Counterattack|25,30,42,54|ability_warrior_challange
+S|Survival|Deterrence|20|ability_whirlwind
+S|Survival|Disengage|20,34,48|ability_rogue_feint
+S|Survival|Explosive Trap|34,44,54|spell_fire_selfdestruct
+S|Survival|Feign Death|30|ability_rogue_feigndeath
+S|Survival|Freezing Trap|20,40,60|spell_frost_chainsofice
+S|Survival|Frost Trap|28|spell_frost_freezingbreath
+S|Survival|Immolation Trap|16,26,36,46,56|spell_fire_flameshock
+S|Survival|Mongoose Bite|16,30,44,58|ability_hunter_swiftstrike
+S|Survival|Raptor Strike|1,8,16,24,32,40,48,56|ability_meleedamage
+S|Survival|Strider Kick|30|ability_hunter_pet_tallstrider
+S|Survival|Track Beasts|1|ability_tracking
+S|Survival|Track Demons|32|spell_shadow_summonfelhunter
+S|Survival|Track Dragonkin|50|inv_misc_head_dragon_01
+S|Survival|Track Elementals|26|spell_frost_summonwaterelemental
+S|Survival|Track Giants|40|ability_racial_avatar
+S|Survival|Track Hidden|24|ability_stealth
+S|Survival|Track Humanoids|10|spell_holy_prayerofhealing
+S|Survival|Track Undead|18|spell_shadow_darksummoning
+S|Survival|Wing Clip|12,38,60|ability_rogue_trip
+S|Pets|Arcane Resistance|20,30,40,50|spell_nature_starfall
+S|Pets|Bite|1,8,16,24,32,40,48,56|ability_racial_cannibalize
+S|Pets|Charge|1,12,24,36,48,60|ability_hunter_pet_boar
+S|Pets|Claw|1,8,16,24,32,40,48,56|ability_druid_rake
+S|Pets|Cower|5,15,25,35,45,55|ability_druid_cower
+S|Pets|Dash|30,40,50|ability_druid_dash
+S|Pets|Demoralizing Screech|8,24,48,56|ability_hunter_pet_vulture
+S|Pets|Dismember|12,24,36,48,60|ability_hunter_pet_crocolisk
+S|Pets|Dive|30,40,50|spell_shadow_burningspirit
+S|Pets|Dust Cloud|12,24,36,48,60|spell_nature_sleep
+S|Pets|Fire Resistance|20,30,40,50|spell_fire_firearmor
+S|Pets|Frost Resistance|20,30,40,50|spell_frost_frostward
+S|Pets|Furious Howl|10,24,40,56|ability_hunter_pet_wolf
+S|Pets|Great Stamina|10,12,18,24,30,36,42,48,54,60|spell_nature_unyeildingstamina
+S|Pets|Growl|1,10,20,30,40,50,60|ability_physical_taunt
+S|Pets|Lightning Breath|1,12,24,36,48,60|spell_nature_lightning
+S|Pets|Mine!|10,20,30,40,50|spell_nature_natureswrath
+S|Pets|Natural Armor|10,12,18,24,30,36,42,48,54,60|spell_nature_spiritarmor
+S|Pets|Nature Resistance|20,30,40,50|spell_nature_resistnature
+S|Pets|Pinch|12,24,36,48,60|ability_hunter_pet_crab
+S|Pets|Prowl|30,40,50|ability_druid_supriseattack
+S|Pets|Savage Rend|12,24,36,48,60|ability_hunter_pet_raptor
+S|Pets|Scorpid Poison|8,24,40,56|ability_poisonsting
+S|Pets|Shadow Resistance|20,30,40,50|spell_shadow_antishadow
+S|Pets|Shell Shield|20|ability_hunter_pet_turtle
+S|Pets|Sonic Blast|12,24,36,48,60|ability_vehicle_sonicshockwave
+S|Pets|Swipe|12,24,36,48,60|inv_misc_monsterclaw_03
+S|Pets|Tendon Rip|12,24,36,48,60|ability_hunter_pet_hyena
+S|Pets|Thunderstomp|30,40,50,60|ability_hunter_pet_gorilla
+S|Pets|Trickster's Dance|20|ability_hunter_aspectofthefox
+S|Pets|Web|12,24,36,48,60|spell_nature_web
+G|Attack|
+G|Throw|
+G|Beast Training|
+G|Dual Wield|Passive
+G|Armor Proficiency|Passive
+G|Dodge|Passive
+G|Parry|Passive
+G|Languages|Passive

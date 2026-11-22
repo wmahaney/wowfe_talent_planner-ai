@@ -1,0 +1,1089 @@
+{
+ "schema": 1,
+ "class": "paladin",
+ "source": {
+  "name": "Talents Forever",
+  "url": "https://talentsforever.com/",
+  "license": "CC BY 4.0",
+  "build": "1.60.1.70755",
+  "generated": "2026-11-10",
+  "retrieved": "2026-11-22",
+  "method": "seed (hand-transcribed summaries)"
+ },
+ "trees": [
+  {
+   "name": "Holy",
+   "talents": [
+    {
+     "name": "Spiritual Focus",
+     "row": 1,
+     "col": 2,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "14/28/42/56/70% chance for Flash of Light, Holy Light and Light's Vigil to keep cast time when hit",
+     "ranks": null,
+     "icon": "spell_arcane_blink"
+    },
+    {
+     "name": "Divine Strength",
+     "row": 1,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Strength +2/4/6/8/10%",
+     "ranks": null,
+     "icon": "ability_golemthunderclap"
+    },
+    {
+     "name": "Healing Light",
+     "row": 2,
+     "col": 1,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Healing from Holy Light, Flash of Light and Holy Shock +4/8/12%",
+     "ranks": null,
+     "icon": "spell_holy_holybolt"
+    },
+    {
+     "name": "Reverence",
+     "row": 2,
+     "col": 2,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "15/30% of mana regen continues while casting",
+     "ranks": null,
+     "icon": "spell_holy_divineillumination"
+    },
+    {
+     "name": "Improved Seals",
+     "row": 2,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Seal and Judgement damage +3/6/9/12/15%",
+     "ranks": null,
+     "icon": "ability_thunderbolt"
+    },
+    {
+     "name": "Purifying Power",
+     "row": 2,
+     "col": 4,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Cleanse/Purify mana cost -10/20%; Exorcism/Holy Wrath cooldown -17/33%",
+     "ranks": null,
+     "icon": "spell_holy_purifyingpower"
+    },
+    {
+     "name": "Divine Favor",
+     "row": 3,
+     "col": 1,
+     "max": 1,
+     "req": null,
+     "cost": "4% of base mana; Instant; 2 min cooldown",
+     "summary": "Next Flash of Light, Holy Light or Holy Shock gets 100% crit chance",
+     "ranks": null,
+     "icon": "spell_holy_heal"
+    },
+    {
+     "name": "Illumination",
+     "row": 3,
+     "col": 2,
+     "max": 5,
+     "req": "Reverence",
+     "cost": null,
+     "summary": "20/40/60/80/100% chance after a crit heal to regain 50% of the spell's base mana cost",
+     "ranks": null,
+     "icon": "spell_holy_greaterheal"
+    },
+    {
+     "name": "Holy Conduit",
+     "row": 3,
+     "col": 3,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Mana cost of Consecration, Holy Wrath, Exorcism, Hammer of Wrath -20/40%",
+     "ranks": null,
+     "icon": "spell_holy_devineaegis"
+    },
+    {
+     "name": "Divine Precision",
+     "row": 4,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Holy hit chance +4/8%; Silence duration -10/20%",
+     "ranks": null,
+     "icon": "spell_holy_mindsooth"
+    },
+    {
+     "name": "Infusion of Light",
+     "row": 4,
+     "col": 2,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Holy Shock/Flash of Light crits cut the next Holy Light cast by 0.5/1.0 sec",
+     "ranks": null,
+     "icon": "ability_paladin_infusionoflight"
+    },
+    {
+     "name": "Oath of Light",
+     "row": 4,
+     "col": 3,
+     "max": 1,
+     "req": null,
+     "cost": "8% of base mana; 40 yd; Instant",
+     "summary": "Oath on an ally for 5 min, raising your Holy Light, Flash of Light and Holy Shock healing on them",
+     "ranks": null,
+     "icon": "spell_holy_greaterblessingoflight"
+    },
+    {
+     "name": "Consecrated Ground",
+     "row": 5,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Holy damage +5/10% vs the first 4 enemies entering Consecration",
+     "ranks": null,
+     "icon": "spell_holy_innerfire"
+    },
+    {
+     "name": "Holy Shock",
+     "row": 5,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": "160 Mana; Enemy 20 yd, Friendly 40 yd; Instant; 10 sec cooldown",
+     "summary": "Unlocks Holy Shock (damage or healing)",
+     "ranks": null,
+     "icon": "spell_holy_searinglight"
+    },
+    {
+     "name": "Boundless Light",
+     "row": 5,
+     "col": 3,
+     "max": 2,
+     "req": "Holy Shock",
+     "cost": null,
+     "summary": "Holy Shock crit chance +15/30% on allies not under Oath of Light",
+     "ranks": null,
+     "icon": "ability_paladin_sacredcleansing"
+    },
+    {
+     "name": "Holy Power",
+     "row": 6,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Critical healing bonus of Holy spells +10/20/30/40/50%",
+     "ranks": null,
+     "icon": "spell_holy_power"
+    },
+    {
+     "name": "Light's Vigil",
+     "row": 7,
+     "col": 2,
+     "max": 1,
+     "req": "Holy Shock",
+     "cost": "730 Mana; 40 yd; 1.5 sec cast; 6 sec cooldown",
+     "summary": "Vigil on a friendly target for 30 sec; next Holy Shock has no cooldown and heals the party",
+     "ranks": null,
+     "icon": "ability_paladin_judgementofthepure"
+    }
+   ]
+  },
+  {
+   "name": "Protection",
+   "talents": [
+    {
+     "name": "Divine Intellect",
+     "row": 1,
+     "col": 2,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Total Intellect +2/4/6/8/10%",
+     "ranks": null,
+     "icon": "spell_nature_sleep"
+    },
+    {
+     "name": "Redoubt",
+     "row": 1,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "10% chance per damaging melee hit taken for +6/12/18/24/30% block for 10 sec or 5 blocks",
+     "ranks": null,
+     "icon": "ability_defend"
+    },
+    {
+     "name": "Precision",
+     "row": 2,
+     "col": 1,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Chance to hit +1/2/3%",
+     "ranks": null,
+     "icon": "ability_rogue_ambush"
+    },
+    {
+     "name": "Guardian's Favor",
+     "row": 2,
+     "col": 2,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Blessing of Protection cooldown -1/2 min; Blessing of Freedom duration +3/6 sec",
+     "ranks": null,
+     "icon": "spell_holy_sealofprotection"
+    },
+    {
+     "name": "Sacred Duty",
+     "row": 2,
+     "col": 4,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Divine Shield, Divine Protection, Templar's Bulwark cooldown -30/60 sec; Forbearance -5/10 sec",
+     "ranks": null,
+     "icon": "spell_holy_divineintervention"
+    },
+    {
+     "name": "Templar's Bulwark",
+     "row": 3,
+     "col": 1,
+     "max": 1,
+     "req": null,
+     "cost": "110 Mana; Instant; 5 min cooldown",
+     "summary": "Absorb shield of 100% max health for 8 sec; applies Forbearance for 1 min",
+     "ranks": null,
+     "icon": "ability_paladin_shieldofthetemplar"
+    },
+    {
+     "name": "Improved Hammer of Justice",
+     "row": 3,
+     "col": 2,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Hammer of Justice cooldown -5/10/15 sec",
+     "ranks": null,
+     "icon": "spell_holy_sealofmight"
+    },
+    {
+     "name": "Shield Specialization",
+     "row": 3,
+     "col": 3,
+     "max": 2,
+     "req": "Redoubt",
+     "cost": null,
+     "summary": "Shield absorb +15/30%; 50/100% chance blocks restore 4% mana (once per 3 sec)",
+     "ranks": null,
+     "icon": "inv_shield_06"
+    },
+    {
+     "name": "Toughness",
+     "row": 3,
+     "col": 4,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Armor from items +2/4/6/8/10%",
+     "ranks": null,
+     "icon": "spell_holy_devotion"
+    },
+    {
+     "name": "Swift Judgement",
+     "row": 4,
+     "col": 1,
+     "max": 1,
+     "req": "Templar's Bulwark",
+     "cost": "10 yd; Instant; 1 min cooldown",
+     "summary": "Uses a Seal's energy on an enemy without consuming it; separate cooldown from Judgement",
+     "ranks": null,
+     "icon": "ability_paladin_judgementred"
+    },
+    {
+     "name": "Improved Righteous Fury",
+     "row": 4,
+     "col": 2,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Damage taken -3/6/9% while Righteous Fury is active",
+     "ranks": null,
+     "icon": "spell_holy_sealoffury"
+    },
+    {
+     "name": "Anticipation",
+     "row": 4,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Defense skill +4/8/12/16/20",
+     "ranks": null,
+     "icon": "spell_magic_lesserinvisibilty"
+    },
+    {
+     "name": "Stoicism",
+     "row": 5,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Stun and Charm duration -10/20%",
+     "ranks": null,
+     "icon": "spell_holy_stoicism"
+    },
+    {
+     "name": "Holy Shield",
+     "row": 5,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": "100 Mana; Instant; 10 sec cooldown; Requires Shields",
+     "summary": "+30% block for 10 sec; 75 Holy damage per blocked attack; 4 charges",
+     "ranks": null,
+     "icon": "spell_holy_blessingofprotection"
+    },
+    {
+     "name": "Reckoning",
+     "row": 5,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Extra attack chance after a block (8-40%) and after a non-periodic crit taken (20-100%); stores up to 4",
+     "ranks": null,
+     "icon": "spell_holy_blessingofstrength"
+    },
+    {
+     "name": "Iron Creed",
+     "row": 6,
+     "col": 3,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Holy Strike threat +10/20/30%; with Righteous Fury, damage taken -2/4/6% for 6 sec",
+     "ranks": null,
+     "icon": "spell_holy_improvedresistanceauras"
+    },
+    {
+     "name": "Shieldsworn",
+     "row": 7,
+     "col": 2,
+     "max": 1,
+     "req": "Holy Shield",
+     "cost": null,
+     "summary": "Holy Strike cooldown -4 sec; Holy Strike triggers shield talents and allows blocking spells for 6 sec",
+     "ranks": null,
+     "icon": "spell_holy_greaterblessingofsanctuary"
+    }
+   ]
+  },
+  {
+   "name": "Retribution",
+   "talents": [
+    {
+     "name": "Deflection",
+     "row": 1,
+     "col": 2,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Parry chance +1/2/3/4/5%",
+     "ranks": null,
+     "icon": "ability_parry"
+    },
+    {
+     "name": "Benediction",
+     "row": 1,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Mana cost of instant spells and abilities -2/4/6/8/10%",
+     "ranks": null,
+     "icon": "spell_frost_windwalkon"
+    },
+    {
+     "name": "Improved Judgement",
+     "row": 2,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Judgement cooldown -1/2 sec",
+     "ranks": null,
+     "icon": "spell_holy_righteousfury"
+    },
+    {
+     "name": "Conviction",
+     "row": 2,
+     "col": 2,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Crit chance for all spells and attacks +2/4/6%",
+     "ranks": null,
+     "icon": "spell_holy_retributionaura"
+    },
+    {
+     "name": "Sanctified Judgement",
+     "row": 2,
+     "col": 3,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "33/66/100% chance for Judgement to return 20/40/60% of the seal's mana cost",
+     "ranks": null,
+     "icon": "ability_paladin_judgementblue"
+    },
+    {
+     "name": "Vindication",
+     "row": 3,
+     "col": 1,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Melee hits have a chance to cut target Attack Power by 68/136/204 for 30 sec",
+     "ranks": null,
+     "icon": "spell_holy_vindication"
+    },
+    {
+     "name": "Unyielding Faith",
+     "row": 3,
+     "col": 2,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Fear and Disorient duration -15/30%",
+     "ranks": null,
+     "icon": "spell_holy_unyieldingfaith"
+    },
+    {
+     "name": "Seal of Command",
+     "row": 3,
+     "col": 3,
+     "max": 1,
+     "req": null,
+     "cost": "65 Mana; Instant",
+     "summary": "Seal with a chance for extra Holy damage (70% of weapon damage)",
+     "ranks": null,
+     "icon": "ability_warrior_innerrage"
+    },
+    {
+     "name": "Pursuit of Justice",
+     "row": 3,
+     "col": 4,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Movement and mounted speed +8/15%",
+     "ranks": null,
+     "icon": "spell_holy_persuitofjustice"
+    },
+    {
+     "name": "Eye for an Eye",
+     "row": 4,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Crits against you reflect 5/10% of damage taken, capped at 50% max health",
+     "ranks": null,
+     "icon": "spell_holy_eyeforaneye"
+    },
+    {
+     "name": "Sacred Arbiter",
+     "row": 4,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": null,
+     "summary": "Holy Strike damage +20%; refreshes Judgement effects on the target",
+     "ranks": null,
+     "icon": "inv_sword_08"
+    },
+    {
+     "name": "Two-Handed Weapon Specialization",
+     "row": 4,
+     "col": 4,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Physical and Holy damage +2/4/6% and threat -7/14/20% with a two-handed weapon",
+     "ranks": null,
+     "icon": "inv_hammer_04"
+    },
+    {
+     "name": "Turn Evil",
+     "row": 5,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Turn Undead cast -0.5/1.0 sec, cooldown -5/10 sec, and it affects Demons",
+     "ranks": null,
+     "icon": "spell_holy_turnundead"
+    },
+    {
+     "name": "Repentance",
+     "row": 5,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": "60 Mana; 20 yd; Instant; 1 min cooldown",
+     "summary": "Incapacitates a Humanoid for up to 6 sec; damage wakes the target",
+     "ranks": null,
+     "icon": "spell_holy_prayerofhealing"
+    },
+    {
+     "name": "Vengeance",
+     "row": 5,
+     "col": 3,
+     "max": 3,
+     "req": "Seal of Command",
+     "cost": null,
+     "summary": "Physical and Holy damage +1/2/3% for 30 sec after a non-periodic crit; stacks 5 times",
+     "ranks": null,
+     "icon": "ability_racial_avatar"
+    },
+    {
+     "name": "Champion of the Light",
+     "row": 6,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Spell damage up to 12-60% of Intellect; Hammer of Wrath cast -0.2-1.0 sec",
+     "ranks": null,
+     "icon": "ability_paladin_enlightenedjudgements"
+    },
+    {
+     "name": "Unsealed Wrath",
+     "row": 7,
+     "col": 2,
+     "max": 1,
+     "req": "Repentance",
+     "cost": null,
+     "summary": "Melee attacks store the active Seal for 15 sec, up to 3 stacks",
+     "ranks": null,
+     "icon": "spell_holy_blessedresillience"
+    }
+   ]
+  }
+ ],
+ "spells": {
+  "tabs": [
+   {
+    "name": "Holy",
+    "spells": [
+     {
+      "name": "Blessing of Wisdom",
+      "levels": [
+       14,
+       24,
+       34,
+       44,
+       54,
+       60
+      ],
+      "icon": "spell_holy_sealofwisdom"
+     },
+     {
+      "name": "Cleanse",
+      "levels": [
+       42
+      ],
+      "icon": "spell_holy_renew"
+     },
+     {
+      "name": "Consecration",
+      "levels": [
+       20,
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "spell_holy_innerfire"
+     },
+     {
+      "name": "Divine Favor",
+      "levels": [
+       20
+      ],
+      "icon": "spell_holy_heal"
+     },
+     {
+      "name": "Exorcism",
+      "levels": [
+       20,
+       28,
+       36,
+       44,
+       52,
+       60
+      ],
+      "icon": "spell_holy_excorcism_02"
+     },
+     {
+      "name": "Flash of Light",
+      "levels": [
+       20,
+       26,
+       34,
+       42,
+       50,
+       58
+      ],
+      "icon": "spell_holy_flashheal"
+     },
+     {
+      "name": "Greater Blessing of Wisdom",
+      "levels": [
+       54,
+       60
+      ],
+      "icon": "spell_holy_greaterblessingofwisdom"
+     },
+     {
+      "name": "Hammer of Wrath",
+      "levels": [
+       44,
+       52,
+       60
+      ],
+      "icon": "ability_thunderclap"
+     },
+     {
+      "name": "Holy Light",
+      "levels": [
+       1,
+       6,
+       14,
+       22,
+       30,
+       38,
+       46,
+       54,
+       60
+      ],
+      "icon": "spell_holy_holybolt"
+     },
+     {
+      "name": "Holy Shock",
+      "levels": [
+       30,
+       40,
+       48,
+       56
+      ],
+      "icon": "spell_holy_searinglight"
+     },
+     {
+      "name": "Holy Wrath",
+      "levels": [
+       50,
+       60
+      ],
+      "icon": "spell_holy_excorcism"
+     },
+     {
+      "name": "Lay on Hands",
+      "levels": [
+       10,
+       30,
+       50
+      ],
+      "icon": "spell_holy_layonhands"
+     },
+     {
+      "name": "Light's Vigil",
+      "levels": [
+       40,
+       50,
+       60
+      ],
+      "icon": "ability_paladin_judgementofthepure"
+     },
+     {
+      "name": "Oath of Light",
+      "levels": [
+       25
+      ],
+      "icon": "spell_holy_greaterblessingoflight"
+     },
+     {
+      "name": "Purify",
+      "levels": [
+       8
+      ],
+      "icon": "spell_holy_purify"
+     },
+     {
+      "name": "Redemption",
+      "levels": [
+       12,
+       24,
+       36,
+       48,
+       60
+      ],
+      "icon": "spell_holy_resurrection"
+     },
+     {
+      "name": "Seal of Light",
+      "levels": [
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "spell_holy_healingaura"
+     },
+     {
+      "name": "Seal of Righteousness",
+      "levels": [
+       1,
+       10,
+       18,
+       26,
+       34,
+       42,
+       50,
+       58
+      ],
+      "icon": "ability_thunderbolt"
+     },
+     {
+      "name": "Seal of Wisdom",
+      "levels": [
+       38,
+       48,
+       58
+      ],
+      "icon": "spell_holy_righteousnessaura"
+     },
+     {
+      "name": "Sense Undead",
+      "levels": null,
+      "icon": "spell_holy_senseundead"
+     },
+     {
+      "name": "Turn Undead",
+      "levels": [
+       24,
+       38,
+       52
+      ],
+      "icon": "spell_holy_turnundead"
+     }
+    ]
+   },
+   {
+    "name": "Protection",
+    "spells": [
+     {
+      "name": "Blessing of Freedom",
+      "levels": [
+       18
+      ],
+      "icon": "spell_holy_sealofvalor"
+     },
+     {
+      "name": "Blessing of Kings",
+      "levels": [
+       20
+      ],
+      "icon": "spell_magic_magearmor"
+     },
+     {
+      "name": "Blessing of Protection",
+      "levels": [
+       10,
+       24,
+       38
+      ],
+      "icon": "spell_holy_sealofprotection"
+     },
+     {
+      "name": "Blessing of Sacrifice",
+      "levels": [
+       46,
+       54
+      ],
+      "icon": "spell_holy_sealofsacrifice"
+     },
+     {
+      "name": "Concentration Aura",
+      "levels": [
+       22
+      ],
+      "icon": "spell_holy_mindsooth"
+     },
+     {
+      "name": "Devotion Aura",
+      "levels": [
+       1,
+       10,
+       20,
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "spell_holy_devotionaura"
+     },
+     {
+      "name": "Divine Intervention",
+      "levels": [
+       30
+      ],
+      "icon": "spell_nature_timestop"
+     },
+     {
+      "name": "Divine Protection",
+      "levels": [
+       6,
+       18
+      ],
+      "icon": "spell_holy_restoration"
+     },
+     {
+      "name": "Divine Shield",
+      "levels": [
+       34,
+       50
+      ],
+      "icon": "spell_holy_divineintervention"
+     },
+     {
+      "name": "Fire Resistance Aura",
+      "levels": [
+       36,
+       48,
+       60
+      ],
+      "icon": "spell_fire_sealoffire"
+     },
+     {
+      "name": "Frost Resistance Aura",
+      "levels": [
+       32,
+       44,
+       56
+      ],
+      "icon": "spell_frost_wizardmark"
+     },
+     {
+      "name": "Greater Blessing of Kings",
+      "levels": [
+       60
+      ],
+      "icon": "spell_magic_greaterblessingofkings"
+     },
+     {
+      "name": "Hammer of Justice",
+      "levels": [
+       8,
+       24,
+       40,
+       54
+      ],
+      "icon": "spell_holy_sealofmight"
+     },
+     {
+      "name": "Holy Shield",
+      "levels": [
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "spell_holy_blessingofprotection"
+     },
+     {
+      "name": "Righteous Fury",
+      "levels": [
+       10
+      ],
+      "icon": "spell_holy_sealoffury"
+     },
+     {
+      "name": "Seal of Fury",
+      "levels": [
+       10,
+       18,
+       26,
+       34,
+       42,
+       50,
+       58
+      ],
+      "icon": "spell_holy_retributionaura"
+     },
+     {
+      "name": "Seal of Justice",
+      "levels": [
+       22
+      ],
+      "icon": "spell_holy_sealofwrath"
+     },
+     {
+      "name": "Shadow Resistance Aura",
+      "levels": [
+       28,
+       40,
+       52
+      ],
+      "icon": "spell_shadow_sealofkings"
+     },
+     {
+      "name": "Swift Judgement",
+      "levels": [
+       25
+      ],
+      "icon": "ability_paladin_judgementred"
+     },
+     {
+      "name": "Templar's Bulwark",
+      "levels": [
+       20
+      ],
+      "icon": "ability_paladin_shieldofthetemplar"
+     }
+    ]
+   },
+   {
+    "name": "Retribution",
+    "spells": [
+     {
+      "name": "Blessing of Might",
+      "levels": [
+       4,
+       12,
+       22,
+       32,
+       42,
+       52,
+       60
+      ],
+      "icon": "spell_holy_fistofjustice"
+     },
+     {
+      "name": "Greater Blessing of Might",
+      "levels": [
+       52,
+       60
+      ],
+      "icon": "spell_holy_greaterblessingofkings"
+     },
+     {
+      "name": "Holy Strike",
+      "levels": [
+       6,
+       12,
+       20,
+       28,
+       36,
+       44,
+       52,
+       60
+      ],
+      "icon": "classicon_paladin"
+     },
+     {
+      "name": "Judgement",
+      "levels": [
+       4
+      ],
+      "icon": "spell_holy_righteousfury"
+     },
+     {
+      "name": "Repentance",
+      "levels": [
+       30
+      ],
+      "icon": "spell_holy_prayerofhealing"
+     },
+     {
+      "name": "Retribution Aura",
+      "levels": [
+       16,
+       26,
+       36,
+       46,
+       56
+      ],
+      "icon": "spell_holy_auraoflight"
+     },
+     {
+      "name": "Seal of Command",
+      "levels": [
+       20,
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "ability_warrior_innerrage"
+     },
+     {
+      "name": "Seal of the Crusader",
+      "levels": [
+       6,
+       12,
+       22,
+       32,
+       42,
+       52
+      ],
+      "icon": "spell_holy_holysmite"
+     }
+    ]
+   }
+  ],
+  "general": [
+   {
+    "name": "Attack",
+    "note": null
+   },
+   {
+    "name": "Armor Proficiency",
+    "note": "Passive"
+   },
+   {
+    "name": "Block",
+    "note": "Passive"
+   },
+   {
+    "name": "Dodge",
+    "note": "Passive"
+   },
+   {
+    "name": "Parry",
+    "note": "Passive"
+   },
+   {
+    "name": "Languages",
+    "note": "Passive"
+   }
+  ]
+ }
+}

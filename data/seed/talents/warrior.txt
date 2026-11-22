@@ -1,0 +1,55 @@
+# class: warrior | build: 1.60.1.70755 | generated: 2026-11-10
+# Tree|Name|row|col|max|req|cost|summary
+Arms|Improved Heroic Strike|1|1|3|||Heroic Strike rage cost -1/-2/-3
+Arms|Deflection|1|2|5|||Parry chance +1/+2/+3/+4/+5%
+Arms|Improved Rend|1|3|3|||Rend bleed damage +12/+23/+35%
+Arms|Improved Charge|2|1|2|||Charge rage generated +3/+6
+Arms|Improved Tactical Mastery|2|2|3|||Rage kept when changing stances +5/+10/+15
+Arms|Improved Overpower|2|4|2|||Overpower crit chance +25/+50%
+Arms|Anger Management|3|2|1|Improved Tactical Mastery||Generates rage in combat; rage decays 30% slower out of combat
+Arms|Deep Wounds|3|3|3|Improved Rend||Crits cause a bleed for 20/40/60% of weapon damage over 12 sec
+Arms|Spearing Strike|4|1|1||Active|75% weapon damage; extra damage vs giants, dragonkin and mounted targets
+Arms|Two-Handed Weapon Specialization|4|2|3|||Two-handed weapon damage +2/+4/+6%
+Arms|Impale|4|3|2|Deep Wounds||Ability crit damage bonus +10/+20%
+Arms|Bloodthrill|5|1|2|||10/20% chance for main-hand hits on Rend targets to allow Overpower
+Arms|Sweeping Strikes|5|2|1||Active|Next 5 melee attacks also hit a nearby enemy
+Arms|Weaponmaster|5|3|5|||By weapon type: crit +1-5% (axe/polearm), armor ignored 3-15% (mace/staff), extra attack chance 1-5% (sword)
+Arms|Improved Slam|6|1|2|||Slam cooldown -2.5/-5 sec; cast and GCD -0.25/-0.5 sec; no longer interrupts melee swing
+Arms|Improved Hamstring|6|3|3|||Hamstring has a 5/10/15% chance to immobilize for 5 sec
+Arms|Mortal Strike|7|2|1|Sweeping Strikes|Active|Weapon damage +85; reduces healing received by 50% for 10 sec
+Fury|Booming Voice|1|2|5|||Shout area +10-50%; Shout and Howl rage cost -5-25%
+Fury|Cruelty|1|3|5|||Melee crit chance +1/+2/+3/+4/+5%
+Fury|Lingering Rage|2|2|5|||Rage decay delay after leaving combat +2-10 sec
+Fury|Unbridled Wrath|2|3|5|||12-60% chance for melee hits to generate 1 extra rage
+Fury|Furious Precision|3|1|3|||Off-hand hit chance +4/+7/+10%
+Fury|Piercing Howl|3|2|1||Active|Slows enemies within 10 yd by 50% for 6 sec
+Fury|Blood Craze|3|3|3|||Regenerates 1/2/3% max health over 6 sec after a crit or a hit over 20% max health
+Fury|Enrage|3|4|5|||30% chance for +2-10% physical damage for 12 sec after taking damage
+Fury|Dual Wield Specialization|4|1|5|||Off-hand damage +5-25%; off-hand rage +10-50%
+Fury|Reckless Swings|4|2|1||Active|Next 4 melee attacks generate 5 extra rage each over 8 sec
+Fury|Improved Execute|4|4|2|||Execute rage cost -3/-5
+Fury|Improved Berserker Rage|5|1|2|||Berserker Rage gives 5/10 rage; 50/100% chance to remove movement impairments
+Fury|Death Wish|5|2|1||Active|+20% physical damage, Fear immunity, +5% damage taken for 30 sec
+Fury|Gore Drinker|5|3|2|Blood Craze||Next 3 melee hits restore 0.5/1.0% max health after listed abilities
+Fury|Improved Intercept|5|4|2|||Intercept cooldown -5/-10 sec
+Fury|Improved Whirlwind|6|1|2|||Whirlwind cooldown -1/-2 sec; damage to closest enemy +15/+30%
+Fury|Flurry|6|3|3|||Attack speed +10/+20/+30% for next 3 swings after a melee crit
+Fury|Bloodthirst|7|2|1|Death Wish|Active|Hits for 45% AP +30; +10% movement speed for 10 sec
+Protection|Improved Bloodrage|1|1|2|||Bloodrage rage generation +25/+50%
+Protection|Shield Specialization|1|2|5|||Shield block chance +1-5%; 20-100% chance to gain 5 rage on block
+Protection|Iron Will|1|3|5|||Stun and Fear duration on you -3-15%
+Protection|Anticipation|2|1|5|||Defense skill +4/+8/+12/+16/+20
+Protection|Improved Revenge|2|3|3|||Revenge damage +20/+40/+60%
+Protection|Improved Thunder Clap|2|4|3|||Thunder Clap rage cost -2/-4/-6
+Protection|Last Stand|3|1|1||Active|Temporary +30% max health for 20 sec, then that health is lost
+Protection|Master of Defense|3|2|2|Shield Specialization||50/100% chance to gain 5 rage on dodge or parry with a shield
+Protection|Improved Disarm|3|3|3|||Disarm cooldown -7/-13/-20 sec
+Protection|Defiance|3|4|3|||Defensive Stance threat +7/+13/+20% with a shield
+Protection|Improved Sunder Armor|4|1|3|||Sunder Armor rage cost -1/-2/-3
+Protection|Vanguard|4|2|1|||Charge usable in Defensive Stance
+Protection|Improved Shield Bash|4|3|2|||Shield Bash has a 50/100% chance to silence for 3 sec
+Protection|Improved Shield Wall|5|1|2|||Shield Wall cooldown reduced by 5.5/11.0 min
+Protection|Concussion Blow|5|2|1||Active|Stuns target for 5 sec
+Protection|Focused Rage|5|3|3|||Offensive ability rage cost -1/-2/-3
+Protection|Bastion|6|3|5|||All damage dealt +2-10% with a shield equipped
+Protection|Shield Slam|7|2|1|Concussion Blow|Active|Shield damage scaled by block value; 50% chance to dispel one magic effect

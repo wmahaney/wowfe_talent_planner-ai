@@ -1,0 +1,54 @@
+# class: priest | build: 1.60.1.70755 | generated: 2026-11-17
+# Tree|Name|row|col|max|req|cost|summary
+Discipline|Power in Light|1|1|5|||Smite and Penance damage +2/4/6/8/10% to targets with your Holy Fire or Shadow Word: Pain
+Discipline|Wand Specialization|1|2|2|||Wand damage +13/25%
+Discipline|Twin Disciplines|1|3|5|||Instant-cast spell damage and healing +1/2/3/4/5%
+Discipline|Silent Resolve|2|1|3|||Spell threat -10/20/30%; Stun, Fear, Silence duration -5/10/15%
+Discipline|Holy Precision|2|2|3|||Holy spell hit chance +6/12/18%
+Discipline|Mental Strength|2|3|5|||Total Intellect +2/4/6/8/10%
+Discipline|Martyrdom|2|4|2|||50/100% chance after being critically hit to gain Focused Casting for 6 sec
+Discipline|Mental Agility|3|1|3|||Mana cost of Smite, Holy Fire and instant spells -3/7/10%
+Discipline|Inner Focus|3|2|1||Instant; 3 min cooldown|Next spell costs no mana and gains +25% crit chance
+Discipline|Improved Power Word: Shield|3|3|3|||Power Word: Shield absorb +7/14/20%
+Discipline|Meditation|3|4|3|||17/33/50% of mana regen continues while casting
+Discipline|Improved Inner Fire|4|1|3|||Inner Fire armor +15/30/45% and charges +4/8/12
+Discipline|Improved Mana Burn|4|2|2|||Mana Burn cast time -0.5/1.0 sec
+Discipline|Soul Warding|4|3|1|Improved Power Word: Shield||Power Word: Shield cooldown -4 sec, mana cost -15%
+Discipline|Penance|5|2|1||150 Mana; Enemy 36 yd, Friendly 40 yd; Channeled; 12 sec cooldown|Channeled Holy damage or healing over 2 sec
+Discipline|Renewed Hope|5|3|5|Soul Warding||Crit chance on Weakened Soul targets +2/4/6/8/10%; Weakened Soul duration -1/2/3/4/5 sec
+Discipline|Divine Aegis|6|3|3|||Shield for 5/10/15% of non-periodic crit heals (up to 1,200, 12 sec)
+Discipline|Power Infusion|7|2|1|Penance|20% of base mana; 30 yd; Instant; 3 min cooldown|Target's spell damage and healing +20% for 15 sec
+Holy|Twilight Focus|1|1|3|||23/47/70% chance to keep cast time when damaged
+Holy|Improved Renew|1|2|3|||Renew healing +5/10/15%
+Holy|Holy Specialization|1|3|5|||Holy spell crit chance +1/2/3/4/5%
+Holy|Spell Warding|2|2|5|||Spell damage taken -2/4/6/8/10%
+Holy|Divine Fury|2|3|5|||Cast time of Smite, Holy Fire, Heal, Greater Heal -0.1/0.2/0.3/0.4/0.5 sec
+Holy|Holy Nova|3|1|1||185 Mana; Instant|Explosion that damages enemies and heals party members
+Holy|Blessed Recovery|3|2|3|||After a crit or heavy hit, heal 8/17/25% of the damage taken over 6 sec
+Holy|Inspiration|3|4|3|||Target armor +8/17/25% for 15 sec after a non-periodic crit heal
+Holy|Holy Reach|4|1|2|||Range and radius of listed spells +10/20%
+Holy|Improved Healing|4|2|3|||Mana cost of Lesser Heal, Heal, Greater Heal, Penance, Prayer of Mending -5/10/15%
+Holy|Searing Light|4|3|2|Divine Fury||Holy damage +2/5%; chance for Holy Nova to cost no mana
+Holy|Holy Binding|4|4|1|||Flash Heal on others also heals you for 50%
+Holy|Litany of Light|5|1|2|||Gain mana equal to 5/10% of base cost when switching heal spells
+Holy|Spirit of Redemption|5|2|1|||On death, become a healing Spirit for 15 sec
+Holy|Spiritual Guidance|5|3|5|||Healing increased by 5-25% of Spirit; damage by 1-8% of Spirit
+Holy|Spiritual Healing|6|3|3|||Healing done +3/7/10%
+Holy|Prayer of Mending|7|2|1|Spirit of Redemption|210 Mana; 40 yd; Instant; 10 sec cooldown|Heals on next damage taken, bouncing up to 5 times
+Shadow|Shadow Focus|1|1|5|||Shadow spell hit chance +1/2/3/4/5%
+Shadow|Blackout|1|2|5|||Shadow damage spells have a 2/4/6/8/10% chance to stun for 3 sec
+Shadow|Spirit Tap|1|3|5|||20/40/60/80/100% chance for +100% Spirit for 15 sec after a kill
+Shadow|Improved Mind Blast|2|1|5|||Mind Blast cooldown -0.5/1.0/1.5/2.0/2.5 sec
+Shadow|Improved Shadow Word: Pain|2|3|2|||Shadow Word: Pain duration +3/6 sec
+Shadow|Shadow Reach|2|4|2|||Shadow spell range +10/20%
+Shadow|Improved Psychic Scream|3|2|2|Blackout||Psychic Scream cooldown -2/4 sec
+Shadow|Mind Flay|3|3|1||45 Mana; 20 yd; Channeled|Shadow damage over 3 sec and a 50% slow
+Shadow|Improved Mind Flay|3|4|2|Mind Flay||Each Mind Flay tick deals 10/20% more than the previous
+Shadow|Dark Inspiration|4|1|5|||Party Spirit +3-15% for 10 sec after Mind Blast or a full Mind Flay
+Shadow|Vampiric Embrace|4|2|1||40 Mana; 30 yd; Instant; 30 sec cooldown|Party heals for 10% of your Shadow damage for 30 sec
+Shadow|Shadow Weaving|4|3|3|||33/67/100% chance to stack +2% Shadow damage taken on the target (up to 5 stacks)
+Shadow|Silence|5|1|1||225 Mana; 20 yd; Instant; 45 sec cooldown|Silences target for 5 sec and interrupts for 3 sec
+Shadow|Devouring Contagion|5|3|2|||Devouring Plague mana cost -25/50%; spreads when targets die
+Shadow|Early Demise|6|1|2|||Shadow Word: Death crit chance +15/30% on targets at or below 20% health
+Shadow|Darkness|6|3|5|||Shadow damage +2/4/6/8/10%
+Shadow|Shadowform|7|2|1|Vampiric Embrace|40% of base mana; Instant; 1.5 sec cooldown|Shadow damage +10%, Shadow spell mana cost -50%; no healing spells

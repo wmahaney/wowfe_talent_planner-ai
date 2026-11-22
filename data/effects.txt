@@ -1,0 +1,68 @@
+# Curated stat effects: the always-on, character-sheet bonuses a talent gives.
+# These drive the "Stat totals" table and the derived-stats calculator.
+# Hand-maintained; tools/update_data.py flags an entry for review whenever the
+# talent it points at changes text, changes max rank, or disappears.
+#
+# class|tree|talent|stat|per-rank values|scope (optional)
+# Stat keys are defined in data/rules.json ("stats").
+warrior|Arms|Deflection|parry|1/2/3/4/5
+warrior|Fury|Cruelty|crit|1/2/3/4/5
+warrior|Protection|Shield Specialization|block|1/2/3/4/5|with a shield
+warrior|Protection|Anticipation|defense|4/8/12/16/20
+paladin|Holy|Divine Strength|str_pct|2/4/6/8/10
+paladin|Protection|Divine Intellect|int_pct|2/4/6/8/10
+paladin|Protection|Precision|hit|1/2/3
+paladin|Protection|Toughness|armor_pct|2/4/6/8/10|from items
+paladin|Protection|Anticipation|defense|4/8/12/16/20
+paladin|Retribution|Deflection|parry|1/2/3/4/5
+paladin|Retribution|Conviction|crit|2/4/6
+paladin|Retribution|Conviction|spell_crit|2/4/6
+hunter|Marksmanship|Lethal Attacks|crit|1/2/3/4/5
+hunter|Survival|Deflection|parry|1/2/3/4/5
+hunter|Survival|Survivalist|health_pct|2/4/6/8/10
+hunter|Survival|Surefooted|hit|1/2/3
+hunter|Survival|Lightning Reflexes|agi_pct|3/6/9/12/15
+rogue|Assassination|Malice|crit|1/2/3/4/5
+rogue|Assassination|Vigor|energy|5/10
+rogue|Combat|Lightning Reflexes|dodge|1/2/3/4/5
+rogue|Combat|Deflection|parry|2/4/6
+rogue|Combat|Precision|hit|1/2/3
+priest|Discipline|Mental Strength|int_pct|2/4/6/8/10
+priest|Discipline|Holy Precision|spell_hit|6/12/18|Holy
+priest|Holy|Holy Specialization|spell_crit|1/2/3/4/5|Holy
+priest|Holy|Spell Warding|spell_damage_taken_pct|-2/-4/-6/-8/-10
+priest|Holy|Spiritual Healing|healing_pct|3/7/10
+priest|Shadow|Shadow Focus|spell_hit|1/2/3/4/5|Shadow
+priest|Shadow|Darkness|damage_pct|2/4/6/8/10|Shadow
+shaman|Enhancement|Thundering Strikes|crit|1/2/3/4/5
+shaman|Enhancement|Thundering Strikes|spell_crit|1/2/3/4/5
+shaman|Enhancement|Ancestral Knowledge|int_pct|2/4/6/8/10
+shaman|Enhancement|Anticipation|dodge|2/4/6
+shaman|Enhancement|Toughness|sta_pct|2/4/6/8/10
+shaman|Restoration|Tidal Focus|hit|1/2/3/4/5
+shaman|Restoration|Improved Reincarnation|health_pct|2/4
+shaman|Restoration|Tidal Mastery|spell_crit|1/2/3/4/5|healing
+shaman|Restoration|Purification|healing_pct|2/4/6/8/10
+mage|Arcane|Magic Absorption|resist_all|5/10
+mage|Arcane|Arcane Impact|spell_crit|2/4/6|Arcane
+mage|Arcane|Arcane Mind|int_pct|2/4/6/8/10
+mage|Arcane|Arcane Instability|spell_crit|1/2/3
+mage|Arcane|Arcane Instability|damage_pct|1/2/3|spells
+mage|Fire|Critical Mass|spell_crit|2/4/6|Fire
+mage|Frost|Precision|hit|2/4/6
+warlock|Affliction|Suppression|spell_hit|1/2/3/4/5
+warlock|Affliction|Malevolence|spell_crit|1/2/3/4/5|Shadow
+warlock|Affliction|Shadow Mastery|damage_pct|2/4/6/8/10|Shadow
+warlock|Demonology|Demonic Embrace|sta_pct|3/6/9/12/15
+warlock|Demonology|Fel Vitality|mana_pct|5/10/15
+warlock|Destruction|Molten Skin|damage_taken_pct|-2/-4/-6/-8/-10
+druid|Balance|Nature's Majesty|crit|2/4
+druid|Balance|Nature's Majesty|spell_crit|2/4
+druid|Balance|Nature's Reach|spell_hit|2/4|Balance
+druid|Balance|Moonfury|damage_pct|2/4/6/8/10|Arcane and Nature
+druid|Feral Combat|Sharpened Claws|crit|3/6|Bear and Cat Form
+druid|Feral Combat|Natural Reaction|dodge|1/2/3/4/5
+druid|Restoration|Heart of the Wild|int_pct|2/4/6/8/10
+druid|Restoration|Naturalist|damage_pct|2/4/6/8/10
+druid|Restoration|Gift of Nature|healing_pct|2/4/6/8/10
+druid|Restoration|Living Spirit|spi_pct|5/10/15

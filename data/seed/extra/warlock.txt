@@ -1,0 +1,126 @@
+T|Affliction|Improved Life Tap|spell_shadow_burningspirit
+T|Affliction|Suppression|spell_shadow_unsummonbuilding
+T|Affliction|Improved Corruption|spell_shadow_abominationexplosion
+T|Affliction|Grim Reach|spell_shadow_callofbone
+T|Affliction|Soul Harvest|inv_elemental_primal_shadow
+T|Affliction|Improved Drains|spell_shadow_haunting
+T|Affliction|Improved Bane of Agony|spell_shadow_curseofsargeras
+T|Affliction|Fel Concentration|spell_shadow_fingerofdeath
+T|Affliction|Amplify Curse|spell_shadow_contagion
+T|Affliction|Pandemic|spell_shadow_unstableaffliction_2
+T|Affliction|Malevolence|spell_shadow_focusedpower
+T|Affliction|Nightfall|spell_shadow_twilight
+T|Affliction|Curse of Exhaustion|spell_shadow_grimward
+T|Affliction|Siphon Life|spell_shadow_requiem
+T|Affliction|Soul Siphon|spell_shadow_lifedrain02
+T|Affliction|Shadow Mastery|spell_shadow_shadetruesight
+T|Affliction|Wrack|ability_deathknight_hemorrhagicfever
+T|Demonology|Improved Health Funnel|spell_shadow_lifedrain
+T|Demonology|Improved Imp|spell_shadow_summonimp
+T|Demonology|Demonic Embrace|spell_shadow_metamorphosis
+T|Demonology|Unholy Power|spell_shadow_shadowworddominate
+T|Demonology|Demonic Aegis|spell_shadow_ragingscream
+T|Demonology|Improved Voidwalker|spell_shadow_summonvoidwalker
+T|Demonology|Fel Vitality|spell_shadow_demonictactics
+T|Demonology|Demonic Energies|spell_shadow_felmending
+T|Demonology|Improved Sayaad|ability_warlock_randomizesuccubusincubus
+T|Demonology|Demonic Sacrifice|spell_shadow_psychicscream
+T|Demonology|Master Summoner|spell_shadow_impphaseshift
+T|Demonology|Decimation|spell_fire_fireball02
+T|Demonology|Fel Domination|spell_nature_removecurse
+T|Demonology|Demonic Brand|ability_demonhunter_chaoticimprint_fire
+T|Demonology|Improved Felhunter|spell_shadow_summonfelhunter
+T|Demonology|Soul Link|spell_shadow_gathershadows
+T|Demonology|Demonic Knowledge|spell_shadow_improvedvampiricembrace
+T|Demonology|Master Demonologist|spell_shadow_shadowpact
+T|Demonology|Demonic Pact|inv_ability_soulharvesterwarlock_demonicsoul
+T|Destruction|Destructive Reach|spell_shadow_corpseexplode
+T|Destruction|Improved Shadow Bolt|spell_shadow_shadowbolt
+T|Destruction|Bane|spell_shadow_deathpact
+T|Destruction|Molten Skin|ability_mage_moltenarmor
+T|Destruction|Cataclysm|spell_fire_windsofwoe
+T|Destruction|Aftermath|spell_fire_fire
+T|Destruction|Ruin|spell_shadow_shadowwordpain
+T|Destruction|Shadowburn|spell_shadow_scourgebuild
+T|Destruction|Intensity|spell_fire_lavaspawn
+T|Destruction|Agonizing Flames|spell_fire_soulburn
+T|Destruction|Conflagrate|spell_fire_fireball
+T|Destruction|Pyroclasm|spell_fire_volcano
+T|Destruction|Bane of Havoc|ability_warlock_baneofhavoc
+T|Destruction|Fire and Brimstone|spell_fire_meteorstorm
+T|Destruction|Shadow and Flame|spell_fire_playingwithfire
+T|Destruction|Incinerate|spell_fire_burnout
+S|Affliction|Amplify Curse|20|spell_shadow_contagion
+S|Affliction|Bane of Agony|8,18,28,38,48,58|spell_shadow_curseofsargeras
+S|Affliction|Bane of Doom|60|spell_shadow_auraofdarkness
+S|Affliction|Corruption|4,14,24,34,44,54,60|spell_shadow_abominationexplosion
+S|Affliction|Curse of Exhaustion|25|spell_shadow_grimward
+S|Affliction|Curse of Recklessness|14,28,42,56|spell_shadow_unholystrength
+S|Affliction|Curse of the Elements|20,30,40,50|warlock_curse_shadow
+S|Affliction|Curse of Tongues|26,50|spell_shadow_curseoftounges
+S|Affliction|Curse of Weakness|4,12,22,32,42,52|spell_shadow_curseofmannoroth
+S|Affliction|Death Coil|42,50,58|spell_shadow_deathcoil
+S|Affliction|Drain Life|14,22,30,38,46,54|spell_shadow_lifedrain02
+S|Affliction|Drain Mana|24,34,44,54|spell_shadow_siphonmana
+S|Affliction|Drain Soul|10,24,38,52|spell_shadow_haunting
+S|Affliction|Fear|8,32,56|spell_shadow_possession
+S|Affliction|Howl of Terror|40,54|spell_shadow_deathscream
+S|Affliction|Life Tap|6,16,26,36,46,56|spell_shadow_burningspirit
+S|Affliction|Siphon Life|30,38,48,58|spell_shadow_requiem
+S|Affliction|Wrack|40|ability_deathknight_hemorrhagicfever
+S|Demonology|Banish|28,48|spell_shadow_cripple
+S|Demonology|Create Firestone|28,36,46,56|inv_misc_gem_bloodstone_02
+S|Demonology|Create Healthstone|10,22,34,46,58|inv_stone_04
+S|Demonology|Create Soulstone|18,30,40,50,60|spell_shadow_soulgem
+S|Demonology|Create Spellstone|36,48,60|inv_misc_gem_sapphire_01
+S|Demonology|Demon Armor|20,30,40,50,60|spell_shadow_ragingscream
+S|Demonology|Demon Skin|1,10|spell_shadow_ragingscream
+S|Demonology|Demonic Sacrifice|20|spell_shadow_psychicscream
+S|Demonology|Detect Invisibility|26,38,50|spell_shadow_detectinvisibility
+S|Demonology|Eye of Kilrogg|22|spell_shadow_evileye
+S|Demonology|Fel Domination|25|spell_nature_removecurse
+S|Demonology|Health Funnel|12,20,28,36,44,52,60|spell_shadow_lifedrain
+S|Demonology|Inferno|50|spell_shadow_summoninfernal
+S|Demonology|Ritual of Doom|60|spell_shadow_antimagicshell
+S|Demonology|Ritual of Summoning|20|spell_shadow_twilight
+S|Demonology|Sense Demons|24|spell_shadow_metamorphosis
+S|Demonology|Shadow Ward|32,42,52,60|spell_shadow_antishadow
+S|Demonology|Soul Link|30|spell_shadow_gathershadows
+S|Demonology|Subjugate Demon|30,44,58|spell_shadow_enslavedemon
+S|Demonology|Summon Felhunter|30|spell_shadow_summonfelhunter
+S|Demonology|Summon Imp|1|spell_shadow_summonimp
+S|Demonology|Summon Incubus|20|ability_warlock_incubus
+S|Demonology|Summon Succubus|20|spell_shadow_summonsuccubus
+S|Demonology|Summon Voidwalker|10|spell_shadow_summonvoidwalker
+S|Demonology|Unending Breath|16|spell_shadow_demonbreath
+S|Demons|Blood Pact|4,14,26,38,50|spell_shadow_bloodboil
+S|Demons|Consume Shadows|18,26,34,42,50,58|spell_shadow_antishadow
+S|Demons|Devour Magic|30,38,46,54|spell_nature_purge
+S|Demons|Fire Shield|14,24,34,44,54|spell_fire_firearmor
+S|Demons|Firebolt|1,8,18,28,38,48,58|spell_fire_firebolt
+S|Demons|Lash of Pain|20,28,36,44,52,60|spell_shadow_curse
+S|Demons|Lesser Invisibility|?|spell_magic_lesserinvisibilty
+S|Demons|Paranoia|42|spell_shadow_auraofdarkness
+S|Demons|Phase Shift|12|spell_shadow_impphaseshift
+S|Demons|Sacrifice|16,24,32,40,48,56|spell_shadow_sacrificialshield
+S|Demons|Seduction|26|spell_shadow_mindsteal
+S|Demons|Soothing Kiss|22,34,46,58|spell_shadow_soothingkiss
+S|Demons|Spell Lock|36,52|spell_shadow_mindrot
+S|Demons|Suffering|24,36,48,60|spell_shadow_blackplague
+S|Demons|Tainted Blood|32,40,48,56|spell_shadow_lifedrain
+S|Demons|Torment|10,20,30,40,50,60|spell_shadow_gathershadows
+S|Destruction|Bane of Havoc|30|ability_warlock_baneofhavoc
+S|Destruction|Conflagrate|25,32,40,48,54,60|spell_fire_fireball
+S|Destruction|Hellfire|30,42,54|spell_fire_incinerate
+S|Destruction|Immolate|1,10,20,30,40,50,60,60|spell_fire_immolation
+S|Destruction|Incinerate|40,50,60|spell_fire_burnout
+S|Destruction|Rain of Fire|20,34,46,58|spell_shadow_rainoffire
+S|Destruction|Searing Pain|18,26,34,42,50,58|spell_fire_soulburn
+S|Destruction|Shadow Bolt|1,6,12,20,28,36,44,52,60,60|spell_shadow_shadowbolt
+S|Destruction|Shadowburn|20,24,32,40,48,56|spell_shadow_scourgebuild
+S|Destruction|Soul Fire|48,56|spell_fire_fireball02
+G|Attack|
+G|Shoot|
+G|Armor Proficiency|Passive
+G|Dodge|Passive
+G|Languages|Passive

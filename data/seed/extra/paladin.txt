@@ -1,0 +1,106 @@
+T|Holy|Spiritual Focus|spell_arcane_blink
+T|Holy|Divine Strength|ability_golemthunderclap
+T|Holy|Healing Light|spell_holy_holybolt
+T|Holy|Reverence|spell_holy_divineillumination
+T|Holy|Improved Seals|ability_thunderbolt
+T|Holy|Purifying Power|spell_holy_purifyingpower
+T|Holy|Divine Favor|spell_holy_heal
+T|Holy|Illumination|spell_holy_greaterheal
+T|Holy|Holy Conduit|spell_holy_devineaegis
+T|Holy|Divine Precision|spell_holy_mindsooth
+T|Holy|Infusion of Light|ability_paladin_infusionoflight
+T|Holy|Oath of Light|spell_holy_greaterblessingoflight
+T|Holy|Consecrated Ground|spell_holy_innerfire
+T|Holy|Holy Shock|spell_holy_searinglight
+T|Holy|Boundless Light|ability_paladin_sacredcleansing
+T|Holy|Holy Power|spell_holy_power
+T|Holy|Light's Vigil|ability_paladin_judgementofthepure
+T|Protection|Divine Intellect|spell_nature_sleep
+T|Protection|Redoubt|ability_defend
+T|Protection|Precision|ability_rogue_ambush
+T|Protection|Guardian's Favor|spell_holy_sealofprotection
+T|Protection|Sacred Duty|spell_holy_divineintervention
+T|Protection|Templar's Bulwark|ability_paladin_shieldofthetemplar
+T|Protection|Improved Hammer of Justice|spell_holy_sealofmight
+T|Protection|Shield Specialization|inv_shield_06
+T|Protection|Toughness|spell_holy_devotion
+T|Protection|Swift Judgement|ability_paladin_judgementred
+T|Protection|Improved Righteous Fury|spell_holy_sealoffury
+T|Protection|Anticipation|spell_magic_lesserinvisibilty
+T|Protection|Stoicism|spell_holy_stoicism
+T|Protection|Holy Shield|spell_holy_blessingofprotection
+T|Protection|Reckoning|spell_holy_blessingofstrength
+T|Protection|Iron Creed|spell_holy_improvedresistanceauras
+T|Protection|Shieldsworn|spell_holy_greaterblessingofsanctuary
+T|Retribution|Deflection|ability_parry
+T|Retribution|Benediction|spell_frost_windwalkon
+T|Retribution|Improved Judgement|spell_holy_righteousfury
+T|Retribution|Conviction|spell_holy_retributionaura
+T|Retribution|Sanctified Judgement|ability_paladin_judgementblue
+T|Retribution|Vindication|spell_holy_vindication
+T|Retribution|Unyielding Faith|spell_holy_unyieldingfaith
+T|Retribution|Seal of Command|ability_warrior_innerrage
+T|Retribution|Pursuit of Justice|spell_holy_persuitofjustice
+T|Retribution|Eye for an Eye|spell_holy_eyeforaneye
+T|Retribution|Sacred Arbiter|inv_sword_08
+T|Retribution|Two-Handed Weapon Specialization|inv_hammer_04
+T|Retribution|Turn Evil|spell_holy_turnundead
+T|Retribution|Repentance|spell_holy_prayerofhealing
+T|Retribution|Vengeance|ability_racial_avatar
+T|Retribution|Champion of the Light|ability_paladin_enlightenedjudgements
+T|Retribution|Unsealed Wrath|spell_holy_blessedresillience
+S|Holy|Blessing of Wisdom|14,24,34,44,54,60|spell_holy_sealofwisdom
+S|Holy|Cleanse|42|spell_holy_renew
+S|Holy|Consecration|20,30,40,50,60|spell_holy_innerfire
+S|Holy|Divine Favor|20|spell_holy_heal
+S|Holy|Exorcism|20,28,36,44,52,60|spell_holy_excorcism_02
+S|Holy|Flash of Light|20,26,34,42,50,58|spell_holy_flashheal
+S|Holy|Greater Blessing of Wisdom|54,60|spell_holy_greaterblessingofwisdom
+S|Holy|Hammer of Wrath|44,52,60|ability_thunderclap
+S|Holy|Holy Light|1,6,14,22,30,38,46,54,60|spell_holy_holybolt
+S|Holy|Holy Shock|30,40,48,56|spell_holy_searinglight
+S|Holy|Holy Wrath|50,60|spell_holy_excorcism
+S|Holy|Lay on Hands|10,30,50|spell_holy_layonhands
+S|Holy|Light's Vigil|40,50,60|ability_paladin_judgementofthepure
+S|Holy|Oath of Light|25|spell_holy_greaterblessingoflight
+S|Holy|Purify|8|spell_holy_purify
+S|Holy|Redemption|12,24,36,48,60|spell_holy_resurrection
+S|Holy|Seal of Light|30,40,50,60|spell_holy_healingaura
+S|Holy|Seal of Righteousness|1,10,18,26,34,42,50,58|ability_thunderbolt
+S|Holy|Seal of Wisdom|38,48,58|spell_holy_righteousnessaura
+S|Holy|Sense Undead|?|spell_holy_senseundead
+S|Holy|Turn Undead|24,38,52|spell_holy_turnundead
+S|Protection|Blessing of Freedom|18|spell_holy_sealofvalor
+S|Protection|Blessing of Kings|20|spell_magic_magearmor
+S|Protection|Blessing of Protection|10,24,38|spell_holy_sealofprotection
+S|Protection|Blessing of Sacrifice|46,54|spell_holy_sealofsacrifice
+S|Protection|Concentration Aura|22|spell_holy_mindsooth
+S|Protection|Devotion Aura|1,10,20,30,40,50,60|spell_holy_devotionaura
+S|Protection|Divine Intervention|30|spell_nature_timestop
+S|Protection|Divine Protection|6,18|spell_holy_restoration
+S|Protection|Divine Shield|34,50|spell_holy_divineintervention
+S|Protection|Fire Resistance Aura|36,48,60|spell_fire_sealoffire
+S|Protection|Frost Resistance Aura|32,44,56|spell_frost_wizardmark
+S|Protection|Greater Blessing of Kings|60|spell_magic_greaterblessingofkings
+S|Protection|Hammer of Justice|8,24,40,54|spell_holy_sealofmight
+S|Protection|Holy Shield|30,40,50,60|spell_holy_blessingofprotection
+S|Protection|Righteous Fury|10|spell_holy_sealoffury
+S|Protection|Seal of Fury|10,18,26,34,42,50,58|spell_holy_retributionaura
+S|Protection|Seal of Justice|22|spell_holy_sealofwrath
+S|Protection|Shadow Resistance Aura|28,40,52|spell_shadow_sealofkings
+S|Protection|Swift Judgement|25|ability_paladin_judgementred
+S|Protection|Templar's Bulwark|20|ability_paladin_shieldofthetemplar
+S|Retribution|Blessing of Might|4,12,22,32,42,52,60|spell_holy_fistofjustice
+S|Retribution|Greater Blessing of Might|52,60|spell_holy_greaterblessingofkings
+S|Retribution|Holy Strike|6,12,20,28,36,44,52,60|classicon_paladin
+S|Retribution|Judgement|4|spell_holy_righteousfury
+S|Retribution|Repentance|30|spell_holy_prayerofhealing
+S|Retribution|Retribution Aura|16,26,36,46,56|spell_holy_auraoflight
+S|Retribution|Seal of Command|20,30,40,50,60|ability_warrior_innerrage
+S|Retribution|Seal of the Crusader|6,12,22,32,42,52|spell_holy_holysmite
+G|Attack|
+G|Armor Proficiency|Passive
+G|Block|Passive
+G|Dodge|Passive
+G|Parry|Passive
+G|Languages|Passive

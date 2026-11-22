@@ -1,0 +1,54 @@
+# class: warlock | build: 1.60.1.70755 | generated: 2026-11-10
+# Tree|Name|row|col|max|req|cost|summary
+Affliction|Improved Life Tap|1|1|2|||Life Tap mana gain +10/20%
+Affliction|Suppression|1|2|5|||Hit chance +1/2/3/4/5%; threat -4/8/12/16/20%
+Affliction|Improved Corruption|1|3|5|||Corruption cast time -0.4/0.8/1.2/1.6/2.0 sec; damage +2/4/6/8/10%
+Affliction|Grim Reach|2|1|2|||Affliction spell range +10/20%
+Affliction|Soul Harvest|2|2|2|||Mana regen +50/100% for 10 sec after killing a Drain Soul target, and it continues while casting
+Affliction|Improved Drains|2|3|3|||Drain Life, Drain Soul, Drain Mana output +7/13/20%
+Affliction|Improved Bane of Agony|3|1|2|||Bane of Agony damage +5/10%
+Affliction|Fel Concentration|3|2|3|||23/47/70% chance to keep channel time when damaged during Drain Life, Drain Mana, Drain Soul or Wrack
+Affliction|Amplify Curse|3|3|1||Instant; 3 min cooldown|Next Curse of Weakness or Bane of Agony +50%, Curse of Exhaustion +20%
+Affliction|Pandemic|3|4|3|||Crit damage bonus on listed DoTs and drains +33/67/100%
+Affliction|Malevolence|4|1|5|||Shadow spell crit chance +1/2/3/4/5%
+Affliction|Nightfall|4|2|2|||2/4% chance for Shadow Trance: next Shadow Bolt is instant
+Affliction|Curse of Exhaustion|4|3|1|Amplify Curse|8% of base mana; 30 yd; Instant|Target movement speed -30% for 12 sec
+Affliction|Siphon Life|5|2|1||150 Mana; 30 yd; Instant|Drains health every 3 sec for 30 sec
+Affliction|Soul Siphon|5|3|3|||Drain Life, Drain Soul, Wrack damage +4/8/12% per Corruption, Siphon Life or Bane of Agony on the target
+Affliction|Shadow Mastery|6|3|5|||Shadow spell damage and life drained +2/4/6/8/10%
+Affliction|Wrack|7|2|1|Siphon Life|200 Mana; 30 yd; Channeled|Shadow damage per sec for 6 sec; your DoTs on the target tick 100% faster while channeling
+Demonology|Improved Health Funnel|1|1|2|||Health Funnel healing +20/40%; health cost -15/30%; threat -50/100%
+Demonology|Improved Imp|1|2|3|||Imp Firebolt damage and Fire Shield effect +10/20/30%
+Demonology|Demonic Embrace|1|3|5|||Total Stamina +3/6/9/12/15%
+Demonology|Unholy Power|1|4|5|||Damage of Imp, Voidwalker, Succubus, Incubus, Felhunter +2/4/6/8/10%
+Demonology|Demonic Aegis|2|1|2|||Demon Skin and Demon Armor effectiveness +15/30%
+Demonology|Improved Voidwalker|2|2|3|||Torment, Consume Shadows, Sacrifice, Suffering effectiveness +10/20/30%
+Demonology|Fel Vitality|2|3|3|||Pet max health and mana +5/10/15%; your max mana +5/10/15%
+Demonology|Demonic Energies|2|4|2|||Pet healed for 8/15% of your spell damage; Life Tap gives your pet 50/100% of the mana gained
+Demonology|Improved Sayaad|3|1|3|||Lash of Pain and Soothing Kiss effect +10/20/30%; Seduction and Lesser Invisibility duration +10/20/30%
+Demonology|Demonic Sacrifice|3|2|1||100 yd; Instant|Sacrifice your pet for a 2 hr buff that depends on the demon
+Demonology|Master Summoner|3|3|2|||Summon cast time -2/4 sec; mana cost -20/40%
+Demonology|Decimation|4|1|2|||Soul Fire cooldown -45/90%; Shadow Bolt and Searing Pain +3/6% vs enemies under 35% health
+Demonology|Fel Domination|4|3|1|Master Summoner|Instant; 5 min cooldown|Next summon cast time -5.5 sec and mana cost -50%
+Demonology|Demonic Brand|4|4|3|||Searing Pain threat -17/33/50%; pet's next 2/4/6 attacks deal bonus Fire or Shadow damage
+Demonology|Improved Felhunter|5|1|3|||Felhunter Tainted Blood, Devour Magic, Paranoia effects +10/20/30%; Spell Lock cooldown -2/4/6 sec
+Demonology|Soul Link|5|2|1|Demonic Sacrifice|20% of base mana; 100 yd; Instant|30% of damage taken is shared with your demon; both deal 3% more damage
+Demonology|Demonic Knowledge|5|3|3|||Spell damage increased by 33/67/100% of your level while a demon is out
+Demonology|Master Demonologist|6|3|5|||You and your demon gain a +2-10% damage or resistance effect, depending on the demon
+Demonology|Demonic Pact|7|2|1|Soul Link||Summoning a different demon no longer cancels Demonic Sacrifice
+Destruction|Destructive Reach|1|1|2|||Destruction spell range +10/20%
+Destruction|Improved Shadow Bolt|1|2|5|||Shadow Bolt crits raise Shadow damage taken by the target +4/8/12/16/20% for 12 sec
+Destruction|Bane|1|3|5|||Shadow Bolt, Immolate, Incinerate cast time -0.1/0.2/0.3/0.4/0.5 sec; Soul Fire -0.4/0.8/1.2/1.6/2.0 sec
+Destruction|Molten Skin|2|1|5|||Damage taken -2/4/6/8/10%
+Destruction|Cataclysm|2|2|3|||Destruction spell mana cost -3/6/10%
+Destruction|Aftermath|2|3|5|||Immolate initial damage +10/20/30/40/50%; Conflagrate daze chance 20/40/60/80/100%
+Destruction|Ruin|3|2|5|||Destruction crit damage bonus +20/40/60/80/100%
+Destruction|Shadowburn|3|3|1||105 Mana; 30 yd; Instant; 15 sec cooldown; Soul Shard|Instant Shadow damage; refunds a Soul Shard if the target dies within 8 sec
+Destruction|Intensity|4|1|3|||23/47/70% chance to keep cast time when damaged while casting Destruction spells
+Destruction|Agonizing Flames|4|2|3|||Searing Pain crit chance +3/7/10%; all Destruction damage +3/7/10%
+Destruction|Conflagrate|4|3|1||100 Mana; 30 yd; Instant; 10 sec cooldown|Fire damage to an Immolated target; consumes Immolate
+Destruction|Pyroclasm|5|1|2|Intensity||Soul Fire, Rain of Fire, Hellfire have a 13/26% chance to stun
+Destruction|Bane of Havoc|5|2|1||5% of base mana; 30 yd; Instant|Cursed target takes 15% of your damage to other targets for 5 min
+Destruction|Fire and Brimstone|5|3|3|Conflagrate||Conflagrate crit chance +8/17/25%
+Destruction|Shadow and Flame|6|3|5|||After Conflagrate, Shadow damage +4-20%; after Shadowburn, Fire damage +4-20% (20 sec)
+Destruction|Incinerate|7|2|1|Bane of Havoc|205 Mana; 30 yd; 2.5 sec cast|Fire damage; +25% if the target has Immolate
