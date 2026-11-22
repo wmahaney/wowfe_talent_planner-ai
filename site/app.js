@@ -483,7 +483,7 @@
         h('span', { class: 'rank' }, `${rank}/${t.max}`),
         h('button', { type: 'button', 'aria-label': 'Remove a point', disabled: canRemove !== 0, onclick: () => change(ti, i, -1) }, '−'),
         h('button', { type: 'button', 'aria-label': 'Spend a point', disabled: canAdd !== 0, onclick: () => change(ti, i, 1) }, '+')),
-      lines);
+      ...lines);
   }
 
   // ------------------------------------------------------------ level bar
