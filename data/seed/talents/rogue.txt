@@ -1,0 +1,56 @@
+# class: rogue | build: 1.60.1.70755 | generated: 2026-11-10
+# Tree|Name|row|col|max|req|cost|summary
+Assassination|Improved Gouge|1|1|3|||Gouge duration +0.5/1/1.5 sec
+Assassination|Remorseless Attacks|1|2|2|||Crit chance +20/40% on the next qualifying strike after a kill
+Assassination|Malice|1|3|5|||Crit chance for attacks and Poisons +1/2/3/4/5%
+Assassination|Ruthlessness|2|1|3|||Finishers add a Combo Point 20/40/60% of the time
+Assassination|Improved Expose Armor|2|2|2|||Expose Armor energy cost -5/10; extra Combo Point refund
+Assassination|Improved Slice and Dice|2|4|3|||Slice and Dice duration +15/30/45%
+Assassination|Vigor|3|1|2|||Max Energy +5/10
+Assassination|Blood Splatter|3|2|1|||Rupture +6 sec, Garrote +9 sec
+Assassination|Lethality|3|3|2|Malice||Crit damage bonus +10/20% on listed abilities
+Assassination|Vile Poisons|4|1|5|||Poison damage +4/8/12/16/20%; dispel resist +8/16/24/32/40%
+Assassination|Cold Blood|4|2|1||Instant; 3 min cooldown|Next qualifying strike gets +100% crit chance
+Assassination|Improved Poisons|4|3|5|||Poison apply chance +2/4/6/8/10%; charge-save chance 10-50%
+Assassination|Relentless Strikes|5|1|5|||4-20% chance per Combo Point to restore 25 Energy
+Assassination|Venom|5|2|1|||Shank: +30% Poison damage, +20% apply chance for 6 sec
+Assassination|Improved Kidney Shot|5|3|2|||Stunned targets take +5/10% damage
+Assassination|Seal Fate|6|3|3|||Crits with Combo Point abilities add a Combo Point 33/66/100% of the time
+Assassination|Mutilate|7|2|1|Venom|60 Energy; Melee Range; Instant; Requires Daggers|Dual-weapon attack, 2 Combo Points, +20% vs Poisoned targets
+Combat|Coup de Grace|1|1|3|||Eviscerate and Death Mark damage +7/13/20%
+Combat|Efficient Strikes|1|2|2|||Sinister Strike and Hemorrhage energy cost -3/5
+Combat|Lightning Reflexes|1|3|5|||Dodge chance +1/2/3/4/5%
+Combat|Puncturing Wounds|2|1|3|||Backstab crit +10/20/30%; Mutilate crit +5/10/15%; chance for an extra Combo Point on Backstab
+Combat|Deflection|2|2|3|||Parry chance +2/4/6%
+Combat|Precision|2|3|3|||Hit chance +1/2/3%
+Combat|Improved Sprint|2|4|2|||Sprint removes movement impairments 50/100% of the time
+Combat|Endurance|3|1|2|||Sprint and Evasion cooldown -30/60%
+Combat|Riposte|3|2|1|Deflection|10 Energy; Melee Range; Instant; 6 sec cooldown|150% weapon damage counterstrike; disarms for 6 sec
+Combat|Composure|3|4|2|||Poised energy reduction +5/10
+Combat|Improved Kick|4|1|2|||Kick silences 50/100% of the time for 2 sec
+Combat|Flawless Execution|4|2|1|||Eviscerate energy cost -15
+Combat|Weapon Expertise|4|3|2|Precision||Enemy dodge and parry chance against you -1/2%
+Combat|Aggression|4|4|3|||Sinister Strike and Eviscerate damage +5/10/15%
+Combat|Dual Wield Specialization|5|1|2|||Off-hand damage +25/50%
+Combat|Blade Flurry|5|2|1||25 Energy; Instant; 2 min cooldown|Attack speed +20% and attacks hit an extra target for 15 sec
+Combat|Hack and Slash|5|3|5|||By weapon type: extra attack chance 1-5% (sword), crit +1-5% (dagger/fist), armor ignored 3-15% (mace)
+Combat|Flash of Steel|6|3|5|||Shank energy +3/6/9/12/15; cooldown -0.4/0.8/1.2/1.6/2.0 sec
+Combat|Adrenaline Rush|7|2|1|Blade Flurry|Instant; 5 min cooldown|Energy regen +100% for 15 sec
+Subtlety|Setup|1|1|3|||15/30/45% chance for an extra Combo Point after a dodge or full resist
+Subtlety|Master of Deception|1|2|3|||Harder to detect in Stealth, as if 1/2/3 levels higher
+Subtlety|Opportunity|1|3|5|||Backstab, Garrote, Ambush, Mutilate damage +4/8/12/16/20%
+Subtlety|Dirty Deeds|2|1|2|||Cheap Shot and Garrote energy cost -10/20; Garrote needs no facing
+Subtlety|Camouflage|2|2|3|||Stealth speed penalty -5/10/15%; Stealth cooldown -2/4/6 sec
+Subtlety|Improved Ambush|2|3|3|||Ambush crit chance +15/30/45%
+Subtlety|Dirty Tricks|2|4|2|||Sap and Blind energy cost -25/50%
+Subtlety|Initiative|3|1|3|||33/67/100% chance for an extra Combo Point from Ambush, Garrote, Cheap Shot
+Subtlety|Premeditation|3|2|1||20 yd; Instant; 2 min cooldown|Adds 2 Combo Points to the target
+Subtlety|Serrated Blades|3|3|3|||Armor ignored 3/6/9%; Rupture damage +10/20/30%
+Subtlety|Elusiveness|4|1|2|||Vanish and Blind cooldown -45/90 sec
+Subtlety|Ghostly Strike|4|2|1||40 Energy; Melee Range; Instant; 20 sec cooldown|125% weapon strike (180% with a dagger); +15% dodge for 7 sec
+Subtlety|Quick Getaway|4|4|2|Dirty Tricks||Sap one more target; +15/30% speed for 3 sec after Sap
+Subtlety|Heightened Senses|5|1|2|||Stealth detection +1/3 levels; enemy spell and ranged hit chance against you -2/4%
+Subtlety|Preparation|5|2|1||Instant; 10 min cooldown|Resets cooldowns on other Rogue abilities
+Subtlety|Hemorrhage|5|3|1|Serrated Blades|35 Energy; Melee Range; Instant|Strike; target takes +15% Rupture and Garrote damage; 1 Combo Point
+Subtlety|Boot Knife|6|3|5|||Shank adds 2 Combo Points 20/40/60/80/100% of the time
+Subtlety|Death Mark|7|2|1|Preparation|25 Energy; 1-5 Combo Points; 20 yd; Instant; 10 sec cooldown|Stores 12-60% of damage dealt per Combo Point, then deals it after 6 sec

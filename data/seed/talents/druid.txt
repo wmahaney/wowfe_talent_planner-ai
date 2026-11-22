@@ -1,0 +1,54 @@
+# class: druid | build: 1.60.1.70755 | generated: 2026-11-13
+# Tree|Name|row|col|max|req|cost|summary
+Balance|Improved Wrath|1|2|5|||Wrath cast time -0.1/0.2/0.3/0.4/0.5 sec; mana cost -10/20/30/40/50%
+Balance|Genesis|1|3|5|||Periodic damage and healing +2/4/6/8/10%
+Balance|Moonglow|2|1|3|||Damaging spell mana cost -8/17/25%
+Balance|Improved Moonfire|2|2|2|||Moonfire damage and crit chance +5/10%
+Balance|Nature's Majesty|2|3|2|||Spell and melee crit chance +2/4%
+Balance|Nature's Reach|2|4|2|||Balance spell range +10/20%; hit chance +2/4%
+Balance|Improved Entangling Roots|3|1|3|||Entangling Roots damage +25/50/75%, and it tolerates that much more damage
+Balance|Nature's Splendor|3|3|1|Nature's Majesty||Moonfire and Rejuvenation +3 sec, Regrowth +6 sec, Insect Swarm +2 sec
+Balance|Insect Swarm|4|1|1||45 Mana; 30 yd; Instant|Target hit chance -2%; Nature damage over 12 sec
+Balance|Vengeance|4|2|5|Improved Moonfire||Arcane and Nature crit damage bonus +20/40/60/80/100%
+Balance|Improved Starfire|4|3|5|||Starfire cast time -0.1/0.2/0.3/0.4/0.5 sec; 3/6/9/12/15% stun chance
+Balance|Overgrowth|5|1|2|||Entangling Roots max targets +1/2
+Balance|Nature's Grace|5|2|1|||After a non-periodic spell crit: 10% faster casting and GCD for 3 sec
+Balance|Eclipse|5|3|3|||Wrath cuts your next 2 Starfire casts by 0.17/0.33/0.50 sec
+Balance|Moonfury|6|2|5|||Arcane and Nature damage +2/4/6/8/10%
+Balance|Moonkin Form|7|2|1||35% of base mana; Instant|Item armor +360%; party crit +3%
+Feral Combat|Ferocity|1|2|5|||Maul, Primal Bite, Swipe, Claw, Rake cost -1/2/3/4/5 Rage or Energy
+Feral Combat|Furor|1|3|5|||20/40/60/80/100% chance to gain Rage on Bear shift or keep Energy on Cat shift
+Feral Combat|Feral Swiftness|2|1|2|||Cat Form speed +15/30%; dodge +2/4%
+Feral Combat|Feral Instinct|2|2|3|||Swipe damage +10/20/30%; harder to detect while prowling
+Feral Combat|Brutal Impact|2|3|2|||Bash and Pounce stun +0.5/1 sec; Bash cooldown -15/30 sec
+Feral Combat|Thick Hide|2|4|3|||Armor per level +1/2/3 in forms
+Feral Combat|Shredding Attacks|3|1|3|||Shred energy cost -6/12/18; Lacerate rage cost -1/2/3
+Feral Combat|Savage Fury|3|2|2|||Claw, Rake, Shred, Maul, Swipe damage +5/10%
+Feral Combat|Feral Charge|3|3|1||5 Rage; 8-25 yd; Instant; 15 sec cooldown; Bear Form|Charge that immobilizes and interrupts for 4 sec
+Feral Combat|Sharpened Claws|3|4|2|||Crit chance in Bear and Cat Form +3/6%
+Feral Combat|Predatory Strikes|4|1|3|||Melee attack power in forms increased by 50/100/150% of your level
+Feral Combat|Lacerate|4|2|1|Savage Fury|15 Rage; Melee Range; Instant; Bear Form|Stacking bleed over 15 sec (max 5)
+Feral Combat|Predatory Discipline|4|3|1|||Ferocious Bite keeps extra damage from excess Energy
+Feral Combat|Blood Frenzy|4|4|2|Sharpened Claws||Bear crits grant 5 Rage (50/100%); Cat combo crits add a point (50/100%)
+Feral Combat|Leader of the Pack|5|2|1|||Party crit +3% within 45 yd while in forms
+Feral Combat|Natural Instinct|5|4|2|||Melee crit damage +10/20%; healing increased by 12/25% of Intellect
+Feral Combat|Rend and Tear|6|1|5|Predatory Strikes||Melee damage vs Bleeding targets +3/6/9/12/15%
+Feral Combat|Natural Reaction|6|4|5|||Dodge +1/2/3/4/5%; 20/40/60/80/100% chance of 5 Rage on dodge
+Feral Combat|Primal Bite|7|2|1|Leader of the Pack|20 Rage; Melee Range; Instant; 6 sec cooldown; Bear Form|100% weapon damage +42, with high threat
+Feral Combat|Shifting Power|7|3|1|Predatory Discipline|55% of base mana; Instant; 8 sec cooldown; Cat Form|Converts 55% of base mana into 40 Energy
+Restoration|Nature's Focus|1|2|5|||14/28/42/56/70% chance to keep Arcane and Nature cast time when damaged
+Restoration|Heart of the Wild|1|3|5|||Intellect +2/4/6/8/10%; Bear Stamina +4/8/12/16/20%; Cat Strength +2/4/6/8/10%
+Restoration|Naturalist|2|1|5|||Healing Touch and Wild Growth cast -0.1/0.2/0.3/0.4/0.5 sec; all damage +2/4/6/8/10%
+Restoration|Reflection|2|2|3|||17/33/50% of mana regen continues while casting
+Restoration|Natural Shapeshifter|2|3|3|||Shapeshift mana cost -10/20/30%
+Restoration|Subtlety|3|2|3|||Nature and Arcane spell threat -10/20/30%
+Restoration|Gift of Nature|3|3|5|||Healing effects +2/4/6/8/10%
+Restoration|Bloom|3|4|1|||Rejuvenation and Regrowth heal for 100% of Spirit when they expire (50% if dispelled)
+Restoration|Tranquil Spirit|4|2|5|||Healing Touch and Tranquility mana cost -2/4/6/8/10%
+Restoration|Improved Rejuvenation|4|3|3|||Rejuvenation effect +5/10/15%
+Restoration|Swiftmend|4|4|1||20% of base mana; 40 yd; Instant; 15 sec cooldown|Instantly heals for the remaining Rejuvenation or Regrowth duration
+Restoration|Nature's Swiftness|5|1|1|Naturalist|Instant; 3 min cooldown|Next Nature spell is instant
+Restoration|Living Spirit|5|2|3|||Spirit +5/10/15%
+Restoration|Improved Tranquility|5|4|2|||Tranquility threat -50/100%; cooldown -30/60%
+Restoration|Improved Regrowth|6|3|5|Improved Rejuvenation||Regrowth crit chance +10/20/30/40/50%
+Restoration|Wild Growth|7|2|1|Living Spirit|550 Mana; 40 yd; 3 sec cast; 6 sec cooldown|Heals the target and party over 7 sec

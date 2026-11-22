@@ -1,0 +1,33 @@
+# Checks the data sources for game changes once a day and opens a pull request
+# when talents or stat tables changed. Merging it redeploys the site.
+# One-time setup: Settings -> Actions -> General -> allow GitHub Actions to
+# create pull requests.
+name: Update game data
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install the WebAssembly toolchain
+        run: sudo apt-get update && sudo apt-get install -y clang lld
+      - name: Pull the latest game data
+        run: python3 tools/wfdata.py update --stats --summary-file "$RUNNER_TEMP/summary.md"
+      - name: Build and test with the new data
+        run: make all test
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          branch: data-update
+          base: main
+          title: Game data update
+          commit-message: Update game data
+          body-path: ${{ runner.temp }}/summary.md
+          add-paths: |
+            data
+            site/data

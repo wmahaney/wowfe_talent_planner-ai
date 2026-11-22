@@ -1,0 +1,570 @@
+{
+ "schema": 1,
+ "class": "rogue",
+ "source": {
+  "name": "Talents Forever",
+  "url": "https://talentsforever.com/",
+  "license": "CC BY 4.0",
+  "build": "1.60.1.70755",
+  "generated": "2026-11-10",
+  "retrieved": "2026-11-22",
+  "method": "seed (hand-transcribed summaries)"
+ },
+ "trees": [
+  {
+   "name": "Assassination",
+   "talents": [
+    {
+     "name": "Improved Gouge",
+     "row": 1,
+     "col": 1,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Gouge duration +0.5/1/1.5 sec",
+     "ranks": null
+    },
+    {
+     "name": "Remorseless Attacks",
+     "row": 1,
+     "col": 2,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Crit chance +20/40% on the next qualifying strike after a kill",
+     "ranks": null
+    },
+    {
+     "name": "Malice",
+     "row": 1,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Crit chance for attacks and Poisons +1/2/3/4/5%",
+     "ranks": null
+    },
+    {
+     "name": "Ruthlessness",
+     "row": 2,
+     "col": 1,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Finishers add a Combo Point 20/40/60% of the time",
+     "ranks": null
+    },
+    {
+     "name": "Improved Expose Armor",
+     "row": 2,
+     "col": 2,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Expose Armor energy cost -5/10; extra Combo Point refund",
+     "ranks": null
+    },
+    {
+     "name": "Improved Slice and Dice",
+     "row": 2,
+     "col": 4,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Slice and Dice duration +15/30/45%",
+     "ranks": null
+    },
+    {
+     "name": "Vigor",
+     "row": 3,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Max Energy +5/10",
+     "ranks": null
+    },
+    {
+     "name": "Blood Splatter",
+     "row": 3,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": null,
+     "summary": "Rupture +6 sec, Garrote +9 sec",
+     "ranks": null
+    },
+    {
+     "name": "Lethality",
+     "row": 3,
+     "col": 3,
+     "max": 2,
+     "req": "Malice",
+     "cost": null,
+     "summary": "Crit damage bonus +10/20% on listed abilities",
+     "ranks": null
+    },
+    {
+     "name": "Vile Poisons",
+     "row": 4,
+     "col": 1,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Poison damage +4/8/12/16/20%; dispel resist +8/16/24/32/40%",
+     "ranks": null
+    },
+    {
+     "name": "Cold Blood",
+     "row": 4,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": "Instant; 3 min cooldown",
+     "summary": "Next qualifying strike gets +100% crit chance",
+     "ranks": null
+    },
+    {
+     "name": "Improved Poisons",
+     "row": 4,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Poison apply chance +2/4/6/8/10%; charge-save chance 10-50%",
+     "ranks": null
+    },
+    {
+     "name": "Relentless Strikes",
+     "row": 5,
+     "col": 1,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "4-20% chance per Combo Point to restore 25 Energy",
+     "ranks": null
+    },
+    {
+     "name": "Venom",
+     "row": 5,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": null,
+     "summary": "Shank: +30% Poison damage, +20% apply chance for 6 sec",
+     "ranks": null
+    },
+    {
+     "name": "Improved Kidney Shot",
+     "row": 5,
+     "col": 3,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Stunned targets take +5/10% damage",
+     "ranks": null
+    },
+    {
+     "name": "Seal Fate",
+     "row": 6,
+     "col": 3,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Crits with Combo Point abilities add a Combo Point 33/66/100% of the time",
+     "ranks": null
+    },
+    {
+     "name": "Mutilate",
+     "row": 7,
+     "col": 2,
+     "max": 1,
+     "req": "Venom",
+     "cost": "60 Energy; Melee Range; Instant; Requires Daggers",
+     "summary": "Dual-weapon attack, 2 Combo Points, +20% vs Poisoned targets",
+     "ranks": null
+    }
+   ]
+  },
+  {
+   "name": "Combat",
+   "talents": [
+    {
+     "name": "Coup de Grace",
+     "row": 1,
+     "col": 1,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Eviscerate and Death Mark damage +7/13/20%",
+     "ranks": null
+    },
+    {
+     "name": "Efficient Strikes",
+     "row": 1,
+     "col": 2,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Sinister Strike and Hemorrhage energy cost -3/5",
+     "ranks": null
+    },
+    {
+     "name": "Lightning Reflexes",
+     "row": 1,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Dodge chance +1/2/3/4/5%",
+     "ranks": null
+    },
+    {
+     "name": "Puncturing Wounds",
+     "row": 2,
+     "col": 1,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Backstab crit +10/20/30%; Mutilate crit +5/10/15%; chance for an extra Combo Point on Backstab",
+     "ranks": null
+    },
+    {
+     "name": "Deflection",
+     "row": 2,
+     "col": 2,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Parry chance +2/4/6%",
+     "ranks": null
+    },
+    {
+     "name": "Precision",
+     "row": 2,
+     "col": 3,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Hit chance +1/2/3%",
+     "ranks": null
+    },
+    {
+     "name": "Improved Sprint",
+     "row": 2,
+     "col": 4,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Sprint removes movement impairments 50/100% of the time",
+     "ranks": null
+    },
+    {
+     "name": "Endurance",
+     "row": 3,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Sprint and Evasion cooldown -30/60%",
+     "ranks": null
+    },
+    {
+     "name": "Riposte",
+     "row": 3,
+     "col": 2,
+     "max": 1,
+     "req": "Deflection",
+     "cost": "10 Energy; Melee Range; Instant; 6 sec cooldown",
+     "summary": "150% weapon damage counterstrike; disarms for 6 sec",
+     "ranks": null
+    },
+    {
+     "name": "Composure",
+     "row": 3,
+     "col": 4,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Poised energy reduction +5/10",
+     "ranks": null
+    },
+    {
+     "name": "Improved Kick",
+     "row": 4,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Kick silences 50/100% of the time for 2 sec",
+     "ranks": null
+    },
+    {
+     "name": "Flawless Execution",
+     "row": 4,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": null,
+     "summary": "Eviscerate energy cost -15",
+     "ranks": null
+    },
+    {
+     "name": "Weapon Expertise",
+     "row": 4,
+     "col": 3,
+     "max": 2,
+     "req": "Precision",
+     "cost": null,
+     "summary": "Enemy dodge and parry chance against you -1/2%",
+     "ranks": null
+    },
+    {
+     "name": "Aggression",
+     "row": 4,
+     "col": 4,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Sinister Strike and Eviscerate damage +5/10/15%",
+     "ranks": null
+    },
+    {
+     "name": "Dual Wield Specialization",
+     "row": 5,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Off-hand damage +25/50%",
+     "ranks": null
+    },
+    {
+     "name": "Blade Flurry",
+     "row": 5,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": "25 Energy; Instant; 2 min cooldown",
+     "summary": "Attack speed +20% and attacks hit an extra target for 15 sec",
+     "ranks": null
+    },
+    {
+     "name": "Hack and Slash",
+     "row": 5,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "By weapon type: extra attack chance 1-5% (sword), crit +1-5% (dagger/fist), armor ignored 3-15% (mace)",
+     "ranks": null
+    },
+    {
+     "name": "Flash of Steel",
+     "row": 6,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Shank energy +3/6/9/12/15; cooldown -0.4/0.8/1.2/1.6/2.0 sec",
+     "ranks": null
+    },
+    {
+     "name": "Adrenaline Rush",
+     "row": 7,
+     "col": 2,
+     "max": 1,
+     "req": "Blade Flurry",
+     "cost": "Instant; 5 min cooldown",
+     "summary": "Energy regen +100% for 15 sec",
+     "ranks": null
+    }
+   ]
+  },
+  {
+   "name": "Subtlety",
+   "talents": [
+    {
+     "name": "Setup",
+     "row": 1,
+     "col": 1,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "15/30/45% chance for an extra Combo Point after a dodge or full resist",
+     "ranks": null
+    },
+    {
+     "name": "Master of Deception",
+     "row": 1,
+     "col": 2,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Harder to detect in Stealth, as if 1/2/3 levels higher",
+     "ranks": null
+    },
+    {
+     "name": "Opportunity",
+     "row": 1,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Backstab, Garrote, Ambush, Mutilate damage +4/8/12/16/20%",
+     "ranks": null
+    },
+    {
+     "name": "Dirty Deeds",
+     "row": 2,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Cheap Shot and Garrote energy cost -10/20; Garrote needs no facing",
+     "ranks": null
+    },
+    {
+     "name": "Camouflage",
+     "row": 2,
+     "col": 2,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Stealth speed penalty -5/10/15%; Stealth cooldown -2/4/6 sec",
+     "ranks": null
+    },
+    {
+     "name": "Improved Ambush",
+     "row": 2,
+     "col": 3,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Ambush crit chance +15/30/45%",
+     "ranks": null
+    },
+    {
+     "name": "Dirty Tricks",
+     "row": 2,
+     "col": 4,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Sap and Blind energy cost -25/50%",
+     "ranks": null
+    },
+    {
+     "name": "Initiative",
+     "row": 3,
+     "col": 1,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "33/67/100% chance for an extra Combo Point from Ambush, Garrote, Cheap Shot",
+     "ranks": null
+    },
+    {
+     "name": "Premeditation",
+     "row": 3,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": "20 yd; Instant; 2 min cooldown",
+     "summary": "Adds 2 Combo Points to the target",
+     "ranks": null
+    },
+    {
+     "name": "Serrated Blades",
+     "row": 3,
+     "col": 3,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Armor ignored 3/6/9%; Rupture damage +10/20/30%",
+     "ranks": null
+    },
+    {
+     "name": "Elusiveness",
+     "row": 4,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Vanish and Blind cooldown -45/90 sec",
+     "ranks": null
+    },
+    {
+     "name": "Ghostly Strike",
+     "row": 4,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": "40 Energy; Melee Range; Instant; 20 sec cooldown",
+     "summary": "125% weapon strike (180% with a dagger); +15% dodge for 7 sec",
+     "ranks": null
+    },
+    {
+     "name": "Quick Getaway",
+     "row": 4,
+     "col": 4,
+     "max": 2,
+     "req": "Dirty Tricks",
+     "cost": null,
+     "summary": "Sap one more target; +15/30% speed for 3 sec after Sap",
+     "ranks": null
+    },
+    {
+     "name": "Heightened Senses",
+     "row": 5,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Stealth detection +1/3 levels; enemy spell and ranged hit chance against you -2/4%",
+     "ranks": null
+    },
+    {
+     "name": "Preparation",
+     "row": 5,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": "Instant; 10 min cooldown",
+     "summary": "Resets cooldowns on other Rogue abilities",
+     "ranks": null
+    },
+    {
+     "name": "Hemorrhage",
+     "row": 5,
+     "col": 3,
+     "max": 1,
+     "req": "Serrated Blades",
+     "cost": "35 Energy; Melee Range; Instant",
+     "summary": "Strike; target takes +15% Rupture and Garrote damage; 1 Combo Point",
+     "ranks": null
+    },
+    {
+     "name": "Boot Knife",
+     "row": 6,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Shank adds 2 Combo Points 20/40/60/80/100% of the time",
+     "ranks": null
+    },
+    {
+     "name": "Death Mark",
+     "row": 7,
+     "col": 2,
+     "max": 1,
+     "req": "Preparation",
+     "cost": "25 Energy; 1-5 Combo Points; 20 yd; Instant; 10 sec cooldown",
+     "summary": "Stores 12-60% of damage dealt per Combo Point, then deals it after 6 sec",
+     "ranks": null
+    }
+   ]
+  }
+ ]
+}

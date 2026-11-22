@@ -1,0 +1,560 @@
+{
+ "schema": 1,
+ "class": "warrior",
+ "source": {
+  "name": "Talents Forever",
+  "url": "https://talentsforever.com/",
+  "license": "CC BY 4.0",
+  "build": "1.60.1.70755",
+  "generated": "2026-11-10",
+  "retrieved": "2026-11-22",
+  "method": "seed (hand-transcribed summaries)"
+ },
+ "trees": [
+  {
+   "name": "Arms",
+   "talents": [
+    {
+     "name": "Improved Heroic Strike",
+     "row": 1,
+     "col": 1,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Heroic Strike rage cost -1/-2/-3",
+     "ranks": null
+    },
+    {
+     "name": "Deflection",
+     "row": 1,
+     "col": 2,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Parry chance +1/+2/+3/+4/+5%",
+     "ranks": null
+    },
+    {
+     "name": "Improved Rend",
+     "row": 1,
+     "col": 3,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Rend bleed damage +12/+23/+35%",
+     "ranks": null
+    },
+    {
+     "name": "Improved Charge",
+     "row": 2,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Charge rage generated +3/+6",
+     "ranks": null
+    },
+    {
+     "name": "Improved Tactical Mastery",
+     "row": 2,
+     "col": 2,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Rage kept when changing stances +5/+10/+15",
+     "ranks": null
+    },
+    {
+     "name": "Improved Overpower",
+     "row": 2,
+     "col": 4,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Overpower crit chance +25/+50%",
+     "ranks": null
+    },
+    {
+     "name": "Anger Management",
+     "row": 3,
+     "col": 2,
+     "max": 1,
+     "req": "Improved Tactical Mastery",
+     "cost": null,
+     "summary": "Generates rage in combat; rage decays 30% slower out of combat",
+     "ranks": null
+    },
+    {
+     "name": "Deep Wounds",
+     "row": 3,
+     "col": 3,
+     "max": 3,
+     "req": "Improved Rend",
+     "cost": null,
+     "summary": "Crits cause a bleed for 20/40/60% of weapon damage over 12 sec",
+     "ranks": null
+    },
+    {
+     "name": "Spearing Strike",
+     "row": 4,
+     "col": 1,
+     "max": 1,
+     "req": null,
+     "cost": "Active",
+     "summary": "75% weapon damage; extra damage vs giants, dragonkin and mounted targets",
+     "ranks": null
+    },
+    {
+     "name": "Two-Handed Weapon Specialization",
+     "row": 4,
+     "col": 2,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Two-handed weapon damage +2/+4/+6%",
+     "ranks": null
+    },
+    {
+     "name": "Impale",
+     "row": 4,
+     "col": 3,
+     "max": 2,
+     "req": "Deep Wounds",
+     "cost": null,
+     "summary": "Ability crit damage bonus +10/+20%",
+     "ranks": null
+    },
+    {
+     "name": "Bloodthrill",
+     "row": 5,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "10/20% chance for main-hand hits on Rend targets to allow Overpower",
+     "ranks": null
+    },
+    {
+     "name": "Sweeping Strikes",
+     "row": 5,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": "Active",
+     "summary": "Next 5 melee attacks also hit a nearby enemy",
+     "ranks": null
+    },
+    {
+     "name": "Weaponmaster",
+     "row": 5,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "By weapon type: crit +1-5% (axe/polearm), armor ignored 3-15% (mace/staff), extra attack chance 1-5% (sword)",
+     "ranks": null
+    },
+    {
+     "name": "Improved Slam",
+     "row": 6,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Slam cooldown -2.5/-5 sec; cast and GCD -0.25/-0.5 sec; no longer interrupts melee swing",
+     "ranks": null
+    },
+    {
+     "name": "Improved Hamstring",
+     "row": 6,
+     "col": 3,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Hamstring has a 5/10/15% chance to immobilize for 5 sec",
+     "ranks": null
+    },
+    {
+     "name": "Mortal Strike",
+     "row": 7,
+     "col": 2,
+     "max": 1,
+     "req": "Sweeping Strikes",
+     "cost": "Active",
+     "summary": "Weapon damage +85; reduces healing received by 50% for 10 sec",
+     "ranks": null
+    }
+   ]
+  },
+  {
+   "name": "Fury",
+   "talents": [
+    {
+     "name": "Booming Voice",
+     "row": 1,
+     "col": 2,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Shout area +10-50%; Shout and Howl rage cost -5-25%",
+     "ranks": null
+    },
+    {
+     "name": "Cruelty",
+     "row": 1,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Melee crit chance +1/+2/+3/+4/+5%",
+     "ranks": null
+    },
+    {
+     "name": "Lingering Rage",
+     "row": 2,
+     "col": 2,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Rage decay delay after leaving combat +2-10 sec",
+     "ranks": null
+    },
+    {
+     "name": "Unbridled Wrath",
+     "row": 2,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "12-60% chance for melee hits to generate 1 extra rage",
+     "ranks": null
+    },
+    {
+     "name": "Furious Precision",
+     "row": 3,
+     "col": 1,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Off-hand hit chance +4/+7/+10%",
+     "ranks": null
+    },
+    {
+     "name": "Piercing Howl",
+     "row": 3,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": "Active",
+     "summary": "Slows enemies within 10 yd by 50% for 6 sec",
+     "ranks": null
+    },
+    {
+     "name": "Blood Craze",
+     "row": 3,
+     "col": 3,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Regenerates 1/2/3% max health over 6 sec after a crit or a hit over 20% max health",
+     "ranks": null
+    },
+    {
+     "name": "Enrage",
+     "row": 3,
+     "col": 4,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "30% chance for +2-10% physical damage for 12 sec after taking damage",
+     "ranks": null
+    },
+    {
+     "name": "Dual Wield Specialization",
+     "row": 4,
+     "col": 1,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Off-hand damage +5-25%; off-hand rage +10-50%",
+     "ranks": null
+    },
+    {
+     "name": "Reckless Swings",
+     "row": 4,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": "Active",
+     "summary": "Next 4 melee attacks generate 5 extra rage each over 8 sec",
+     "ranks": null
+    },
+    {
+     "name": "Improved Execute",
+     "row": 4,
+     "col": 4,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Execute rage cost -3/-5",
+     "ranks": null
+    },
+    {
+     "name": "Improved Berserker Rage",
+     "row": 5,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Berserker Rage gives 5/10 rage; 50/100% chance to remove movement impairments",
+     "ranks": null
+    },
+    {
+     "name": "Death Wish",
+     "row": 5,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": "Active",
+     "summary": "+20% physical damage, Fear immunity, +5% damage taken for 30 sec",
+     "ranks": null
+    },
+    {
+     "name": "Gore Drinker",
+     "row": 5,
+     "col": 3,
+     "max": 2,
+     "req": "Blood Craze",
+     "cost": null,
+     "summary": "Next 3 melee hits restore 0.5/1.0% max health after listed abilities",
+     "ranks": null
+    },
+    {
+     "name": "Improved Intercept",
+     "row": 5,
+     "col": 4,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Intercept cooldown -5/-10 sec",
+     "ranks": null
+    },
+    {
+     "name": "Improved Whirlwind",
+     "row": 6,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Whirlwind cooldown -1/-2 sec; damage to closest enemy +15/+30%",
+     "ranks": null
+    },
+    {
+     "name": "Flurry",
+     "row": 6,
+     "col": 3,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Attack speed +10/+20/+30% for next 3 swings after a melee crit",
+     "ranks": null
+    },
+    {
+     "name": "Bloodthirst",
+     "row": 7,
+     "col": 2,
+     "max": 1,
+     "req": "Death Wish",
+     "cost": "Active",
+     "summary": "Hits for 45% AP +30; +10% movement speed for 10 sec",
+     "ranks": null
+    }
+   ]
+  },
+  {
+   "name": "Protection",
+   "talents": [
+    {
+     "name": "Improved Bloodrage",
+     "row": 1,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Bloodrage rage generation +25/+50%",
+     "ranks": null
+    },
+    {
+     "name": "Shield Specialization",
+     "row": 1,
+     "col": 2,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Shield block chance +1-5%; 20-100% chance to gain 5 rage on block",
+     "ranks": null
+    },
+    {
+     "name": "Iron Will",
+     "row": 1,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Stun and Fear duration on you -3-15%",
+     "ranks": null
+    },
+    {
+     "name": "Anticipation",
+     "row": 2,
+     "col": 1,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "Defense skill +4/+8/+12/+16/+20",
+     "ranks": null
+    },
+    {
+     "name": "Improved Revenge",
+     "row": 2,
+     "col": 3,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Revenge damage +20/+40/+60%",
+     "ranks": null
+    },
+    {
+     "name": "Improved Thunder Clap",
+     "row": 2,
+     "col": 4,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Thunder Clap rage cost -2/-4/-6",
+     "ranks": null
+    },
+    {
+     "name": "Last Stand",
+     "row": 3,
+     "col": 1,
+     "max": 1,
+     "req": null,
+     "cost": "Active",
+     "summary": "Temporary +30% max health for 20 sec, then that health is lost",
+     "ranks": null
+    },
+    {
+     "name": "Master of Defense",
+     "row": 3,
+     "col": 2,
+     "max": 2,
+     "req": "Shield Specialization",
+     "cost": null,
+     "summary": "50/100% chance to gain 5 rage on dodge or parry with a shield",
+     "ranks": null
+    },
+    {
+     "name": "Improved Disarm",
+     "row": 3,
+     "col": 3,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Disarm cooldown -7/-13/-20 sec",
+     "ranks": null
+    },
+    {
+     "name": "Defiance",
+     "row": 3,
+     "col": 4,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Defensive Stance threat +7/+13/+20% with a shield",
+     "ranks": null
+    },
+    {
+     "name": "Improved Sunder Armor",
+     "row": 4,
+     "col": 1,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Sunder Armor rage cost -1/-2/-3",
+     "ranks": null
+    },
+    {
+     "name": "Vanguard",
+     "row": 4,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": null,
+     "summary": "Charge usable in Defensive Stance",
+     "ranks": null
+    },
+    {
+     "name": "Improved Shield Bash",
+     "row": 4,
+     "col": 3,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Shield Bash has a 50/100% chance to silence for 3 sec",
+     "ranks": null
+    },
+    {
+     "name": "Improved Shield Wall",
+     "row": 5,
+     "col": 1,
+     "max": 2,
+     "req": null,
+     "cost": null,
+     "summary": "Shield Wall cooldown reduced by 5.5/11.0 min",
+     "ranks": null
+    },
+    {
+     "name": "Concussion Blow",
+     "row": 5,
+     "col": 2,
+     "max": 1,
+     "req": null,
+     "cost": "Active",
+     "summary": "Stuns target for 5 sec",
+     "ranks": null
+    },
+    {
+     "name": "Focused Rage",
+     "row": 5,
+     "col": 3,
+     "max": 3,
+     "req": null,
+     "cost": null,
+     "summary": "Offensive ability rage cost -1/-2/-3",
+     "ranks": null
+    },
+    {
+     "name": "Bastion",
+     "row": 6,
+     "col": 3,
+     "max": 5,
+     "req": null,
+     "cost": null,
+     "summary": "All damage dealt +2-10% with a shield equipped",
+     "ranks": null
+    },
+    {
+     "name": "Shield Slam",
+     "row": 7,
+     "col": 2,
+     "max": 1,
+     "req": "Concussion Blow",
+     "cost": "Active",
+     "summary": "Shield damage scaled by block value; 50% chance to dispel one magic effect",
+     "ranks": null
+    }
+   ]
+  }
+ ]
+}
