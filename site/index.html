@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WoW Forever Talent Planner</title>
-<meta name="description" content="Plan talent builds for every WoW Forever class, see the bonuses they add up to, and check class stats at any level.">
+<meta name="description" content="Plan talent builds for every WoW Forever class, see the bonuses they add up to, every skill and the level it is learned, and class stats at any level.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
@@ -35,7 +35,8 @@
 <nav class="views" id="views" aria-label="Section">
   <button type="button" data-view="talents" aria-pressed="true">Talents</button>
   <button type="button" data-view="bonuses" aria-pressed="false">Bonuses</button>
-  <button type="button" data-view="stats" aria-pressed="false">Base stats</button>
+  <button type="button" data-view="skills" aria-pressed="false">Skills</button>
+  <button type="button" data-view="stats" aria-pressed="false">Stats</button>
   <button type="button" data-view="data" aria-pressed="false">Data</button>
 </nav>
 
@@ -50,6 +51,11 @@
     <section class="view view-bonuses panel" aria-labelledby="h-bonuses">
       <h2 id="h-bonuses">Bonuses from this build</h2>
       <div id="bonuses"></div>
+    </section>
+
+    <section class="view view-skills panel" aria-labelledby="h-skills">
+      <h2 id="h-skills">Skills by level</h2>
+      <div id="skills"></div>
     </section>
 
     <section class="view view-stats panel" aria-labelledby="h-stats">

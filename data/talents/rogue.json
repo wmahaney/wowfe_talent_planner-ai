@@ -22,7 +22,8 @@
      "req": null,
      "cost": null,
      "summary": "Gouge duration +0.5/1/1.5 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_gouge"
     },
     {
      "name": "Remorseless Attacks",
@@ -32,7 +33,8 @@
      "req": null,
      "cost": null,
      "summary": "Crit chance +20/40% on the next qualifying strike after a kill",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_fiegndead"
     },
     {
      "name": "Malice",
@@ -42,7 +44,8 @@
      "req": null,
      "cost": null,
      "summary": "Crit chance for attacks and Poisons +1/2/3/4/5%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_racial_bloodrage"
     },
     {
      "name": "Ruthlessness",
@@ -52,7 +55,8 @@
      "req": null,
      "cost": null,
      "summary": "Finishers add a Combo Point 20/40/60% of the time",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_druid_disembowel"
     },
     {
      "name": "Improved Expose Armor",
@@ -62,7 +66,8 @@
      "req": null,
      "cost": null,
      "summary": "Expose Armor energy cost -5/10; extra Combo Point refund",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_riposte"
     },
     {
      "name": "Improved Slice and Dice",
@@ -72,7 +77,8 @@
      "req": null,
      "cost": null,
      "summary": "Slice and Dice duration +15/30/45%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_slicedice"
     },
     {
      "name": "Vigor",
@@ -82,7 +88,8 @@
      "req": null,
      "cost": null,
      "summary": "Max Energy +5/10",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_earthbindtotem"
     },
     {
      "name": "Blood Splatter",
@@ -92,7 +99,8 @@
      "req": null,
      "cost": null,
      "summary": "Rupture +6 sec, Garrote +9 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_rupture"
     },
     {
      "name": "Lethality",
@@ -102,7 +110,8 @@
      "req": "Malice",
      "cost": null,
      "summary": "Crit damage bonus +10/20% on listed abilities",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_criticalstrike"
     },
     {
      "name": "Vile Poisons",
@@ -112,7 +121,8 @@
      "req": null,
      "cost": null,
      "summary": "Poison damage +4/8/12/16/20%; dispel resist +8/16/24/32/40%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_feigndeath"
     },
     {
      "name": "Cold Blood",
@@ -122,7 +132,8 @@
      "req": null,
      "cost": "Instant; 3 min cooldown",
      "summary": "Next qualifying strike gets +100% crit chance",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_ice_lament"
     },
     {
      "name": "Improved Poisons",
@@ -132,7 +143,8 @@
      "req": null,
      "cost": null,
      "summary": "Poison apply chance +2/4/6/8/10%; charge-save chance 10-50%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_poisons"
     },
     {
      "name": "Relentless Strikes",
@@ -142,7 +154,8 @@
      "req": null,
      "cost": null,
      "summary": "4-20% chance per Combo Point to restore 25 Energy",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_decisivestrike"
     },
     {
      "name": "Venom",
@@ -152,7 +165,8 @@
      "req": null,
      "cost": null,
      "summary": "Shank: +30% Poison damage, +20% apply chance for 6 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_sword_31"
     },
     {
      "name": "Improved Kidney Shot",
@@ -162,7 +176,8 @@
      "req": null,
      "cost": null,
      "summary": "Stunned targets take +5/10% damage",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_kidneyshot"
     },
     {
      "name": "Seal Fate",
@@ -172,7 +187,8 @@
      "req": null,
      "cost": null,
      "summary": "Crits with Combo Point abilities add a Combo Point 33/66/100% of the time",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_chilltouch"
     },
     {
      "name": "Mutilate",
@@ -182,7 +198,8 @@
      "req": "Venom",
      "cost": "60 Energy; Melee Range; Instant; Requires Daggers",
      "summary": "Dual-weapon attack, 2 Combo Points, +20% vs Poisoned targets",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_deadlybrew"
     }
    ]
   },
@@ -197,7 +214,8 @@
      "req": null,
      "cost": null,
      "summary": "Eviscerate and Death Mark damage +7/13/20%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_eviscerate"
     },
     {
      "name": "Efficient Strikes",
@@ -207,7 +225,8 @@
      "req": null,
      "cost": null,
      "summary": "Sinister Strike and Hemorrhage energy cost -3/5",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_ritualofsacrifice"
     },
     {
      "name": "Lightning Reflexes",
@@ -217,7 +236,8 @@
      "req": null,
      "cost": null,
      "summary": "Dodge chance +1/2/3/4/5%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_invisibilty"
     },
     {
      "name": "Puncturing Wounds",
@@ -227,7 +247,8 @@
      "req": null,
      "cost": null,
      "summary": "Backstab crit +10/20/30%; Mutilate crit +5/10/15%; chance for an extra Combo Point on Backstab",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_backstab"
     },
     {
      "name": "Deflection",
@@ -237,7 +258,8 @@
      "req": null,
      "cost": null,
      "summary": "Parry chance +2/4/6%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_parry"
     },
     {
      "name": "Precision",
@@ -247,7 +269,8 @@
      "req": null,
      "cost": null,
      "summary": "Hit chance +1/2/3%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_marksmanship"
     },
     {
      "name": "Improved Sprint",
@@ -257,7 +280,8 @@
      "req": null,
      "cost": null,
      "summary": "Sprint removes movement impairments 50/100% of the time",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_sprint"
     },
     {
      "name": "Endurance",
@@ -267,7 +291,8 @@
      "req": null,
      "cost": null,
      "summary": "Sprint and Evasion cooldown -30/60%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_shadowward"
     },
     {
      "name": "Riposte",
@@ -277,7 +302,8 @@
      "req": "Deflection",
      "cost": "10 Energy; Melee Range; Instant; 6 sec cooldown",
      "summary": "150% weapon damage counterstrike; disarms for 6 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_challange"
     },
     {
      "name": "Composure",
@@ -287,7 +313,8 @@
      "req": null,
      "cost": null,
      "summary": "Poised energy reduction +5/10",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_fleetfooted"
     },
     {
      "name": "Improved Kick",
@@ -297,7 +324,8 @@
      "req": null,
      "cost": null,
      "summary": "Kick silences 50/100% of the time for 2 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_kick"
     },
     {
      "name": "Flawless Execution",
@@ -307,7 +335,8 @@
      "req": null,
      "cost": null,
      "summary": "Eviscerate energy cost -15",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_sword_35"
     },
     {
      "name": "Weapon Expertise",
@@ -317,7 +346,8 @@
      "req": "Precision",
      "cost": null,
      "summary": "Enemy dodge and parry chance against you -1/2%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_holy_blessingofstrength"
     },
     {
      "name": "Aggression",
@@ -327,7 +357,8 @@
      "req": null,
      "cost": null,
      "summary": "Sinister Strike and Eviscerate damage +5/10/15%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_racial_avatar"
     },
     {
      "name": "Dual Wield Specialization",
@@ -337,7 +368,8 @@
      "req": null,
      "cost": null,
      "summary": "Off-hand damage +25/50%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_dualwield"
     },
     {
      "name": "Blade Flurry",
@@ -347,7 +379,8 @@
      "req": null,
      "cost": "25 Energy; Instant; 2 min cooldown",
      "summary": "Attack speed +20% and attacks hit an extra target for 15 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_punishingblow"
     },
     {
      "name": "Hack and Slash",
@@ -357,7 +390,8 @@
      "req": null,
      "cost": null,
      "summary": "By weapon type: extra attack chance 1-5% (sword), crit +1-5% (dagger/fist), armor ignored 3-15% (mace)",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_sword_27"
     },
     {
      "name": "Flash of Steel",
@@ -367,7 +401,8 @@
      "req": null,
      "cost": null,
      "summary": "Shank energy +3/6/9/12/15; cooldown -0.4/0.8/1.2/1.6/2.0 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_restlessblades"
     },
     {
      "name": "Adrenaline Rush",
@@ -377,7 +412,8 @@
      "req": "Blade Flurry",
      "cost": "Instant; 5 min cooldown",
      "summary": "Energy regen +100% for 15 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_shadowworddominate"
     }
    ]
   },
@@ -392,7 +428,8 @@
      "req": null,
      "cost": null,
      "summary": "15/30/45% chance for an extra Combo Point after a dodge or full resist",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_mirrorimage"
     },
     {
      "name": "Master of Deception",
@@ -402,7 +439,8 @@
      "req": null,
      "cost": null,
      "summary": "Harder to detect in Stealth, as if 1/2/3 levels higher",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_charm"
     },
     {
      "name": "Opportunity",
@@ -412,7 +450,8 @@
      "req": null,
      "cost": null,
      "summary": "Backstab, Garrote, Ambush, Mutilate damage +4/8/12/16/20%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_warcry"
     },
     {
      "name": "Dirty Deeds",
@@ -422,7 +461,8 @@
      "req": null,
      "cost": null,
      "summary": "Cheap Shot and Garrote energy cost -10/20; Garrote needs no facing",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_summonsuccubus"
     },
     {
      "name": "Camouflage",
@@ -432,7 +472,8 @@
      "req": null,
      "cost": null,
      "summary": "Stealth speed penalty -5/10/15%; Stealth cooldown -2/4/6 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_stealth"
     },
     {
      "name": "Improved Ambush",
@@ -442,7 +483,8 @@
      "req": null,
      "cost": null,
      "summary": "Ambush crit chance +15/30/45%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_ambush"
     },
     {
      "name": "Dirty Tricks",
@@ -452,7 +494,8 @@
      "req": null,
      "cost": null,
      "summary": "Sap and Blind energy cost -25/50%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_sap"
     },
     {
      "name": "Initiative",
@@ -462,7 +505,8 @@
      "req": null,
      "cost": null,
      "summary": "33/67/100% chance for an extra Combo Point from Ambush, Garrote, Cheap Shot",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_fumble"
     },
     {
      "name": "Premeditation",
@@ -472,7 +516,8 @@
      "req": null,
      "cost": "20 yd; Instant; 2 min cooldown",
      "summary": "Adds 2 Combo Points to the target",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_possession"
     },
     {
      "name": "Serrated Blades",
@@ -482,7 +527,8 @@
      "req": null,
      "cost": null,
      "summary": "Armor ignored 3/6/9%; Rupture damage +10/20/30%",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_sword_17"
     },
     {
      "name": "Elusiveness",
@@ -492,7 +538,8 @@
      "req": null,
      "cost": null,
      "summary": "Vanish and Blind cooldown -45/90 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_magic_lesserinvisibilty"
     },
     {
      "name": "Ghostly Strike",
@@ -502,7 +549,8 @@
      "req": null,
      "cost": "40 Energy; Melee Range; Instant; 20 sec cooldown",
      "summary": "125% weapon strike (180% with a dagger); +15% dodge for 7 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_curse"
     },
     {
      "name": "Quick Getaway",
@@ -512,7 +560,8 @@
      "req": "Dirty Tricks",
      "cost": null,
      "summary": "Sap one more target; +15/30% speed for 3 sec after Sap",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_blackjack"
     },
     {
      "name": "Heightened Senses",
@@ -522,7 +571,8 @@
      "req": null,
      "cost": null,
      "summary": "Stealth detection +1/3 levels; enemy spell and ranged hit chance against you -2/4%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_ambush"
     },
     {
      "name": "Preparation",
@@ -532,7 +582,8 @@
      "req": null,
      "cost": "Instant; 10 min cooldown",
      "summary": "Resets cooldowns on other Rogue abilities",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_antishadow"
     },
     {
      "name": "Hemorrhage",
@@ -542,7 +593,8 @@
      "req": "Serrated Blades",
      "cost": "35 Energy; Melee Range; Instant",
      "summary": "Strike; target takes +15% Rupture and Garrote damage; 1 Combo Point",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_lifedrain"
     },
     {
      "name": "Boot Knife",
@@ -552,7 +604,8 @@
      "req": null,
      "cost": null,
      "summary": "Shank adds 2 Combo Points 20/40/60/80/100% of the time",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_sword_32"
     },
     {
      "name": "Death Mark",
@@ -562,9 +615,458 @@
      "req": "Preparation",
      "cost": "25 Energy; 1-5 Combo Points; 20 yd; Instant; 10 sec cooldown",
      "summary": "Stores 12-60% of damage dealt per Combo Point, then deals it after 6 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_creature_cursed_02"
     }
    ]
   }
- ]
+ ],
+ "spells": {
+  "tabs": [
+   {
+    "name": "Assassination",
+    "spells": [
+     {
+      "name": "Ambush",
+      "levels": [
+       18,
+       26,
+       34,
+       42,
+       50,
+       58
+      ],
+      "icon": "ability_rogue_ambush"
+     },
+     {
+      "name": "Cheap Shot",
+      "levels": [
+       26
+      ],
+      "icon": "ability_cheapshot"
+     },
+     {
+      "name": "Cold Blood",
+      "levels": [
+       25
+      ],
+      "icon": "spell_ice_lament"
+     },
+     {
+      "name": "Eviscerate",
+      "levels": [
+       1,
+       8,
+       16,
+       24,
+       32,
+       40,
+       48,
+       56,
+       60
+      ],
+      "icon": "ability_rogue_eviscerate"
+     },
+     {
+      "name": "Expose Armor",
+      "levels": [
+       14,
+       26,
+       36,
+       46,
+       56
+      ],
+      "icon": "ability_warrior_riposte"
+     },
+     {
+      "name": "Garrote",
+      "levels": [
+       14,
+       22,
+       30,
+       38,
+       46,
+       54
+      ],
+      "icon": "ability_rogue_garrote"
+     },
+     {
+      "name": "Kidney Shot",
+      "levels": [
+       30,
+       50
+      ],
+      "icon": "ability_rogue_kidneyshot"
+     },
+     {
+      "name": "Mutilate",
+      "levels": [
+       40,
+       50,
+       60
+      ],
+      "icon": "ability_rogue_deadlybrew"
+     },
+     {
+      "name": "Rupture",
+      "levels": [
+       20,
+       28,
+       36,
+       44,
+       52,
+       60
+      ],
+      "icon": "ability_rogue_rupture"
+     },
+     {
+      "name": "Slice and Dice",
+      "levels": [
+       10,
+       42
+      ],
+      "icon": "ability_rogue_slicedice"
+     }
+    ]
+   },
+   {
+    "name": "Combat",
+    "spells": [
+     {
+      "name": "Adrenaline Rush",
+      "levels": [
+       40
+      ],
+      "icon": "spell_shadow_shadowworddominate"
+     },
+     {
+      "name": "Backstab",
+      "levels": [
+       4,
+       12,
+       20,
+       28,
+       36,
+       44,
+       52,
+       60,
+       60
+      ],
+      "icon": "ability_backstab"
+     },
+     {
+      "name": "Blade Flurry",
+      "levels": [
+       30
+      ],
+      "icon": "ability_warrior_punishingblow"
+     },
+     {
+      "name": "Evasion",
+      "levels": [
+       8
+      ],
+      "icon": "spell_shadow_shadowward"
+     },
+     {
+      "name": "Feint",
+      "levels": [
+       16,
+       28,
+       40,
+       52,
+       60
+      ],
+      "icon": "ability_rogue_feint"
+     },
+     {
+      "name": "Gouge",
+      "levels": [
+       6,
+       18,
+       32,
+       46,
+       60
+      ],
+      "icon": "ability_gouge"
+     },
+     {
+      "name": "Kick",
+      "levels": [
+       12,
+       26,
+       42,
+       58
+      ],
+      "icon": "ability_kick"
+     },
+     {
+      "name": "Riposte",
+      "levels": [
+       20
+      ],
+      "icon": "ability_warrior_challange"
+     },
+     {
+      "name": "Shank",
+      "levels": [
+       24,
+       44
+      ],
+      "icon": "ability_theblackarrow"
+     },
+     {
+      "name": "Sinister Strike",
+      "levels": [
+       1,
+       6,
+       14,
+       22,
+       30,
+       38,
+       46,
+       54
+      ],
+      "icon": "spell_shadow_ritualofsacrifice"
+     },
+     {
+      "name": "Sprint",
+      "levels": [
+       10,
+       34,
+       58
+      ],
+      "icon": "ability_rogue_sprint"
+     }
+    ]
+   },
+   {
+    "name": "Subtlety",
+    "spells": [
+     {
+      "name": "Blind",
+      "levels": [
+       34
+      ],
+      "icon": "spell_shadow_mindsteal"
+     },
+     {
+      "name": "Death Mark",
+      "levels": [
+       40,
+       48,
+       56,
+       60
+      ],
+      "icon": "ability_creature_cursed_02"
+     },
+     {
+      "name": "Detect Traps",
+      "levels": [
+       24
+      ],
+      "icon": "ability_spy"
+     },
+     {
+      "name": "Disarm Trap",
+      "levels": [
+       30
+      ],
+      "icon": "spell_shadow_grimward"
+     },
+     {
+      "name": "Distract",
+      "levels": [
+       22
+      ],
+      "icon": "ability_rogue_distract"
+     },
+     {
+      "name": "Ghostly Strike",
+      "levels": [
+       25
+      ],
+      "icon": "spell_shadow_curse"
+     },
+     {
+      "name": "Hemorrhage",
+      "levels": [
+       30
+      ],
+      "icon": "spell_shadow_lifedrain"
+     },
+     {
+      "name": "Pick Pocket",
+      "levels": [
+       4
+      ],
+      "icon": "inv_misc_bag_11"
+     },
+     {
+      "name": "Poised",
+      "levels": [
+       18
+      ],
+      "icon": "ability_rogue_fleetfooted"
+     },
+     {
+      "name": "Premeditation",
+      "levels": [
+       20
+      ],
+      "icon": "spell_shadow_possession"
+     },
+     {
+      "name": "Preparation",
+      "levels": [
+       30
+      ],
+      "icon": "spell_shadow_antishadow"
+     },
+     {
+      "name": "Safe Fall",
+      "levels": [
+       40
+      ],
+      "icon": "inv_feather_01"
+     },
+     {
+      "name": "Sap",
+      "levels": [
+       10,
+       28,
+       48
+      ],
+      "icon": "ability_sap"
+     },
+     {
+      "name": "Stealth",
+      "levels": [
+       1,
+       20,
+       40,
+       60
+      ],
+      "icon": "ability_stealth"
+     },
+     {
+      "name": "Vanish",
+      "levels": [
+       22,
+       42
+      ],
+      "icon": "ability_vanish"
+     }
+    ]
+   },
+   {
+    "name": "Poisons",
+    "spells": [
+     {
+      "name": "Crippling Poison",
+      "levels": [
+       20,
+       50
+      ],
+      "icon": "ability_poisonsting"
+     },
+     {
+      "name": "Instant Poison",
+      "levels": [
+       20,
+       28,
+       36,
+       44,
+       52,
+       60
+      ],
+      "icon": "ability_poisons"
+     },
+     {
+      "name": "Mind-numbing Poison",
+      "levels": [
+       24,
+       38,
+       52
+      ],
+      "icon": "spell_nature_nullifydisease"
+     },
+     {
+      "name": "Deadly Poison",
+      "levels": [
+       30,
+       38,
+       46,
+       54,
+       60
+      ],
+      "icon": "ability_rogue_dualweild"
+     },
+     {
+      "name": "Wound Poison",
+      "levels": [
+       32,
+       40,
+       48,
+       56
+      ],
+      "icon": "inv_misc_herb_16"
+     },
+     {
+      "name": "Blinding Powder",
+      "levels": [
+       34
+      ],
+      "icon": "inv_misc_ammo_gunpowder_02"
+     }
+    ]
+   }
+  ],
+  "general": [
+   {
+    "name": "Attack",
+    "note": null
+   },
+   {
+    "name": "Pick Lock",
+    "note": null
+   },
+   {
+    "name": "Shoot Bow",
+    "note": null
+   },
+   {
+    "name": "Shoot Crossbow",
+    "note": null
+   },
+   {
+    "name": "Shoot Gun",
+    "note": null
+   },
+   {
+    "name": "Throw",
+    "note": null
+   },
+   {
+    "name": "Dual Wield",
+    "note": "Passive"
+   },
+   {
+    "name": "Armor Proficiency",
+    "note": "Passive"
+   },
+   {
+    "name": "Dodge",
+    "note": "Passive"
+   },
+   {
+    "name": "Parry",
+    "note": "Passive"
+   },
+   {
+    "name": "Languages",
+    "note": "Passive"
+   }
+  ]
+ }
 }

@@ -7,6 +7,11 @@
     "prerequisite_needs_max_rank": true,
     "assumed": ["points_per_row", "prerequisite_needs_max_rank"]
   },
+  "icons": {
+    "_comment": "Where icon images come from. {name} is the icon name stored in the data. Run `python3 tools/wfdata.py icons` to copy them into site/icons/ and serve them yourself.",
+    "remote": "https://wow.zamimg.com/images/wow/icons/large/{name}.jpg",
+    "local_dir": "icons"
+  },
   "conversions": {
     "stat_floor": 20,
     "health_per_stamina": 10,

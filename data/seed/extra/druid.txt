@@ -1,0 +1,116 @@
+T|Balance|Improved Wrath|spell_nature_abolishmagic
+T|Balance|Genesis|spell_arcane_arcane03
+T|Balance|Moonglow|spell_nature_sentinal
+T|Balance|Improved Moonfire|spell_nature_starfall
+T|Balance|Nature's Majesty|inv_staff_01
+T|Balance|Nature's Reach|spell_nature_naturetouchgrow
+T|Balance|Improved Entangling Roots|spell_nature_stranglevines
+T|Balance|Nature's Splendor|spell_nature_natureresistancetotem
+T|Balance|Insect Swarm|spell_nature_insectswarm
+T|Balance|Vengeance|spell_nature_purge
+T|Balance|Improved Starfire|spell_arcane_starfire
+T|Balance|Overgrowth|inv_misc_herb_15
+T|Balance|Nature's Grace|spell_nature_naturesblessing
+T|Balance|Eclipse|ability_druid_eclipse
+T|Balance|Moonfury|spell_nature_moonglow
+T|Balance|Moonkin Form|spell_nature_forceofnature
+T|Feral Combat|Ferocity|ability_hunter_pet_hyena
+T|Feral Combat|Furor|spell_holy_blessingofstamina
+T|Feral Combat|Feral Swiftness|spell_nature_spiritwolf
+T|Feral Combat|Feral Instinct|ability_ambush
+T|Feral Combat|Brutal Impact|ability_druid_bash
+T|Feral Combat|Thick Hide|inv_misc_pelt_bear_03
+T|Feral Combat|Shredding Attacks|spell_shadow_vampiricaura
+T|Feral Combat|Savage Fury|ability_druid_ravage
+T|Feral Combat|Feral Charge|ability_hunter_pet_bear
+T|Feral Combat|Sharpened Claws|inv_misc_monsterclaw_04
+T|Feral Combat|Predatory Strikes|ability_hunter_pet_cat
+T|Feral Combat|Lacerate|ability_druid_lacerate
+T|Feral Combat|Predatory Discipline|spell_druid_savagery
+T|Feral Combat|Blood Frenzy|ability_ghoulfrenzy
+T|Feral Combat|Leader of the Pack|spell_nature_unyeildingstamina
+T|Feral Combat|Natural Instinct|ability_druid_predatoryinstincts
+T|Feral Combat|Rend and Tear|ability_druid_primalagression
+T|Feral Combat|Natural Reaction|ability_bullrush
+T|Feral Combat|Primal Bite|ability_racial_cannibalize
+T|Feral Combat|Shifting Power|spell_druid_displacement
+T|Restoration|Nature's Focus|spell_nature_healingwavegreater
+T|Restoration|Heart of the Wild|spell_holy_blessingofagility
+T|Restoration|Naturalist|spell_nature_healingtouch
+T|Restoration|Reflection|spell_frost_windwalkon
+T|Restoration|Natural Shapeshifter|spell_nature_wispsplode
+T|Restoration|Subtlety|ability_eyeoftheowl
+T|Restoration|Gift of Nature|spell_nature_protectionformnature
+T|Restoration|Bloom|inv_misc_herb_felblossom
+T|Restoration|Tranquil Spirit|spell_holy_elunesgrace
+T|Restoration|Improved Rejuvenation|spell_nature_rejuvenation
+T|Restoration|Swiftmend|inv_relics_idolofrejuvenation
+T|Restoration|Nature's Swiftness|spell_nature_ravenform
+T|Restoration|Living Spirit|spell_nature_giftofthewaterspirit
+T|Restoration|Improved Tranquility|spell_nature_tranquility
+T|Restoration|Improved Regrowth|spell_nature_resistnature
+T|Restoration|Wild Growth|ability_druid_flourish
+S|Balance|Barkskin|44|spell_nature_stoneclawtotem
+S|Balance|Entangling Roots|8,18,28,38,48,58|spell_nature_stranglevines
+S|Balance|Faerie Fire|18,30,42,54|spell_nature_faeriefire
+S|Balance|Hibernate|18,38,58|spell_nature_sleep
+S|Balance|Hurricane|40,50,60|spell_nature_cyclone
+S|Balance|Insect Swarm|25,30,40,50,60|spell_nature_insectswarm
+S|Balance|Moonfire|4,10,16,22,28,34,40,46,52,58|spell_nature_starfall
+S|Balance|Moonkin Form|40|spell_nature_forceofnature
+S|Balance|Nature's Grasp|10,18,28,38,48,58|spell_nature_natureswrath
+S|Balance|Omen of Clarity|20|spell_nature_crystalball
+S|Balance|Soothe Animal|22,38,54|ability_hunter_beastsoothe
+S|Balance|Starfire|20,26,34,42,50,58,60|spell_arcane_starfire
+S|Balance|Teleport: Moonglade|10|spell_arcane_teleportmoonglade
+S|Balance|Thorns|6,14,24,34,44,54|spell_nature_thorns
+S|Balance|Wrath|1,6,14,22,30,38,46,54|spell_nature_abolishmagic
+S|Feral Combat|Aquatic Form|16|ability_druid_aquaticform
+S|Feral Combat|Bash|14,30,46|ability_druid_bash
+S|Feral Combat|Bear Form|10|ability_racial_bearform
+S|Feral Combat|Cat Form|20|ability_druid_catform
+S|Feral Combat|Challenging Roar|28|ability_druid_challangingroar
+S|Feral Combat|Claw|20,28,38,48,58|ability_druid_rake
+S|Feral Combat|Cower|28,40,52|ability_druid_cower
+S|Feral Combat|Dash|26,46|ability_druid_dash
+S|Feral Combat|Demoralizing Roar|10,20,32,42,52|ability_druid_demoralizingroar
+S|Feral Combat|Dire Bear Form|40|ability_racial_bearform
+S|Feral Combat|Enrage|12|ability_druid_enrage
+S|Feral Combat|Feline Grace|40|inv_feather_01
+S|Feral Combat|Feral Charge|20|ability_hunter_pet_bear
+S|Feral Combat|Ferocious Bite|24,32,40,48,56,60|ability_druid_ferociousbite
+S|Feral Combat|Frenzied Regeneration|36|ability_bullrush
+S|Feral Combat|Growl|10|ability_physical_taunt
+S|Feral Combat|Lacerate|25,34,42,50,58|ability_druid_lacerate
+S|Feral Combat|Maul|10,18,26,34,42,50,58|ability_druid_maul
+S|Feral Combat|Poised|32|ability_racial_darkflight
+S|Feral Combat|Pounce|36,46,56|ability_druid_supriseattack
+S|Feral Combat|Primal Bite|40,50,60|ability_racial_cannibalize
+S|Feral Combat|Prowl|20,40,60|ability_ambush
+S|Feral Combat|Rake|24,34,44,54|ability_druid_disembowel
+S|Feral Combat|Ravage|32,42,50,58|ability_druid_ravage
+S|Feral Combat|Rip|20,28,36,44,52,60|ability_ghoulfrenzy
+S|Feral Combat|Shifting Power|40|spell_druid_displacement
+S|Feral Combat|Shred|20,30,38,46,54|spell_shadow_vampiricaura
+S|Feral Combat|Swipe|16,24,34,44,54|inv_misc_monsterclaw_03
+S|Feral Combat|Track Humanoids|32|ability_tracking
+S|Feral Combat|Travel Form|30|ability_druid_travelform
+S|Restoration|Abolish Poison|26|spell_nature_nullifypoison_02
+S|Restoration|Cure Poison|14|spell_nature_nullifypoison
+S|Restoration|Gift of the Wild|50,60|spell_nature_regeneration
+S|Restoration|Healing Touch|1,8,14,20,26,32,38,44,50,56,60|spell_nature_healingtouch
+S|Restoration|Innervate|40|spell_nature_lightning
+S|Restoration|Mark of the Wild|1,10,20,30,40,50,60|spell_nature_regeneration
+S|Restoration|Nature's Swiftness|30|spell_nature_ravenform
+S|Restoration|Rebirth|20,30,40,50,60|spell_nature_reincarnation
+S|Restoration|Regrowth|12,18,24,30,36,42,48,54,60|spell_nature_resistnature
+S|Restoration|Rejuvenation|4,10,16,22,28,34,40,46,52,58,60|spell_nature_rejuvenation
+S|Restoration|Remove Curse|24|spell_holy_removecurse
+S|Restoration|Revive|12,24,36,48,60|ability_druid_lunarguidance
+S|Restoration|Swiftmend|25|inv_relics_idolofrejuvenation
+S|Restoration|Tranquility|30,40,50,60|spell_nature_tranquility
+S|Restoration|Wild Growth|40,50,60|ability_druid_flourish
+G|Attack|
+G|Armor Proficiency|Passive
+G|Dodge|Passive
+G|Languages|Passive

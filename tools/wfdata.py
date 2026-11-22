@@ -8,6 +8,7 @@ curated effects). The site reads the generated copies in site/data/.
     python3 tools/wfdata.py update    # pull the latest game data, write a changelog entry
     python3 tools/wfdata.py build     # regenerate site/data from data/
     python3 tools/wfdata.py check     # validate data/ without writing anything
+    python3 tools/wfdata.py icons     # download the icon images into site/icons/
 
 `update` is what you run (or what the scheduled GitHub workflow runs) after a
 game patch or hotfix. It only needs the Python standard library.
@@ -116,6 +117,11 @@ def validate_class(doc):
             if above < rules["points_per_row"] * (row - 1):
                 problems.append(f'{doc["class"]}/{tree["name"]}: row {row} can never be unlocked '
                                 f'({above} points available above it)')
+    for tab in (doc.get("spells") or {}).get("tabs", []):
+        for sp in tab["spells"]:
+            lv = sp.get("levels")
+            if lv and (any(not 1 <= v <= 60 for v in lv) or lv != sorted(lv)):
+                problems.append(f'{doc["class"]} spell {tab["name"]}/{sp["name"]}: odd learn levels {lv}')
     return problems
 
 
@@ -180,11 +186,30 @@ def cmd_seed(args):
                 order.append(tree)
             trees[tree].append({"name": name, "row": int(row), "col": int(col), "max": int(mx),
                                 "req": req or None, "cost": cost or None, "summary": summary, "ranks": None})
+        tabs, tab_order, general = {}, [], []
+        for line in (DATA / "seed" / "extra" / f"{cls}.txt").read_text(encoding="utf-8").splitlines():
+            if not line.strip() or line.startswith("#"):
+                continue
+            kind, a, b, *rest = line.split("|")
+            if kind == "T":      # T|tree|talent|icon
+                match = [t for t in trees[a] if t["name"] == b]
+                if not match:
+                    raise SystemExit(f"data/seed/extra/{cls}.txt: no talent {a}/{b}")
+                match[0]["icon"] = rest[0]
+            elif kind == "S":    # S|tab|spell|levels|icon
+                if a not in tabs:
+                    tabs[a] = []
+                    tab_order.append(a)
+                levels = None if rest[0] == "?" else [int(v) for v in rest[0].split(",")]
+                tabs[a].append({"name": b, "levels": levels, "icon": rest[1] or None})
+            elif kind == "G":    # G|name|note
+                general.append({"name": a, "note": b or None})
         doc = {"schema": SCHEMA, "class": cls,
                "source": {"name": TALENT_SOURCE["name"], "url": TALENT_SOURCE["url"],
                           "license": TALENT_SOURCE["license"], "build": build, "generated": generated,
                           "retrieved": args.date, "method": "seed (hand-transcribed summaries)"},
-               "trees": [{"name": t, "talents": trees[t]} for t in order]}
+               "trees": [{"name": t, "talents": trees[t]} for t in order],
+               "spells": {"tabs": [{"name": t, "spells": tabs[t]} for t in tab_order], "general": general}}
         problems = validate_class(doc)
         if problems:
             raise SystemExit("\n".join(problems))
@@ -242,6 +267,42 @@ def find_build(export):
     return m.group(0) if m else None
 
 
+def convert_spellbook(export):
+    """The export's spellbook -> {"tabs": [...], "general": [...]}, or None if it has none.
+
+    Multi-rank learn levels come from spellbook.levels; single-rank ones from the
+    "Learned at level N" line of the matching spell_desc entry (key Class|Spell|Rank)."""
+    book = export.get("spellbook")
+    if not isinstance(book, dict) or not isinstance(book.get("tabs"), list):
+        return None
+    levels, icons = book.get("levels") or {}, book.get("icons") or {}
+    desc_level = {}
+    for key, entry in (export.get("spell_desc") or {}).items():
+        parts = key.split("|")
+        m = re.search(r"\d+", str(entry.get("lv", ""))) if isinstance(entry, dict) else None
+        if len(parts) >= 2 and m:
+            desc_level.setdefault(parts[1], []).append(int(m.group(0)))
+    tabs = []
+    for tab in book["tabs"]:
+        spells, seen = [], set()
+        for item in tab.get("spells", []):
+            name = item[0] if isinstance(item, (list, tuple)) else item.get("name")
+            if not name or name in seen:
+                continue
+            seen.add(name)
+            lv = levels.get(name) or sorted(desc_level.get(name, [])) or None
+            icon = icons.get(name)
+            if isinstance(icon, list):
+                icon = icon[0] if icon else None
+            spells.append({"name": name, "levels": [int(v) for v in lv] if lv else None, "icon": icon or None})
+        tabs.append({"name": tab.get("name", "?"), "spells": spells})
+    general = []
+    for item in book.get("general") or []:
+        if isinstance(item, (list, tuple)) and item:
+            general.append({"name": item[0], "note": (item[1] if len(item) > 1 else None) or None})
+    return {"tabs": tabs, "general": general}
+
+
 def convert_export(cls, export, old, date):
     trees = find_trees(export.get("talents", export))
     if len(trees) != 3:
@@ -274,7 +335,8 @@ def convert_export(cls, export, old, date):
                 cost = "Active"
             talents.append({"name": t["name"], "row": int(t["row"]), "col": int(t["col"]), "max": mx,
                             "req": req or None, "cost": cost, "summary": summary,
-                            "ranks": ranks if len(ranks) == mx else None})
+                            "ranks": ranks if len(ranks) == mx else None,
+                            "icon": t.get("icon") or (prev or {}).get("icon")})
         talents.sort(key=lambda x: (x["row"], x["col"]))
         out_trees.append({"name": tree_name, "talents": talents})
     return {"schema": SCHEMA, "class": cls,
@@ -282,7 +344,8 @@ def convert_export(cls, export, old, date):
                        "license": TALENT_SOURCE["license"], "build": find_build(export),
                        "generated": export.get("generated"), "retrieved": date,
                        "method": "export"},
-            "trees": out_trees}
+            "trees": out_trees,
+            "spells": convert_spellbook(export) or (old or {}).get("spells") or {"tabs": [], "general": []}}
 
 
 def diff_class(old, new):
@@ -311,6 +374,19 @@ def diff_class(old, new):
         if a.get("ranks") and b.get("ranks") and a["ranks"] != b["ranks"]:
             lines.append(f"text changed: {label}")
             changed_text.add(key)
+    def spell_map(d):
+        return {(tab["name"], sp["name"]): sp for tab in (d.get("spells") or {}).get("tabs", []) for sp in tab["spells"]}
+    so, sn = spell_map(old), spell_map(new)
+    if so and sn:
+        for key in sn.keys() - so.keys():
+            lines.append(f"new spell {key[0]} / {key[1]} (levels {sn[key]['levels'] or 'unknown'})")
+        for key in so.keys() - sn.keys():
+            lines.append(f"spell removed: {key[0]} / {key[1]}")
+        for key in sn.keys() & so.keys():
+            if so[key].get("levels") != sn[key].get("levels"):
+                lines.append(f"learn levels of {key[0]} / {key[1]}: {so[key].get('levels')} -> {sn[key].get('levels')}")
+    elif sn and not so:
+        lines.append("spell lists added")
     return sorted(lines), changed_text
 
 
@@ -482,6 +558,12 @@ def cmd_build(args):
                 effs = [e for e in effects[cls].get((tree["name"], t["name"]), []) if len(e["values"]) == t["max"]]
                 if effs:
                     t["effects"] = effs
+        talent_names = {t["name"] for tree in doc["trees"] for t in tree["talents"]}
+        for tab in (doc.get("spells") or {}).get("tabs", []):
+            for sp in tab["spells"]:
+                if sp["name"] in talent_names:
+                    sp["talent"] = True
+        doc.setdefault("spells", {"tabs": [], "general": []})
         doc.update({"name": meta["name"], "color": meta["color"],
                     "consts": {k: meta[k] for k in ("ap_per_str", "ap_per_agi", "rap_per_agi", "block_value")},
                     "tables": stats["classes"].get(cls, {})})
@@ -491,11 +573,51 @@ def cmd_build(args):
                                     "method": doc["source"].get("method")})
     if problems:
         raise SystemExit("data problems:\n" + "\n".join(problems))
+    # Icons: use the copies in site/icons/ when every one is there, else the remote host.
+    icons = rules.get("icons", {})
+    names = icon_names()
+    local_dir = ROOT / "site" / icons.get("local_dir", "icons")
+    have_all = bool(names) and all((local_dir / f"{n}.jpg").exists() for n in names)
+    manifest["icons"] = {"url": (icons.get("local_dir", "icons") + "/{name}.jpg") if have_all else icons.get("remote"),
+                         "local": have_all}
     write_json(SITE_DATA / "manifest.json", manifest, compact=True)
     for line in review:
         print("review:", line)
     print(f"built site/data for {len(CLASSES)} classes")
     return 0
+
+
+def icon_names():
+    names = set()
+    for cls in CLASSES:
+        doc = read_json(DATA / "talents" / f"{cls}.json")
+        names.update(t.get("icon") for tree in doc["trees"] for t in tree["talents"])
+        names.update(sp.get("icon") for tab in (doc.get("spells") or {}).get("tabs", []) for sp in tab["spells"])
+    names.discard(None)
+    return sorted(n for n in names if re.fullmatch(r"[a-z0-9_]+", n))
+
+
+def cmd_icons(args):
+    """Download every icon the data refers to into site/icons/, so the site serves its own copies."""
+    icons = read_json(DATA / "rules.json").get("icons", {})
+    out = ROOT / "site" / icons.get("local_dir", "icons")
+    out.mkdir(parents=True, exist_ok=True)
+    names, got, missing = icon_names(), 0, []
+    for name in names:
+        target = out / f"{name}.jpg"
+        if target.exists() and not args.force:
+            continue
+        try:
+            req = urllib.request.Request(icons["remote"].format(name=name), headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                target.write_bytes(resp.read())
+            got += 1
+        except Exception as exc:
+            missing.append(f"{name}: {exc}")
+    print(f"{len(names)} icons referenced, {got} downloaded, {len(missing)} failed")
+    for line in missing[:20]:
+        print("  missing", line)
+    return cmd_build(args)
 
 
 def cmd_check(args):
@@ -520,6 +642,8 @@ def main():
     sub.add_parser("seed")
     sub.add_parser("build")
     sub.add_parser("check")
+    ic = sub.add_parser("icons")
+    ic.add_argument("--force", action="store_true", help="download again even if the file exists")
     up = sub.add_parser("update")
     up.add_argument("--classes", nargs="+", default=CLASSES, choices=CLASSES)
     up.add_argument("--stats", action="store_true", help="also refresh the per-level stat tables (ForeverDB)")
@@ -527,7 +651,7 @@ def main():
     up.add_argument("--dry-run", action="store_true", help="report changes without writing")
     up.add_argument("--summary-file", help="write the Markdown change summary here")
     args = ap.parse_args()
-    return {"seed": cmd_seed, "build": cmd_build, "check": cmd_check, "update": cmd_update}[args.cmd](args) or 0
+    return {"seed": cmd_seed, "build": cmd_build, "check": cmd_check, "update": cmd_update, "icons": cmd_icons}[args.cmd](args) or 0
 
 
 if __name__ == "__main__":

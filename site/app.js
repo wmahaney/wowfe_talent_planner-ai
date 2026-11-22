@@ -27,7 +27,8 @@
   let W = null;            // wasm exports
   let manifest = null;
   let doc = null;          // current class document
-  const S = { cls: null, level: 60, tab: 0, selected: null, codes: {}, attrs: {} };
+  const S = { cls: null, level: 60, tab: 0, selected: null, codes: {}, attrs: {}, skillMode: 'level' };
+  let skillsKey = '';
   const nodes = [];        // nodes[tree][talent] = button
 
   // ------------------------------------------------------------ small helpers
@@ -54,6 +55,16 @@
       localStorage.setItem(key, JSON.stringify(value));
     } catch (_) { /* storage is a convenience only */ }
     return null;
+  }
+
+  /** Icon image for a talent or spell, or null. A failed load removes itself, leaving the text. */
+  function icon(name, size, onload) {
+    const url = manifest.icons && manifest.icons.url;
+    if (!name || !url) return null;
+    const img = h('img', { class: 'icon', src: url.replace('{name}', name), alt: '', loading: 'lazy', width: size, height: size });
+    img.addEventListener('error', () => img.remove());
+    if (onload) img.addEventListener('load', onload);
+    return img;
   }
 
   let toastTimer = 0;
@@ -190,6 +201,7 @@
     S.cls = key;
     S.selected = null;
     S.tab = 0;
+    skillsKey = '';
     loadEngine();
     if (level) S.level = level;
     W.pl_set_level(S.level);
@@ -233,6 +245,9 @@
             if (e.key === '-' || e.key === 'Backspace' || e.key === 'Delete') { select(ti, i); change(ti, i, -1); }
           },
         }, h('span', { class: 'name' }, t.name), h('span', { class: 'rank' }));
+        b.title = t.name;
+        const img = icon(t.icon, 64, () => b.classList.add('has-icon'));
+        if (img) b.prepend(img);
         nodes[ti].push(b);
         grid.append(b);
       });
@@ -340,6 +355,7 @@
     if (rank > 0 && canRemove !== 0) lines.push(h('p', { class: 'muted' }, REASONS[canRemove]));
     box.replaceChildren(
       h('div', { class: 'detail-head' },
+        icon(t.icon, 36),
         h('h2', null, t.name),
         h('span', { class: 'rank' }, `${rank}/${t.max}`),
         h('button', { type: 'button', 'aria-label': 'Remove a point', disabled: canRemove !== 0, onclick: () => change(ti, i, -1) }, '−'),
@@ -395,17 +411,77 @@
     const abilities = all.filter((x) => x.t.cost);
     if (abilities.length) {
       kids.push(h('h3', null, 'Abilities unlocked'), h('ul', { class: 'taken' }, abilities.map(({ t }) => h('li', null,
-        h('span', { class: 't-name' }, t.name),
+        icon(t.icon, 22), h('span', { class: 't-name' }, t.name),
         h('span', { class: 't-text' }, talentText(t, 1), t.cost !== 'Active' ? ` (${t.cost})` : '')))));
     }
     doc.trees.forEach((tree, ti) => {
       const mine = all.filter((x) => x.ti === ti && !x.t.cost);
       if (!mine.length) return;
       kids.push(h('h3', null, `${tree.name} passives`), h('ul', { class: 'taken' }, mine.map(({ t, rank }) => h('li', null,
-        h('span', { class: 't-name' }, t.name), h('span', { class: 't-rank' }, `${rank}/${t.max}`),
+        icon(t.icon, 22), h('span', { class: 't-name' }, t.name), h('span', { class: 't-rank' }, `${rank}/${t.max}`),
         h('span', { class: 't-text' }, talentText(t, rank))))));
     });
     box.replaceChildren(...kids);
+  }
+
+  // ------------------------------------------------------------ skills
+
+  function renderSkills() {
+    const key = `${S.cls}|${S.level}|${S.skillMode}`;
+    if (key === skillsKey) return;
+    skillsKey = key;
+    const tabs = (doc.spells && doc.spells.tabs) || [], general = (doc.spells && doc.spells.general) || [];
+    const all = tabs.flatMap((tab) => tab.spells.map((sp) => ({ sp, tab: tab.name })));
+    if (!all.length) {
+      $('#skills').replaceChildren(h('p', { class: 'muted' }, 'No skill list in the data for this class yet.'));
+      return;
+    }
+    const known = all.filter(({ sp }) => sp.levels && sp.levels[0] <= S.level).length;
+    const upcoming = [...new Set(all.flatMap(({ sp }) => sp.levels || []))].filter((l) => l > S.level).sort((a, b) => a - b)[0];
+    const modeBtn = (mode, label) => h('button', {
+      type: 'button', 'aria-pressed': String(S.skillMode === mode),
+      onclick: () => { S.skillMode = mode; renderSkills(); },
+    }, label);
+    const name = (sp) => [icon(sp.icon, 22), h('span', { class: 's-name' }, sp.name)];
+    const kids = [
+      h('div', { class: 'seg' }, modeBtn('level', 'By level'), modeBtn('tree', 'By tree')),
+      h('p', { class: 'note' }, `At level ${S.level} a ${doc.name} can have ${known} of ${all.length} skills. `,
+        upcoming ? `The trainer next has something new at level ${upcoming}.` : 'Nothing is left to train.'),
+    ];
+    const body = h('div', { class: 'skills-scroll' });
+    if (S.skillMode === 'level') {
+      const byLevel = new Map();
+      all.forEach(({ sp, tab }) => (sp.levels || []).forEach((lv, ri) => {
+        if (!byLevel.has(lv)) byLevel.set(lv, []);
+        byLevel.get(lv).push({ sp, tab, rank: ri + 1 });
+      }));
+      [...byLevel.keys()].sort((a, b) => a - b).forEach((lv) => {
+        const items = byLevel.get(lv).sort((a, b) => a.rank - b.rank || a.sp.name.localeCompare(b.sp.name));
+        body.append(h('div', { class: 'lv-row' + (lv > S.level ? ' future' : '') + (lv === S.level ? ' now' : '') },
+          h('div', { class: 'lv num' }, lv),
+          h('ul', { class: 'lv-list' }, items.map(({ sp, tab, rank }) => h('li', null, name(sp),
+            h('span', { class: 's-tag' + (rank === 1 ? ' new' : '') },
+              rank === 1 ? (sp.talent ? 'talent' : 'new') : `rank ${rank}`),
+            h('span', { class: 's-tab muted' }, tab))))));
+      });
+    } else {
+      tabs.forEach((tab) => {
+        body.append(h('h3', null, tab.name), h('ul', { class: 'tree-list' }, tab.spells.map((sp) => h('li', null,
+          h('div', null, name(sp), sp.talent ? h('span', { class: 's-tag' }, 'talent') : null),
+          h('div', { class: 's-levels num' }, sp.levels
+            ? sp.levels.map((lv, ri) => [ri ? ', ' : '', h('span', { class: lv <= S.level ? 'have' : 'muted' }, lv)])
+            : h('span', { class: 'muted' }, 'level not listed'))))));
+      });
+    }
+    const unlisted = all.filter(({ sp }) => !sp.levels);
+    if (S.skillMode === 'level' && unlisted.length) {
+      body.append(h('h3', null, 'Level not listed'), h('ul', { class: 'lv-list' }, unlisted.map(({ sp, tab }) => h('li', null, name(sp), h('span', { class: 's-tab muted' }, tab)))));
+    }
+    if (general.length) {
+      body.append(h('h3', null, 'From the start'), h('p', { class: 'note' }, general.map((g) => g.name + (g.note ? ` (${g.note.toLowerCase()})` : '')).join(', ') + '.'));
+    }
+    body.append(h('p', { class: 'note' }, 'Levels are when the class trainer offers each rank. Skills tagged talent need the talent first; their higher ranks then come from the trainer.'));
+    $('#skills').replaceChildren(...kids, body);
   }
 
   // ------------------------------------------------------------ base stats
@@ -554,6 +630,7 @@
     renderTrees();
     renderDetail();
     renderBonuses();
+    renderSkills();
     renderStatsLevel();
     renderDerived();
     renderData();

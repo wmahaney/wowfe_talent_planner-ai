@@ -22,7 +22,8 @@
      "req": null,
      "cost": null,
      "summary": "2/4/6/8/10% chance for 30% attack speed (12 sec) from Hawk ranged or Beast melee attacks",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_ravenform"
     },
     {
      "name": "Endurance Training",
@@ -32,7 +33,8 @@
      "req": null,
      "cost": null,
      "summary": "Pet Health and Armor +3/6/9/12/15%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_reincarnation"
     },
     {
      "name": "Focused Fire",
@@ -42,7 +44,8 @@
      "req": null,
      "cost": null,
      "summary": "All damage by you and your pet +1/2% while your pet is active",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_weapon_crossbow_10"
     },
     {
      "name": "Improved Aspect of the Monkey",
@@ -52,7 +55,8 @@
      "req": null,
      "cost": null,
      "summary": "Aspect of the Monkey dodge +2/4/6%; pet gets 50% of the effect",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_hunter_aspectofthemonkey"
     },
     {
      "name": "Improved Revive Pet",
@@ -62,7 +66,8 @@
      "req": null,
      "cost": null,
      "summary": "Revive Pet cast -3/6 sec, mana cost -20/40%, health returned +15/30%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_hunter_beastsoothe"
     },
     {
      "name": "Pathfinding",
@@ -72,7 +77,8 @@
      "req": null,
      "cost": null,
      "summary": "Speed bonus of Aspect of the Cheetah and Pack +3/6%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_mount_jungletiger"
     },
     {
      "name": "Bestial Swiftness",
@@ -82,7 +88,8 @@
      "req": null,
      "cost": null,
      "summary": "Pet movement speed +30%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_druid_dash"
     },
     {
      "name": "Unleashed Fury",
@@ -92,7 +99,8 @@
      "req": null,
      "cost": null,
      "summary": "Pet and hawk damage +3/6/9/12/15%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_bullrush"
     },
     {
      "name": "Improved Mend Pet",
@@ -102,7 +110,8 @@
      "req": null,
      "cost": null,
      "summary": "Mend Pet 15/50% cleanse chance; mana cost -10/20%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_hunter_mendpet"
     },
     {
      "name": "Ferocity",
@@ -112,7 +121,8 @@
      "req": null,
      "cost": null,
      "summary": "Pet and hawk crit chance +2/4/6/8/10%",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_misc_monsterclaw_04"
     },
     {
      "name": "Summon Hawk",
@@ -122,7 +132,8 @@
      "req": null,
      "cost": "11% of base mana; 35 yd; Instant; 6 sec cooldown",
      "summary": "Hawk dive-bomb spell",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_hunter_animalhandler"
     },
     {
      "name": "Spirit Bond",
@@ -132,7 +143,8 @@
      "req": null,
      "cost": null,
      "summary": "Regenerate 1% of total health every 10/5 sec while your pet is active",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_druid_demoralizingroar"
     },
     {
      "name": "Intimidation",
@@ -142,7 +154,8 @@
      "req": "Bestial Swiftness",
      "cost": "8% of base mana; 100 yd; Instant; 1 min cooldown",
      "summary": "Pet stuns on its next attack",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_devour"
     },
     {
      "name": "Bestial Discipline",
@@ -152,7 +165,8 @@
      "req": null,
      "cost": null,
      "summary": "Pet Focus regen +10/20%; 25/50% of mana regen continues while casting",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_abolishmagic"
     },
     {
      "name": "Frenzy",
@@ -162,7 +176,8 @@
      "req": "Ferocity",
      "cost": null,
      "summary": "20/40/60/80/100% chance for pet to gain 30% attack speed for 8 sec after a crit",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_misc_monsterclaw_03"
     },
     {
      "name": "Bestial Wrath",
@@ -172,7 +187,8 @@
      "req": "Intimidation",
      "cost": "12% of base mana; 100 yd; Instant; 2 min cooldown",
      "summary": "Pet deals 50% more damage for 18 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_druid_ferociousbite"
     }
    ]
   },
@@ -187,7 +203,8 @@
      "req": null,
      "cost": null,
      "summary": "Ranged weapon range +2/4/6 yd",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_townwatch"
     },
     {
      "name": "Improved Concussive Shot",
@@ -197,7 +214,8 @@
      "req": null,
      "cost": null,
      "summary": "4/8/12/16/20% chance for Concussive Shot to stun for 3 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_stun"
     },
     {
      "name": "Lethal Attacks",
@@ -207,7 +225,8 @@
      "req": null,
      "cost": null,
      "summary": "Crit chance for all attacks +1/2/3/4/5%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_searingarrow"
     },
     {
      "name": "Improved Stings",
@@ -217,7 +236,8 @@
      "req": null,
      "cost": null,
      "summary": "Serpent Sting damage +6/13/20%; Viper Sting cooldown -2/4/6 sec; Scorpid Sting duration +15/30/45 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_hunter_quickshot"
     },
     {
      "name": "Efficiency",
@@ -227,7 +247,8 @@
      "req": null,
      "cost": null,
      "summary": "Mana cost of Shots, Stings and melee abilities -3/6/9/12/15%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_wizardmark"
     },
     {
      "name": "Careful Aim",
@@ -237,7 +258,8 @@
      "req": null,
      "cost": null,
      "summary": "Attack Power increased by 20/40/60/80/100% of Intellect",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_hunter_zenarchery"
     },
     {
      "name": "Rapid Killing",
@@ -247,7 +269,8 @@
      "req": null,
      "cost": null,
      "summary": "Rapid Fire cooldown -1/2 min; next Shot damage +10/20% after a kill or Serpent Sting death",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_hunter_rapidkilling"
     },
     {
      "name": "Improved Arcane Shot",
@@ -257,7 +280,8 @@
      "req": null,
      "cost": null,
      "summary": "Arcane Shot cooldown -0.3/0.6/0.9/1.2/1.5 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_impalingbolt"
     },
     {
      "name": "Lone Wolf",
@@ -267,7 +291,8 @@
      "req": null,
      "cost": null,
      "summary": "All attack damage +20% with no active pet",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_mount_whitedirewolf"
     },
     {
      "name": "Trueshot Aura",
@@ -277,7 +302,8 @@
      "req": null,
      "cost": "180 Mana; Instant",
      "summary": "+20 ranged Attack Power for party/raid within 45 yd",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_trueshot"
     },
     {
      "name": "Mortal Shots",
@@ -287,7 +313,8 @@
      "req": "Careful Aim",
      "cost": null,
      "summary": "Ranged crit damage bonus +6/12/18/24/30%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_piercedamage"
     },
     {
      "name": "Rapid Recuperation",
@@ -297,7 +324,8 @@
      "req": "Rapid Killing",
      "cost": null,
      "summary": "Serpent Sting allows 25/50% mana regen while casting; 50/100% when Rapid Killing is used",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_hunter_rapidregeneration"
     },
     {
      "name": "Barrage",
@@ -307,7 +335,8 @@
      "req": null,
      "cost": null,
      "summary": "Multi-Shot, Aimed Shot and Volley damage +5/10/15%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_upgrademoonglaive"
     },
     {
      "name": "Scatter Shot",
@@ -317,7 +346,8 @@
      "req": null,
      "cost": "8% of base mana; 15 yd; Instant; 30 sec cooldown",
      "summary": "Disorients target for 4 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_golemstormbolt"
     },
     {
      "name": "Ranged Weapon Specialization",
@@ -327,7 +357,8 @@
      "req": null,
      "cost": null,
      "summary": "Ranged weapon damage +1/2/3/4/5%",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_weapon_rifle_06"
     },
     {
      "name": "Sniper Shot",
@@ -337,7 +368,8 @@
      "req": "Trueshot Aura",
      "cost": "365 Mana; 8-45 yd; 4 sec cast; 15 sec cooldown",
      "summary": "Long-range shot; next 3 Shots gain +10 yd range",
-     "ranks": null
+     "ranks": null,
+     "icon": "hunter_pvp_snipershot"
     }
    ]
   },
@@ -352,7 +384,8 @@
      "req": null,
      "cost": null,
      "summary": "Damage to tracked creature types +1/2/3/4/5%",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_misc_head_dragon_black"
     },
     {
      "name": "Deflection",
@@ -362,7 +395,8 @@
      "req": null,
      "cost": null,
      "summary": "Parry chance +1/2/3/4/5%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_parry"
     },
     {
      "name": "Entrapment",
@@ -372,7 +406,8 @@
      "req": null,
      "cost": null,
      "summary": "Traps entrap targets for 1/2/3/4/5 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_stranglevines"
     },
     {
      "name": "Savage Strikes",
@@ -382,7 +417,8 @@
      "req": null,
      "cost": null,
      "summary": "Melee ability crit chance +2/4%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_racial_bloodrage"
     },
     {
      "name": "Survivalist",
@@ -392,7 +428,8 @@
      "req": null,
      "cost": null,
      "summary": "Total Health +2/4/6/8/10%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_twilight"
     },
     {
      "name": "Improved Wing Clip",
@@ -402,7 +439,8 @@
      "req": null,
      "cost": null,
      "summary": "7/13/20% chance for Wing Clip to immobilize for 5 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_trip"
     },
     {
      "name": "Clever Traps",
@@ -412,7 +450,8 @@
      "req": null,
      "cost": null,
      "summary": "Freezing and Frost trap duration +15/30%; Immolation and Explosive trap damage +15/30%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_timestop"
     },
     {
      "name": "Surefooted",
@@ -422,7 +461,8 @@
      "req": null,
      "cost": null,
      "summary": "Hit chance +1/2/3%; movement impairment duration -10/20/30%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_kick"
     },
     {
      "name": "Deterrence",
@@ -432,7 +472,8 @@
      "req": null,
      "cost": "Instant; 5 min cooldown",
      "summary": "+25% Dodge and Parry for 10 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_whirlwind"
     },
     {
      "name": "Survival Tactics",
@@ -442,7 +483,8 @@
      "req": null,
      "cost": null,
      "summary": "Hit chance of Traps and Feign Death +5/10%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_ensnare"
     },
     {
      "name": "Predator's Edge",
@@ -452,7 +494,8 @@
      "req": null,
      "cost": null,
      "summary": "Melee ability crit damage +6-30%; off-hand weapon damage +10-50%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_dualwield"
     },
     {
      "name": "Counterattack",
@@ -462,7 +505,8 @@
      "req": "Deterrence",
      "cost": "30 Mana; Melee Range; Instant; 5 sec cooldown",
      "summary": "Counterattack after a parry; immobilizes target for 5 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_challange"
     },
     {
      "name": "Resourcefulness",
@@ -472,7 +516,8 @@
      "req": null,
      "cost": null,
      "summary": "Trap and melee mana cost -30/60%; crits can keep mana regenerating while casting",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_hunter_resourcefulness"
     },
     {
      "name": "Expose Prey",
@@ -482,7 +527,8 @@
      "req": null,
      "cost": null,
      "summary": "5/10% chance to allow Mongoose Bite after attacks on Hunter's Mark targets",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_hunter_swiftstrike"
     },
     {
      "name": "Survivalist's Discipline",
@@ -492,7 +538,8 @@
      "req": null,
      "cost": null,
      "summary": "Trap and Deterrence cooldowns -20/40%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_hunter_mastertactitian"
     },
     {
      "name": "Strider Kick",
@@ -502,7 +549,8 @@
      "req": null,
      "cost": "5.81% of base mana; Melee Range; Instant; 8 sec cooldown",
      "summary": "Kick; +30% movement speed for 3 sec afterwards",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_hunter_pet_tallstrider"
     },
     {
      "name": "Lightning Reflexes",
@@ -512,7 +560,8 @@
      "req": null,
      "cost": null,
      "summary": "Agility +3/6/9/12/15%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_invisibilty"
     },
     {
      "name": "Lacerating Strikes",
@@ -522,9 +571,883 @@
      "req": "Expose Prey",
      "cost": null,
      "summary": "Mongoose Bite causes a bleed for 40% of its damage over 21 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_gouge"
     }
    ]
   }
- ]
+ ],
+ "spells": {
+  "tabs": [
+   {
+    "name": "Beast Mastery",
+    "spells": [
+     {
+      "name": "Aspect of the Beast",
+      "levels": [
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "ability_mount_pinktiger"
+     },
+     {
+      "name": "Aspect of the Cheetah",
+      "levels": [
+       20
+      ],
+      "icon": "ability_mount_jungletiger"
+     },
+     {
+      "name": "Aspect of the Hawk",
+      "levels": [
+       10,
+       18,
+       28,
+       38,
+       48,
+       58,
+       60
+      ],
+      "icon": "spell_nature_ravenform"
+     },
+     {
+      "name": "Aspect of the Monkey",
+      "levels": [
+       4
+      ],
+      "icon": "ability_hunter_aspectofthemonkey"
+     },
+     {
+      "name": "Aspect of the Pack",
+      "levels": [
+       40
+      ],
+      "icon": "ability_mount_whitetiger"
+     },
+     {
+      "name": "Aspect of the Wild",
+      "levels": [
+       46,
+       56
+      ],
+      "icon": "spell_nature_protectionformnature"
+     },
+     {
+      "name": "Beast Lore",
+      "levels": [
+       24
+      ],
+      "icon": "ability_physical_taunt"
+     },
+     {
+      "name": "Bestial Wrath",
+      "levels": [
+       40
+      ],
+      "icon": "ability_druid_ferociousbite"
+     },
+     {
+      "name": "Call Pet",
+      "levels": [
+       10
+      ],
+      "icon": "ability_hunter_beastcall"
+     },
+     {
+      "name": "Dismiss Pet",
+      "levels": [
+       10
+      ],
+      "icon": "spell_nature_spiritwolf"
+     },
+     {
+      "name": "Eagle Eye",
+      "levels": [
+       14
+      ],
+      "icon": "ability_hunter_eagleeye"
+     },
+     {
+      "name": "Eyes of the Beast",
+      "levels": [
+       14
+      ],
+      "icon": "ability_eyeoftheowl"
+     },
+     {
+      "name": "Feed Pet",
+      "levels": [
+       10
+      ],
+      "icon": "ability_hunter_beasttraining"
+     },
+     {
+      "name": "Intimidation",
+      "levels": [
+       30
+      ],
+      "icon": "ability_devour"
+     },
+     {
+      "name": "Mend Pet",
+      "levels": [
+       12,
+       20,
+       28,
+       36,
+       44,
+       52,
+       60
+      ],
+      "icon": "ability_hunter_mendpet"
+     },
+     {
+      "name": "Revive Pet",
+      "levels": [
+       10
+      ],
+      "icon": "ability_hunter_beastsoothe"
+     },
+     {
+      "name": "Scare Beast",
+      "levels": [
+       14,
+       30,
+       46
+      ],
+      "icon": "ability_druid_cower"
+     },
+     {
+      "name": "Summon Hawk",
+      "levels": [
+       25,
+       36,
+       48,
+       60
+      ],
+      "icon": "ability_hunter_animalhandler"
+     },
+     {
+      "name": "Tame Beast",
+      "levels": [
+       10
+      ],
+      "icon": "ability_hunter_beasttaming"
+     },
+     {
+      "name": "Tranquilizing Shot",
+      "levels": [
+       60
+      ],
+      "icon": "spell_nature_drowsy"
+     }
+    ]
+   },
+   {
+    "name": "Marksmanship",
+    "spells": [
+     {
+      "name": "Aimed Shot",
+      "levels": [
+       20,
+       28,
+       36,
+       44,
+       52,
+       60
+      ],
+      "icon": "inv_spear_07"
+     },
+     {
+      "name": "Arcane Shot",
+      "levels": [
+       6,
+       12,
+       20,
+       28,
+       36,
+       44,
+       52,
+       60
+      ],
+      "icon": "ability_impalingbolt"
+     },
+     {
+      "name": "Auto Shot",
+      "levels": [
+       1
+      ],
+      "icon": "ability_whirlwind"
+     },
+     {
+      "name": "Concussive Shot",
+      "levels": [
+       8
+      ],
+      "icon": "spell_frost_stun"
+     },
+     {
+      "name": "Distracting Shot",
+      "levels": [
+       12,
+       20,
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "spell_arcane_blink"
+     },
+     {
+      "name": "Flare",
+      "levels": [
+       32
+      ],
+      "icon": "spell_fire_flare"
+     },
+     {
+      "name": "Hunter's Mark",
+      "levels": [
+       6,
+       22,
+       40,
+       58
+      ],
+      "icon": "ability_hunter_snipershot"
+     },
+     {
+      "name": "Multi-Shot",
+      "levels": [
+       18
+      ],
+      "icon": "ability_upgrademoonglaive"
+     },
+     {
+      "name": "Rapid Fire",
+      "levels": [
+       26
+      ],
+      "icon": "ability_hunter_runningshot"
+     },
+     {
+      "name": "Scatter Shot",
+      "levels": [
+       30
+      ],
+      "icon": "ability_golemstormbolt"
+     },
+     {
+      "name": "Scorpid Sting",
+      "levels": [
+       22
+      ],
+      "icon": "ability_hunter_criticalshot"
+     },
+     {
+      "name": "Serpent Sting",
+      "levels": [
+       4,
+       10,
+       18,
+       26,
+       34,
+       42,
+       50,
+       58,
+       60
+      ],
+      "icon": "ability_hunter_quickshot"
+     },
+     {
+      "name": "Sniper Shot",
+      "levels": [
+       40,
+       48,
+       58
+      ],
+      "icon": "hunter_pvp_snipershot"
+     },
+     {
+      "name": "Trueshot Aura",
+      "levels": [
+       25,
+       32,
+       40,
+       50,
+       60
+      ],
+      "icon": "ability_trueshot"
+     },
+     {
+      "name": "Viper Sting",
+      "levels": [
+       36,
+       46,
+       56
+      ],
+      "icon": "ability_hunter_aimedshot"
+     },
+     {
+      "name": "Volley",
+      "levels": [
+       40,
+       50,
+       58
+      ],
+      "icon": "ability_marksmanship"
+     }
+    ]
+   },
+   {
+    "name": "Survival",
+    "spells": [
+     {
+      "name": "Counterattack",
+      "levels": [
+       25,
+       30,
+       42,
+       54
+      ],
+      "icon": "ability_warrior_challange"
+     },
+     {
+      "name": "Deterrence",
+      "levels": [
+       20
+      ],
+      "icon": "ability_whirlwind"
+     },
+     {
+      "name": "Disengage",
+      "levels": [
+       20,
+       34,
+       48
+      ],
+      "icon": "ability_rogue_feint"
+     },
+     {
+      "name": "Explosive Trap",
+      "levels": [
+       34,
+       44,
+       54
+      ],
+      "icon": "spell_fire_selfdestruct"
+     },
+     {
+      "name": "Feign Death",
+      "levels": [
+       30
+      ],
+      "icon": "ability_rogue_feigndeath"
+     },
+     {
+      "name": "Freezing Trap",
+      "levels": [
+       20,
+       40,
+       60
+      ],
+      "icon": "spell_frost_chainsofice"
+     },
+     {
+      "name": "Frost Trap",
+      "levels": [
+       28
+      ],
+      "icon": "spell_frost_freezingbreath"
+     },
+     {
+      "name": "Immolation Trap",
+      "levels": [
+       16,
+       26,
+       36,
+       46,
+       56
+      ],
+      "icon": "spell_fire_flameshock"
+     },
+     {
+      "name": "Mongoose Bite",
+      "levels": [
+       16,
+       30,
+       44,
+       58
+      ],
+      "icon": "ability_hunter_swiftstrike"
+     },
+     {
+      "name": "Raptor Strike",
+      "levels": [
+       1,
+       8,
+       16,
+       24,
+       32,
+       40,
+       48,
+       56
+      ],
+      "icon": "ability_meleedamage"
+     },
+     {
+      "name": "Strider Kick",
+      "levels": [
+       30
+      ],
+      "icon": "ability_hunter_pet_tallstrider"
+     },
+     {
+      "name": "Track Beasts",
+      "levels": [
+       1
+      ],
+      "icon": "ability_tracking"
+     },
+     {
+      "name": "Track Demons",
+      "levels": [
+       32
+      ],
+      "icon": "spell_shadow_summonfelhunter"
+     },
+     {
+      "name": "Track Dragonkin",
+      "levels": [
+       50
+      ],
+      "icon": "inv_misc_head_dragon_01"
+     },
+     {
+      "name": "Track Elementals",
+      "levels": [
+       26
+      ],
+      "icon": "spell_frost_summonwaterelemental"
+     },
+     {
+      "name": "Track Giants",
+      "levels": [
+       40
+      ],
+      "icon": "ability_racial_avatar"
+     },
+     {
+      "name": "Track Hidden",
+      "levels": [
+       24
+      ],
+      "icon": "ability_stealth"
+     },
+     {
+      "name": "Track Humanoids",
+      "levels": [
+       10
+      ],
+      "icon": "spell_holy_prayerofhealing"
+     },
+     {
+      "name": "Track Undead",
+      "levels": [
+       18
+      ],
+      "icon": "spell_shadow_darksummoning"
+     },
+     {
+      "name": "Wing Clip",
+      "levels": [
+       12,
+       38,
+       60
+      ],
+      "icon": "ability_rogue_trip"
+     }
+    ]
+   },
+   {
+    "name": "Pets",
+    "spells": [
+     {
+      "name": "Arcane Resistance",
+      "levels": [
+       20,
+       30,
+       40,
+       50
+      ],
+      "icon": "spell_nature_starfall"
+     },
+     {
+      "name": "Bite",
+      "levels": [
+       1,
+       8,
+       16,
+       24,
+       32,
+       40,
+       48,
+       56
+      ],
+      "icon": "ability_racial_cannibalize"
+     },
+     {
+      "name": "Charge",
+      "levels": [
+       1,
+       12,
+       24,
+       36,
+       48,
+       60
+      ],
+      "icon": "ability_hunter_pet_boar"
+     },
+     {
+      "name": "Claw",
+      "levels": [
+       1,
+       8,
+       16,
+       24,
+       32,
+       40,
+       48,
+       56
+      ],
+      "icon": "ability_druid_rake"
+     },
+     {
+      "name": "Cower",
+      "levels": [
+       5,
+       15,
+       25,
+       35,
+       45,
+       55
+      ],
+      "icon": "ability_druid_cower"
+     },
+     {
+      "name": "Dash",
+      "levels": [
+       30,
+       40,
+       50
+      ],
+      "icon": "ability_druid_dash"
+     },
+     {
+      "name": "Demoralizing Screech",
+      "levels": [
+       8,
+       24,
+       48,
+       56
+      ],
+      "icon": "ability_hunter_pet_vulture"
+     },
+     {
+      "name": "Dismember",
+      "levels": [
+       12,
+       24,
+       36,
+       48,
+       60
+      ],
+      "icon": "ability_hunter_pet_crocolisk"
+     },
+     {
+      "name": "Dive",
+      "levels": [
+       30,
+       40,
+       50
+      ],
+      "icon": "spell_shadow_burningspirit"
+     },
+     {
+      "name": "Dust Cloud",
+      "levels": [
+       12,
+       24,
+       36,
+       48,
+       60
+      ],
+      "icon": "spell_nature_sleep"
+     },
+     {
+      "name": "Fire Resistance",
+      "levels": [
+       20,
+       30,
+       40,
+       50
+      ],
+      "icon": "spell_fire_firearmor"
+     },
+     {
+      "name": "Frost Resistance",
+      "levels": [
+       20,
+       30,
+       40,
+       50
+      ],
+      "icon": "spell_frost_frostward"
+     },
+     {
+      "name": "Furious Howl",
+      "levels": [
+       10,
+       24,
+       40,
+       56
+      ],
+      "icon": "ability_hunter_pet_wolf"
+     },
+     {
+      "name": "Great Stamina",
+      "levels": [
+       10,
+       12,
+       18,
+       24,
+       30,
+       36,
+       42,
+       48,
+       54,
+       60
+      ],
+      "icon": "spell_nature_unyeildingstamina"
+     },
+     {
+      "name": "Growl",
+      "levels": [
+       1,
+       10,
+       20,
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "ability_physical_taunt"
+     },
+     {
+      "name": "Lightning Breath",
+      "levels": [
+       1,
+       12,
+       24,
+       36,
+       48,
+       60
+      ],
+      "icon": "spell_nature_lightning"
+     },
+     {
+      "name": "Mine!",
+      "levels": [
+       10,
+       20,
+       30,
+       40,
+       50
+      ],
+      "icon": "spell_nature_natureswrath"
+     },
+     {
+      "name": "Natural Armor",
+      "levels": [
+       10,
+       12,
+       18,
+       24,
+       30,
+       36,
+       42,
+       48,
+       54,
+       60
+      ],
+      "icon": "spell_nature_spiritarmor"
+     },
+     {
+      "name": "Nature Resistance",
+      "levels": [
+       20,
+       30,
+       40,
+       50
+      ],
+      "icon": "spell_nature_resistnature"
+     },
+     {
+      "name": "Pinch",
+      "levels": [
+       12,
+       24,
+       36,
+       48,
+       60
+      ],
+      "icon": "ability_hunter_pet_crab"
+     },
+     {
+      "name": "Prowl",
+      "levels": [
+       30,
+       40,
+       50
+      ],
+      "icon": "ability_druid_supriseattack"
+     },
+     {
+      "name": "Savage Rend",
+      "levels": [
+       12,
+       24,
+       36,
+       48,
+       60
+      ],
+      "icon": "ability_hunter_pet_raptor"
+     },
+     {
+      "name": "Scorpid Poison",
+      "levels": [
+       8,
+       24,
+       40,
+       56
+      ],
+      "icon": "ability_poisonsting"
+     },
+     {
+      "name": "Shadow Resistance",
+      "levels": [
+       20,
+       30,
+       40,
+       50
+      ],
+      "icon": "spell_shadow_antishadow"
+     },
+     {
+      "name": "Shell Shield",
+      "levels": [
+       20
+      ],
+      "icon": "ability_hunter_pet_turtle"
+     },
+     {
+      "name": "Sonic Blast",
+      "levels": [
+       12,
+       24,
+       36,
+       48,
+       60
+      ],
+      "icon": "ability_vehicle_sonicshockwave"
+     },
+     {
+      "name": "Swipe",
+      "levels": [
+       12,
+       24,
+       36,
+       48,
+       60
+      ],
+      "icon": "inv_misc_monsterclaw_03"
+     },
+     {
+      "name": "Tendon Rip",
+      "levels": [
+       12,
+       24,
+       36,
+       48,
+       60
+      ],
+      "icon": "ability_hunter_pet_hyena"
+     },
+     {
+      "name": "Thunderstomp",
+      "levels": [
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "ability_hunter_pet_gorilla"
+     },
+     {
+      "name": "Trickster's Dance",
+      "levels": [
+       20
+      ],
+      "icon": "ability_hunter_aspectofthefox"
+     },
+     {
+      "name": "Web",
+      "levels": [
+       12,
+       24,
+       36,
+       48,
+       60
+      ],
+      "icon": "spell_nature_web"
+     }
+    ]
+   }
+  ],
+  "general": [
+   {
+    "name": "Attack",
+    "note": null
+   },
+   {
+    "name": "Throw",
+    "note": null
+   },
+   {
+    "name": "Beast Training",
+    "note": null
+   },
+   {
+    "name": "Dual Wield",
+    "note": "Passive"
+   },
+   {
+    "name": "Armor Proficiency",
+    "note": "Passive"
+   },
+   {
+    "name": "Dodge",
+    "note": "Passive"
+   },
+   {
+    "name": "Parry",
+    "note": "Passive"
+   },
+   {
+    "name": "Languages",
+    "note": "Passive"
+   }
+  ]
+ }
 }

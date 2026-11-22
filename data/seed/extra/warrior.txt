@@ -1,0 +1,107 @@
+T|Arms|Improved Heroic Strike|ability_rogue_ambush
+T|Arms|Deflection|ability_parry
+T|Arms|Improved Rend|ability_gouge
+T|Arms|Improved Charge|ability_warrior_charge
+T|Arms|Improved Tactical Mastery|spell_nature_enchantarmor
+T|Arms|Improved Overpower|inv_sword_05
+T|Arms|Anger Management|spell_holy_blessingofstamina
+T|Arms|Deep Wounds|ability_backstab
+T|Arms|Spearing Strike|inv_spear_01
+T|Arms|Two-Handed Weapon Specialization|inv_axe_09
+T|Arms|Impale|ability_searingarrow
+T|Arms|Bloodthrill|inv_sword_01
+T|Arms|Sweeping Strikes|ability_rogue_slicedice
+T|Arms|Weaponmaster|garrison_weaponupgrade
+T|Arms|Improved Slam|ability_warrior_decisivestrike
+T|Arms|Improved Hamstring|ability_shockwave
+T|Arms|Mortal Strike|ability_warrior_savageblow
+T|Fury|Booming Voice|spell_nature_purge
+T|Fury|Cruelty|ability_rogue_eviscerate
+T|Fury|Lingering Rage|ability_warrior_secondwind
+T|Fury|Unbridled Wrath|spell_nature_stoneclawtotem
+T|Fury|Furious Precision|ability_warrior_incite
+T|Fury|Piercing Howl|spell_shadow_deathscream
+T|Fury|Blood Craze|spell_shadow_summonimp
+T|Fury|Enrage|spell_shadow_unholyfrenzy
+T|Fury|Dual Wield Specialization|ability_dualwield
+T|Fury|Reckless Swings|ability_warrior_bloodfrenzy
+T|Fury|Improved Execute|inv_sword_48
+T|Fury|Improved Berserker Rage|spell_nature_ancestralguardian
+T|Fury|Death Wish|spell_shadow_deathpact
+T|Fury|Gore Drinker|racial_troll_berserk
+T|Fury|Improved Intercept|ability_rogue_sprint
+T|Fury|Improved Whirlwind|ability_whirlwind
+T|Fury|Flurry|ability_ghoulfrenzy
+T|Fury|Bloodthirst|spell_nature_bloodlust
+T|Protection|Improved Bloodrage|ability_racial_bloodrage
+T|Protection|Shield Specialization|inv_shield_06
+T|Protection|Iron Will|spell_magic_magearmor
+T|Protection|Anticipation|spell_nature_mirrorimage
+T|Protection|Improved Revenge|ability_warrior_revenge
+T|Protection|Improved Thunder Clap|ability_thunderclap
+T|Protection|Last Stand|spell_holy_ashestoashes
+T|Protection|Master of Defense|ability_warrior_shieldguard
+T|Protection|Improved Disarm|ability_warrior_disarm
+T|Protection|Defiance|ability_warrior_innerrage
+T|Protection|Improved Sunder Armor|ability_warrior_sunder
+T|Protection|Vanguard|ability_warrior_shieldcharge
+T|Protection|Improved Shield Bash|ability_warrior_shieldbash
+T|Protection|Improved Shield Wall|ability_warrior_shieldwall
+T|Protection|Concussion Blow|ability_thunderbolt
+T|Protection|Focused Rage|ability_warrior_focusedrage
+T|Protection|Bastion|inv_shield_04
+T|Protection|Shield Slam|inv_shield_05
+S|Arms|Battle Stance|1|ability_warrior_offensivestance
+S|Arms|Charge|4,26,46|ability_warrior_charge
+S|Arms|Hamstring|8,32,54|ability_shockwave
+S|Arms|Heroic Strike|1,8,16,24,32,40,48,56,60|ability_rogue_ambush
+S|Arms|Mocking Blow|16,26,36,46,56|ability_warrior_punishingblow
+S|Arms|Mortal Strike|40,48,54,60|ability_warrior_savageblow
+S|Arms|Overpower|12,28,44,60|ability_meleedamage
+S|Arms|Rend|4,10,20,30,40,50,60|ability_gouge
+S|Arms|Retaliation|20|ability_warrior_challange
+S|Arms|Spearing Strike|25|inv_spear_01
+S|Arms|Sweeping Strikes|30|ability_rogue_slicedice
+S|Arms|Tactical Mastery|14|spell_nature_enchantarmor
+S|Arms|Thunder Clap|6,18,28,38,48,58|spell_nature_thunderclap
+S|Arms|Victory Rush|20|ability_warrior_devastate
+S|Fury|Battle Shout|1,12,22,32,42,52,60|ability_warrior_battleshout
+S|Fury|Berserker Rage|30|spell_nature_ancestralguardian
+S|Fury|Berserker Stance|30|ability_racial_avatar
+S|Fury|Bloodthirst|40,48,54,60|spell_nature_bloodlust
+S|Fury|Challenging Shout|26|ability_bullrush
+S|Fury|Cleave|20,30,40,50,60|ability_warrior_cleave
+S|Fury|Death Wish|30|spell_shadow_deathpact
+S|Fury|Demoralizing Shout|14,24,34,44,54|ability_warrior_warcry
+S|Fury|Execute|24,32,40,48,56|inv_sword_48
+S|Fury|Intercept|30,42,52|ability_rogue_sprint
+S|Fury|Intimidating Shout|22|ability_golemthunderclap
+S|Fury|Piercing Howl|20|spell_shadow_deathscream
+S|Fury|Pummel|38,58|inv_gauntlets_04
+S|Fury|Reckless Swings|25|ability_warrior_bloodfrenzy
+S|Fury|Recklessness|50|ability_criticalstrike
+S|Fury|Slam|20,30,38,46,54|ability_warrior_decisivestrike
+S|Fury|Whirlwind|36|ability_whirlwind
+S|Protection|Bloodrage|10|ability_racial_bloodrage
+S|Protection|Concussion Blow|30|ability_thunderbolt
+S|Protection|Defensive Stance|10|ability_warrior_defensivestance
+S|Protection|Disarm|18|ability_warrior_disarm
+S|Protection|Last Stand|20|spell_holy_ashestoashes
+S|Protection|Revenge|14,24,34,44,54,60|ability_warrior_revenge
+S|Protection|Shield Bash|12,32,52|ability_warrior_shieldbash
+S|Protection|Shield Block|16|ability_defend
+S|Protection|Shield Slam|40,48,54,60|inv_shield_05
+S|Protection|Shield Wall|28|ability_warrior_shieldwall
+S|Protection|Sunder Armor|10,22,34,46,58|ability_warrior_sunder
+S|Protection|Taunt|10|spell_nature_reincarnation
+G|Attack|
+G|Throw|
+G|Shoot Bow|
+G|Shoot Crossbow|
+G|Shoot Gun|
+G|Dual Wield|Passive
+G|Armor Proficiency|Passive
+G|Block|Passive
+G|Dodge|Passive
+G|Parry|Passive
+G|Languages|Passive

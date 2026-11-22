@@ -22,7 +22,8 @@
      "req": null,
      "cost": null,
      "summary": "Heroic Strike rage cost -1/-2/-3",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_ambush"
     },
     {
      "name": "Deflection",
@@ -32,7 +33,8 @@
      "req": null,
      "cost": null,
      "summary": "Parry chance +1/+2/+3/+4/+5%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_parry"
     },
     {
      "name": "Improved Rend",
@@ -42,7 +44,8 @@
      "req": null,
      "cost": null,
      "summary": "Rend bleed damage +12/+23/+35%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_gouge"
     },
     {
      "name": "Improved Charge",
@@ -52,7 +55,8 @@
      "req": null,
      "cost": null,
      "summary": "Charge rage generated +3/+6",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_charge"
     },
     {
      "name": "Improved Tactical Mastery",
@@ -62,7 +66,8 @@
      "req": null,
      "cost": null,
      "summary": "Rage kept when changing stances +5/+10/+15",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_enchantarmor"
     },
     {
      "name": "Improved Overpower",
@@ -72,7 +77,8 @@
      "req": null,
      "cost": null,
      "summary": "Overpower crit chance +25/+50%",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_sword_05"
     },
     {
      "name": "Anger Management",
@@ -82,7 +88,8 @@
      "req": "Improved Tactical Mastery",
      "cost": null,
      "summary": "Generates rage in combat; rage decays 30% slower out of combat",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_holy_blessingofstamina"
     },
     {
      "name": "Deep Wounds",
@@ -92,7 +99,8 @@
      "req": "Improved Rend",
      "cost": null,
      "summary": "Crits cause a bleed for 20/40/60% of weapon damage over 12 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_backstab"
     },
     {
      "name": "Spearing Strike",
@@ -102,7 +110,8 @@
      "req": null,
      "cost": "Active",
      "summary": "75% weapon damage; extra damage vs giants, dragonkin and mounted targets",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_spear_01"
     },
     {
      "name": "Two-Handed Weapon Specialization",
@@ -112,7 +121,8 @@
      "req": null,
      "cost": null,
      "summary": "Two-handed weapon damage +2/+4/+6%",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_axe_09"
     },
     {
      "name": "Impale",
@@ -122,7 +132,8 @@
      "req": "Deep Wounds",
      "cost": null,
      "summary": "Ability crit damage bonus +10/+20%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_searingarrow"
     },
     {
      "name": "Bloodthrill",
@@ -132,7 +143,8 @@
      "req": null,
      "cost": null,
      "summary": "10/20% chance for main-hand hits on Rend targets to allow Overpower",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_sword_01"
     },
     {
      "name": "Sweeping Strikes",
@@ -142,7 +154,8 @@
      "req": null,
      "cost": "Active",
      "summary": "Next 5 melee attacks also hit a nearby enemy",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_slicedice"
     },
     {
      "name": "Weaponmaster",
@@ -152,7 +165,8 @@
      "req": null,
      "cost": null,
      "summary": "By weapon type: crit +1-5% (axe/polearm), armor ignored 3-15% (mace/staff), extra attack chance 1-5% (sword)",
-     "ranks": null
+     "ranks": null,
+     "icon": "garrison_weaponupgrade"
     },
     {
      "name": "Improved Slam",
@@ -162,7 +176,8 @@
      "req": null,
      "cost": null,
      "summary": "Slam cooldown -2.5/-5 sec; cast and GCD -0.25/-0.5 sec; no longer interrupts melee swing",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_decisivestrike"
     },
     {
      "name": "Improved Hamstring",
@@ -172,7 +187,8 @@
      "req": null,
      "cost": null,
      "summary": "Hamstring has a 5/10/15% chance to immobilize for 5 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_shockwave"
     },
     {
      "name": "Mortal Strike",
@@ -182,7 +198,8 @@
      "req": "Sweeping Strikes",
      "cost": "Active",
      "summary": "Weapon damage +85; reduces healing received by 50% for 10 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_savageblow"
     }
    ]
   },
@@ -197,7 +214,8 @@
      "req": null,
      "cost": null,
      "summary": "Shout area +10-50%; Shout and Howl rage cost -5-25%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_purge"
     },
     {
      "name": "Cruelty",
@@ -207,7 +225,8 @@
      "req": null,
      "cost": null,
      "summary": "Melee crit chance +1/+2/+3/+4/+5%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_eviscerate"
     },
     {
      "name": "Lingering Rage",
@@ -217,7 +236,8 @@
      "req": null,
      "cost": null,
      "summary": "Rage decay delay after leaving combat +2-10 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_secondwind"
     },
     {
      "name": "Unbridled Wrath",
@@ -227,7 +247,8 @@
      "req": null,
      "cost": null,
      "summary": "12-60% chance for melee hits to generate 1 extra rage",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_stoneclawtotem"
     },
     {
      "name": "Furious Precision",
@@ -237,7 +258,8 @@
      "req": null,
      "cost": null,
      "summary": "Off-hand hit chance +4/+7/+10%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_incite"
     },
     {
      "name": "Piercing Howl",
@@ -247,7 +269,8 @@
      "req": null,
      "cost": "Active",
      "summary": "Slows enemies within 10 yd by 50% for 6 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_deathscream"
     },
     {
      "name": "Blood Craze",
@@ -257,7 +280,8 @@
      "req": null,
      "cost": null,
      "summary": "Regenerates 1/2/3% max health over 6 sec after a crit or a hit over 20% max health",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_summonimp"
     },
     {
      "name": "Enrage",
@@ -267,7 +291,8 @@
      "req": null,
      "cost": null,
      "summary": "30% chance for +2-10% physical damage for 12 sec after taking damage",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_unholyfrenzy"
     },
     {
      "name": "Dual Wield Specialization",
@@ -277,7 +302,8 @@
      "req": null,
      "cost": null,
      "summary": "Off-hand damage +5-25%; off-hand rage +10-50%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_dualwield"
     },
     {
      "name": "Reckless Swings",
@@ -287,7 +313,8 @@
      "req": null,
      "cost": "Active",
      "summary": "Next 4 melee attacks generate 5 extra rage each over 8 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_bloodfrenzy"
     },
     {
      "name": "Improved Execute",
@@ -297,7 +324,8 @@
      "req": null,
      "cost": null,
      "summary": "Execute rage cost -3/-5",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_sword_48"
     },
     {
      "name": "Improved Berserker Rage",
@@ -307,7 +335,8 @@
      "req": null,
      "cost": null,
      "summary": "Berserker Rage gives 5/10 rage; 50/100% chance to remove movement impairments",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_ancestralguardian"
     },
     {
      "name": "Death Wish",
@@ -317,7 +346,8 @@
      "req": null,
      "cost": "Active",
      "summary": "+20% physical damage, Fear immunity, +5% damage taken for 30 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_deathpact"
     },
     {
      "name": "Gore Drinker",
@@ -327,7 +357,8 @@
      "req": "Blood Craze",
      "cost": null,
      "summary": "Next 3 melee hits restore 0.5/1.0% max health after listed abilities",
-     "ranks": null
+     "ranks": null,
+     "icon": "racial_troll_berserk"
     },
     {
      "name": "Improved Intercept",
@@ -337,7 +368,8 @@
      "req": null,
      "cost": null,
      "summary": "Intercept cooldown -5/-10 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_rogue_sprint"
     },
     {
      "name": "Improved Whirlwind",
@@ -347,7 +379,8 @@
      "req": null,
      "cost": null,
      "summary": "Whirlwind cooldown -1/-2 sec; damage to closest enemy +15/+30%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_whirlwind"
     },
     {
      "name": "Flurry",
@@ -357,7 +390,8 @@
      "req": null,
      "cost": null,
      "summary": "Attack speed +10/+20/+30% for next 3 swings after a melee crit",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_ghoulfrenzy"
     },
     {
      "name": "Bloodthirst",
@@ -367,7 +401,8 @@
      "req": "Death Wish",
      "cost": "Active",
      "summary": "Hits for 45% AP +30; +10% movement speed for 10 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_bloodlust"
     }
    ]
   },
@@ -382,7 +417,8 @@
      "req": null,
      "cost": null,
      "summary": "Bloodrage rage generation +25/+50%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_racial_bloodrage"
     },
     {
      "name": "Shield Specialization",
@@ -392,7 +428,8 @@
      "req": null,
      "cost": null,
      "summary": "Shield block chance +1-5%; 20-100% chance to gain 5 rage on block",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_shield_06"
     },
     {
      "name": "Iron Will",
@@ -402,7 +439,8 @@
      "req": null,
      "cost": null,
      "summary": "Stun and Fear duration on you -3-15%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_magic_magearmor"
     },
     {
      "name": "Anticipation",
@@ -412,7 +450,8 @@
      "req": null,
      "cost": null,
      "summary": "Defense skill +4/+8/+12/+16/+20",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_mirrorimage"
     },
     {
      "name": "Improved Revenge",
@@ -422,7 +461,8 @@
      "req": null,
      "cost": null,
      "summary": "Revenge damage +20/+40/+60%",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_revenge"
     },
     {
      "name": "Improved Thunder Clap",
@@ -432,7 +472,8 @@
      "req": null,
      "cost": null,
      "summary": "Thunder Clap rage cost -2/-4/-6",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_thunderclap"
     },
     {
      "name": "Last Stand",
@@ -442,7 +483,8 @@
      "req": null,
      "cost": "Active",
      "summary": "Temporary +30% max health for 20 sec, then that health is lost",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_holy_ashestoashes"
     },
     {
      "name": "Master of Defense",
@@ -452,7 +494,8 @@
      "req": "Shield Specialization",
      "cost": null,
      "summary": "50/100% chance to gain 5 rage on dodge or parry with a shield",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_shieldguard"
     },
     {
      "name": "Improved Disarm",
@@ -462,7 +505,8 @@
      "req": null,
      "cost": null,
      "summary": "Disarm cooldown -7/-13/-20 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_disarm"
     },
     {
      "name": "Defiance",
@@ -472,7 +516,8 @@
      "req": null,
      "cost": null,
      "summary": "Defensive Stance threat +7/+13/+20% with a shield",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_innerrage"
     },
     {
      "name": "Improved Sunder Armor",
@@ -482,7 +527,8 @@
      "req": null,
      "cost": null,
      "summary": "Sunder Armor rage cost -1/-2/-3",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_sunder"
     },
     {
      "name": "Vanguard",
@@ -492,7 +538,8 @@
      "req": null,
      "cost": null,
      "summary": "Charge usable in Defensive Stance",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_shieldcharge"
     },
     {
      "name": "Improved Shield Bash",
@@ -502,7 +549,8 @@
      "req": null,
      "cost": null,
      "summary": "Shield Bash has a 50/100% chance to silence for 3 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_shieldbash"
     },
     {
      "name": "Improved Shield Wall",
@@ -512,7 +560,8 @@
      "req": null,
      "cost": null,
      "summary": "Shield Wall cooldown reduced by 5.5/11.0 min",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_shieldwall"
     },
     {
      "name": "Concussion Blow",
@@ -522,7 +571,8 @@
      "req": null,
      "cost": "Active",
      "summary": "Stuns target for 5 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_thunderbolt"
     },
     {
      "name": "Focused Rage",
@@ -532,7 +582,8 @@
      "req": null,
      "cost": null,
      "summary": "Offensive ability rage cost -1/-2/-3",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_warrior_focusedrage"
     },
     {
      "name": "Bastion",
@@ -542,7 +593,8 @@
      "req": null,
      "cost": null,
      "summary": "All damage dealt +2-10% with a shield equipped",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_shield_04"
     },
     {
      "name": "Shield Slam",
@@ -552,9 +604,451 @@
      "req": "Concussion Blow",
      "cost": "Active",
      "summary": "Shield damage scaled by block value; 50% chance to dispel one magic effect",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_shield_05"
     }
    ]
   }
- ]
+ ],
+ "spells": {
+  "tabs": [
+   {
+    "name": "Arms",
+    "spells": [
+     {
+      "name": "Battle Stance",
+      "levels": [
+       1
+      ],
+      "icon": "ability_warrior_offensivestance"
+     },
+     {
+      "name": "Charge",
+      "levels": [
+       4,
+       26,
+       46
+      ],
+      "icon": "ability_warrior_charge"
+     },
+     {
+      "name": "Hamstring",
+      "levels": [
+       8,
+       32,
+       54
+      ],
+      "icon": "ability_shockwave"
+     },
+     {
+      "name": "Heroic Strike",
+      "levels": [
+       1,
+       8,
+       16,
+       24,
+       32,
+       40,
+       48,
+       56,
+       60
+      ],
+      "icon": "ability_rogue_ambush"
+     },
+     {
+      "name": "Mocking Blow",
+      "levels": [
+       16,
+       26,
+       36,
+       46,
+       56
+      ],
+      "icon": "ability_warrior_punishingblow"
+     },
+     {
+      "name": "Mortal Strike",
+      "levels": [
+       40,
+       48,
+       54,
+       60
+      ],
+      "icon": "ability_warrior_savageblow"
+     },
+     {
+      "name": "Overpower",
+      "levels": [
+       12,
+       28,
+       44,
+       60
+      ],
+      "icon": "ability_meleedamage"
+     },
+     {
+      "name": "Rend",
+      "levels": [
+       4,
+       10,
+       20,
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "ability_gouge"
+     },
+     {
+      "name": "Retaliation",
+      "levels": [
+       20
+      ],
+      "icon": "ability_warrior_challange"
+     },
+     {
+      "name": "Spearing Strike",
+      "levels": [
+       25
+      ],
+      "icon": "inv_spear_01"
+     },
+     {
+      "name": "Sweeping Strikes",
+      "levels": [
+       30
+      ],
+      "icon": "ability_rogue_slicedice"
+     },
+     {
+      "name": "Tactical Mastery",
+      "levels": [
+       14
+      ],
+      "icon": "spell_nature_enchantarmor"
+     },
+     {
+      "name": "Thunder Clap",
+      "levels": [
+       6,
+       18,
+       28,
+       38,
+       48,
+       58
+      ],
+      "icon": "spell_nature_thunderclap"
+     },
+     {
+      "name": "Victory Rush",
+      "levels": [
+       20
+      ],
+      "icon": "ability_warrior_devastate"
+     }
+    ]
+   },
+   {
+    "name": "Fury",
+    "spells": [
+     {
+      "name": "Battle Shout",
+      "levels": [
+       1,
+       12,
+       22,
+       32,
+       42,
+       52,
+       60
+      ],
+      "icon": "ability_warrior_battleshout"
+     },
+     {
+      "name": "Berserker Rage",
+      "levels": [
+       30
+      ],
+      "icon": "spell_nature_ancestralguardian"
+     },
+     {
+      "name": "Berserker Stance",
+      "levels": [
+       30
+      ],
+      "icon": "ability_racial_avatar"
+     },
+     {
+      "name": "Bloodthirst",
+      "levels": [
+       40,
+       48,
+       54,
+       60
+      ],
+      "icon": "spell_nature_bloodlust"
+     },
+     {
+      "name": "Challenging Shout",
+      "levels": [
+       26
+      ],
+      "icon": "ability_bullrush"
+     },
+     {
+      "name": "Cleave",
+      "levels": [
+       20,
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "ability_warrior_cleave"
+     },
+     {
+      "name": "Death Wish",
+      "levels": [
+       30
+      ],
+      "icon": "spell_shadow_deathpact"
+     },
+     {
+      "name": "Demoralizing Shout",
+      "levels": [
+       14,
+       24,
+       34,
+       44,
+       54
+      ],
+      "icon": "ability_warrior_warcry"
+     },
+     {
+      "name": "Execute",
+      "levels": [
+       24,
+       32,
+       40,
+       48,
+       56
+      ],
+      "icon": "inv_sword_48"
+     },
+     {
+      "name": "Intercept",
+      "levels": [
+       30,
+       42,
+       52
+      ],
+      "icon": "ability_rogue_sprint"
+     },
+     {
+      "name": "Intimidating Shout",
+      "levels": [
+       22
+      ],
+      "icon": "ability_golemthunderclap"
+     },
+     {
+      "name": "Piercing Howl",
+      "levels": [
+       20
+      ],
+      "icon": "spell_shadow_deathscream"
+     },
+     {
+      "name": "Pummel",
+      "levels": [
+       38,
+       58
+      ],
+      "icon": "inv_gauntlets_04"
+     },
+     {
+      "name": "Reckless Swings",
+      "levels": [
+       25
+      ],
+      "icon": "ability_warrior_bloodfrenzy"
+     },
+     {
+      "name": "Recklessness",
+      "levels": [
+       50
+      ],
+      "icon": "ability_criticalstrike"
+     },
+     {
+      "name": "Slam",
+      "levels": [
+       20,
+       30,
+       38,
+       46,
+       54
+      ],
+      "icon": "ability_warrior_decisivestrike"
+     },
+     {
+      "name": "Whirlwind",
+      "levels": [
+       36
+      ],
+      "icon": "ability_whirlwind"
+     }
+    ]
+   },
+   {
+    "name": "Protection",
+    "spells": [
+     {
+      "name": "Bloodrage",
+      "levels": [
+       10
+      ],
+      "icon": "ability_racial_bloodrage"
+     },
+     {
+      "name": "Concussion Blow",
+      "levels": [
+       30
+      ],
+      "icon": "ability_thunderbolt"
+     },
+     {
+      "name": "Defensive Stance",
+      "levels": [
+       10
+      ],
+      "icon": "ability_warrior_defensivestance"
+     },
+     {
+      "name": "Disarm",
+      "levels": [
+       18
+      ],
+      "icon": "ability_warrior_disarm"
+     },
+     {
+      "name": "Last Stand",
+      "levels": [
+       20
+      ],
+      "icon": "spell_holy_ashestoashes"
+     },
+     {
+      "name": "Revenge",
+      "levels": [
+       14,
+       24,
+       34,
+       44,
+       54,
+       60
+      ],
+      "icon": "ability_warrior_revenge"
+     },
+     {
+      "name": "Shield Bash",
+      "levels": [
+       12,
+       32,
+       52
+      ],
+      "icon": "ability_warrior_shieldbash"
+     },
+     {
+      "name": "Shield Block",
+      "levels": [
+       16
+      ],
+      "icon": "ability_defend"
+     },
+     {
+      "name": "Shield Slam",
+      "levels": [
+       40,
+       48,
+       54,
+       60
+      ],
+      "icon": "inv_shield_05"
+     },
+     {
+      "name": "Shield Wall",
+      "levels": [
+       28
+      ],
+      "icon": "ability_warrior_shieldwall"
+     },
+     {
+      "name": "Sunder Armor",
+      "levels": [
+       10,
+       22,
+       34,
+       46,
+       58
+      ],
+      "icon": "ability_warrior_sunder"
+     },
+     {
+      "name": "Taunt",
+      "levels": [
+       10
+      ],
+      "icon": "spell_nature_reincarnation"
+     }
+    ]
+   }
+  ],
+  "general": [
+   {
+    "name": "Attack",
+    "note": null
+   },
+   {
+    "name": "Throw",
+    "note": null
+   },
+   {
+    "name": "Shoot Bow",
+    "note": null
+   },
+   {
+    "name": "Shoot Crossbow",
+    "note": null
+   },
+   {
+    "name": "Shoot Gun",
+    "note": null
+   },
+   {
+    "name": "Dual Wield",
+    "note": "Passive"
+   },
+   {
+    "name": "Armor Proficiency",
+    "note": "Passive"
+   },
+   {
+    "name": "Block",
+    "note": "Passive"
+   },
+   {
+    "name": "Dodge",
+    "note": "Passive"
+   },
+   {
+    "name": "Parry",
+    "note": "Passive"
+   },
+   {
+    "name": "Languages",
+    "note": "Passive"
+   }
+  ]
+ }
 }

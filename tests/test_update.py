@@ -25,8 +25,13 @@ def fake_export(doc):
                 item["cost"] = t["cost"]
             talents.append(item)
         trees.append({"name": tree["name"], "bg": 1, "icon": "x", "talents": talents, "removed": []})
+    book = {"general": [["Attack", ""], ["Dodge", "Passive"]],
+            "tabs": [{"name": "Arms", "spells": [["Charge", "Rank 3"], ["Charge", "Rank 2"], ["Retaliation", ""]]}],
+            "levels": {"Charge": [4, 26, 46]}, "icons": {"Charge": "ability_warrior_charge"}}
+    desc = {"Warrior|Retaliation|": {"lv": "Learned at level 20", "d": "x"},
+            "Warrior|Charge|Rank 2": {"lv": "Learned at level 26", "d": "x"}}
     return {"_readme": "Talent data from the WoW Forever client, build 1.60.1.99999.", "generated": "2027-01-05",
-            "class": doc["class"], "talents": {"trees": trees}, "spellbook": {}, "spell_desc": {}}
+            "class": doc["class"], "talents": {"trees": trees}, "spellbook": book, "spell_desc": desc}
 
 
 def main():
@@ -39,8 +44,14 @@ def main():
     assert first["source"]["build"] == "1.60.1.99999" and first["source"]["generated"] == "2027-01-05"
     assert first["trees"][0]["talents"][0]["ranks"][0].endswith("rank 1 text.")
     assert first["trees"][0]["talents"][0]["summary"], "summary kept while the text is unverified"
+    assert first["trees"][0]["talents"][0]["icon"] == "x", "icon comes from the export"
+    arms_spells = first["spells"]["tabs"][0]["spells"]
+    assert arms_spells == [{"name": "Charge", "levels": [4, 26, 46], "icon": "ability_warrior_charge"},
+                           {"name": "Retaliation", "levels": [20], "icon": None}], arms_spells
+    assert first["spells"]["general"][1] == {"name": "Dodge", "note": "Passive"}
     lines, changed = wfdata.diff_class(old, first)
-    assert lines == [] and not changed, lines
+    assert not changed and all("spell" in l or "learn levels" in l for l in lines), lines
+    first["spells"] = old["spells"]
 
     # A patch: one talent gains a rank, one is reworded, one is replaced, one moves.
     arms = export["talents"]["trees"][0]["talents"]
@@ -50,6 +61,13 @@ def main():
     by_name["Improved Rend"]["desc"][0] = "Reworded."
     by_name["Improved Charge"]["name"] = "Juggernaut"
     by_name["Improved Hamstring"]["col"] = 4
+    export["spellbook"] = {"general": [], "levels": {"Charge": [4, 24, 46]}, "icons": {},
+                           "tabs": [{"name": t["name"], "spells": [[s["name"], ""] for s in t["spells"]]}
+                                    for t in old["spells"]["tabs"]]}
+    export["spell_desc"] = {f"Warrior|{s['name']}|": {"lv": f"Learned at level {s['levels'][0]}"}
+                            for t in old["spells"]["tabs"] for s in t["spells"] if s["levels"] and len(s["levels"]) == 1}
+    export["spellbook"]["levels"].update({s["name"]: s["levels"] for t in old["spells"]["tabs"] for s in t["spells"]
+                                          if s["levels"] and len(s["levels"]) > 1 and s["name"] != "Charge"})
     second = wfdata.convert_export("warrior", export, first, "2027-02-01")
     lines, changed = wfdata.diff_class(first, second)
     text = "\n".join(lines)
@@ -58,6 +76,8 @@ def main():
     assert "added Arms / Juggernaut" in text and "removed Arms / Improved Charge" in text, text
     assert "moved Arms / Improved Hamstring" in text, text
     assert ("Arms", "Improved Rend") in changed
+    assert "learn levels of Arms / Charge: [4, 26, 46] -> [4, 24, 46]" in text, text
+    assert "spell removed" not in text and "new spell" not in text, text
     deflection = next(t for t in second["trees"][0]["talents"] if t["name"] == "Deflection")
     assert deflection["summary"] is None, "stale summary dropped when the talent changes"
 

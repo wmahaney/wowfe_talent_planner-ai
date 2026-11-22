@@ -6,6 +6,8 @@ across its three trees, and see
 
 - **Bonuses**: every talent you took at its current rank, with stat boosts
   added up across trees;
+- **Skills**: every skill the class trainer teaches and the level of each
+  rank, listed by level or by tree, following the level slider;
 - **Base stats**: class numbers at any level (the level slider drives both the
   talent point budget and this panel), plus what your own attributes turn into
   once talents are applied.
@@ -31,7 +33,7 @@ skip that unless you change `core/`.
 | --- | --- |
 | `core/planner.c`, `planner.h` | Rules engine: rows, prerequisites, point budget, build strings, stat maths. Freestanding C99. |
 | `site/` | What gets published: `index.html`, `style.css`, `app.js`, `planner.wasm`, `data/`. |
-| `data/talents/*.json` | Canonical talent data, one file per class. |
+| `data/talents/*.json` | Canonical talent data, icon names and skill lists, one file per class. |
 | `data/stats.json` | Per-level class tables (crit conversions, base mana). |
 | `data/rules.json` | Game rules, conversions, class constants, stat definitions. |
 | `data/effects.txt` | Hand-curated stat effects (which talent gives +5% parry, and so on). |
@@ -69,6 +71,25 @@ positional and can break when a tree is rearranged.
 `.github/workflows/update-data.yml` runs the same command daily and opens a
 pull request when anything changed.
 
+## Icons
+
+Talents and skills carry the game's icon names (for example `ability_parry`).
+The site turns a name into an image URL with the pattern in
+`data/rules.json` under `icons.remote`, which points at Wowhead's icon host by
+default. An icon that fails to load is dropped and the name is shown instead,
+so the planner works without them.
+
+To serve the images from your own site instead of someone else's host:
+
+```
+python3 tools/wfdata.py icons     # downloads into site/icons/ and rebuilds
+```
+
+Once every icon is in `site/icons/`, the build switches to the local copies.
+The images are Blizzard's artwork, so whether to commit them to a public
+repository is your call. The default URL pattern was not tested from the
+machine this was written on; if icons do not appear, check `icons.remote`.
+
 ## Deploying to GitHub Pages
 
 1. Push this repository to GitHub.
@@ -84,6 +105,9 @@ create pull requests under Settings -> Actions -> General.
   were read from the Talents Forever export of client build 1.60.1.70755. The
   descriptions are short summaries. The first `make update` replaces them with
   the full text of every rank.
+- Skill lists and learn levels come from the same export. Four skills have no
+  level in it and are listed as such: Paladin *Sense Undead*, Mage *Polymorph
+  (Turtle)* and *(Pig)*, Warlock pet *Lesser Invisibility*.
 - Two positions were ambiguous in what was read and were resolved by hand:
   Warrior Fury *Enrage* (placed at row 3, column 4) and Mage Fire *Impact*
   (placed at row 2, column 3). The first update settles both.

@@ -1,0 +1,111 @@
+T|Discipline|Power in Light|spell_holy_searinglight
+T|Discipline|Wand Specialization|inv_wand_01
+T|Discipline|Twin Disciplines|spell_holy_sealofvengeance
+T|Discipline|Silent Resolve|spell_nature_manaregentotem
+T|Discipline|Holy Precision|spell_holy_divineillumination
+T|Discipline|Mental Strength|spell_nature_enchantarmor
+T|Discipline|Martyrdom|spell_nature_tranquility
+T|Discipline|Mental Agility|ability_hibernation
+T|Discipline|Inner Focus|spell_frost_windwalkon
+T|Discipline|Improved Power Word: Shield|spell_holy_powerwordshield
+T|Discipline|Meditation|spell_nature_sleep
+T|Discipline|Improved Inner Fire|spell_holy_innerfire
+T|Discipline|Improved Mana Burn|spell_shadow_manaburn
+T|Discipline|Soul Warding|spell_holy_pureofheart
+T|Discipline|Penance|spell_holy_penance
+T|Discipline|Renewed Hope|spell_holy_holyprotection
+T|Discipline|Divine Aegis|spell_holy_devineaegis
+T|Discipline|Power Infusion|spell_holy_powerinfusion
+T|Holy|Twilight Focus|spell_holy_healingfocus
+T|Holy|Improved Renew|spell_holy_renew
+T|Holy|Holy Specialization|spell_holy_sealofsalvation
+T|Holy|Spell Warding|spell_holy_spellwarding
+T|Holy|Divine Fury|spell_holy_sealofwrath
+T|Holy|Holy Nova|spell_holy_holynova
+T|Holy|Blessed Recovery|spell_holy_blessedrecovery
+T|Holy|Inspiration|spell_holy_layonhands
+T|Holy|Holy Reach|spell_holy_purify
+T|Holy|Improved Healing|spell_holy_heal02
+T|Holy|Searing Light|spell_holy_searinglightpriest
+T|Holy|Holy Binding|spell_holy_blindingheal
+T|Holy|Litany of Light|inv_scroll_07
+T|Holy|Spirit of Redemption|inv_enchant_essenceeternallarge
+T|Holy|Spiritual Guidance|spell_holy_spiritualguidence
+T|Holy|Spiritual Healing|spell_nature_moonglow
+T|Holy|Prayer of Mending|spell_holy_prayerofmendingtga
+T|Shadow|Shadow Focus|spell_shadow_burningspirit
+T|Shadow|Blackout|spell_shadow_gathershadows
+T|Shadow|Spirit Tap|spell_shadow_requiem
+T|Shadow|Improved Mind Blast|spell_shadow_unholyfrenzy
+T|Shadow|Improved Shadow Word: Pain|spell_shadow_shadowwordpain
+T|Shadow|Shadow Reach|spell_shadow_chilltouch
+T|Shadow|Improved Psychic Scream|spell_shadow_psychicscream
+T|Shadow|Mind Flay|spell_shadow_siphonmana
+T|Shadow|Improved Mind Flay|spell_shadow_soulleech_2
+T|Shadow|Dark Inspiration|spell_warlock_demonsoul
+T|Shadow|Vampiric Embrace|spell_shadow_unsummonbuilding
+T|Shadow|Shadow Weaving|spell_shadow_blackplague
+T|Shadow|Silence|spell_shadow_impphaseshift
+T|Shadow|Devouring Contagion|spell_shadow_devouringplague
+T|Shadow|Early Demise|spell_shadow_demonicfortitude
+T|Shadow|Darkness|spell_shadow_twilight
+T|Shadow|Shadowform|spell_shadow_shadowform
+S|Discipline|Confounding Flash|10|ability_paladin_blindinglight2
+S|Discipline|Contingency Plan|20,30,40,50,60|ability_priest_soulwarding
+S|Discipline|Dispel Magic|18,36|spell_holy_dispelmagic
+S|Discipline|Divine Spirit|30,40,50,60|spell_holy_divinespirit
+S|Discipline|Elune's Grace|20|spell_holy_elunesgrace
+S|Discipline|Feedback|20,30,40,50,60|spell_shadow_ritualofsacrifice
+S|Discipline|Inner Fire|12,20,30,40,50,60|spell_holy_innerfire
+S|Discipline|Inner Focus|20|spell_frost_windwalkon
+S|Discipline|Levitate|34|spell_holy_layonhands
+S|Discipline|Mana Burn|24,32,40,48,56|spell_shadow_manaburn
+S|Discipline|Penance|30,40,50,60|spell_holy_penance
+S|Discipline|Power Infusion|40|spell_holy_powerinfusion
+S|Discipline|Power Word: Fortitude|1,12,24,36,48,60|spell_holy_wordfortitude
+S|Discipline|Power Word: Shield|6,12,18,24,30,36,42,48,54,60|spell_holy_powerwordshield
+S|Discipline|Prayer of Fortitude|48,60|spell_holy_prayeroffortitude
+S|Discipline|Prayer of Spirit|60|spell_holy_prayerofspirit
+S|Discipline|Shackle Undead|20,40,60|spell_nature_slow
+S|Discipline|Starshards|10,18,26,34,42,50,58|spell_arcane_starfire
+S|Holy|Abolish Disease|32|spell_nature_nullifydisease
+S|Holy|Chastise|20,30,40,50,60|spell_holy_chastise
+S|Holy|Cure Disease|14|spell_holy_nullifydisease
+S|Holy|Desperate Prayer|10,18,26,34,42,50,58|spell_holy_restoration
+S|Holy|Divine Grace|10,18,26,34,42,50,58|ability_priest_savinggrace
+S|Holy|Fear Ward|20|spell_holy_excorcism
+S|Holy|Flash Heal|20,26,32,38,44,50,56|spell_holy_flashheal
+S|Holy|Greater Heal|40,46,52,58,60|spell_holy_greaterheal
+S|Holy|Heal|16,22,28,34|spell_holy_heal
+S|Holy|Holy Fire|20,24,30,36,42,48,54,60|spell_holy_searinglight
+S|Holy|Holy Nova|20,28,36,44,52,60|spell_holy_holynova
+S|Holy|Lesser Heal|1,4,10|spell_holy_lesserheal
+S|Holy|Prayer of Healing|30,40,50,60,60|spell_holy_prayerofhealing02
+S|Holy|Prayer of Mending|40,50,60|spell_holy_prayerofmendingtga
+S|Holy|Renew|8,14,20,26,32,38,44,50,56,60|spell_holy_renew
+S|Holy|Resurrection|10,22,34,46,58|spell_holy_resurrection
+S|Holy|Smite|1,6,14,22,30,38,46,54|spell_holy_holysmite
+S|Shadow|Dark Sacrifice|20,30,40,50,60|spell_holy_powerinfusion_shadow
+S|Shadow|Devouring Plague|20,28,36,44,52,60|spell_shadow_devouringplague
+S|Shadow|Fade|8,20,30,40,50,60|spell_magic_lesserinvisibilty
+S|Shadow|Hex of Weakness|10,20,30,40,50,60|spell_shadow_fingerofdeath
+S|Shadow|Mind Blast|10,16,22,28,34,40,46,52,58|spell_shadow_unholyfrenzy
+S|Shadow|Mind Control|30,44,58|spell_shadow_shadowworddominate
+S|Shadow|Mind Flay|20,28,36,44,52,60|spell_shadow_siphonmana
+S|Shadow|Mind Soothe|20,36,52|spell_holy_mindsooth
+S|Shadow|Mind Vision|22,44|spell_holy_mindvision
+S|Shadow|Prayer of Shadow Protection|56|spell_holy_prayerofshadowprotection
+S|Shadow|Psychic Scream|14,28,42,56|spell_shadow_psychicscream
+S|Shadow|Shadow Protection|30,42,56|spell_shadow_antishadow
+S|Shadow|Shadow Word: Death|32,40,48,56|spell_shadow_demonicfortitude
+S|Shadow|Shadow Word: Pain|4,10,18,26,34,42,50,58|spell_shadow_shadowwordpain
+S|Shadow|Shadowform|40|spell_shadow_shadowform
+S|Shadow|Shadowguard|20,28,36,44,52,60|spell_nature_lightningshield
+S|Shadow|Silence|30|spell_shadow_impphaseshift
+S|Shadow|Touch of Weakness|10,20,30,40,50,60|spell_shadow_deadofnight
+S|Shadow|Vampiric Embrace|25|spell_shadow_unsummonbuilding
+G|Attack|
+G|Shoot|
+G|Armor Proficiency|Passive
+G|Dodge|Passive
+G|Languages|Passive

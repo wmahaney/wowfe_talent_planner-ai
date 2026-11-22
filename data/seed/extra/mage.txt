@@ -1,0 +1,118 @@
+T|Arcane|Wand Specialization|inv_wand_01
+T|Arcane|Improved Channeling|spell_nature_starfall
+T|Arcane|Arcane Resilience|spell_arcane_arcaneresilience
+T|Arcane|Arcane Subtlety|spell_holy_dispelmagic
+T|Arcane|Magic Absorption|spell_nature_astralrecalgroup
+T|Arcane|Arcane Concentration|spell_shadow_manaburn
+T|Arcane|Missile Barrage|ability_mage_missilebarrage
+T|Arcane|Arcane Geometry|inv_ability_mage_radiantspark
+T|Arcane|Arcane Impact|spell_nature_wispsplode
+T|Arcane|Arcane Blast|spell_arcane_blast
+T|Arcane|Arcane Shielding|spell_shadow_detectlesserinvisibility
+T|Arcane|Improved Counterspell|spell_frost_iceshock
+T|Arcane|Arcane Meditation|spell_shadow_siphonmana
+T|Arcane|Arcane Wrath|ability_mage_netherwindpresence
+T|Arcane|Presence of Mind|spell_nature_enchantarmor
+T|Arcane|Arcane Mind|spell_shadow_charm
+T|Arcane|Arcane Instability|spell_shadow_teleport
+T|Arcane|Arcane Power|spell_nature_lightning
+T|Fire|Incineration|spell_fire_flameshock
+T|Fire|Accelerant|spell_fire_flamebolt
+T|Fire|Ignite|spell_fire_incinerate
+T|Fire|Flame Throwing|spell_fire_flare
+T|Fire|Impact|spell_fire_meteorstorm
+T|Fire|Burning Soul|spell_fire_fire
+T|Fire|Improved Flamestrike|spell_fire_selfdestruct
+T|Fire|Pyroblast|spell_fire_fireball02
+T|Fire|Improved Fire Blast|spell_fire_lavaspawn
+T|Fire|Improved Scorch|spell_fire_soulburn
+T|Fire|Improved Fire Ward|spell_fire_firearmor
+T|Fire|Heating Up|spell_fire_firebolt
+T|Fire|Master of Elements|spell_fire_masterofelements
+T|Fire|Critical Mass|spell_nature_wispheal
+T|Fire|Blast Wave|spell_holy_excorcism_02
+T|Fire|Fire Power|spell_fire_immolation
+T|Fire|Combustion|spell_fire_sealoffire
+T|Frost|Frost Warding|spell_frost_frostward
+T|Frost|Improved Frostbolt|spell_frost_frostbolt02
+T|Frost|Precision|spell_ice_magicdamage
+T|Frost|Ice Shards|spell_frost_iceshard
+T|Frost|Frostbite|spell_frost_frostarmor
+T|Frost|Improved Frost Nova|spell_frost_freezingbreath
+T|Frost|Permafrost|spell_frost_wisp
+T|Frost|Frost Channeling|spell_frost_stun
+T|Frost|Improved Blizzard|spell_frost_icestorm
+T|Frost|Ice Lance|spell_frost_frostblast
+T|Frost|Arctic Reach|spell_shadow_darkritual
+T|Frost|Ice Block|spell_frost_frost
+T|Frost|Shatter|spell_frost_frostshock
+T|Frost|Improved Cone of Cold|spell_frost_glacier
+T|Frost|Cold Snap|spell_frost_wizardmark
+T|Frost|Fingers of Frost|ability_mage_wintersgrasp
+T|Frost|Winter's Chill|spell_frost_chillingblast
+T|Frost|Ice Barrier|spell_ice_lament
+S|Arcane|Amplify Magic|18,30,42,54|spell_holy_flashheal
+S|Arcane|Arcane Blast|20,30,40,50,60|spell_arcane_blast
+S|Arcane|Arcane Brilliance|56|spell_holy_arcaneintellect
+S|Arcane|Arcane Explosion|14,22,30,38,46,54|spell_nature_wispsplode
+S|Arcane|Arcane Intellect|1,14,28,42,56|spell_holy_magicalsentry
+S|Arcane|Arcane Missiles|8,16,24,32,40,48,56,56|spell_nature_starfall
+S|Arcane|Arcane Power|40|spell_nature_lightning
+S|Arcane|Arcane Wrath|25,36,48,60|ability_mage_netherwindpresence
+S|Arcane|Blink|20|spell_arcane_blink
+S|Arcane|Conjure Food|6,12,22,32,42,52,60|inv_misc_food_10
+S|Arcane|Conjure Mana Agate|28|inv_misc_gem_emerald_01
+S|Arcane|Conjure Mana Citrine|48|inv_misc_gem_opal_01
+S|Arcane|Conjure Mana Jade|38|inv_misc_gem_emerald_02
+S|Arcane|Conjure Mana Ruby|58|inv_misc_gem_ruby_01
+S|Arcane|Conjure Water|4,10,20,30,40,50,60|inv_drink_06
+S|Arcane|Counterspell|24|spell_frost_iceshock
+S|Arcane|Dampen Magic|12,24,36,48,60|spell_nature_abolishmagic
+S|Arcane|Evocation|20|spell_nature_purge
+S|Arcane|Mage Armor|34,46,58|spell_magearmor
+S|Arcane|Mana Shield|20,28,36,44,52,60|spell_shadow_detectlesserinvisibility
+S|Arcane|Polymorph (Turtle)|?|ability_hunter_pet_turtle
+S|Arcane|Polymorph (Pig)|?|spell_magic_polymorphpig
+S|Arcane|Polymorph|8,20,40,60|spell_nature_polymorph
+S|Arcane|Portal: Darnassus|50|spell_arcane_portaldarnassus
+S|Arcane|Portal: Ironforge|40|spell_arcane_portalironforge
+S|Arcane|Portal: Orgrimmar|40|spell_arcane_portalorgrimmar
+S|Arcane|Portal: Stormwind|40|spell_arcane_portalstormwind
+S|Arcane|Portal: Thunder Bluff|50|spell_arcane_portalthunderbluff
+S|Arcane|Portal: Undercity|40|spell_arcane_portalundercity
+S|Arcane|Presence of Mind|30|spell_nature_enchantarmor
+S|Arcane|Remove Lesser Curse|18|spell_nature_removecurse
+S|Arcane|Slow Fall|12|spell_magic_featherfall
+S|Arcane|Teleport: Dalaran|50|spell_arcane_teleporthalloftheguardian
+S|Arcane|Teleport: Darnassus|30|spell_arcane_teleportdarnassus
+S|Arcane|Teleport: Ironforge|20|spell_arcane_teleportironforge
+S|Arcane|Teleport: Orgrimmar|20|spell_arcane_teleportorgrimmar
+S|Arcane|Teleport: Stormwind|20|spell_arcane_teleportstormwind
+S|Arcane|Teleport: Thunder Bluff|30|spell_arcane_teleportthunderbluff
+S|Arcane|Teleport: Undercity|20|spell_arcane_teleportundercity
+S|Fire|Blast Wave|30,36,44,52,60|spell_holy_excorcism_02
+S|Fire|Combustion|40|spell_fire_sealoffire
+S|Fire|Fire Blast|6,14,22,30,38,46,54|spell_fire_fireball
+S|Fire|Fire Ward|20,30,40,50,60|spell_fire_firearmor
+S|Fire|Fireball|1,6,12,18,24,30,36,42,48,54,60,60|spell_fire_flamebolt
+S|Fire|Flamestrike|16,24,32,40,48,56|spell_fire_selfdestruct
+S|Fire|Frostfire Bolt|40,50,60|ability_mage_frostfirebolt
+S|Fire|Pyroblast|20,24,30,36,42,48,54,60|spell_fire_fireball02
+S|Fire|Scorch|22,28,34,40,46,52,58|spell_fire_soulburn
+S|Frost|Blizzard|20,28,36,44,52,60|spell_frost_icestorm
+S|Frost|Cold Snap|30|spell_frost_wizardmark
+S|Frost|Cone of Cold|26,34,42,50|spell_frost_glacier
+S|Frost|Frost Armor|1,10,20|spell_frost_frostarmor02
+S|Frost|Frost Nova|10,26,40,54|spell_frost_frostnova
+S|Frost|Frost Ward|22,32,42,52,60|spell_frost_frostward
+S|Frost|Frostbolt|4,8,14,20,26,32,38,44,50,56,60|spell_frost_frostbolt02
+S|Frost|Ice Armor|30,40,50,60|spell_frost_frostarmor02
+S|Frost|Ice Barrier|40,46,52,58|spell_ice_lament
+S|Frost|Ice Block|25|spell_frost_frost
+S|Frost|Ice Lance|20,28,34,42,48,56|spell_frost_frostblast
+G|Attack|
+G|Shoot|
+G|Comprehend Scroll|
+G|Armor Proficiency|Passive
+G|Dodge|Passive
+G|Languages|Passive

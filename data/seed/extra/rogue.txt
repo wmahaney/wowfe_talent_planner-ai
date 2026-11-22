@@ -1,0 +1,107 @@
+T|Assassination|Improved Gouge|ability_gouge
+T|Assassination|Remorseless Attacks|ability_fiegndead
+T|Assassination|Malice|ability_racial_bloodrage
+T|Assassination|Ruthlessness|ability_druid_disembowel
+T|Assassination|Improved Expose Armor|ability_warrior_riposte
+T|Assassination|Improved Slice and Dice|ability_rogue_slicedice
+T|Assassination|Vigor|spell_nature_earthbindtotem
+T|Assassination|Blood Splatter|ability_rogue_rupture
+T|Assassination|Lethality|ability_criticalstrike
+T|Assassination|Vile Poisons|ability_rogue_feigndeath
+T|Assassination|Cold Blood|spell_ice_lament
+T|Assassination|Improved Poisons|ability_poisons
+T|Assassination|Relentless Strikes|ability_warrior_decisivestrike
+T|Assassination|Venom|inv_sword_31
+T|Assassination|Improved Kidney Shot|ability_rogue_kidneyshot
+T|Assassination|Seal Fate|spell_shadow_chilltouch
+T|Assassination|Mutilate|ability_rogue_deadlybrew
+T|Combat|Coup de Grace|ability_rogue_eviscerate
+T|Combat|Efficient Strikes|spell_shadow_ritualofsacrifice
+T|Combat|Lightning Reflexes|spell_nature_invisibilty
+T|Combat|Puncturing Wounds|ability_backstab
+T|Combat|Deflection|ability_parry
+T|Combat|Precision|ability_marksmanship
+T|Combat|Improved Sprint|ability_rogue_sprint
+T|Combat|Endurance|spell_shadow_shadowward
+T|Combat|Riposte|ability_warrior_challange
+T|Combat|Composure|ability_rogue_fleetfooted
+T|Combat|Improved Kick|ability_kick
+T|Combat|Flawless Execution|inv_sword_35
+T|Combat|Weapon Expertise|spell_holy_blessingofstrength
+T|Combat|Aggression|ability_racial_avatar
+T|Combat|Dual Wield Specialization|ability_dualwield
+T|Combat|Blade Flurry|ability_warrior_punishingblow
+T|Combat|Hack and Slash|inv_sword_27
+T|Combat|Flash of Steel|ability_rogue_restlessblades
+T|Combat|Adrenaline Rush|spell_shadow_shadowworddominate
+T|Subtlety|Setup|spell_nature_mirrorimage
+T|Subtlety|Master of Deception|spell_shadow_charm
+T|Subtlety|Opportunity|ability_warrior_warcry
+T|Subtlety|Dirty Deeds|spell_shadow_summonsuccubus
+T|Subtlety|Camouflage|ability_stealth
+T|Subtlety|Improved Ambush|ability_rogue_ambush
+T|Subtlety|Dirty Tricks|ability_sap
+T|Subtlety|Initiative|spell_shadow_fumble
+T|Subtlety|Premeditation|spell_shadow_possession
+T|Subtlety|Serrated Blades|inv_sword_17
+T|Subtlety|Elusiveness|spell_magic_lesserinvisibilty
+T|Subtlety|Ghostly Strike|spell_shadow_curse
+T|Subtlety|Quick Getaway|ability_rogue_blackjack
+T|Subtlety|Heightened Senses|ability_ambush
+T|Subtlety|Preparation|spell_shadow_antishadow
+T|Subtlety|Hemorrhage|spell_shadow_lifedrain
+T|Subtlety|Boot Knife|inv_sword_32
+T|Subtlety|Death Mark|ability_creature_cursed_02
+S|Assassination|Ambush|18,26,34,42,50,58|ability_rogue_ambush
+S|Assassination|Cheap Shot|26|ability_cheapshot
+S|Assassination|Cold Blood|25|spell_ice_lament
+S|Assassination|Eviscerate|1,8,16,24,32,40,48,56,60|ability_rogue_eviscerate
+S|Assassination|Expose Armor|14,26,36,46,56|ability_warrior_riposte
+S|Assassination|Garrote|14,22,30,38,46,54|ability_rogue_garrote
+S|Assassination|Kidney Shot|30,50|ability_rogue_kidneyshot
+S|Assassination|Mutilate|40,50,60|ability_rogue_deadlybrew
+S|Assassination|Rupture|20,28,36,44,52,60|ability_rogue_rupture
+S|Assassination|Slice and Dice|10,42|ability_rogue_slicedice
+S|Combat|Adrenaline Rush|40|spell_shadow_shadowworddominate
+S|Combat|Backstab|4,12,20,28,36,44,52,60,60|ability_backstab
+S|Combat|Blade Flurry|30|ability_warrior_punishingblow
+S|Combat|Evasion|8|spell_shadow_shadowward
+S|Combat|Feint|16,28,40,52,60|ability_rogue_feint
+S|Combat|Gouge|6,18,32,46,60|ability_gouge
+S|Combat|Kick|12,26,42,58|ability_kick
+S|Combat|Riposte|20|ability_warrior_challange
+S|Combat|Shank|24,44|ability_theblackarrow
+S|Combat|Sinister Strike|1,6,14,22,30,38,46,54|spell_shadow_ritualofsacrifice
+S|Combat|Sprint|10,34,58|ability_rogue_sprint
+S|Subtlety|Blind|34|spell_shadow_mindsteal
+S|Subtlety|Death Mark|40,48,56,60|ability_creature_cursed_02
+S|Subtlety|Detect Traps|24|ability_spy
+S|Subtlety|Disarm Trap|30|spell_shadow_grimward
+S|Subtlety|Distract|22|ability_rogue_distract
+S|Subtlety|Ghostly Strike|25|spell_shadow_curse
+S|Subtlety|Hemorrhage|30|spell_shadow_lifedrain
+S|Subtlety|Pick Pocket|4|inv_misc_bag_11
+S|Subtlety|Poised|18|ability_rogue_fleetfooted
+S|Subtlety|Premeditation|20|spell_shadow_possession
+S|Subtlety|Preparation|30|spell_shadow_antishadow
+S|Subtlety|Safe Fall|40|inv_feather_01
+S|Subtlety|Sap|10,28,48|ability_sap
+S|Subtlety|Stealth|1,20,40,60|ability_stealth
+S|Subtlety|Vanish|22,42|ability_vanish
+S|Poisons|Crippling Poison|20,50|ability_poisonsting
+S|Poisons|Instant Poison|20,28,36,44,52,60|ability_poisons
+S|Poisons|Mind-numbing Poison|24,38,52|spell_nature_nullifydisease
+S|Poisons|Deadly Poison|30,38,46,54,60|ability_rogue_dualweild
+S|Poisons|Wound Poison|32,40,48,56|inv_misc_herb_16
+S|Poisons|Blinding Powder|34|inv_misc_ammo_gunpowder_02
+G|Attack|
+G|Pick Lock|
+G|Shoot Bow|
+G|Shoot Crossbow|
+G|Shoot Gun|
+G|Throw|
+G|Dual Wield|Passive
+G|Armor Proficiency|Passive
+G|Dodge|Passive
+G|Parry|Passive
+G|Languages|Passive

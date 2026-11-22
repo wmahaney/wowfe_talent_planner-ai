@@ -22,7 +22,8 @@
      "req": null,
      "cost": null,
      "summary": "Wand damage +13/25%",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_wand_01"
     },
     {
      "name": "Improved Channeling",
@@ -32,7 +33,8 @@
      "req": null,
      "cost": null,
      "summary": "Interrupt protection: Arcane Missiles 20-100%, Arcane Blast and Arcane Wrath 14-70%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_starfall"
     },
     {
      "name": "Arcane Resilience",
@@ -42,7 +44,8 @@
      "req": null,
      "cost": null,
      "summary": "Armor increased by 25/50/75% of Intellect",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_arcane_arcaneresilience"
     },
     {
      "name": "Arcane Subtlety",
@@ -52,7 +55,8 @@
      "req": null,
      "cost": null,
      "summary": "Target resistance -8/15; Arcane threat -15/30%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_holy_dispelmagic"
     },
     {
      "name": "Magic Absorption",
@@ -62,7 +66,8 @@
      "req": null,
      "cost": null,
      "summary": "All resistances +5/10; 1/2% mana restored on full resists",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_astralrecalgroup"
     },
     {
      "name": "Arcane Concentration",
@@ -72,7 +77,8 @@
      "req": null,
      "cost": null,
      "summary": "Clearcasting chance 2/4/6/8/10%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_manaburn"
     },
     {
      "name": "Missile Barrage",
@@ -82,7 +88,8 @@
      "req": null,
      "cost": null,
      "summary": "Chance for free, faster Arcane Missiles: 20/40% from Arcane Blast, 10/20% from other listed spells",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_mage_missilebarrage"
     },
     {
      "name": "Arcane Geometry",
@@ -92,7 +99,8 @@
      "req": null,
      "cost": null,
      "summary": "Arcane spell range +3/6 yd",
-     "ranks": null
+     "ranks": null,
+     "icon": "inv_ability_mage_radiantspark"
     },
     {
      "name": "Arcane Impact",
@@ -102,7 +110,8 @@
      "req": null,
      "cost": null,
      "summary": "Arcane crit chance +2/4/6%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_wispsplode"
     },
     {
      "name": "Arcane Blast",
@@ -112,7 +121,8 @@
      "req": null,
      "cost": "15% of base mana; 30 yd; 1.5 sec cast",
      "summary": "Unlocks Arcane Blast",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_arcane_blast"
     },
     {
      "name": "Arcane Shielding",
@@ -122,7 +132,8 @@
      "req": null,
      "cost": null,
      "summary": "Mana Shield mana loss -17/33%; Mage Armor resistances +25/50%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_detectlesserinvisibility"
     },
     {
      "name": "Improved Counterspell",
@@ -132,7 +143,8 @@
      "req": null,
      "cost": null,
      "summary": "Counterspell silences for 2/4 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_iceshock"
     },
     {
      "name": "Arcane Meditation",
@@ -142,7 +154,8 @@
      "req": "Arcane Concentration",
      "cost": null,
      "summary": "17/33/50% of mana regen continues while casting",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_siphonmana"
     },
     {
      "name": "Arcane Wrath",
@@ -152,7 +165,8 @@
      "req": "Arcane Blast",
      "cost": "140 Mana; 30 yd; 3.5 sec cast; 6 sec cooldown",
      "summary": "Unlocks Arcane Wrath",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_mage_netherwindpresence"
     },
     {
      "name": "Presence of Mind",
@@ -162,7 +176,8 @@
      "req": null,
      "cost": "Instant; 3 min cooldown",
      "summary": "Next spell with a cast under 10 sec becomes instant",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_enchantarmor"
     },
     {
      "name": "Arcane Mind",
@@ -172,7 +187,8 @@
      "req": null,
      "cost": null,
      "summary": "Intellect +2/4/6/8/10%; Arcane crit damage bonus +20/40/60/80/100%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_charm"
     },
     {
      "name": "Arcane Instability",
@@ -182,7 +198,8 @@
      "req": null,
      "cost": null,
      "summary": "Spell damage and crit chance +1/2/3%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_teleport"
     },
     {
      "name": "Arcane Power",
@@ -192,7 +209,8 @@
      "req": "Presence of Mind",
      "cost": "Instant; 3 min cooldown",
      "summary": "30% more spell damage and 30% more mana cost for 15 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_lightning"
     }
    ]
   },
@@ -207,7 +225,8 @@
      "req": null,
      "cost": null,
      "summary": "Crit chance of Fire Blast, Ice Lance, Arcane Blast, Scorch +2/4/6/8/10%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_flameshock"
     },
     {
      "name": "Accelerant",
@@ -217,7 +236,8 @@
      "req": null,
      "cost": null,
      "summary": "Cast time of Fireball, Frostfire Bolt, Arcane Wrath -0.1/0.2/0.3/0.4/0.5 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_flamebolt"
     },
     {
      "name": "Ignite",
@@ -227,7 +247,8 @@
      "req": null,
      "cost": null,
      "summary": "Fire crits burn for an extra 8/16/24/32/40% of spell damage over 4 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_incinerate"
     },
     {
      "name": "Flame Throwing",
@@ -237,7 +258,8 @@
      "req": null,
      "cost": null,
      "summary": "Fire spell range +3/6 yd",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_flare"
     },
     {
      "name": "Impact",
@@ -247,7 +269,8 @@
      "req": null,
      "cost": null,
      "summary": "Fire spells have a 3/7/10% chance to stun for 2 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_meteorstorm"
     },
     {
      "name": "Burning Soul",
@@ -257,7 +280,8 @@
      "req": null,
      "cost": null,
      "summary": "23/47/70% chance to keep cast time when hit; threat -10/20/30%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_fire"
     },
     {
      "name": "Improved Flamestrike",
@@ -267,7 +291,8 @@
      "req": null,
      "cost": null,
      "summary": "Flamestrike crit chance +5/10/15%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_selfdestruct"
     },
     {
      "name": "Pyroblast",
@@ -277,7 +302,8 @@
      "req": null,
      "cost": "125 Mana; 35 yd; 6 sec cast",
      "summary": "Unlocks Pyroblast",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_fireball02"
     },
     {
      "name": "Improved Fire Blast",
@@ -287,7 +313,8 @@
      "req": null,
      "cost": null,
      "summary": "Fire Blast cooldown -1/2 sec; range +8/15 yd",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_lavaspawn"
     },
     {
      "name": "Improved Scorch",
@@ -297,7 +324,8 @@
      "req": null,
      "cost": null,
      "summary": "33/67/100% chance for Scorch to apply a stacking +3% Fire damage taken (up to 5)",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_soulburn"
     },
     {
      "name": "Improved Fire Ward",
@@ -307,7 +335,8 @@
      "req": null,
      "cost": null,
      "summary": "Fire Ward has a 10/20% chance to reflect Fire spells",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_firearmor"
     },
     {
      "name": "Heating Up",
@@ -317,7 +346,8 @@
      "req": "Pyroblast",
      "cost": null,
      "summary": "Crits shorten the next Pyroblast cast by 25% per stack, up to 3",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_firebolt"
     },
     {
      "name": "Master of Elements",
@@ -327,7 +357,8 @@
      "req": null,
      "cost": null,
      "summary": "Fire and Frost crits refund 10/20/30% of the spell's base mana cost",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_masterofelements"
     },
     {
      "name": "Critical Mass",
@@ -337,7 +368,8 @@
      "req": null,
      "cost": null,
      "summary": "Fire crit chance +2/4/6%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_nature_wispheal"
     },
     {
      "name": "Blast Wave",
@@ -347,7 +379,8 @@
      "req": null,
      "cost": "215 Mana; Instant; 45 sec cooldown",
      "summary": "Unlocks Blast Wave",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_holy_excorcism_02"
     },
     {
      "name": "Fire Power",
@@ -357,7 +390,8 @@
      "req": null,
      "cost": null,
      "summary": "Fire damage +1/2/3% per Fire effect on the target (caps at 4/8/12%)",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_immolation"
     },
     {
      "name": "Combustion",
@@ -367,7 +401,8 @@
      "req": "Critical Mass",
      "cost": "Instant; 3 min cooldown",
      "summary": "Fire crit chance +10% until 3 non-periodic Fire crits",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_fire_sealoffire"
     }
    ]
   },
@@ -382,7 +417,8 @@
      "req": null,
      "cost": null,
      "summary": "Frost Armor and Ice Armor +15/30%; Frost Ward and Ice Barrier improved",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_frostward"
     },
     {
      "name": "Improved Frostbolt",
@@ -392,7 +428,8 @@
      "req": null,
      "cost": null,
      "summary": "Frostbolt cast time -0.1/0.2/0.3/0.4/0.5 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_frostbolt02"
     },
     {
      "name": "Precision",
@@ -402,7 +439,8 @@
      "req": null,
      "cost": null,
      "summary": "Hit chance +2/4/6%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_ice_magicdamage"
     },
     {
      "name": "Ice Shards",
@@ -412,7 +450,8 @@
      "req": null,
      "cost": null,
      "summary": "Frost crit damage bonus +20/40/60/80/100%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_iceshard"
     },
     {
      "name": "Frostbite",
@@ -422,7 +461,8 @@
      "req": null,
      "cost": null,
      "summary": "Chill effects have a 5/10/15% chance to freeze for 5 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_frostarmor"
     },
     {
      "name": "Improved Frost Nova",
@@ -432,7 +472,8 @@
      "req": null,
      "cost": null,
      "summary": "Frost Nova cooldown -2/4 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_freezingbreath"
     },
     {
      "name": "Permafrost",
@@ -442,7 +483,8 @@
      "req": null,
      "cost": null,
      "summary": "Chill duration +11/22/33%; extra slow 3/7/10%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_wisp"
     },
     {
      "name": "Frost Channeling",
@@ -452,7 +494,8 @@
      "req": null,
      "cost": null,
      "summary": "Frost mana cost -5/10/15%; threat -10/20/30%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_stun"
     },
     {
      "name": "Improved Blizzard",
@@ -462,7 +505,8 @@
      "req": null,
      "cost": null,
      "summary": "Blizzard adds a chill slowing by 15/25/40% for 1.5 sec",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_icestorm"
     },
     {
      "name": "Ice Lance",
@@ -472,7 +516,8 @@
      "req": null,
      "cost": "45 Mana; 30 yd; Instant; 8 sec cooldown",
      "summary": "Unlocks Ice Lance",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_frostblast"
     },
     {
      "name": "Arctic Reach",
@@ -482,7 +527,8 @@
      "req": null,
      "cost": null,
      "summary": "Range and radius of listed Frost spells +10/20%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_shadow_darkritual"
     },
     {
      "name": "Ice Block",
@@ -492,7 +538,8 @@
      "req": null,
      "cost": "15 Mana; Instant; 5 min cooldown",
      "summary": "Unlocks Ice Block",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_frost"
     },
     {
      "name": "Shatter",
@@ -502,7 +549,8 @@
      "req": null,
      "cost": null,
      "summary": "Crit chance vs Frozen targets +17/33/50%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_frostshock"
     },
     {
      "name": "Improved Cone of Cold",
@@ -512,7 +560,8 @@
      "req": null,
      "cost": null,
      "summary": "Cone of Cold damage +12/23/35%",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_glacier"
     },
     {
      "name": "Cold Snap",
@@ -522,7 +571,8 @@
      "req": null,
      "cost": "Instant; 10 min cooldown",
      "summary": "Resets cooldowns on other Frost spells",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_wizardmark"
     },
     {
      "name": "Fingers of Frost",
@@ -532,7 +582,8 @@
      "req": "Ice Lance",
      "cost": null,
      "summary": "15% chance from Chill effects to make your next 1/2 spells treat the target as Frozen",
-     "ranks": null
+     "ranks": null,
+     "icon": "ability_mage_wintersgrasp"
     },
     {
      "name": "Winter's Chill",
@@ -542,7 +593,8 @@
      "req": null,
      "cost": null,
      "summary": "20/40/60/80/100% chance to apply stacking Winter's Chill, boosting your Frost damage",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_frost_chillingblast"
     },
     {
      "name": "Ice Barrier",
@@ -552,9 +604,599 @@
      "req": "Cold Snap",
      "cost": "305 Mana; Instant; 30 sec cooldown",
      "summary": "Unlocks Ice Barrier",
-     "ranks": null
+     "ranks": null,
+     "icon": "spell_ice_lament"
     }
    ]
   }
- ]
+ ],
+ "spells": {
+  "tabs": [
+   {
+    "name": "Arcane",
+    "spells": [
+     {
+      "name": "Amplify Magic",
+      "levels": [
+       18,
+       30,
+       42,
+       54
+      ],
+      "icon": "spell_holy_flashheal"
+     },
+     {
+      "name": "Arcane Blast",
+      "levels": [
+       20,
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "spell_arcane_blast"
+     },
+     {
+      "name": "Arcane Brilliance",
+      "levels": [
+       56
+      ],
+      "icon": "spell_holy_arcaneintellect"
+     },
+     {
+      "name": "Arcane Explosion",
+      "levels": [
+       14,
+       22,
+       30,
+       38,
+       46,
+       54
+      ],
+      "icon": "spell_nature_wispsplode"
+     },
+     {
+      "name": "Arcane Intellect",
+      "levels": [
+       1,
+       14,
+       28,
+       42,
+       56
+      ],
+      "icon": "spell_holy_magicalsentry"
+     },
+     {
+      "name": "Arcane Missiles",
+      "levels": [
+       8,
+       16,
+       24,
+       32,
+       40,
+       48,
+       56,
+       56
+      ],
+      "icon": "spell_nature_starfall"
+     },
+     {
+      "name": "Arcane Power",
+      "levels": [
+       40
+      ],
+      "icon": "spell_nature_lightning"
+     },
+     {
+      "name": "Arcane Wrath",
+      "levels": [
+       25,
+       36,
+       48,
+       60
+      ],
+      "icon": "ability_mage_netherwindpresence"
+     },
+     {
+      "name": "Blink",
+      "levels": [
+       20
+      ],
+      "icon": "spell_arcane_blink"
+     },
+     {
+      "name": "Conjure Food",
+      "levels": [
+       6,
+       12,
+       22,
+       32,
+       42,
+       52,
+       60
+      ],
+      "icon": "inv_misc_food_10"
+     },
+     {
+      "name": "Conjure Mana Agate",
+      "levels": [
+       28
+      ],
+      "icon": "inv_misc_gem_emerald_01"
+     },
+     {
+      "name": "Conjure Mana Citrine",
+      "levels": [
+       48
+      ],
+      "icon": "inv_misc_gem_opal_01"
+     },
+     {
+      "name": "Conjure Mana Jade",
+      "levels": [
+       38
+      ],
+      "icon": "inv_misc_gem_emerald_02"
+     },
+     {
+      "name": "Conjure Mana Ruby",
+      "levels": [
+       58
+      ],
+      "icon": "inv_misc_gem_ruby_01"
+     },
+     {
+      "name": "Conjure Water",
+      "levels": [
+       4,
+       10,
+       20,
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "inv_drink_06"
+     },
+     {
+      "name": "Counterspell",
+      "levels": [
+       24
+      ],
+      "icon": "spell_frost_iceshock"
+     },
+     {
+      "name": "Dampen Magic",
+      "levels": [
+       12,
+       24,
+       36,
+       48,
+       60
+      ],
+      "icon": "spell_nature_abolishmagic"
+     },
+     {
+      "name": "Evocation",
+      "levels": [
+       20
+      ],
+      "icon": "spell_nature_purge"
+     },
+     {
+      "name": "Mage Armor",
+      "levels": [
+       34,
+       46,
+       58
+      ],
+      "icon": "spell_magearmor"
+     },
+     {
+      "name": "Mana Shield",
+      "levels": [
+       20,
+       28,
+       36,
+       44,
+       52,
+       60
+      ],
+      "icon": "spell_shadow_detectlesserinvisibility"
+     },
+     {
+      "name": "Polymorph (Turtle)",
+      "levels": null,
+      "icon": "ability_hunter_pet_turtle"
+     },
+     {
+      "name": "Polymorph (Pig)",
+      "levels": null,
+      "icon": "spell_magic_polymorphpig"
+     },
+     {
+      "name": "Polymorph",
+      "levels": [
+       8,
+       20,
+       40,
+       60
+      ],
+      "icon": "spell_nature_polymorph"
+     },
+     {
+      "name": "Portal: Darnassus",
+      "levels": [
+       50
+      ],
+      "icon": "spell_arcane_portaldarnassus"
+     },
+     {
+      "name": "Portal: Ironforge",
+      "levels": [
+       40
+      ],
+      "icon": "spell_arcane_portalironforge"
+     },
+     {
+      "name": "Portal: Orgrimmar",
+      "levels": [
+       40
+      ],
+      "icon": "spell_arcane_portalorgrimmar"
+     },
+     {
+      "name": "Portal: Stormwind",
+      "levels": [
+       40
+      ],
+      "icon": "spell_arcane_portalstormwind"
+     },
+     {
+      "name": "Portal: Thunder Bluff",
+      "levels": [
+       50
+      ],
+      "icon": "spell_arcane_portalthunderbluff"
+     },
+     {
+      "name": "Portal: Undercity",
+      "levels": [
+       40
+      ],
+      "icon": "spell_arcane_portalundercity"
+     },
+     {
+      "name": "Presence of Mind",
+      "levels": [
+       30
+      ],
+      "icon": "spell_nature_enchantarmor"
+     },
+     {
+      "name": "Remove Lesser Curse",
+      "levels": [
+       18
+      ],
+      "icon": "spell_nature_removecurse"
+     },
+     {
+      "name": "Slow Fall",
+      "levels": [
+       12
+      ],
+      "icon": "spell_magic_featherfall"
+     },
+     {
+      "name": "Teleport: Dalaran",
+      "levels": [
+       50
+      ],
+      "icon": "spell_arcane_teleporthalloftheguardian"
+     },
+     {
+      "name": "Teleport: Darnassus",
+      "levels": [
+       30
+      ],
+      "icon": "spell_arcane_teleportdarnassus"
+     },
+     {
+      "name": "Teleport: Ironforge",
+      "levels": [
+       20
+      ],
+      "icon": "spell_arcane_teleportironforge"
+     },
+     {
+      "name": "Teleport: Orgrimmar",
+      "levels": [
+       20
+      ],
+      "icon": "spell_arcane_teleportorgrimmar"
+     },
+     {
+      "name": "Teleport: Stormwind",
+      "levels": [
+       20
+      ],
+      "icon": "spell_arcane_teleportstormwind"
+     },
+     {
+      "name": "Teleport: Thunder Bluff",
+      "levels": [
+       30
+      ],
+      "icon": "spell_arcane_teleportthunderbluff"
+     },
+     {
+      "name": "Teleport: Undercity",
+      "levels": [
+       20
+      ],
+      "icon": "spell_arcane_teleportundercity"
+     }
+    ]
+   },
+   {
+    "name": "Fire",
+    "spells": [
+     {
+      "name": "Blast Wave",
+      "levels": [
+       30,
+       36,
+       44,
+       52,
+       60
+      ],
+      "icon": "spell_holy_excorcism_02"
+     },
+     {
+      "name": "Combustion",
+      "levels": [
+       40
+      ],
+      "icon": "spell_fire_sealoffire"
+     },
+     {
+      "name": "Fire Blast",
+      "levels": [
+       6,
+       14,
+       22,
+       30,
+       38,
+       46,
+       54
+      ],
+      "icon": "spell_fire_fireball"
+     },
+     {
+      "name": "Fire Ward",
+      "levels": [
+       20,
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "spell_fire_firearmor"
+     },
+     {
+      "name": "Fireball",
+      "levels": [
+       1,
+       6,
+       12,
+       18,
+       24,
+       30,
+       36,
+       42,
+       48,
+       54,
+       60,
+       60
+      ],
+      "icon": "spell_fire_flamebolt"
+     },
+     {
+      "name": "Flamestrike",
+      "levels": [
+       16,
+       24,
+       32,
+       40,
+       48,
+       56
+      ],
+      "icon": "spell_fire_selfdestruct"
+     },
+     {
+      "name": "Frostfire Bolt",
+      "levels": [
+       40,
+       50,
+       60
+      ],
+      "icon": "ability_mage_frostfirebolt"
+     },
+     {
+      "name": "Pyroblast",
+      "levels": [
+       20,
+       24,
+       30,
+       36,
+       42,
+       48,
+       54,
+       60
+      ],
+      "icon": "spell_fire_fireball02"
+     },
+     {
+      "name": "Scorch",
+      "levels": [
+       22,
+       28,
+       34,
+       40,
+       46,
+       52,
+       58
+      ],
+      "icon": "spell_fire_soulburn"
+     }
+    ]
+   },
+   {
+    "name": "Frost",
+    "spells": [
+     {
+      "name": "Blizzard",
+      "levels": [
+       20,
+       28,
+       36,
+       44,
+       52,
+       60
+      ],
+      "icon": "spell_frost_icestorm"
+     },
+     {
+      "name": "Cold Snap",
+      "levels": [
+       30
+      ],
+      "icon": "spell_frost_wizardmark"
+     },
+     {
+      "name": "Cone of Cold",
+      "levels": [
+       26,
+       34,
+       42,
+       50
+      ],
+      "icon": "spell_frost_glacier"
+     },
+     {
+      "name": "Frost Armor",
+      "levels": [
+       1,
+       10,
+       20
+      ],
+      "icon": "spell_frost_frostarmor02"
+     },
+     {
+      "name": "Frost Nova",
+      "levels": [
+       10,
+       26,
+       40,
+       54
+      ],
+      "icon": "spell_frost_frostnova"
+     },
+     {
+      "name": "Frost Ward",
+      "levels": [
+       22,
+       32,
+       42,
+       52,
+       60
+      ],
+      "icon": "spell_frost_frostward"
+     },
+     {
+      "name": "Frostbolt",
+      "levels": [
+       4,
+       8,
+       14,
+       20,
+       26,
+       32,
+       38,
+       44,
+       50,
+       56,
+       60
+      ],
+      "icon": "spell_frost_frostbolt02"
+     },
+     {
+      "name": "Ice Armor",
+      "levels": [
+       30,
+       40,
+       50,
+       60
+      ],
+      "icon": "spell_frost_frostarmor02"
+     },
+     {
+      "name": "Ice Barrier",
+      "levels": [
+       40,
+       46,
+       52,
+       58
+      ],
+      "icon": "spell_ice_lament"
+     },
+     {
+      "name": "Ice Block",
+      "levels": [
+       25
+      ],
+      "icon": "spell_frost_frost"
+     },
+     {
+      "name": "Ice Lance",
+      "levels": [
+       20,
+       28,
+       34,
+       42,
+       48,
+       56
+      ],
+      "icon": "spell_frost_frostblast"
+     }
+    ]
+   }
+  ],
+  "general": [
+   {
+    "name": "Attack",
+    "note": null
+   },
+   {
+    "name": "Shoot",
+    "note": null
+   },
+   {
+    "name": "Comprehend Scroll",
+    "note": null
+   },
+   {
+    "name": "Armor Proficiency",
+    "note": "Passive"
+   },
+   {
+    "name": "Dodge",
+    "note": "Passive"
+   },
+   {
+    "name": "Languages",
+    "note": "Passive"
+   }
+  ]
+ }
 }
