@@ -34,13 +34,17 @@ TALENT_SOURCE = {
     "url": "https://talentsforever.com/",
     "export": "https://talentsforever.com/export/{cls}.json",
     "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "attribution": "Talent data from Talents Forever (https://talentsforever.com/), licensed CC BY 4.0. "
                    "Game names and tooltip text belong to Blizzard Entertainment.",
+    "changes": "Reformatted into this project's JSON; descriptions may be summarised; "
+               "per-rank and per-level values are computed from the text. See CREDITS.md.",
 }
 STATS_SOURCE = {
     "name": "ForeverDB",
     "url": "https://foreverdb.net/stats",
     "page": "https://foreverdb.net/stats/{cls}",
+    "license": "none stated",
 }
 STAT_TABLES = ["agi_per_crit", "int_per_spell_crit", "base_mana"]
 BUILD_RE = re.compile(r"\b\d+\.\d+\.\d+\.\d{4,6}\b")
@@ -55,6 +59,8 @@ def read_json(path, default=None):
 
 
 def write_json(path, obj, compact=False):
+    if isinstance(obj, dict) and isinstance(obj.get("source"), dict) and obj["source"].get("name") == TALENT_SOURCE["name"]:
+        obj["source"].update({k: TALENT_SOURCE[k] for k in ("license_url", "attribution", "changes")})
     path.parent.mkdir(parents=True, exist_ok=True)
     if compact:
         text = json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
@@ -542,10 +548,14 @@ def cmd_build(args):
     effects = load_effects()
     manifest = {"schema": SCHEMA, "built": args.date, "rules": rules["talents"],
                 "conversions": rules["conversions"], "stats": rules["stats"], "classes": [],
-                "sources": {"talents": {k: TALENT_SOURCE[k] for k in ("name", "url", "license", "attribution")},
+                "sources": {"talents": {k: TALENT_SOURCE[k]
+                                        for k in ("name", "url", "license", "license_url", "attribution", "changes")},
                             "stats": {"name": STATS_SOURCE["name"], "url": STATS_SOURCE["url"],
+                                      "license": STATS_SOURCE["license"],
                                       "build": stats["source"].get("build"),
-                                      "retrieved": stats["source"].get("retrieved")}},
+                                      "retrieved": stats["source"].get("retrieved")},
+                            "icons": {"name": "Blizzard Entertainment", "host": "Wowhead (wow.zamimg.com)"},
+                            "credits": rules.get("project", {}).get("credits")},
                 "changelog": read_json(DATA / "changelog.json", [])[:20]}
     problems, review = [], []
     for cls in CLASSES:
@@ -564,6 +574,7 @@ def cmd_build(args):
                 if sp["name"] in talent_names:
                     sp["talent"] = True
         doc.setdefault("spells", {"tabs": [], "general": []})
+        doc["source"].update({k: TALENT_SOURCE[k] for k in ("license_url", "attribution", "changes")})
         doc.update({"name": meta["name"], "color": meta["color"],
                     "consts": {k: meta[k] for k in ("ap_per_str", "ap_per_agi", "rap_per_agi", "block_value")},
                     "tables": stats["classes"].get(cls, {})})

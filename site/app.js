@@ -731,9 +731,12 @@
         h('tbody', null, manifest.classes.map((c) => h('tr', { class: c.key === S.cls ? 'now' : null },
           h('td', null, c.name), h('td', { class: 'num', style: 'text-align:left' }, c.build || '?'), h('td', { class: 'num', style: 'text-align:left' }, c.generated || '?')))))),
       h('p', { class: 'note', style: 'margin-top:8px' },
-        'Talent data from ', h('a', { href: src.talents.url }, src.talents.name), `, licensed ${src.talents.license}. `,
+        'Talent, skill and icon-name data from ', h('a', { href: src.talents.url }, src.talents.name), ', licensed ',
+        h('a', { href: src.talents.license_url }, src.talents.license), ' and adapted here. ',
         'Per-level stat tables from ', h('a', { href: src.stats.url }, src.stats.name), ` (build ${src.stats.build}). `,
-        'Game names and tooltip text belong to Blizzard Entertainment. This planner is not affiliated with Blizzard.'),
+        'Icons are Blizzard Entertainment artwork, served by Wowhead. ',
+        'Game names, tooltip text and icons belong to Blizzard Entertainment. This planner is not affiliated with Blizzard. ',
+        src.credits ? h('a', { href: src.credits }, 'All credits') : null, src.credits ? '.' : null),
       manifest.classes.some((c) => (c.method || '').startsWith('seed'))
         ? h('p', { class: 'note' }, 'Talent descriptions are short summaries for now. Running the data update replaces them with the full text for every rank.')
         : null,

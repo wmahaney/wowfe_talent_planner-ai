@@ -8,7 +8,10 @@
   "build": "1.60.1.70755",
   "generated": "2026-11-13",
   "retrieved": "2026-11-22",
-  "method": "seed (hand-transcribed summaries)"
+  "method": "seed (hand-transcribed summaries)",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "Talent data from Talents Forever (https://talentsforever.com/), licensed CC BY 4.0. Game names and tooltip text belong to Blizzard Entertainment.",
+  "changes": "Reformatted into this project's JSON; descriptions may be summarised; per-rank and per-level values are computed from the text. See CREDITS.md."
  },
  "trees": [
   {
