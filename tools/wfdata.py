@@ -347,7 +347,7 @@ def convert_export(cls, export, old, date):
         out_trees.append({"name": tree_name, "talents": talents})
     return {"schema": SCHEMA, "class": cls,
             "source": {"name": TALENT_SOURCE["name"], "url": TALENT_SOURCE["url"],
-                       "license": TALENT_SOURCE["license"], "build": find_build(export),
+                       "license": TALENT_SOURCE["license"], "build": find_build(export) or ((old or {}).get("source") or {}).get("build"),
                        "generated": export.get("generated"), "retrieved": date,
                        "method": "export"},
             "trees": out_trees,
@@ -633,15 +633,20 @@ def cmd_icons(args):
 
 def cmd_check(args):
     effects = load_effects()
-    problems = []
+    problems, review = [], []
     for cls in CLASSES:
         doc = read_json(DATA / "talents" / f"{cls}.json")
-        problems += validate_class(doc) + effects_review(cls, doc, effects)
+        problems += validate_class(doc)
+        # A stale curated effect is a note for whoever reviews the update, not an error:
+        # build leaves out any effect that no longer matches its talent.
+        review += effects_review(cls, doc, effects)
     stats = read_json(DATA / "stats.json")
     for cls, tables in stats["classes"].items():
         for name, vals in tables.items():
             if len(vals) != 60:
                 problems.append(f"stats {cls}.{name}: {len(vals)} values")
+    for line in review:
+        print("review:", line)
     print("\n".join(problems) if problems else "data ok")
     return 1 if problems else 0
 

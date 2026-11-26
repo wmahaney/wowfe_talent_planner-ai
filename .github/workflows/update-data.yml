@@ -14,13 +14,16 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Install the WebAssembly toolchain
         run: sudo apt-get update && sudo apt-get install -y clang lld
       - name: Pull the latest game data
         run: python3 tools/wfdata.py update --stats --summary-file "$RUNNER_TEMP/summary.md"
       - name: Build and test with the new data
         run: make all test
+      - name: Show the change summary on the run page
+        if: always()
+        run: test -f "$RUNNER_TEMP/summary.md" && cat "$RUNNER_TEMP/summary.md" >> "$GITHUB_STEP_SUMMARY" || true
       - uses: peter-evans/create-pull-request@v7
         with:
           branch: data-update
