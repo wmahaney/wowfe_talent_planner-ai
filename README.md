@@ -15,7 +15,11 @@ across its three trees, and see
   rank, listed by level or by tree, following the level slider;
 - **Base stats**: class numbers at any level (the level slider drives both the
   talent point budget and this panel), plus what your own attributes turn into
-  once talents are applied.
+  once talents are applied;
+- **Updates**: recent game changes to talents, skills and stat tables, for
+  your class or all classes, with links to Blizzard's own patch notes. Talents
+  changed in the latest update get a gold dot in the tree, and the site shows
+  a notice when there's an update you haven't seen.
 
 It is a static site: a rules engine written in C and compiled to WebAssembly,
 a thin JavaScript UI, and JSON data files. It deploys to GitHub Pages as is.
@@ -63,7 +67,12 @@ the per-level tables from ForeverDB, then:
    prerequisite or text, and records it in `data/changelog.json`;
 3. lists any entry in `data/effects.txt` that now points at a changed or
    missing talent, because those are curated by hand and need a look;
-4. rebuilds `site/data/`.
+4. rebuilds `site/data/`, including `site/data/changelog.json`, which the
+   site's Updates view reads. Cost lines that only changed punctuation or
+   wording are marked minor and hidden there unless asked for.
+
+The links to Blizzard's notes live under `official_notes` in
+`data/rules.json`.
 
 Useful flags: `--dry-run` (report only), `--classes mage priest`,
 `--from-dir downloads/` (read `<class>.json` and `<class>.html` you saved by

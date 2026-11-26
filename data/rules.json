@@ -197,5 +197,15 @@
       "label": "All resistances",
       "unit": ""
     }
-  }
+  },
+  "official_notes": [
+    {
+      "name": "WoW: Forever hotfixes (Blizzard)",
+      "url": "https://news.blizzard.com/en-us/article/24315281"
+    },
+    {
+      "name": "WoW Forever development notes (Blizzard forums)",
+      "url": "https://us.forums.blizzard.com/en/wow/t/forever-beta-development-notes/2360696"
+    }
+  ]
 }

@@ -354,46 +354,93 @@ def convert_export(cls, export, old, date):
             "spells": convert_spellbook(export) or (old or {}).get("spells") or {"tabs": [], "general": []}}
 
 
-def diff_class(old, new):
-    """Human-readable list of talent changes, plus the set of talents whose text changed."""
-    lines, changed_text = [], set()
+def _cost_key(cost):
+    """Cost text reduced to its facts, so a change of punctuation or wording isn't news."""
+    if not cost:
+        return ()
+    c = cost.lower().replace("|", ";").replace(" to ", "-")
+    for word in ("range", "requires", "reagents:", "tools:", ":"):
+        c = c.replace(word, " ")
+    return tuple(sorted(" ".join(part.split()) for part in re.split(r"[;,]", c) if part.strip()))
+
+
+def diff_changes(old, new):
+    """Structured talent and spell changes between two class documents.
+
+    Each change is {"kind", "tree", "name", "from", "to"} plus "minor": true for
+    changes that are only rewording. The site's Updates view reads these.
+    """
+    out = []
     if old is None:
-        return ["new class data"], changed_text
+        return [{"kind": "new_class"}]
     o = {(tr["name"], t["name"]): t for tr in old["trees"] for t in tr["talents"]}
     n = {(tr["name"], t["name"]): t for tr in new["trees"] for t in tr["talents"]}
-    for key in n.keys() - o.keys():
+    def rank_text(t):
+        return (t.get("ranks") or [None])[-1] or t.get("summary")
+    for key in sorted(n.keys() - o.keys()):
         t = n[key]
-        lines.append(f"added {key[0]} / {key[1]} (row {t['row']}, col {t['col']}, {t['max']} ranks)")
-    for key in o.keys() - n.keys():
-        lines.append(f"removed {key[0]} / {key[1]}")
+        out.append({"kind": "added", "tree": key[0], "name": key[1],
+                    "to": {"row": t["row"], "col": t["col"], "max": t["max"], "text": rank_text(t)}})
+    for key in sorted(o.keys() - n.keys()):
+        out.append({"kind": "removed", "tree": key[0], "name": key[1], "from": {"text": rank_text(o[key])}})
     for key in sorted(n.keys() & o.keys()):
         a, b = o[key], n[key]
-        label = f"{key[0]} / {key[1]}"
+        base = {"tree": key[0], "name": key[1]}
         if (a["row"], a["col"]) != (b["row"], b["col"]):
-            lines.append(f"moved {label}: row {a['row']} col {a['col']} -> row {b['row']} col {b['col']}")
+            out.append({**base, "kind": "moved", "from": [a["row"], a["col"]], "to": [b["row"], b["col"]]})
         if a["max"] != b["max"]:
-            lines.append(f"max rank of {label}: {a['max']} -> {b['max']}")
+            out.append({**base, "kind": "ranks", "from": a["max"], "to": b["max"]})
         if a.get("req") != b.get("req"):
-            lines.append(f"prerequisite of {label}: {a.get('req') or 'none'} -> {b.get('req') or 'none'}")
+            out.append({**base, "kind": "req", "from": a.get("req"), "to": b.get("req")})
         if a.get("cost") != b.get("cost") and a.get("cost") != "Active":
-            lines.append(f"cost of {label}: {a.get('cost') or 'none'} -> {b.get('cost') or 'none'}")
+            c = {**base, "kind": "cost", "from": a.get("cost"), "to": b.get("cost")}
+            if _cost_key(a.get("cost")) == _cost_key(b.get("cost")):
+                c["minor"] = True
+            out.append(c)
         if a.get("ranks") and b.get("ranks") and a["ranks"] != b["ranks"]:
-            lines.append(f"text changed: {label}")
-            changed_text.add(key)
+            out.append({**base, "kind": "text", "from": a["ranks"][-1], "to": b["ranks"][-1]})
     def spell_map(d):
         return {(tab["name"], sp["name"]): sp for tab in (d.get("spells") or {}).get("tabs", []) for sp in tab["spells"]}
     so, sn = spell_map(old), spell_map(new)
     if so and sn:
-        for key in sn.keys() - so.keys():
-            lines.append(f"new spell {key[0]} / {key[1]} (levels {sn[key]['levels'] or 'unknown'})")
-        for key in so.keys() - sn.keys():
-            lines.append(f"spell removed: {key[0]} / {key[1]}")
-        for key in sn.keys() & so.keys():
+        for key in sorted(sn.keys() - so.keys()):
+            out.append({"kind": "spell_added", "tree": key[0], "name": key[1], "to": sn[key].get("levels")})
+        for key in sorted(so.keys() - sn.keys()):
+            out.append({"kind": "spell_removed", "tree": key[0], "name": key[1], "from": so[key].get("levels")})
+        for key in sorted(sn.keys() & so.keys()):
             if so[key].get("levels") != sn[key].get("levels"):
-                lines.append(f"learn levels of {key[0]} / {key[1]}: {so[key].get('levels')} -> {sn[key].get('levels')}")
+                out.append({"kind": "spell_levels", "tree": key[0], "name": key[1],
+                            "from": so[key].get("levels"), "to": sn[key].get("levels")})
     elif sn and not so:
-        lines.append("spell lists added")
-    return sorted(lines), changed_text
+        out.append({"kind": "spell_lists"})
+    return out
+
+
+def change_line(c):
+    """One change as a line of the Markdown summary."""
+    k, label = c["kind"], f"{c.get('tree')} / {c.get('name')}"
+    f, t = c.get("from"), c.get("to")
+    return {
+        "new_class": lambda: "new class data",
+        "spell_lists": lambda: "spell lists added",
+        "added": lambda: f"added {label} (row {t['row']}, col {t['col']}, {t['max']} ranks)",
+        "removed": lambda: f"removed {label}",
+        "moved": lambda: f"moved {label}: row {f[0]} col {f[1]} -> row {t[0]} col {t[1]}",
+        "ranks": lambda: f"max rank of {label}: {f} -> {t}",
+        "req": lambda: f"prerequisite of {label}: {f or 'none'} -> {t or 'none'}",
+        "cost": lambda: f"cost of {label}: {f or 'none'} -> {t or 'none'}" + (" (wording only)" if c.get("minor") else ""),
+        "text": lambda: f"text changed: {label}",
+        "spell_added": lambda: f"new spell {label} (levels {t or 'unknown'})",
+        "spell_removed": lambda: f"spell removed: {label}",
+        "spell_levels": lambda: f"learn levels of {label}: {f} -> {t}",
+    }[k]()
+
+
+def diff_class(old, new):
+    """Human-readable list of talent changes, plus the set of talents whose text changed."""
+    changes = diff_changes(old, new)
+    changed_text = {(c["tree"], c["name"]) for c in changes if c["kind"] == "text"}
+    return sorted(change_line(c) for c in changes), changed_text
 
 
 # ---------------------------------------------------------------- update: stats
@@ -460,7 +507,7 @@ def parse_stats_page(page):
 
 def cmd_update(args):
     effects = load_effects()
-    entry = {"date": args.date, "classes": {}, "review": [], "builds": {}}
+    entry = {"date": args.date, "classes": {}, "changes": {}, "review": [], "builds": {}}
     failed = []
     for cls in args.classes:
         old = read_json(DATA / "talents" / f"{cls}.json")
@@ -476,7 +523,12 @@ def cmd_update(args):
         except Exception as exc:  # keep the old data for this class and carry on
             failed.append(f"{cls}: {exc}")
             continue
-        lines, changed_text = diff_class(old, new)
+        changes = diff_changes(old, new)
+        lines = sorted(change_line(c) for c in changes if not c.get("minor"))
+        minor = sum(1 for c in changes if c.get("minor"))
+        if minor:
+            lines.append(f"{minor} cost lines reworded with no change in substance")
+        changed_text = {(c["tree"], c["name"]) for c in changes if c["kind"] == "text"}
         same_meta = old and old["source"].get("build") == new["source"]["build"] \
             and old["source"].get("generated") == new["source"]["generated"]
         first_export = old and old["source"].get("method", "").startswith("seed")
@@ -484,6 +536,7 @@ def cmd_update(args):
             continue
         if lines:
             entry["classes"][cls] = lines
+            entry["changes"][cls] = changes
         if old and old["source"].get("build") != new["source"]["build"]:
             entry["builds"][cls] = [old["source"].get("build"), new["source"]["build"]]
         entry["review"].extend(effects_review(cls, new, effects, changed_text))
@@ -512,6 +565,8 @@ def cmd_update(args):
             stats["source"]["retrieved"] = args.date
             write_json(DATA / "stats.json", stats)
             entry["classes"]["_stats"] = [f"per-level stat tables changed: {', '.join(stats_changed)}"]
+            for cls in stats_changed:
+                entry["changes"].setdefault(cls, []).append({"kind": "stats"})
 
     changed = bool(entry["classes"] or entry["builds"])
     md = ["# Game data update " + args.date, ""]
@@ -542,6 +597,18 @@ def cmd_update(args):
 
 # ---------------------------------------------------------------- build / check
 
+def updates_index(log, rules):
+    """What the site needs up front: when the last update was and which talents it touched."""
+    latest = log[0] if log else None
+    touched = {}
+    if latest:
+        for cls, changes in (latest.get("changes") or {}).items():
+            touched[cls] = sorted({f"{c['tree']}/{c['name']}" for c in changes
+                                   if c.get("name") and not c.get("minor") and not c["kind"].startswith("spell")})
+    return {"count": len(log), "latest": latest and latest["date"], "touched": touched,
+            "official": rules.get("official_notes", [])}
+
+
 def cmd_build(args):
     rules = read_json(DATA / "rules.json")
     stats = read_json(DATA / "stats.json")
@@ -556,7 +623,7 @@ def cmd_build(args):
                                       "retrieved": stats["source"].get("retrieved")},
                             "icons": {"name": "Blizzard Entertainment", "host": "Wowhead (wow.zamimg.com)"},
                             "credits": rules.get("project", {}).get("credits")},
-                "changelog": read_json(DATA / "changelog.json", [])[:20]}
+                "updates": updates_index(read_json(DATA / "changelog.json", []), rules)}
     problems, review = [], []
     for cls in CLASSES:
         doc = read_json(DATA / "talents" / f"{cls}.json")
@@ -592,6 +659,7 @@ def cmd_build(args):
     manifest["icons"] = {"url": (icons.get("local_dir", "icons") + "/{name}.jpg") if have_all else icons.get("remote"),
                          "local": have_all}
     write_json(SITE_DATA / "manifest.json", manifest, compact=True)
+    write_json(SITE_DATA / "changelog.json", read_json(DATA / "changelog.json", []), compact=True)
     for line in review:
         print("review:", line)
     print(f"built site/data for {len(CLASSES)} classes")

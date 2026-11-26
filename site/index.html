@@ -32,11 +32,14 @@
   </div>
 </section>
 
+<p class="update-note" id="update-note" hidden></p>
+
 <nav class="views" id="views" aria-label="Section">
   <button type="button" data-view="talents" aria-pressed="true">Talents</button>
   <button type="button" data-view="bonuses" aria-pressed="false">Bonuses</button>
   <button type="button" data-view="skills" aria-pressed="false">Skills</button>
   <button type="button" data-view="stats" aria-pressed="false">Stats</button>
+  <button type="button" data-view="updates" aria-pressed="false">Updates<span class="badge" id="updates-badge" hidden></span></button>
   <button type="button" data-view="data" aria-pressed="false">Data</button>
 </nav>
 
@@ -61,6 +64,11 @@
     <section class="view view-stats panel" aria-labelledby="h-stats">
       <h2 id="h-stats">Base stats</h2>
       <div id="stats"></div>
+    </section>
+
+    <section class="view view-updates panel" id="updates-panel" aria-labelledby="h-updates">
+      <h2 id="h-updates">Recent game updates</h2>
+      <div id="updates"></div>
     </section>
 
     <section class="view view-data panel" aria-labelledby="h-data">
