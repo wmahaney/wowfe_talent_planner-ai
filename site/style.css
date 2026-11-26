@@ -82,6 +82,7 @@ main[data-view="talents"] .view-talents,
 main[data-view="bonuses"] .view-bonuses,
 main[data-view="skills"] .view-skills,
 main[data-view="stats"] .view-stats,
+main[data-view="updates"] .view-updates,
 main[data-view="data"] .view-data { display: block; }
 
 /* ---------- trees ---------- */
@@ -165,7 +166,35 @@ tr.now td { color: var(--class); font-weight: 700; }
 .builds li { display: flex; gap: 8px; align-items: center; font-size: 0.92rem; }
 .builds .b-name { flex: 1; overflow-wrap: anywhere; }
 .builds button { padding: 3px 9px; font-size: 0.85rem; }
-.changelog { margin: 0; padding-left: 18px; font-size: 0.88rem; color: var(--muted); }
+/* ---------- game updates ---------- */
+.badge { display: inline-block; min-width: 1.4em; margin-left: 5px; padding: 0 5px; border-radius: 9px;
+         background: var(--gold); color: #14161c; font-size: 0.75rem; line-height: 1.4em; }
+.badge[hidden], .update-note[hidden] { display: none; }
+.update-note { margin: 10px 16px 0; padding: 8px 12px; border: 1px solid var(--gold); border-radius: 8px;
+               background: color-mix(in srgb, var(--gold) 12%, var(--panel)); font-size: 0.92rem; }
+.update-note button { margin-left: 8px; padding: 2px 10px; }
+.upd-filter { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 10px; }
+.upd-filter button[aria-pressed="true"] { background: var(--class); color: #14161c; border-color: var(--class); }
+.upd-entry { border-top: 1px solid var(--line); padding-top: 8px; margin-top: 10px; }
+.upd-entry > h3 { margin: 0 0 4px; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.upd-entry .upd-new { color: var(--gold); font-size: 0.8rem; font-weight: 700; }
+.upd-class { margin: 8px 0 0; font-size: 0.95rem; }
+.upd-list { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 7px; }
+.upd-list li { display: grid; grid-template-columns: 24px 1fr; gap: 2px 8px; font-size: 0.9rem; }
+.upd-list .u-icon { grid-row: span 2; width: 24px; height: 24px; }
+.upd-list .u-icon img { display: block; border-radius: 4px; }
+.upd-list .u-head { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; }
+.upd-list .u-name { font-weight: 700; }
+.upd-list button.u-name { background: none; border: 0; padding: 0; color: inherit; font: inherit; font-weight: 700;
+                          text-decoration: underline dotted; cursor: pointer; }
+.upd-list .u-kind { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+.u-kind.added { color: #7ccf7c; } .u-kind.removed { color: #e57373; } .u-kind.changed { color: var(--gold); }
+.upd-list .u-body { color: var(--muted); }
+.upd-list .u-was { text-decoration: line-through; opacity: 0.75; }
+.upd-more { font-size: 0.85rem; }
+.node.recent::after { content: ""; position: absolute; top: 3px; right: 3px; width: 8px; height: 8px;
+                      border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 2px var(--panel); }
+.tip-recent { color: var(--gold); font-size: 0.85rem; }
 
 .credits {
   margin: 28px 16px 0; padding-top: 14px; border-top: 1px solid var(--line);

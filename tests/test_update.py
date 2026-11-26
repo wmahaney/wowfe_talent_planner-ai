@@ -85,6 +85,33 @@ def main():
     review = wfdata.effects_review("warrior", second, wfdata.load_effects(), changed)
     assert any("Deflection" in r for r in review), review
 
+    # Structured changes for the site's Updates view.
+    changes = wfdata.diff_changes(first, second)
+    kinds = {(c["kind"], c.get("name")) for c in changes}
+    assert ("ranks", "Deflection") in kinds and ("added", "Juggernaut") in kinds and ("removed", "Improved Charge") in kinds, kinds
+    ranks = next(c for c in changes if c["kind"] == "ranks")
+    assert ranks["from"] == 5 and ranks["to"] == 3 and ranks["tree"] == "Arms"
+    added = next(c for c in changes if c["kind"] == "added")
+    assert added["to"]["max"] and added["to"]["text"], added
+
+    # Cost text that only changed its punctuation is marked minor; a real change is not.
+    a, b = copy.deepcopy(second), copy.deepcopy(second)
+    t_a, t_b = a["trees"][0]["talents"][0], b["trees"][0]["talents"][0]
+    t_a["cost"], t_b["cost"] = "100 Mana; 30 yd; Instant; 1-5 Combo Points", "100 Mana | 30 yd range | Instant | 1 to 5 Combo Points"
+    (c,) = [c for c in wfdata.diff_changes(a, b) if c["kind"] == "cost"]
+    assert c.get("minor"), c
+    t_b["cost"] = "120 Mana | 30 yd range | Instant | 1 to 5 Combo Points"
+    (c,) = [c for c in wfdata.diff_changes(a, b) if c["kind"] == "cost"]
+    assert not c.get("minor"), c
+    assert "wording only" not in wfdata.change_line(c)
+
+    # The site index marks talents touched by the latest update, not reworded ones or spells.
+    log = [{"date": "2027-02-01", "changes": {"warrior": changes + [dict(c, minor=True, name="Reworded Only")]}}]
+    idx = wfdata.updates_index(log, {"official_notes": [{"name": "x", "url": "https://example.com"}]})
+    assert idx["latest"] == "2027-02-01" and "Arms/Deflection" in idx["touched"]["warrior"], idx
+    assert not any("Reworded Only" in k for k in idx["touched"]["warrior"])
+    assert not any(k.endswith("/Charge") for k in idx["touched"]["warrior"]), "spells are not talents"
+
     # Stats page scraping.
     rows = "".join(f"<tr><td>{l}{' (level cap)' if l == 60 else ''}</td><td>{l / 2:.1f}</td><td>{l}.5</td>"
                    f"<td>{1000 + l:,}</td></tr>" for l in range(1, 61))

@@ -252,6 +252,8 @@
         h('div', { class: 'tip-name' }, t.name),
         h('div', { class: 'tip-rank' }, `Rank ${rank}/${t.max}`),
         kind ? h('div', { class: 'tip-cost' }, kind) : null))];
+    const changedOn = recentTouch(tree.name, t.name);
+    if (changedOn) lines.push(h('p', { class: 'tip-recent' }, `Changed in the ${fmtDate(changedOn)} game update.`));
     const ok = W.pl_can_add(ti, i), first = earliestLevel(tree, t);
     if (rank < t.max) {
       if (first > S.level) lines.push(h('p', { class: 'warn' }, `Needs character level ${first} or higher.`));
@@ -448,6 +450,7 @@
         b.classList.toggle('maxed', rank >= t.max);
         b.classList.toggle('open', rank < t.max && W.pl_can_add(ti, i) === 0);
         b.classList.toggle('selected', !!sel);
+        b.classList.toggle('recent', !!recentTouch(tree.name, t.name));
         b.lastChild.textContent = `${rank}/${t.max}`;
         b.setAttribute('aria-label', `${t.name}, rank ${rank} of ${t.max}`);
       });
@@ -465,6 +468,9 @@
     const canAdd = W.pl_can_add(ti, i), canRemove = W.pl_can_remove(ti, i);
     const lines = [];
     if (t.cost && t.cost !== 'Active') lines.push(h('p', { class: 'cost' }, t.cost));
+    const changedOn = recentTouch(doc.trees[ti].name, t.name);
+    if (changedOn) lines.push(h('p', { class: 'tip-recent' }, `Changed in the ${fmtDate(changedOn)} game update. `,
+      h('button', { type: 'button', onclick: openUpdates }, 'What changed')));
     if (rank === 0) lines.push(h('p', null, talentText(t, 0)));
     else {
       lines.push(h('p', null, h('span', { class: 'muted' }, t.max > 1 ? `Rank ${rank}: ` : ''), talentText(t, rank)));
@@ -720,7 +726,6 @@
       } }, 'Load'),
       h('button', { type: 'button', 'aria-label': `Delete ${b.name}`, onclick: () => { builds.splice(bi, 1); store('wfplanner.builds', builds); renderData(); } }, 'Delete')));
     const src = manifest.sources;
-    const log = manifest.changelog || [];
     $('#data').replaceChildren(
       h('form', { class: 'save-row', onsubmit: (e) => { e.preventDefault(); save(); } }, nameInput, h('button', { type: 'submit' }, 'Save build')),
       builds.length ? h('ul', { class: 'builds' }, list)
@@ -744,10 +749,188 @@
         ? h('p', { class: 'note' }, `Assumed from Classic until confirmed: ${manifest.rules.points_per_row} points per row to unlock the next one, and prerequisites need max rank.`)
         : null,
       h('h3', null, 'Data updates'),
-      log.length ? h('ul', { class: 'changelog' }, log.slice(0, 5).map((entry) => {
-        const n = Object.values(entry.classes || {}).reduce((sum, lines) => sum + lines.length, 0);
-        return h('li', null, `${entry.date}: ${n} change${n === 1 ? '' : 's'} in ${Object.keys(entry.classes || {}).map((c) => c.replace('_', '')).join(', ') || 'build numbers only'}`);
-      })) : h('p', { class: 'note' }, `No updates recorded since the data was first added (${manifest.built}).`));
+      h('p', { class: 'note' }, updates.length ? `${updates.length} update${updates.length === 1 ? '' : 's'} recorded, the latest on ${fmtDate(updates[0].date)}. ` : `No updates recorded since the data was first added (${manifest.built}). `,
+        h('button', { type: 'button', onclick: openUpdates }, 'See recent game updates')));
+  }
+
+  // ------------------------------------------------------------ game updates
+
+  let updates = [];        // data/changelog.json, newest first
+  const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const fmtDate = (d) => { const [y, m, day] = String(d).split('-').map(Number); return m ? `${day} ${MONTHS[m - 1]} ${y}` : d; };
+  const className = (key) => (manifest.classes.find((c) => c.key === key) || { name: key }).name;
+  const lv = (levels) => (levels && levels.length ? `level${levels.length > 1 ? 's' : ''} ${levels.join(', ')}` : 'level unknown');
+
+  function recentTouch(treeName, name) {
+    const u = manifest.updates;
+    return u && u.latest && (u.touched[S.cls] || []).includes(`${treeName}/${name}`) ? u.latest : null;
+  }
+
+  function unseenUpdates() {
+    const seen = store('wfplanner.updatesSeen') || '';
+    const u = manifest.updates;
+    if (!u || !u.latest || u.latest <= seen) return 0;
+    if (!seen) {               // first visit: only point out an update from the last 30 days
+      const age = (Date.now() - Date.parse(u.latest)) / 864e5;
+      if (!(age <= 30)) return 0;
+    }
+    return updates.filter((e) => e.date > seen).length || 1;
+  }
+
+  function markUpdatesSeen() {
+    if (manifest.updates && manifest.updates.latest) store('wfplanner.updatesSeen', manifest.updates.latest);
+    renderUpdateNote();
+  }
+
+  function renderUpdateNote() {
+    const n = unseenUpdates(), badge = $('#updates-badge'), note = $('#update-note');
+    badge.hidden = !n;
+    badge.textContent = n || '';
+    note.hidden = !n;
+    if (!n) return;
+    const touched = doc ? doc.trees.reduce((n, tr) => n + tr.talents.filter((t) => recentTouch(tr.name, t.name)).length, 0) : 0;
+    note.replaceChildren(
+      h('strong', null, `Game data updated ${fmtDate(manifest.updates.latest)}.`), ' ',
+      touched ? `${touched} ${doc ? doc.name : ''} talent${touched === 1 ? '' : 's'} changed (marked with a gold dot).`
+        : 'See what changed.',
+      h('button', { type: 'button', onclick: openUpdates }, 'Show me'),
+      h('button', { type: 'button', 'aria-label': 'Dismiss', onclick: markUpdatesSeen }, '×'));
+  }
+
+  function openUpdates() {
+    setView('updates');
+    $('#updates-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function setView(view) {
+    $('#app').dataset.view = view;
+    document.querySelectorAll('#views button').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.view === view)));
+    if (view === 'updates') markUpdatesSeen();
+  }
+
+  async function goToTalent(cls, treeName, name) {
+    if (cls !== S.cls) await selectClass(cls);
+    const ti = doc.trees.findIndex((t) => t.name === treeName);
+    const i = ti < 0 ? -1 : doc.trees[ti].talents.findIndex((t) => t.name === name);
+    if (i < 0) { toast(`${name} is not in the current talent data.`); return; }
+    select(ti, i);
+    setView('talents');
+    refresh();
+    nodes[ti][i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    nodes[ti][i].focus({ preventScroll: true });
+  }
+
+  // One talent or spell, with every change to it in this update.
+  function describe(c) {
+    const f = c.from, t = c.to;
+    switch (c.kind) {
+      case 'added': return [t.max > 1 ? `${t.max} ranks, row ${t.row}.` : `Row ${t.row}.`, t.text ? ` ${t.text}` : ''];
+      case 'removed': return f && f.text ? [h('span', { class: 'u-was' }, f.text)] : ['Taken out of the tree.'];
+      case 'moved': return [`Moved from row ${f[0]}, column ${f[1]} to row ${t[0]}, column ${t[1]}.`];
+      case 'ranks': return [`Ranks: ${f} → ${t}.`];
+      case 'req': return [t ? `Now requires ${t}${f ? ` (was ${f})` : ''}.` : `No longer requires ${f}.`];
+      case 'cost': return [h('span', { class: 'u-was' }, f || 'none'), ' → ', t || 'none'];
+      case 'text': return [h('span', { class: 'u-was' }, f), ' → ', t];
+      case 'spell_added': return [`New skill, learned at ${lv(t)}.`];
+      case 'spell_removed': return ['No longer in the spellbook.'];
+      case 'spell_levels': return [`Learned at ${lv(f)} → ${lv(t)}.`];
+      case 'stats': return ['The per-level stat tables changed (crit and mana conversions).'];
+      case 'new_class': return ['Class data added.'];
+      case 'spell_lists': return ['Skill lists added.'];
+      default: return [c.kind];
+    }
+  }
+
+  function classChanges(cls, changes, showMinor) {
+    const talentDoc = cls === S.cls ? doc : null;
+    const groups = new Map();
+    let minor = 0;
+    for (const c of changes) {
+      if (c.minor && !showMinor) { minor++; continue; }
+      const key = c.name ? `${c.kind.startsWith('spell') ? 's' : 't'}|${c.tree}|${c.name}` : `x|${c.kind}`;
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(c);
+    }
+    const order = { added: 0, ranks: 1, req: 1, moved: 1, text: 1, cost: 2, removed: 3, spell_added: 4, spell_levels: 5, spell_removed: 6 };
+    const items = [...groups.values()].sort((a, b) => (order[a[0].kind] ?? 9) - (order[b[0].kind] ?? 9));
+    const list = items.map((cs) => {
+      const c = cs[0], isTalent = c.name && !c.kind.startsWith('spell');
+      const kind = c.kind === 'added' || c.kind === 'spell_added' ? 'added'
+        : c.kind === 'removed' || c.kind === 'spell_removed' ? 'removed' : 'changed';
+      let iconName = null;
+      if (talentDoc && isTalent) {
+        const tr = talentDoc.trees.find((x) => x.name === c.tree);
+        const tal = tr && tr.talents.find((x) => x.name === c.name);
+        iconName = tal && tal.icon;
+      } else if (talentDoc && c.name) {
+        for (const tab of (talentDoc.spells || {}).tabs || []) {
+          const sp = tab.spells.find((x) => x.name === c.name);
+          if (sp) { iconName = sp.icon; break; }
+        }
+      }
+      const canJump = isTalent && kind !== 'removed';
+      const name = c.name ? (canJump
+        ? h('button', { type: 'button', class: 'u-name', onclick: () => goToTalent(cls, c.tree, c.name), title: 'Show in the talent tree' }, c.name)
+        : h('span', { class: 'u-name' }, c.name)) : null;
+      return h('li', null,
+        h('span', { class: 'u-icon' }, icon(iconName, 24)),
+        h('div', { class: 'u-head' }, name, c.tree ? h('span', { class: 'muted' }, c.tree) : null,
+          h('span', { class: `u-kind ${kind}` }, kind === 'added' ? (isTalent ? 'new talent' : 'new') : kind)),
+        h('div', { class: 'u-body' }, cs.map((x) => h('div', null, describe(x)))));
+    });
+    return { list, minor };
+  }
+
+  function renderUpdates() {
+    const box = $('#updates');
+    const official = (manifest.updates && manifest.updates.official) || [];
+    const links = official.length ? h('p', { class: 'note', style: 'margin-top:0' },
+      'Blizzard\'s own notes: ', official.flatMap((o, k) => [k ? ' · ' : '', h('a', { href: o.url, target: '_blank', rel: 'noopener' }, o.name)]),
+      '. Below is what changed in the talent and skill data itself, checked daily.') : null;
+    if (!updates.length) {
+      box.replaceChildren(links || '', h('p', { class: 'muted' },
+        `No game changes recorded yet. The data is checked every day, and anything that changes in the talents, skills or stat tables shows up here.`));
+      return;
+    }
+    const all = S.updAll, seen = store('wfplanner.updatesSeen') || '';
+    const filter = h('div', { class: 'upd-filter' },
+      h('button', { type: 'button', 'aria-pressed': String(!all), onclick: () => { S.updAll = false; renderUpdates(); } }, doc.name),
+      h('button', { type: 'button', 'aria-pressed': String(!!all), onclick: () => { S.updAll = true; renderUpdates(); } }, 'All classes'),
+      h('label', { class: 'muted', style: 'font-size:0.85rem;margin-left:auto' },
+        h('input', { type: 'checkbox', checked: !!S.updMinor, onchange: (e) => { S.updMinor = e.target.checked; renderUpdates(); } }), ' Show rewording'));
+    const entries = [];
+    for (const e of updates.slice(0, S.updMore ? updates.length : 10)) {
+      const byClass = e.changes || {};
+      const keys = Object.keys(Object.keys(byClass).length ? byClass : (e.classes || {}))
+        .filter((k) => k !== '_stats' && (all || k === S.cls));
+      const parts = [];
+      let minorTotal = 0;
+      for (const k of keys) {
+        let body, count;
+        if (byClass[k]) {
+          const { list, minor } = classChanges(k, byClass[k], S.updMinor);
+          minorTotal += minor;
+          count = list.length;
+          body = list.length ? h('ul', { class: 'upd-list' }, list) : null;
+        } else {          // entries written before changes were recorded in detail
+          count = e.classes[k].length;
+          body = h('ul', { class: 'changelog' }, e.classes[k].map((l) => h('li', null, l)));
+        }
+        if (body) parts.push(all ? h('h4', { class: 'upd-class' }, className(k), h('span', { class: 'muted' }, ` · ${count}`)) : null, body);
+      }
+      const builds = Object.entries(e.builds || {}).filter(([k, v]) => (all || k === S.cls) && v[1]);
+      if (builds.length && !all) parts.push(h('p', { class: 'note' }, `Game build ${builds[0][1][0] || '?'} → ${builds[0][1][1]}.`));
+      if (!parts.length && !minorTotal) continue;
+      if (!parts.length) parts.push(h('p', { class: 'muted' }, 'Only rewording.'));
+      if (minorTotal) parts.push(h('p', { class: 'note' }, `${minorTotal} cost line${minorTotal === 1 ? ' was' : 's were'} reworded without changing what ${minorTotal === 1 ? 'it says' : 'they say'}.`));
+      entries.push(h('article', { class: 'upd-entry' },
+        h('h3', null, fmtDate(e.date), seen && e.date > seen ? h('span', { class: 'upd-new' }, 'NEW') : null),
+        parts));
+    }
+    if (!entries.length) entries.push(h('p', { class: 'muted' },
+      `No changes to ${doc.name} in the recorded updates. `, h('button', { type: 'button', onclick: () => { S.updAll = true; renderUpdates(); } }, 'Show all classes')));
+    if (updates.length > 10 && !S.updMore) entries.push(h('button', { type: 'button', class: 'upd-more', onclick: () => { S.updMore = true; renderUpdates(); } }, `Show ${updates.length - 10} older updates`));
+    box.replaceChildren(...[links, filter, ...entries].filter(Boolean));
   }
 
   // ------------------------------------------------------------ refresh + start
@@ -762,6 +945,8 @@
     renderStatsLevel();
     renderDerived();
     renderData();
+    renderUpdates();
+    renderUpdateNote();
     try { history.replaceState(null, '', `#${S.cls}-${S.level}-${exportCode()}`); } catch (_) { /* sandboxed frame */ }
   }
 
@@ -775,6 +960,7 @@
   async function start() {
     try {
       [manifest] = await Promise.all([loadJSON('manifest'), loadWasm()]);
+      updates = await loadJSON('changelog').catch(() => []) || [];
     } catch (err) {
       $('#build-line').textContent = `${err.message}. If you opened index.html straight from disk, run "make serve" instead.`;
       $('#build-line').classList.add('warn');
@@ -791,10 +977,7 @@
       try { await navigator.clipboard.writeText(location.href); toast('Link to this build copied.'); }
       catch (_) { toast('Copy the address bar to share this build.'); }
     });
-    document.querySelectorAll('#views button').forEach((b) => b.addEventListener('click', () => {
-      $('#app').dataset.view = b.dataset.view;
-      document.querySelectorAll('#views button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
-    }));
+    document.querySelectorAll('#views button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
     window.addEventListener('resize', () => doc && doc.trees.forEach((_, ti) => drawArrows(ti)));
     tip = h('div', { class: 'tooltip', role: 'tooltip', hidden: true });
     document.body.append(tip);
