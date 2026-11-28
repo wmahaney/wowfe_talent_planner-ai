@@ -138,9 +138,9 @@ create pull requests under Settings -> Actions -> General.
 
 ## License and credits
 
-Everything written for this project (the engine, the site, the tools, the
-tests and the docs) is dedicated to the public domain under
-[CC0 1.0](LICENSE): use it for anything, no credit needed.
+This project is licensed under the
+[GNU General Public License v3.0 or later](LICENSE). That covers everything
+written for it: the engine, the site, the tools, the tests and the docs.
 
 The game data comes from other people and keeps their terms:
 
@@ -149,9 +149,8 @@ The game data comes from other people and keeps their terms:
 | `data/talents/`, `data/seed/talents/`, `data/seed/extra/`, `data/effects.txt`, `data/changelog.json`, the class files and `changelog.json` in `site/data/` | [CC BY 4.0](LICENSES/CC-BY-4.0.txt): reuse freely, keep the credit | [Talents Forever](https://talentsforever.com/) |
 | `data/stats.json`, `data/seed/stats.txt`, `site/data/stats.json` | [GPL-3.0](LICENSES/GPL-3.0-only.txt) | [ForeverDB](https://foreverdb.net/) |
 
-The stat tables are kept in their own files so the GPL covers only them. To
-reuse the rest under CC0 and CC BY alone, leave those files out. The exact
-per-file list is in [REUSE.toml](REUSE.toml). World of Warcraft names, text and
+The Talents Forever material stays under CC BY 4.0 as well, so keep its credit
+when you reuse it. The exact per-file list is in [REUSE.toml](REUSE.toml). World of Warcraft names, text and
 icons belong to Blizzard Entertainment; this project is not affiliated with
 Blizzard.
 

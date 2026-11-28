@@ -5,16 +5,16 @@ written for this project is listed here with its source and terms.
 
 ## What the project's license covers
 
-The [CC0 1.0](LICENSE) dedication covers the code and text written for this
-project by its author: the C engine, the site's HTML, CSS and JavaScript, the
-tools, the tests and the documentation. It does **not** cover the third-party
-material below, which stays under its own terms. If you reuse this project,
-keep these credits.
+The project is licensed under the [GNU GPL v3.0 or later](LICENSE). That
+covers the code and text written for it: the C engine, the site's HTML, CSS
+and JavaScript, the tools, the tests and the documentation. The third-party
+material below also stays under its own terms. If you reuse this project, keep
+these credits.
 
 Which files carry which license is listed in [REUSE.toml](REUSE.toml); the
 license texts are in [LICENSES/](LICENSES/). In short: Talents Forever data is
-CC BY 4.0, ForeverDB stat tables are GPL-3.0 and live only in the `stats`
-files, and everything else is CC0. The single-file build (`make single`)
+CC BY 4.0, ForeverDB stat tables are GPL-3.0 (in the `stats` files), and
+everything else is GPL-3.0-or-later. The single-file build (`make single`)
 bundles all of these, so it carries all three sets of terms.
 
 ## Game data
