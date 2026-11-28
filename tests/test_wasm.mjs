@@ -33,6 +33,7 @@ function fill(doc, ti) {
   }
 }
 
+const stats = json('stats');
 for (const c of manifest.classes) {
   const doc = json(c.key);
   assert.equal(doc.trees.length, 3, `${c.key}: three trees`);
@@ -68,6 +69,8 @@ for (const c of manifest.classes) {
     assert.equal(W.pl_points_spent(), 21);
     assert.equal(W.pl_required_level(), 30);
   }
-  for (const [name, values] of Object.entries(doc.tables)) assert.equal(values.length, 60, `${c.key}.${name}`);
+  const tables = stats.classes[c.key] || {};
+  assert.ok(Object.keys(tables).length, `${c.key}: stat tables present`);
+  for (const [name, values] of Object.entries(tables)) assert.equal(values.length, 60, `${c.key}.${name}`);
 }
 console.log(`wasm engine ok for ${manifest.classes.length} classes`);

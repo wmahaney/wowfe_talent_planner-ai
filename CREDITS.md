@@ -5,11 +5,17 @@ written for this project is listed here with its source and terms.
 
 ## What the project's license covers
 
-The [CC0 1.0](LICENSE) dedication covers the code and text written for this
-project by its author: the C engine, the site's HTML, CSS and JavaScript, the
-tools, the tests and the documentation. It does **not** cover the third-party
-material below, which stays under its own terms. If you reuse this project,
-keep these credits.
+The project is licensed under the [GNU GPL v3.0 or later](LICENSE). That
+covers the code and text written for it: the C engine, the site's HTML, CSS
+and JavaScript, the tools, the tests and the documentation. The third-party
+material below also stays under its own terms. If you reuse this project, keep
+these credits.
+
+Which files carry which license is listed in [REUSE.toml](REUSE.toml); the
+license texts are in [LICENSES/](LICENSES/). In short: Talents Forever data is
+CC BY 4.0, ForeverDB stat tables are GPL-3.0 (in the `stats` files), and
+everything else is GPL-3.0-or-later. The single-file build (`make single`)
+bundles all of these, so it carries all three sets of terms.
 
 ## Game data
 
@@ -32,13 +38,26 @@ computes per-rank and per-level values from the text. The updater
 (`tools/wfdata.py update`) records further changes in `data/changelog.json`.
 
 ### ForeverDB
-<https://foreverdb.net/stats>
+<https://foreverdb.net/stats> · licensed
+[GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html) (see
+<https://foreverdb.net/about>)
+
+> Data from ForeverDB.net.
+
+ForeverDB publishes its own data under the GNU GPL v3.0; it says the game's
+own tables are Blizzard Entertainment's and claims only their selection and
+arrangement.
 
 Used for: the per-level class tables (Agility per 1% crit, Intellect per 1%
-spell crit, base mana) and the stat conversion figures (health per Stamina,
+spell crit, base mana), stored in `data/stats.json`, `data/seed/stats.txt` and
+`site/data/stats.json`, which are distributed under GPL-3.0. The
+individual stat conversion figures in `data/rules.json` (health per Stamina,
 mana per Intellect, armor per Agility, attack power per Strength and Agility,
-rating per 1%, block value per Strength). ForeverDB states no license for
-these pages; the numbers are credited here and in the app.
+rating per 1%, block value per Strength) were also read from ForeverDB; they
+are single game constants rather than a table and are credited here.
+
+Changes made here: the three tables were copied into this project's JSON
+layout, one list of 60 values per class and table.
 
 ## Images
 

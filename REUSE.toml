@@ -1,0 +1,35 @@
+# Which license covers which file (https://reuse.software/spec/).
+# Everything written for this project is GPL-3.0-or-later.
+# Third-party data keeps the terms it came with; see CREDITS.md.
+# When several entries match a file, the last one wins.
+version = 1
+
+[[annotations]]
+path = "**"
+SPDX-FileCopyrightText = "William E. Mahaney"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+# Talents Forever: talent trees, rank text, icon names, skill levels.
+[[annotations]]
+path = [
+    "data/talents/**",
+    "data/seed/talents/**",
+    "data/seed/extra/**",
+    "data/effects.txt",
+    "data/changelog.json",
+    "site/data/*.json",
+]
+SPDX-FileCopyrightText = "Talents Forever (https://talentsforever.com/); game names and tooltip text Blizzard Entertainment, Inc."
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# ForeverDB: per-level class stat tables, GPL v3.0 as published upstream.
+[[annotations]]
+path = ["data/stats.json", "data/seed/stats.txt", "site/data/stats.json"]
+SPDX-FileCopyrightText = "ForeverDB.net (https://foreverdb.net/); the game's own tables Blizzard Entertainment, Inc."
+SPDX-License-Identifier = "GPL-3.0-only"
+
+# Generated index of the site data: our own work.
+[[annotations]]
+path = "site/data/manifest.json"
+SPDX-FileCopyrightText = "William E. Mahaney"
+SPDX-License-Identifier = "GPL-3.0-or-later"
