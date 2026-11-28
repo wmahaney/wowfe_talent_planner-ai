@@ -35,7 +35,9 @@ def fake_export(doc):
 
 
 def main():
-    old = wfdata.read_json(wfdata.DATA / "talents" / "warrior.json")
+    # Start from the hand-made seed, not data/talents: the daily update rewrites
+    # those files with real tooltip text, which would change what this test sees.
+    old = wfdata.seed_class("warrior", "2026-11-22")
     export = fake_export(old)
 
     # First import after the seed: same shape, text arrives, nothing structural changes.

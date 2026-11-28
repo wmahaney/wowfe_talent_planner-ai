@@ -174,51 +174,57 @@ def effects_review(cls, doc, effects, changed_text=()):
 
 # ---------------------------------------------------------------- seed
 
+def seed_class(cls, date):
+    """One class document built from data/seed, without writing anything."""
+    path = DATA / "seed" / "talents" / f"{cls}.txt"
+    build = generated = None
+    trees, order = {}, []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.startswith("# class:"):
+            meta = dict(p.strip().split(": ", 1) for p in line[1:].split("|"))
+            build, generated = meta.get("build"), meta.get("generated")
+            continue
+        if not line.strip() or line.startswith("#"):
+            continue
+        tree, name, row, col, mx, req, cost, summary = line.split("|")
+        if tree not in trees:
+            trees[tree] = []
+            order.append(tree)
+        trees[tree].append({"name": name, "row": int(row), "col": int(col), "max": int(mx),
+                            "req": req or None, "cost": cost or None, "summary": summary, "ranks": None})
+    tabs, tab_order, general = {}, [], []
+    for line in (DATA / "seed" / "extra" / f"{cls}.txt").read_text(encoding="utf-8").splitlines():
+        if not line.strip() or line.startswith("#"):
+            continue
+        kind, a, b, *rest = line.split("|")
+        if kind == "T":      # T|tree|talent|icon
+            match = [t for t in trees[a] if t["name"] == b]
+            if not match:
+                raise SystemExit(f"data/seed/extra/{cls}.txt: no talent {a}/{b}")
+            match[0]["icon"] = rest[0]
+        elif kind == "S":    # S|tab|spell|levels|icon
+            if a not in tabs:
+                tabs[a] = []
+                tab_order.append(a)
+            levels = None if rest[0] == "?" else [int(v) for v in rest[0].split(",")]
+            tabs[a].append({"name": b, "levels": levels, "icon": rest[1] or None})
+        elif kind == "G":    # G|name|note
+            general.append({"name": a, "note": b or None})
+    doc = {"schema": SCHEMA, "class": cls,
+           "source": {"name": TALENT_SOURCE["name"], "url": TALENT_SOURCE["url"],
+                      "license": TALENT_SOURCE["license"], "build": build, "generated": generated,
+                      "retrieved": date, "method": "seed (hand-transcribed summaries)"},
+           "trees": [{"name": t, "talents": trees[t]} for t in order],
+           "spells": {"tabs": [{"name": t, "spells": tabs[t]} for t in tab_order], "general": general}}
+    problems = validate_class(doc)
+    if problems:
+        raise SystemExit("\n".join(problems))
+    return doc
+
+
 def cmd_seed(args):
     for cls in CLASSES:
-        path = DATA / "seed" / "talents" / f"{cls}.txt"
-        build = generated = None
-        trees, order = {}, []
-        for line in path.read_text(encoding="utf-8").splitlines():
-            if line.startswith("# class:"):
-                meta = dict(p.strip().split(": ", 1) for p in line[1:].split("|"))
-                build, generated = meta.get("build"), meta.get("generated")
-                continue
-            if not line.strip() or line.startswith("#"):
-                continue
-            tree, name, row, col, mx, req, cost, summary = line.split("|")
-            if tree not in trees:
-                trees[tree] = []
-                order.append(tree)
-            trees[tree].append({"name": name, "row": int(row), "col": int(col), "max": int(mx),
-                                "req": req or None, "cost": cost or None, "summary": summary, "ranks": None})
-        tabs, tab_order, general = {}, [], []
-        for line in (DATA / "seed" / "extra" / f"{cls}.txt").read_text(encoding="utf-8").splitlines():
-            if not line.strip() or line.startswith("#"):
-                continue
-            kind, a, b, *rest = line.split("|")
-            if kind == "T":      # T|tree|talent|icon
-                match = [t for t in trees[a] if t["name"] == b]
-                if not match:
-                    raise SystemExit(f"data/seed/extra/{cls}.txt: no talent {a}/{b}")
-                match[0]["icon"] = rest[0]
-            elif kind == "S":    # S|tab|spell|levels|icon
-                if a not in tabs:
-                    tabs[a] = []
-                    tab_order.append(a)
-                levels = None if rest[0] == "?" else [int(v) for v in rest[0].split(",")]
-                tabs[a].append({"name": b, "levels": levels, "icon": rest[1] or None})
-            elif kind == "G":    # G|name|note
-                general.append({"name": a, "note": b or None})
-        doc = {"schema": SCHEMA, "class": cls,
-               "source": {"name": TALENT_SOURCE["name"], "url": TALENT_SOURCE["url"],
-                          "license": TALENT_SOURCE["license"], "build": build, "generated": generated,
-                          "retrieved": args.date, "method": "seed (hand-transcribed summaries)"},
-               "trees": [{"name": t, "talents": trees[t]} for t in order],
-               "spells": {"tabs": [{"name": t, "spells": tabs[t]} for t in tab_order], "general": general}}
-        problems = validate_class(doc)
-        if problems:
-            raise SystemExit("\n".join(problems))
+        doc = seed_class(cls, args.date)
         write_json(DATA / "talents" / f"{cls}.json", doc)
 
     stats = {"schema": SCHEMA, "source": {"name": STATS_SOURCE["name"], "url": STATS_SOURCE["url"],
