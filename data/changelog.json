@@ -1,0 +1,748 @@
+[
+ {
+  "date": "2026-11-28",
+  "classes": {
+   "paladin": [
+    "9 cost lines reworded with no change in substance"
+   ],
+   "hunter": [
+    "9 cost lines reworded with no change in substance"
+   ],
+   "rogue": [
+    "10 cost lines reworded with no change in substance"
+   ],
+   "priest": [
+    "9 cost lines reworded with no change in substance"
+   ],
+   "shaman": [
+    "cost of Restoration / Mana Tide Totem: 10 Mana; Instant; 5 min cooldown -> 10 Mana | Instant | 5 min cooldown | Tools: Water Totem",
+    "5 cost lines reworded with no change in substance"
+   ],
+   "mage": [
+    "spell removed: Arcane / Polymorph (Pig)",
+    "spell removed: Arcane / Polymorph (Turtle)",
+    "11 cost lines reworded with no change in substance"
+   ],
+   "warlock": [
+    "learn levels of Demons / Lesser Invisibility: None -> [32]",
+    "11 cost lines reworded with no change in substance"
+   ],
+   "druid": [
+    "added Balance / Dreamstate (row 6, col 2, 5 ranks)",
+    "added Balance / Moon and Stars (row 2, col 2, 2 ranks)",
+    "added Balance / Starlight Wrath (row 1, col 2, 5 ranks)",
+    "cost of Feral Combat / Feral Charge: 5 Rage; 8-25 yd; Instant; 15 sec cooldown; Bear Form -> 5 Rage | 8-25 yd range | Instant | 15 sec cooldown | Requires Bear Form, Dire Bear Form",
+    "cost of Feral Combat / Lacerate: 15 Rage; Melee Range; Instant; Bear Form -> 15 Rage | Melee Range | Instant | Requires Bear Form, Dire Bear Form",
+    "cost of Feral Combat / Primal Bite: 20 Rage; Melee Range; Instant; 6 sec cooldown; Bear Form -> 20 Rage | Melee Range | Instant | 6 sec cooldown | Requires Bear Form, Dire Bear Form",
+    "max rank of Balance / Improved Starfire: 5 -> 2",
+    "prerequisite of Balance / Vengeance: Improved Moonfire -> Moon and Stars",
+    "removed Balance / Improved Moonfire",
+    "removed Balance / Improved Wrath",
+    "removed Balance / Moonfury",
+    "6 cost lines reworded with no change in substance"
+   ]
+  },
+  "changes": {
+   "paladin": [
+    {
+     "tree": "Holy",
+     "name": "Divine Favor",
+     "kind": "cost",
+     "from": "4% of base mana; Instant; 2 min cooldown",
+     "to": "4% of base mana | Instant | 2 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Holy",
+     "name": "Holy Shock",
+     "kind": "cost",
+     "from": "160 Mana; Enemy 20 yd, Friendly 40 yd; Instant; 10 sec cooldown",
+     "to": "160 Mana | Enemy: 20 yd range | Friendly: 40 yd range | Instant | 10 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Holy",
+     "name": "Light's Vigil",
+     "kind": "cost",
+     "from": "730 Mana; 40 yd; 1.5 sec cast; 6 sec cooldown",
+     "to": "730 Mana | 40 yd range | 1.5 sec cast | 6 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Holy",
+     "name": "Oath of Light",
+     "kind": "cost",
+     "from": "8% of base mana; 40 yd; Instant",
+     "to": "8% of base mana | 40 yd range | Instant",
+     "minor": true
+    },
+    {
+     "tree": "Protection",
+     "name": "Holy Shield",
+     "kind": "cost",
+     "from": "100 Mana; Instant; 10 sec cooldown; Requires Shields",
+     "to": "100 Mana | Instant | 10 sec cooldown | Requires Shields",
+     "minor": true
+    },
+    {
+     "tree": "Protection",
+     "name": "Swift Judgement",
+     "kind": "cost",
+     "from": "10 yd; Instant; 1 min cooldown",
+     "to": "10 yd range | Instant | 1 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Protection",
+     "name": "Templar's Bulwark",
+     "kind": "cost",
+     "from": "110 Mana; Instant; 5 min cooldown",
+     "to": "110 Mana | Instant | 5 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Retribution",
+     "name": "Repentance",
+     "kind": "cost",
+     "from": "60 Mana; 20 yd; Instant; 1 min cooldown",
+     "to": "60 Mana | 20 yd range | Instant | 1 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Retribution",
+     "name": "Seal of Command",
+     "kind": "cost",
+     "from": "65 Mana; Instant",
+     "to": "65 Mana | Instant",
+     "minor": true
+    }
+   ],
+   "hunter": [
+    {
+     "tree": "Beast Mastery",
+     "name": "Bestial Wrath",
+     "kind": "cost",
+     "from": "12% of base mana; 100 yd; Instant; 2 min cooldown",
+     "to": "12% of base mana | 100 yd range | Instant | 2 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Beast Mastery",
+     "name": "Intimidation",
+     "kind": "cost",
+     "from": "8% of base mana; 100 yd; Instant; 1 min cooldown",
+     "to": "8% of base mana | 100 yd range | Instant | 1 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Beast Mastery",
+     "name": "Summon Hawk",
+     "kind": "cost",
+     "from": "11% of base mana; 35 yd; Instant; 6 sec cooldown",
+     "to": "11% of base mana | 35 yd range | Instant | 6 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Marksmanship",
+     "name": "Scatter Shot",
+     "kind": "cost",
+     "from": "8% of base mana; 15 yd; Instant; 30 sec cooldown",
+     "to": "8% of base mana | 15 yd range | Instant | 30 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Marksmanship",
+     "name": "Sniper Shot",
+     "kind": "cost",
+     "from": "365 Mana; 8-45 yd; 4 sec cast; 15 sec cooldown",
+     "to": "365 Mana | 8-45 yd range | 4 sec cast | 15 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Marksmanship",
+     "name": "Trueshot Aura",
+     "kind": "cost",
+     "from": "180 Mana; Instant",
+     "to": "180 Mana | Instant",
+     "minor": true
+    },
+    {
+     "tree": "Survival",
+     "name": "Counterattack",
+     "kind": "cost",
+     "from": "30 Mana; Melee Range; Instant; 5 sec cooldown",
+     "to": "30 Mana | Melee Range | Instant | 5 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Survival",
+     "name": "Deterrence",
+     "kind": "cost",
+     "from": "Instant; 5 min cooldown",
+     "to": "Instant | 5 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Survival",
+     "name": "Strider Kick",
+     "kind": "cost",
+     "from": "5.81% of base mana; Melee Range; Instant; 8 sec cooldown",
+     "to": "5.81% of base mana | Melee Range | Instant | 8 sec cooldown",
+     "minor": true
+    }
+   ],
+   "rogue": [
+    {
+     "tree": "Assassination",
+     "name": "Cold Blood",
+     "kind": "cost",
+     "from": "Instant; 3 min cooldown",
+     "to": "Instant | 3 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Assassination",
+     "name": "Mutilate",
+     "kind": "cost",
+     "from": "60 Energy; Melee Range; Instant; Requires Daggers",
+     "to": "60 Energy | Melee Range | Instant | Requires Daggers",
+     "minor": true
+    },
+    {
+     "tree": "Combat",
+     "name": "Adrenaline Rush",
+     "kind": "cost",
+     "from": "Instant; 5 min cooldown",
+     "to": "Instant | 5 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Combat",
+     "name": "Blade Flurry",
+     "kind": "cost",
+     "from": "25 Energy; Instant; 2 min cooldown",
+     "to": "25 Energy | Instant | 2 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Combat",
+     "name": "Riposte",
+     "kind": "cost",
+     "from": "10 Energy; Melee Range; Instant; 6 sec cooldown",
+     "to": "10 Energy | Melee Range | Instant | 6 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Subtlety",
+     "name": "Death Mark",
+     "kind": "cost",
+     "from": "25 Energy; 1-5 Combo Points; 20 yd; Instant; 10 sec cooldown",
+     "to": "25 Energy | 1 to 5 Combo Points | 20 yd range | Instant | 10 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Subtlety",
+     "name": "Ghostly Strike",
+     "kind": "cost",
+     "from": "40 Energy; Melee Range; Instant; 20 sec cooldown",
+     "to": "40 Energy | Melee Range | Instant | 20 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Subtlety",
+     "name": "Hemorrhage",
+     "kind": "cost",
+     "from": "35 Energy; Melee Range; Instant",
+     "to": "35 Energy | Melee Range | Instant",
+     "minor": true
+    },
+    {
+     "tree": "Subtlety",
+     "name": "Premeditation",
+     "kind": "cost",
+     "from": "20 yd; Instant; 2 min cooldown",
+     "to": "20 yd range | Instant | 2 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Subtlety",
+     "name": "Preparation",
+     "kind": "cost",
+     "from": "Instant; 10 min cooldown",
+     "to": "Instant | 10 min cooldown",
+     "minor": true
+    }
+   ],
+   "priest": [
+    {
+     "tree": "Discipline",
+     "name": "Inner Focus",
+     "kind": "cost",
+     "from": "Instant; 3 min cooldown",
+     "to": "Instant | 3 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Discipline",
+     "name": "Penance",
+     "kind": "cost",
+     "from": "150 Mana; Enemy 36 yd, Friendly 40 yd; Channeled; 12 sec cooldown",
+     "to": "150 Mana | Enemy: 36 yd range | Friendly: 40 yd range | Channeled | 12 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Discipline",
+     "name": "Power Infusion",
+     "kind": "cost",
+     "from": "20% of base mana; 30 yd; Instant; 3 min cooldown",
+     "to": "20% of base mana | 30 yd range | Instant | 3 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Holy",
+     "name": "Holy Nova",
+     "kind": "cost",
+     "from": "185 Mana; Instant",
+     "to": "185 Mana | Instant",
+     "minor": true
+    },
+    {
+     "tree": "Holy",
+     "name": "Prayer of Mending",
+     "kind": "cost",
+     "from": "210 Mana; 40 yd; Instant; 10 sec cooldown",
+     "to": "210 Mana | 40 yd range | Instant | 10 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Shadow",
+     "name": "Mind Flay",
+     "kind": "cost",
+     "from": "45 Mana; 20 yd; Channeled",
+     "to": "45 Mana | 20 yd range | Channeled",
+     "minor": true
+    },
+    {
+     "tree": "Shadow",
+     "name": "Shadowform",
+     "kind": "cost",
+     "from": "40% of base mana; Instant; 1.5 sec cooldown",
+     "to": "40% of base mana | Instant | 1.5 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Shadow",
+     "name": "Silence",
+     "kind": "cost",
+     "from": "225 Mana; 20 yd; Instant; 45 sec cooldown",
+     "to": "225 Mana | 20 yd range | Instant | 45 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Shadow",
+     "name": "Vampiric Embrace",
+     "kind": "cost",
+     "from": "40 Mana; 30 yd; Instant; 30 sec cooldown",
+     "to": "40 Mana | 30 yd range | Instant | 30 sec cooldown",
+     "minor": true
+    }
+   ],
+   "shaman": [
+    {
+     "tree": "Elemental",
+     "name": "Lightning Mastery",
+     "kind": "cost",
+     "from": "Instant; 3 min cooldown",
+     "to": "Instant | 3 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Enhancement",
+     "name": "Rage of the Farseer",
+     "kind": "cost",
+     "from": "Instant; 3 min cooldown",
+     "to": "Instant | 3 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Enhancement",
+     "name": "Stormstrike",
+     "kind": "cost",
+     "from": "8% of base mana; Melee Range; Instant; 8 sec cooldown",
+     "to": "8% of base mana | Melee Range | Instant | 8 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Restoration",
+     "name": "Mana Tide Totem",
+     "kind": "cost",
+     "from": "10 Mana; Instant; 5 min cooldown",
+     "to": "10 Mana | Instant | 5 min cooldown | Tools: Water Totem"
+    },
+    {
+     "tree": "Restoration",
+     "name": "Nature's Swiftness",
+     "kind": "cost",
+     "from": "Instant; 3 min cooldown",
+     "to": "Instant | 3 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Restoration",
+     "name": "Riptide",
+     "kind": "cost",
+     "from": "150 Mana; 40 yd; Instant; 12 sec cooldown",
+     "to": "150 Mana | 40 yd range | Instant | 12 sec cooldown",
+     "minor": true
+    }
+   ],
+   "mage": [
+    {
+     "tree": "Arcane",
+     "name": "Arcane Blast",
+     "kind": "cost",
+     "from": "15% of base mana; 30 yd; 1.5 sec cast",
+     "to": "15% of base mana | 30 yd range | 1.5 sec cast",
+     "minor": true
+    },
+    {
+     "tree": "Arcane",
+     "name": "Arcane Power",
+     "kind": "cost",
+     "from": "Instant; 3 min cooldown",
+     "to": "Instant | 3 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Arcane",
+     "name": "Arcane Wrath",
+     "kind": "cost",
+     "from": "140 Mana; 30 yd; 3.5 sec cast; 6 sec cooldown",
+     "to": "140 Mana | 30 yd range | 3.5 sec cast | 6 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Arcane",
+     "name": "Presence of Mind",
+     "kind": "cost",
+     "from": "Instant; 3 min cooldown",
+     "to": "Instant | 3 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Fire",
+     "name": "Blast Wave",
+     "kind": "cost",
+     "from": "215 Mana; Instant; 45 sec cooldown",
+     "to": "215 Mana | Instant | 45 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Fire",
+     "name": "Combustion",
+     "kind": "cost",
+     "from": "Instant; 3 min cooldown",
+     "to": "Instant | 3 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Fire",
+     "name": "Pyroblast",
+     "kind": "cost",
+     "from": "125 Mana; 35 yd; 6 sec cast",
+     "to": "125 Mana | 35 yd range | 6 sec cast",
+     "minor": true
+    },
+    {
+     "tree": "Frost",
+     "name": "Cold Snap",
+     "kind": "cost",
+     "from": "Instant; 10 min cooldown",
+     "to": "Instant | 10 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Frost",
+     "name": "Ice Barrier",
+     "kind": "cost",
+     "from": "305 Mana; Instant; 30 sec cooldown",
+     "to": "305 Mana | Instant | 30 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Frost",
+     "name": "Ice Block",
+     "kind": "cost",
+     "from": "15 Mana; Instant; 5 min cooldown",
+     "to": "15 Mana | Instant | 5 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Frost",
+     "name": "Ice Lance",
+     "kind": "cost",
+     "from": "45 Mana; 30 yd; Instant; 8 sec cooldown",
+     "to": "45 Mana | 30 yd range | Instant | 8 sec cooldown",
+     "minor": true
+    },
+    {
+     "kind": "spell_removed",
+     "tree": "Arcane",
+     "name": "Polymorph (Pig)",
+     "from": null
+    },
+    {
+     "kind": "spell_removed",
+     "tree": "Arcane",
+     "name": "Polymorph (Turtle)",
+     "from": null
+    }
+   ],
+   "warlock": [
+    {
+     "tree": "Affliction",
+     "name": "Amplify Curse",
+     "kind": "cost",
+     "from": "Instant; 3 min cooldown",
+     "to": "Instant | 3 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Affliction",
+     "name": "Curse of Exhaustion",
+     "kind": "cost",
+     "from": "8% of base mana; 30 yd; Instant",
+     "to": "8% of base mana | 30 yd range | Instant",
+     "minor": true
+    },
+    {
+     "tree": "Affliction",
+     "name": "Siphon Life",
+     "kind": "cost",
+     "from": "150 Mana; 30 yd; Instant",
+     "to": "150 Mana | 30 yd range | Instant",
+     "minor": true
+    },
+    {
+     "tree": "Affliction",
+     "name": "Wrack",
+     "kind": "cost",
+     "from": "200 Mana; 30 yd; Channeled",
+     "to": "200 Mana | 30 yd range | Channeled",
+     "minor": true
+    },
+    {
+     "tree": "Demonology",
+     "name": "Demonic Sacrifice",
+     "kind": "cost",
+     "from": "100 yd; Instant",
+     "to": "100 yd range | Instant",
+     "minor": true
+    },
+    {
+     "tree": "Demonology",
+     "name": "Fel Domination",
+     "kind": "cost",
+     "from": "Instant; 5 min cooldown",
+     "to": "Instant | 5 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Demonology",
+     "name": "Soul Link",
+     "kind": "cost",
+     "from": "20% of base mana; 100 yd; Instant",
+     "to": "20% of base mana | 100 yd range | Instant",
+     "minor": true
+    },
+    {
+     "tree": "Destruction",
+     "name": "Bane of Havoc",
+     "kind": "cost",
+     "from": "5% of base mana; 30 yd; Instant",
+     "to": "5% of base mana | 30 yd range | Instant",
+     "minor": true
+    },
+    {
+     "tree": "Destruction",
+     "name": "Conflagrate",
+     "kind": "cost",
+     "from": "100 Mana; 30 yd; Instant; 10 sec cooldown",
+     "to": "100 Mana | 30 yd range | Instant | 10 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Destruction",
+     "name": "Incinerate",
+     "kind": "cost",
+     "from": "205 Mana; 30 yd; 2.5 sec cast",
+     "to": "205 Mana | 30 yd range | 2.5 sec cast",
+     "minor": true
+    },
+    {
+     "tree": "Destruction",
+     "name": "Shadowburn",
+     "kind": "cost",
+     "from": "105 Mana; 30 yd; Instant; 15 sec cooldown; Soul Shard",
+     "to": "105 Mana | 30 yd range | Instant | 15 sec cooldown | Reagents: Soul Shard",
+     "minor": true
+    },
+    {
+     "kind": "spell_levels",
+     "tree": "Demons",
+     "name": "Lesser Invisibility",
+     "from": null,
+     "to": [
+      32
+     ]
+    }
+   ],
+   "druid": [
+    {
+     "kind": "added",
+     "tree": "Balance",
+     "name": "Dreamstate",
+     "to": {
+      "row": 6,
+      "col": 2,
+      "max": 5,
+      "text": "When you cast Innervate on a target other than yourself, you gain 100% of the effect as well."
+     }
+    },
+    {
+     "kind": "added",
+     "tree": "Balance",
+     "name": "Moon and Stars",
+     "to": {
+      "row": 2,
+      "col": 2,
+      "max": 2,
+      "text": "Increases the damage and critical strike chance of your Moonfire spell by 10% and gives your Starfire spell a 100% chance not to lose casting time from taking damage."
+     }
+    },
+    {
+     "kind": "added",
+     "tree": "Balance",
+     "name": "Starlight Wrath",
+     "to": {
+      "row": 1,
+      "col": 2,
+      "max": 5,
+      "text": "Reduces the cast time of your Wrath and Starfire spells by 0.5 sec and the Mana cost of your Wrath spell by 50%."
+     }
+    },
+    {
+     "kind": "removed",
+     "tree": "Balance",
+     "name": "Improved Moonfire",
+     "from": {
+      "text": "Moonfire damage and crit chance +5/10%"
+     }
+    },
+    {
+     "kind": "removed",
+     "tree": "Balance",
+     "name": "Improved Wrath",
+     "from": {
+      "text": "Wrath cast time -0.1/0.2/0.3/0.4/0.5 sec; mana cost -10/20/30/40/50%"
+     }
+    },
+    {
+     "kind": "removed",
+     "tree": "Balance",
+     "name": "Moonfury",
+     "from": {
+      "text": "Arcane and Nature damage +2/4/6/8/10%"
+     }
+    },
+    {
+     "tree": "Balance",
+     "name": "Improved Starfire",
+     "kind": "ranks",
+     "from": 5,
+     "to": 2
+    },
+    {
+     "tree": "Balance",
+     "name": "Insect Swarm",
+     "kind": "cost",
+     "from": "45 Mana; 30 yd; Instant",
+     "to": "45 Mana | 30 yd range | Instant",
+     "minor": true
+    },
+    {
+     "tree": "Balance",
+     "name": "Moonkin Form",
+     "kind": "cost",
+     "from": "35% of base mana; Instant",
+     "to": "35% of base mana | Instant",
+     "minor": true
+    },
+    {
+     "tree": "Balance",
+     "name": "Vengeance",
+     "kind": "req",
+     "from": "Improved Moonfire",
+     "to": "Moon and Stars"
+    },
+    {
+     "tree": "Feral Combat",
+     "name": "Feral Charge",
+     "kind": "cost",
+     "from": "5 Rage; 8-25 yd; Instant; 15 sec cooldown; Bear Form",
+     "to": "5 Rage | 8-25 yd range | Instant | 15 sec cooldown | Requires Bear Form, Dire Bear Form"
+    },
+    {
+     "tree": "Feral Combat",
+     "name": "Lacerate",
+     "kind": "cost",
+     "from": "15 Rage; Melee Range; Instant; Bear Form",
+     "to": "15 Rage | Melee Range | Instant | Requires Bear Form, Dire Bear Form"
+    },
+    {
+     "tree": "Feral Combat",
+     "name": "Primal Bite",
+     "kind": "cost",
+     "from": "20 Rage; Melee Range; Instant; 6 sec cooldown; Bear Form",
+     "to": "20 Rage | Melee Range | Instant | 6 sec cooldown | Requires Bear Form, Dire Bear Form"
+    },
+    {
+     "tree": "Feral Combat",
+     "name": "Shifting Power",
+     "kind": "cost",
+     "from": "55% of base mana; Instant; 8 sec cooldown; Cat Form",
+     "to": "55% of base mana | Instant | 8 sec cooldown | Requires Cat Form",
+     "minor": true
+    },
+    {
+     "tree": "Restoration",
+     "name": "Nature's Swiftness",
+     "kind": "cost",
+     "from": "Instant; 3 min cooldown",
+     "to": "Instant | 3 min cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Restoration",
+     "name": "Swiftmend",
+     "kind": "cost",
+     "from": "20% of base mana; 40 yd; Instant; 15 sec cooldown",
+     "to": "20% of base mana | 40 yd range | Instant | 15 sec cooldown",
+     "minor": true
+    },
+    {
+     "tree": "Restoration",
+     "name": "Wild Growth",
+     "kind": "cost",
+     "from": "550 Mana; 40 yd; 3 sec cast; 6 sec cooldown",
+     "to": "550 Mana | 40 yd range | 3 sec cast | 6 sec cooldown",
+     "minor": true
+    }
+   ]
+  },
+  "review": [
+   "druid: effect for Balance/Moonfury points at a talent that no longer exists"
+  ],
+  "builds": {}
+ }
+]

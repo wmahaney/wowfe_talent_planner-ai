@@ -6,9 +6,9 @@
   "url": "https://talentsforever.com/",
   "license": "CC BY 4.0",
   "build": "1.60.1.70755",
-  "generated": "2026-11-17",
-  "retrieved": "2026-11-22",
-  "method": "seed (hand-transcribed summaries)",
+  "generated": "2026-11-27",
+  "retrieved": "2026-11-28",
+  "method": "export",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "Talent data from Talents Forever (https://talentsforever.com/), licensed CC BY 4.0. Game names and tooltip text belong to Blizzard Entertainment.",
   "changes": "Reformatted into this project's JSON; descriptions may be summarised; per-rank and per-level values are computed from the text. See CREDITS.md."
@@ -25,7 +25,13 @@
      "req": null,
      "cost": null,
      "summary": "Mana cost of Shocks, Lightning Bolt, Chain Lightning -2/4/6/8/10%",
-     "ranks": null,
+     "ranks": [
+      "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 2%.",
+      "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 4%.",
+      "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 6%.",
+      "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 8%.",
+      "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 10%."
+     ],
      "icon": "spell_nature_wispsplode"
     },
     {
@@ -36,7 +42,13 @@
      "req": null,
      "cost": null,
      "summary": "Lightning Bolt, Chain Lightning, Earth Shock damage +1/2/3/4/5%",
-     "ranks": null,
+     "ranks": [
+      "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 1%.",
+      "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 2%.",
+      "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 3%.",
+      "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 4%.",
+      "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 5%."
+     ],
      "icon": "spell_nature_earthshock"
     },
     {
@@ -47,7 +59,11 @@
      "req": null,
      "cost": null,
      "summary": "Spell crits grant 3/6/9% melee crit chance for 10 sec",
-     "ranks": null,
+     "ranks": [
+      "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 3% for 10 sec.",
+      "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 6% for 10 sec.",
+      "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 9% for 10 sec."
+     ],
      "icon": "spell_fire_elementaldevastation"
     },
     {
@@ -58,7 +74,13 @@
      "req": null,
      "cost": null,
      "summary": "Shock cooldown -0.2/0.4/0.6/0.8/1.0 sec",
-     "ranks": null,
+     "ranks": [
+      "Reduces the cooldown of your Shock spells by 0.2 sec.",
+      "Reduces the cooldown of your Shock spells by 0.4 sec.",
+      "Reduces the cooldown of your Shock spells by 0.6 sec.",
+      "Reduces the cooldown of your Shock spells by 0.8 sec.",
+      "Reduces the cooldown of your Shock spells by 1.0 sec."
+     ],
      "icon": "spell_frost_frostward"
     },
     {
@@ -69,7 +91,11 @@
      "req": null,
      "cost": null,
      "summary": "Lightning Bolt and Chain Lightning cast time -0.17/0.33/0.50 sec",
-     "ranks": null,
+     "ranks": [
+      "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.17 sec.",
+      "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.33 sec.",
+      "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.50 sec."
+     ],
      "icon": "spell_lightning_lightningbolt01"
     },
     {
@@ -80,7 +106,11 @@
      "req": null,
      "cost": null,
      "summary": "Fire Totem, Flame Shock, Fire Nova damage +5/10/15%; Flame Shock duration +3/6/9 sec",
-     "ranks": null,
+     "ranks": [
+      "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 5%, as well as increases the duration of your Flame Shock spell by 3 sec.",
+      "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 10%, as well as increases the duration of your Flame Shock spell by 6 sec.",
+      "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 15%, as well as increases the duration of your Flame Shock spell by 9 sec."
+     ],
      "icon": "spell_fire_immolation"
     },
     {
@@ -91,7 +121,9 @@
      "req": null,
      "cost": null,
      "summary": "10% chance for Clearcasting after Fire, Frost or Nature damage; next spell is free",
-     "ranks": null,
+     "ranks": [
+      "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+     ],
      "icon": "spell_shadow_manaburn"
     },
     {
@@ -102,7 +134,11 @@
      "req": null,
      "cost": null,
      "summary": "Fire, Frost and Nature damage taken -3/7/10%",
-     "ranks": null,
+     "ranks": [
+      "Reduces damage taken from Fire, Frost, and Nature effects by 3%.",
+      "Reduces damage taken from Fire, Frost, and Nature effects by 7%.",
+      "Reduces damage taken from Fire, Frost, and Nature effects by 10%."
+     ],
      "icon": "spell_nature_spiritarmor"
     },
     {
@@ -113,7 +149,10 @@
      "req": null,
      "cost": null,
      "summary": "Fire Nova damage +10/20%, cooldown -2/4 sec; Magma Totem duration +10/20 sec",
-     "ranks": null,
+     "ranks": [
+      "Increases the damage done by your Fire Nova spell by 10% and reduces its cooldown by 2 sec, and increases the duration of your Magma Totem by 10 sec.",
+      "Increases the damage done by your Fire Nova spell by 20% and reduces its cooldown by 4 sec, and increases the duration of your Magma Totem by 20 sec."
+     ],
      "icon": "spell_fire_sealoffire"
     },
     {
@@ -124,7 +163,11 @@
      "req": null,
      "cost": null,
      "summary": "23/47/70% chance Lightning Bolt and Chain Lightning keep cast time when damaged",
-     "ranks": null,
+     "ranks": [
+      "Gives your Lightning Bolt and Chain Lightning spells a 23% chance to not lose casting time when you take damage.",
+      "Gives your Lightning Bolt and Chain Lightning spells a 47% chance to not lose casting time when you take damage.",
+      "Gives your Lightning Bolt and Chain Lightning spells a 70% chance to not lose casting time when you take damage."
+     ],
      "icon": "spell_nature_eyeofthestorm"
     },
     {
@@ -135,7 +178,9 @@
      "req": null,
      "cost": null,
      "summary": "Earthbind Totem immobilizes nearby targets for 5 sec",
-     "ranks": null,
+     "ranks": [
+      "Your Earthbind Totem Immobilizes nearby targets for 5 sec when cast."
+     ],
      "icon": "spell_nature_stranglevines"
     },
     {
@@ -146,7 +191,10 @@
      "req": null,
      "cost": null,
      "summary": "Range of Lightning Bolt, Chain Lightning, Fire Nova +3/6 yd",
-     "ranks": null,
+     "ranks": [
+      "Increases the range of your Lightning Bolt, Chain Lightning, and Fire Nova spells by 3 yards.",
+      "Increases the range of your Lightning Bolt, Chain Lightning, and Fire Nova spells by 6 yards."
+     ],
      "icon": "spell_nature_stormreach"
     },
     {
@@ -157,7 +205,9 @@
      "req": null,
      "cost": null,
      "summary": "Lightning Bolt and Chain Lightning crit chance +5%",
-     "ranks": null,
+     "ranks": [
+      "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 5%."
+     ],
      "icon": "spell_nature_callstorm"
     },
     {
@@ -168,7 +218,11 @@
      "req": "Elemental Alacrity",
      "cost": null,
      "summary": "10/20/30% chance for a free half-damage repeat of Lightning Bolt or Chain Lightning",
-     "ranks": null,
+     "ranks": [
+      "Gives your Lightning Bolt and Chain Lightning spells a 10% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+      "Gives your Lightning Bolt and Chain Lightning spells a 20% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+      "Gives your Lightning Bolt and Chain Lightning spells a 30% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat."
+     ],
      "icon": "spell_nature_lightningoverload"
     },
     {
@@ -179,7 +233,13 @@
      "req": "Lightning Overload",
      "cost": null,
      "summary": "Crit damage bonus of Searing and Magma Totems and Fire, Frost, Nature spells +20/40/60/80/100%",
-     "ranks": null,
+     "ranks": [
+      "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 20%.",
+      "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 40%.",
+      "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 60%.",
+      "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 80%.",
+      "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 100%."
+     ],
      "icon": "spell_fire_volcano"
     },
     {
@@ -188,9 +248,11 @@
      "col": 2,
      "max": 1,
      "req": "Call of Thunder",
-     "cost": "Instant; 3 min cooldown",
+     "cost": "Instant | 3 min cooldown",
      "summary": "Lightning Bolt cast -0.5 sec; Chain Lightning cooldown removed for 15 sec",
-     "ranks": null,
+     "ranks": [
+      "Gain mastery over Lightning, reducing the cast time of your Lightning Bolt spell by 0.5 sec, and removing the cooldown from your Chain Lightning spell. Lasts 15 sec."
+     ],
      "icon": "spell_nature_unrelentingstorm"
     }
    ]
@@ -206,7 +268,10 @@
      "req": null,
      "cost": null,
      "summary": "Stoneclaw Totem health +25/50%; Earthbind Totem radius +10/20%",
-     "ranks": null,
+     "ranks": [
+      "Increases the health of your Stoneclaw Totem by 25% and the radius of your Earthbind Totem by 10%.",
+      "Increases the health of your Stoneclaw Totem by 50% and the radius of your Earthbind Totem by 20%."
+     ],
      "icon": "spell_nature_stoneclawtotem"
     },
     {
@@ -217,7 +282,13 @@
      "req": null,
      "cost": null,
      "summary": "Crit chance for all spells and attacks +1/2/3/4/5%",
-     "ranks": null,
+     "ranks": [
+      "Improves your chance to get a critical strike with all spells and attacks by 1%.",
+      "Improves your chance to get a critical strike with all spells and attacks by 2%.",
+      "Improves your chance to get a critical strike with all spells and attacks by 3%.",
+      "Improves your chance to get a critical strike with all spells and attacks by 4%.",
+      "Improves your chance to get a critical strike with all spells and attacks by 5%."
+     ],
      "icon": "ability_thunderbolt"
     },
     {
@@ -228,7 +299,13 @@
      "req": null,
      "cost": null,
      "summary": "Intellect +2/4/6/8/10%",
-     "ranks": null,
+     "ranks": [
+      "Increases your Intellect by 2%.",
+      "Increases your Intellect by 4%.",
+      "Increases your Intellect by 6%.",
+      "Increases your Intellect by 8%.",
+      "Increases your Intellect by 10%."
+     ],
      "icon": "spell_shadow_grimward"
     },
     {
@@ -239,7 +316,10 @@
      "req": null,
      "cost": null,
      "summary": "Stoneskin and Windwall damage reduction +10/20%; Grounding Totem cooldown -1/2 sec",
-     "ranks": null,
+     "ranks": [
+      "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 10% and reduces the cooldown of your Grounding Totem by 1 sec.",
+      "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 20% and reduces the cooldown of your Grounding Totem by 2 sec."
+     ],
      "icon": "spell_nature_stoneskintotem"
     },
     {
@@ -250,7 +330,11 @@
      "req": null,
      "cost": null,
      "summary": "Attack Power increased by 33/66/100% of Intellect",
-     "ranks": null,
+     "ranks": [
+      "Increases your Attack Power by an amount equal to 33% of your Intellect.",
+      "Increases your Attack Power by an amount equal to 66% of your Intellect.",
+      "Increases your Attack Power by an amount equal to 100% of your Intellect."
+     ],
      "icon": "spell_nature_mentalquickness"
     },
     {
@@ -261,7 +345,11 @@
      "req": null,
      "cost": null,
      "summary": "Lightning Shield orb damage +5/10/15%",
-     "ranks": null,
+     "ranks": [
+      "Increases the damage done by your Lightning Shield orbs by 5%.",
+      "Increases the damage done by your Lightning Shield orbs by 10%.",
+      "Increases the damage done by your Lightning Shield orbs by 15%."
+     ],
      "icon": "spell_nature_lightningshield"
     },
     {
@@ -272,7 +360,11 @@
      "req": null,
      "cost": null,
      "summary": "Rockbiter AP, Windfury effect and Flametongue/Frostbrand damage increase with rank",
-     "ranks": null,
+     "ranks": [
+      "Increases the melee attack power bonus of your Rockbiter Weapon by 7%, your Windfury Weapon effect by 13% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 5%.",
+      "Increases the melee attack power bonus of your Rockbiter Weapon by 13%, your Windfury Weapon effect by 27% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 10%.",
+      "Increases the melee attack power bonus of your Rockbiter Weapon by 20%, your Windfury Weapon effect by 40% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 15%."
+     ],
      "icon": "spell_fire_flametounge"
     },
     {
@@ -283,7 +375,9 @@
      "req": null,
      "cost": null,
      "summary": "Shock and Lightning Shield mana cost -45%",
-     "ranks": null,
+     "ranks": [
+      "Reduces the mana cost of your Shock and Lightning Shield spells by 45%."
+     ],
      "icon": "spell_nature_elementalabsorption"
     },
     {
@@ -294,7 +388,11 @@
      "req": null,
      "cost": null,
      "summary": "Dodge chance +2/4/6%",
-     "ranks": null,
+     "ranks": [
+      "Increases your chance to dodge by an additional 2%.",
+      "Increases your chance to dodge by an additional 4%.",
+      "Increases your chance to dodge by an additional 6%."
+     ],
      "icon": "spell_nature_mirrorimage"
     },
     {
@@ -305,7 +403,13 @@
      "req": null,
      "cost": null,
      "summary": "Stamina +2/4/6/8/10%",
-     "ranks": null,
+     "ranks": [
+      "Increases your Stamina by 2%.",
+      "Increases your Stamina by 4%.",
+      "Increases your Stamina by 6%.",
+      "Increases your Stamina by 8%.",
+      "Increases your Stamina by 10%."
+     ],
      "icon": "spell_holy_devotion"
     },
     {
@@ -316,7 +420,13 @@
      "req": "Mental Dexterity",
      "cost": null,
      "summary": "Attack speed +6/12/18/24/30% for 3 swings after a melee crit",
-     "ranks": null,
+     "ranks": [
+      "Increases your attack speed by 6% for your next 3 swings after dealing a melee critical strike.",
+      "Increases your attack speed by 12% for your next 3 swings after dealing a melee critical strike.",
+      "Increases your attack speed by 18% for your next 3 swings after dealing a melee critical strike.",
+      "Increases your attack speed by 24% for your next 3 swings after dealing a melee critical strike.",
+      "Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike."
+     ],
      "icon": "ability_ghoulfrenzy"
     },
     {
@@ -325,9 +435,11 @@
      "col": 3,
      "max": 1,
      "req": null,
-     "cost": "8% of base mana; Melee Range; Instant; 8 sec cooldown",
+     "cost": "8% of base mana | Melee Range | Instant | 8 sec cooldown",
      "summary": "Extra weapon strike; +20% damage to your next Lightning Bolt, Chain Lightning or Earth Shock",
-     "ranks": null,
+     "ranks": [
+      "Instantly strike for 100% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
+     ],
      "icon": "ability_shaman_stormstrike"
     },
     {
@@ -338,7 +450,10 @@
      "req": null,
      "cost": null,
      "summary": "Ghost Wolf cast -1.0/3.0 sec; usable indoors",
-     "ranks": null,
+     "ranks": [
+      "Reduces the cast time of your Ghost Wolf spell by 1.0 sec, and Ghost Wolf may be used indoors.",
+      "Reduces the cast time of your Ghost Wolf spell by 3.0 sec, and Ghost Wolf may be used indoors."
+     ],
      "icon": "spell_nature_spiritwolf"
     },
     {
@@ -349,7 +464,9 @@
      "req": null,
      "cost": null,
      "summary": "Grants Parry; threat -30% or +30% depending on Rockbiter Weapon",
-     "ranks": null,
+     "ranks": [
+      "Gives a chance to parry enemy melee attacks, reduces all threat generated by your attacks by 30% while Rockbiter Weapon is not active, and increases all threat generated by 30% while Rockbiter Weapon is active."
+     ],
      "icon": "ability_parry"
     },
     {
@@ -360,7 +477,10 @@
      "req": null,
      "cost": null,
      "summary": "Spell damage and healing up to +15/30% of Intellect",
-     "ranks": null,
+     "ranks": [
+      "Increases your spell damage and healing by up to 15% of your Intellect.",
+      "Increases your spell damage and healing by up to 30% of your Intellect."
+     ],
      "icon": "spell_nature_sleep"
     },
     {
@@ -371,7 +491,10 @@
      "req": "Stormstrike",
      "cost": null,
      "summary": "50/100% chance for 50% mana regen while casting; Stormstrike can reset on dodge or parry",
-     "ranks": null,
+     "ranks": [
+      "When you Stormstrike, you have a 50% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 50% chance to reset each time you Dodge or Parry.",
+      "When you Stormstrike, you have a 100% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 100% chance to reset each time you Dodge or Parry."
+     ],
      "icon": "spell_shaman_improvedstormstrike"
     },
     {
@@ -382,7 +505,13 @@
      "req": null,
      "cost": null,
      "summary": "Melee hits can cut Lightning Bolt cast time and mana by 20%, stacking 5 times; proc rate rises by rank",
-     "ranks": null,
+     "ranks": [
+      "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec. Activates about 6 times per minute.",
+      "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec. Activates about 7 times per minute.",
+      "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec. Activates about 8 times per minute.",
+      "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec. Activates about 9 times per minute.",
+      "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec. Activates about 10 times per minute."
+     ],
      "icon": "spell_shaman_maelstromweapon"
     },
     {
@@ -391,9 +520,11 @@
      "col": 2,
      "max": 1,
      "req": "Mental Quickness",
-     "cost": "Instant; 3 min cooldown",
+     "cost": "Instant | 3 min cooldown",
      "summary": "Attack speed +30% for 25 sec",
-     "ranks": null,
+     "ranks": [
+      "Increases your attack speed by 30% for 25 sec."
+     ],
      "icon": "spell_nature_bloodlust"
     }
    ]
@@ -409,7 +540,13 @@
      "req": null,
      "cost": null,
      "summary": "Healing Wave cast time -0.1/0.2/0.3/0.4/0.5 sec",
-     "ranks": null,
+     "ranks": [
+      "Reduces the casting time of your Healing Wave spell by 0.1 sec.",
+      "Reduces the casting time of your Healing Wave spell by 0.2 sec.",
+      "Reduces the casting time of your Healing Wave spell by 0.3 sec.",
+      "Reduces the casting time of your Healing Wave spell by 0.4 sec.",
+      "Reduces the casting time of your Healing Wave spell by 0.5 sec."
+     ],
      "icon": "spell_nature_magicimmunity"
     },
     {
@@ -420,7 +557,13 @@
      "req": null,
      "cost": null,
      "summary": "Healing mana cost -1/2/3/4/5%; hit chance +1/2/3/4/5%",
-     "ranks": null,
+     "ranks": [
+      "Reduces the Mana cost of your healing spells by 1% and improves your chance to hit by 1%.",
+      "Reduces the Mana cost of your healing spells by 2% and improves your chance to hit by 2%.",
+      "Reduces the Mana cost of your healing spells by 3% and improves your chance to hit by 3%.",
+      "Reduces the Mana cost of your healing spells by 4% and improves your chance to hit by 4%.",
+      "Reduces the Mana cost of your healing spells by 5% and improves your chance to hit by 5%."
+     ],
      "icon": "spell_frost_manarecharge"
     },
     {
@@ -431,7 +574,11 @@
      "req": null,
      "cost": null,
      "summary": "17/33/50% of mana regen continues while casting",
-     "ranks": null,
+     "ranks": [
+      "Allows 17% of your Mana regeneration to continue while casting.",
+      "Allows 33% of your Mana regeneration to continue while casting.",
+      "Allows 50% of your Mana regeneration to continue while casting."
+     ],
      "icon": "spell_nature_sleep"
     },
     {
@@ -442,7 +589,11 @@
      "req": null,
      "cost": null,
      "summary": "Spell threat -5/10/15%",
-     "ranks": null,
+     "ranks": [
+      "Reduces the threat generated by your spells by 5%.",
+      "Reduces the threat generated by your spells by 10%.",
+      "Reduces the threat generated by your spells by 15%."
+     ],
      "icon": "spell_nature_healingtouch"
     },
     {
@@ -453,7 +604,13 @@
      "req": null,
      "cost": null,
      "summary": "Totem mana cost -5/10/15/20/25%",
-     "ranks": null,
+     "ranks": [
+      "Reduces the Mana cost of your totems and any spells that summon or move them by 5%.",
+      "Reduces the Mana cost of your totems and any spells that summon or move them by 10%.",
+      "Reduces the Mana cost of your totems and any spells that summon or move them by 15%.",
+      "Reduces the Mana cost of your totems and any spells that summon or move them by 20%.",
+      "Reduces the Mana cost of your totems and any spells that summon or move them by 25%."
+     ],
      "icon": "spell_nature_moonglow"
     },
     {
@@ -464,7 +621,10 @@
      "req": null,
      "cost": null,
      "summary": "Reincarnation cooldown -10/20 min; max health +2/4%; reincarnate with +10/20% health and mana",
-     "ranks": null,
+     "ranks": [
+      "Reduces the cooldown of your Reincarnation spell by 10 min, increases your maximum health by 2%, and increases the amount of health and Mana you reincarnate with by an additional 10%.",
+      "Reduces the cooldown of your Reincarnation spell by 20 min, increases your maximum health by 4%, and increases the amount of health and Mana you reincarnate with by an additional 20%."
+     ],
      "icon": "spell_nature_reincarnation"
     },
     {
@@ -475,7 +635,11 @@
      "req": null,
      "cost": null,
      "summary": "Target armor +8/17/25% for 15 sec after a healing crit",
-     "ranks": null,
+     "ranks": [
+      "Increases your target's armor value by 8% for 15 sec after getting a critical effect from one of your healing spells.",
+      "Increases your target's armor value by 17% for 15 sec after getting a critical effect from one of your healing spells.",
+      "Increases your target's armor value by 25% for 15 sec after getting a critical effect from one of your healing spells."
+     ],
      "icon": "spell_nature_undyingstrength"
     },
     {
@@ -486,7 +650,11 @@
      "req": null,
      "cost": null,
      "summary": "23/47/70% chance healing spells keep cast time when damaged",
-     "ranks": null,
+     "ranks": [
+      "Gives your healing spells a 23% chance to not lose casting time when you take damage.",
+      "Gives your healing spells a 47% chance to not lose casting time when you take damage.",
+      "Gives your healing spells a 70% chance to not lose casting time when you take damage."
+     ],
      "icon": "spell_nature_healingwavelesser"
     },
     {
@@ -497,7 +665,9 @@
      "req": null,
      "cost": "Instant",
      "summary": "Water globes restore mana when hit or on spell crits",
-     "ranks": null,
+     "ranks": [
+      "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min.\n\nOnly one Elemental Shield can be active on the Shaman at any one time."
+     ],
      "icon": "ability_shaman_watershield"
     },
     {
@@ -508,7 +678,13 @@
      "req": null,
      "cost": null,
      "summary": "Healing crit chance +1/2/3/4/5%",
-     "ranks": null,
+     "ranks": [
+      "Increases the critical effect chance of your healing spells by 1%.",
+      "Increases the critical effect chance of your healing spells by 2%.",
+      "Increases the critical effect chance of your healing spells by 3%.",
+      "Increases the critical effect chance of your healing spells by 4%.",
+      "Increases the critical effect chance of your healing spells by 5%."
+     ],
      "icon": "spell_nature_tranquility"
     },
     {
@@ -519,7 +695,13 @@
      "req": null,
      "cost": null,
      "summary": "Mana Spring Totem +5-25%; Healing Stream Totem +10-50%",
-     "ranks": null,
+     "ranks": [
+      "Increases the effect of your Mana Spring Totem by 5% and increases the effect of your Healing Stream Totem by 10%.",
+      "Increases the effect of your Mana Spring Totem by 10% and increases the effect of your Healing Stream Totem by 20%.",
+      "Increases the effect of your Mana Spring Totem by 15% and increases the effect of your Healing Stream Totem by 30%.",
+      "Increases the effect of your Mana Spring Totem by 20% and increases the effect of your Healing Stream Totem by 40%.",
+      "Increases the effect of your Mana Spring Totem by 25% and increases the effect of your Healing Stream Totem by 50%."
+     ],
      "icon": "spell_nature_manaregentotem"
     },
     {
@@ -528,9 +710,11 @@
      "col": 3,
      "max": 1,
      "req": null,
-     "cost": "10 Mana; Instant; 5 min cooldown",
+     "cost": "10 Mana | Instant | 5 min cooldown | Tools: Water Totem",
      "summary": "Restores mana every 3 sec to group members for 12 sec",
-     "ranks": null,
+     "ranks": [
+      "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 88 mana every 3 seconds to group members within 30 yards."
+     ],
      "icon": "spell_frost_summonwaterelemental"
     },
     {
@@ -541,7 +725,11 @@
      "req": null,
      "cost": null,
      "summary": "Healing Wave healing +8/17/25%",
-     "ranks": null,
+     "ranks": [
+      "Increases the amount healed by your Healing Wave spell by 8%.",
+      "Increases the amount healed by your Healing Wave spell by 17%.",
+      "Increases the amount healed by your Healing Wave spell by 25%."
+     ],
      "icon": "spell_nature_healingway"
     },
     {
@@ -550,9 +738,11 @@
      "col": 3,
      "max": 1,
      "req": null,
-     "cost": "Instant; 3 min cooldown",
+     "cost": "Instant | 3 min cooldown",
      "summary": "Next Nature spell with a cast under 10 sec becomes instant",
-     "ranks": null,
+     "ranks": [
+      "When activated, your next Nature spell with a casting time less than 10 sec. becomes an instant cast spell."
+     ],
      "icon": "spell_nature_ravenform"
     },
     {
@@ -563,7 +753,13 @@
      "req": null,
      "cost": null,
      "summary": "Healing effectiveness +2/4/6/8/10%",
-     "ranks": null,
+     "ranks": [
+      "Increases the effectiveness of your healing spells by 2%.",
+      "Increases the effectiveness of your healing spells by 4%.",
+      "Increases the effectiveness of your healing spells by 6%.",
+      "Increases the effectiveness of your healing spells by 8%.",
+      "Increases the effectiveness of your healing spells by 10%."
+     ],
      "icon": "spell_frost_wizardmark"
     },
     {
@@ -572,9 +768,11 @@
      "col": 2,
      "max": 1,
      "req": "Healing Way",
-     "cost": "150 Mana; 40 yd; Instant; 12 sec cooldown",
+     "cost": "150 Mana | 40 yd range | Instant | 12 sec cooldown",
      "summary": "Heal over 15 sec; Chain Heal on the target is 25% more effective",
-     "ranks": null,
+     "ranks": [
+      "Heals a friendly target for 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%."
+     ],
      "icon": "spell_nature_riptide"
     }
    ]
