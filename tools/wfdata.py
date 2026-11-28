@@ -44,7 +44,10 @@ STATS_SOURCE = {
     "name": "ForeverDB",
     "url": "https://foreverdb.net/stats",
     "page": "https://foreverdb.net/stats/{cls}",
-    "license": "none stated",
+    "license": "GPL-3.0",
+    "license_url": "https://www.gnu.org/licenses/gpl-3.0.html",
+    "attribution": "Data from ForeverDB.net (https://foreverdb.net/), licensed GPL-3.0. "
+                   "The game's own tables are Blizzard Entertainment's.",
 }
 STAT_TABLES = ["agi_per_crit", "int_per_spell_crit", "base_mana"]
 BUILD_RE = re.compile(r"\b\d+\.\d+\.\d+\.\d{4,6}\b")
@@ -619,14 +622,17 @@ def cmd_build(args):
     rules = read_json(DATA / "rules.json")
     stats = read_json(DATA / "stats.json")
     effects = load_effects()
+    stats_source = {k: STATS_SOURCE[k] for k in ("name", "url", "license", "license_url", "attribution")}
+    stats_source.update(build=stats["source"].get("build"), retrieved=stats["source"].get("retrieved"))
+    # The stat tables are GPL-3.0 (ForeverDB), so they ship in their own file
+    # rather than inside the class files, which stay CC BY 4.0 (Talents Forever).
+    write_json(SITE_DATA / "stats.json", {"schema": SCHEMA, "source": stats_source,
+                                          "classes": stats["classes"]}, compact=True)
     manifest = {"schema": SCHEMA, "built": args.date, "rules": rules["talents"],
                 "conversions": rules["conversions"], "stats": rules["stats"], "classes": [],
                 "sources": {"talents": {k: TALENT_SOURCE[k]
                                         for k in ("name", "url", "license", "license_url", "attribution", "changes")},
-                            "stats": {"name": STATS_SOURCE["name"], "url": STATS_SOURCE["url"],
-                                      "license": STATS_SOURCE["license"],
-                                      "build": stats["source"].get("build"),
-                                      "retrieved": stats["source"].get("retrieved")},
+                            "stats": stats_source,
                             "icons": {"name": "Blizzard Entertainment", "host": "Wowhead (wow.zamimg.com)"},
                             "credits": rules.get("project", {}).get("credits")},
                 "updates": updates_index(read_json(DATA / "changelog.json", []), rules)}
@@ -649,8 +655,7 @@ def cmd_build(args):
         doc.setdefault("spells", {"tabs": [], "general": []})
         doc["source"].update({k: TALENT_SOURCE[k] for k in ("license_url", "attribution", "changes")})
         doc.update({"name": meta["name"], "color": meta["color"],
-                    "consts": {k: meta[k] for k in ("ap_per_str", "ap_per_agi", "rap_per_agi", "block_value")},
-                    "tables": stats["classes"].get(cls, {})})
+                    "consts": {k: meta[k] for k in ("ap_per_str", "ap_per_agi", "rap_per_agi", "block_value")}})
         write_json(SITE_DATA / f"{cls}.json", doc, compact=True)
         manifest["classes"].append({"key": cls, "name": meta["name"], "color": meta["color"],
                                     "build": doc["source"].get("build"), "generated": doc["source"].get("generated"),

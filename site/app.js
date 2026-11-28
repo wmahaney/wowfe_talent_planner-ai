@@ -26,6 +26,7 @@
 
   let W = null;            // wasm exports
   let manifest = null;
+  let statTables = {};    // per-class level tables, from data/stats.json
   let doc = null;          // current class document
   const S = { cls: null, level: 60, tab: 0, selected: null, codes: {}, attrs: {}, skillMode: 'level' };
   let skillsKey = '';
@@ -114,6 +115,8 @@
     return W.pl_import() === 0;
   }
 
+  const tablesFor = (key) => statTables[key] || {};
+
   function loadEngine() {
     const r = manifest.rules, cv = manifest.conversions, k = doc.consts;
     W.pl_reset();
@@ -124,7 +127,7 @@
       tree.talents.forEach((t) => W.pl_add_talent(ti, t.row, t.col, t.max, -1));
       tree.talents.forEach((t, i) => { if (t.req) W.pl_set_req(ti, i, index.get(t.req)); });
     });
-    TABLES.forEach((name, ti) => (doc.tables[name] || []).forEach((v, i) => W.pl_table_set(ti, i + 1, v)));
+    TABLES.forEach((name, ti) => (tablesFor(S.cls)[name] || []).forEach((v, i) => W.pl_table_set(ti, i + 1, v)));
     W.pl_const_set(C.AP_PER_STR, k.ap_per_str);
     W.pl_const_set(C.AP_PER_AGI, k.ap_per_agi);
     W.pl_const_set(C.RAP_PER_AGI, k.rap_per_agi);
@@ -642,7 +645,7 @@
   }
 
   function renderStatsLevel() {
-    const r = manifest.rules, cv = manifest.conversions, k = doc.consts, tb = doc.tables;
+    const r = manifest.rules, cv = manifest.conversions, k = doc.consts, tb = tablesFor(S.cls);
     const picks = [...new Set([1, 10, 20, 30, 40, 50, 60, S.level])].sort((a, b) => a - b);
     const cols = [['Level', (l) => l], ['Points', (l) => W.pl_points_at_level(l)]];
     if (tb.agi_per_crit) cols.push(['Agi per 1% crit', (l) => fmt(tb.agi_per_crit[l - 1], 1)]);
@@ -738,7 +741,8 @@
       h('p', { class: 'note', style: 'margin-top:8px' },
         'Talent, skill and icon-name data from ', h('a', { href: src.talents.url }, src.talents.name), ', licensed ',
         h('a', { href: src.talents.license_url }, src.talents.license), ' and adapted here. ',
-        'Per-level stat tables from ', h('a', { href: src.stats.url }, src.stats.name), ` (build ${src.stats.build}). `,
+        'Per-level stat tables from ', h('a', { href: src.stats.url }, src.stats.name), ', licensed ',
+        src.stats.license_url ? h('a', { href: src.stats.license_url }, src.stats.license) : src.stats.license, ` (build ${src.stats.build}). `,
         'Icons are Blizzard Entertainment artwork, served by Wowhead. ',
         'Game names, tooltip text and icons belong to Blizzard Entertainment. This planner is not affiliated with Blizzard. ',
         src.credits ? h('a', { href: src.credits }, 'All credits') : null, src.credits ? '.' : null),
@@ -960,6 +964,7 @@
   async function start() {
     try {
       [manifest] = await Promise.all([loadJSON('manifest'), loadWasm()]);
+      statTables = (await loadJSON('stats')).classes || {};
       updates = await loadJSON('changelog').catch(() => []) || [];
     } catch (err) {
       $('#build-line').textContent = `${err.message}. If you opened index.html straight from disk, run "make serve" instead.`;

@@ -138,13 +138,21 @@ create pull requests under Settings -> Actions -> General.
 
 ## License and credits
 
-The project's own code and text are dedicated to the public domain under
-[CC0 1.0](LICENSE). That does not extend to third-party material: talent,
-skill and icon-name data from [Talents Forever](https://talentsforever.com/)
-is used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and
-must stay credited, stat tables come from
-[ForeverDB](https://foreverdb.net/stats), and World of Warcraft names, text
-and icons belong to Blizzard Entertainment. This project is not affiliated
-with Blizzard.
+Everything written for this project (the engine, the site, the tools, the
+tests and the docs) is dedicated to the public domain under
+[CC0 1.0](LICENSE): use it for anything, no credit needed.
+
+The game data comes from other people and keeps their terms:
+
+| Files | License | From |
+|---|---|---|
+| `data/talents/`, `data/seed/talents/`, `data/seed/extra/`, `data/effects.txt`, `data/changelog.json`, the class files and `changelog.json` in `site/data/` | [CC BY 4.0](LICENSES/CC-BY-4.0.txt): reuse freely, keep the credit | [Talents Forever](https://talentsforever.com/) |
+| `data/stats.json`, `data/seed/stats.txt`, `site/data/stats.json` | [GPL-3.0](LICENSES/GPL-3.0-only.txt) | [ForeverDB](https://foreverdb.net/) |
+
+The stat tables are kept in their own files so the GPL covers only them. To
+reuse the rest under CC0 and CC BY alone, leave those files out. The exact
+per-file list is in [REUSE.toml](REUSE.toml). World of Warcraft names, text and
+icons belong to Blizzard Entertainment; this project is not affiliated with
+Blizzard.
 
 Full list, with what was changed from each source: [CREDITS.md](CREDITS.md).
